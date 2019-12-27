@@ -79,7 +79,7 @@ package body STM32.SDMMC is
       Data_Length        : UInt25;
       Data_Block_Size    : DCTRL_DBLOCKSIZE_Field;
       Transfer_Direction : Data_Direction;
-      Transfer_Mode      : DCTRL_DTMODE_Field;
+      Transfer_Mode      : Boolean;
       DPSM               : Boolean;
       DMA_Enabled        : Boolean);
 
@@ -275,7 +275,7 @@ package body STM32.SDMMC is
       --  the Power_Off command
       DCTRL_Write_Delay;
 
-      This.Periph.POWER.PWRCTRL := Power_Off;
+      This.Periph.POWER.PWRCTRL := 0;
 
       --  Use the Default SDMMC peripheral configuration for SD card init
       This.Periph.CLKCR := (others => <>);
@@ -284,7 +284,7 @@ package body STM32.SDMMC is
 
       This.Periph.CLKCR.CLKEN   := False;
       DCTRL_Write_Delay;
-      This.Periph.POWER.PWRCTRL := Power_On;
+      This.Periph.POWER.PWRCTRL := 3;
 
       --  Wait for the clock to stabilize.
       DCTRL_Write_Delay;
@@ -363,9 +363,9 @@ package body STM32.SDMMC is
       This.Periph.ARG := Arg;
       CMD_Reg.CMDINDEX := CMD_CMDINDEX_Field (Cmd.Cmd);
       CMD_Reg.WAITRESP := (case Cmd.Rsp is
-                              when Rsp_No => No_Response,
-                              when Rsp_R2 => Long_Response,
-                              when others => Short_Response);
+                              when Rsp_No => 0,
+                              when Rsp_R2 => 3,
+                              when others => 1);
       CMD_Reg.WAITINT  := False;
       CMD_Reg.CPSMEN   := True;
       This.Periph.CMD := CMD_Reg;
@@ -435,7 +435,7 @@ package body STM32.SDMMC is
          Data_Length        => UInt25 (Buf'Length * 4),
          Data_Block_Size    => Block_Size,
          Transfer_Direction => Read,
-         Transfer_Mode      => Block,
+         Transfer_Mode      => False,
          DPSM               => True,
          DMA_Enabled        => False);
 
@@ -536,7 +536,7 @@ package body STM32.SDMMC is
       Data_Length        : UInt25;
       Data_Block_Size    : DCTRL_DBLOCKSIZE_Field;
       Transfer_Direction : Data_Direction;
-      Transfer_Mode      : DCTRL_DTMODE_Field;
+      Transfer_Mode      : Boolean;
       DPSM               : Boolean;
       DMA_Enabled        : Boolean)
    is
@@ -550,8 +550,8 @@ package body STM32.SDMMC is
 
       Tmp := Controller.Periph.DCTRL;
       Tmp.DTDIR      :=
-        (if Transfer_Direction = Read then Card_To_Controller
-         else Controller_To_Card);
+        (if Transfer_Direction = Read then True
+         else False);
       Tmp.DTMODE     := Transfer_Mode;
       Tmp.DBLOCKSIZE := Data_Block_Size;
       Tmp.DTEN       := DPSM;
@@ -1137,9 +1137,9 @@ package body STM32.SDMMC is
       Configure_Data
         (This,
          Data_Length        => Data'Length,
-         Data_Block_Size    => Block_512B,
+         Data_Block_Size    => 9,
          Transfer_Direction => Read,
-         Transfer_Mode      => Block,
+         Transfer_Mode      => False,
          DPSM               => True,
          DMA_Enabled        => False);
 
@@ -1275,9 +1275,9 @@ package body STM32.SDMMC is
       Configure_Data
         (This,
          Data_Length        => UInt25 (N_Blocks) * 512,
-         Data_Block_Size    => Block_512B,
+         Data_Block_Size    => 9,
          Transfer_Direction => Read,
-         Transfer_Mode      => Block,
+         Transfer_Mode      => False,
          DPSM               => True,
          DMA_Enabled        => True);
 
@@ -1397,9 +1397,9 @@ package body STM32.SDMMC is
       Configure_Data
         (This,
          Data_Length        => UInt25 (N_Blocks) * 512,
-         Data_Block_Size    => Block_512B,
+         Data_Block_Size    => 9,
          Transfer_Direction => Write,
-         Transfer_Mode      => Block,
+         Transfer_Mode      => False,
          DPSM               => True,
          DMA_Enabled        => True);
 
