@@ -76,7 +76,7 @@ library project NUCLEO_F411RE_Full is
    Device_Name                    := "STM32F411RE";     -- From board definition
    Device_Family                  := "STM32F4";           -- From board definition
    Has_Ravenscar_SFP_Runtime      := "True";              -- From board definition
-   Runtime_Name                   := "ravenscar-full-stm32f4"; -- From default value
+   Runtime_Name                   := "ravenscar-full-nucleo-f411re"; -- From default value
    Has_Ravenscar_Full_Runtime     := "True";              -- From board definition
    CPU_Core                       := "ARM Cortex-M4F";    -- From mcu definition
    Board                          := "NUCLEO_F411RE";     -- From command line
@@ -107,7 +107,7 @@ library project NUCLEO_F411RE_Full is
     Src_Dirs_Root & "/arch/ARM/STM32/drivers/crc_stm32f4/", -- From MCU definition
     Src_Dirs_Root & "/arch/ARM/STM32/drivers/i2c_stm32f4", -- From MCU definition
     Src_Dirs_Root & "/arch/ARM/STM32/drivers/power_control_stm32f4", -- From MCU definition
-    Src_Dirs_Root & "/arch/ARM/STM32/drivers/uart_stm32f4/", -- From MCU definition
+    Src_Dirs_Root & "/arch/ARM/STM32/drivers/uart_stm32f411/", -- From MCU definition
     Src_Dirs_Root & "/arch/ARM/STM32/drivers/sd/", -- From MCU definition
     Src_Dirs_Root & "/arch/ARM/STM32/drivers/sd/sdio/", -- From MCU definition
     Src_Dirs_Root & "/middleware/src/filesystem", -- From middleware config

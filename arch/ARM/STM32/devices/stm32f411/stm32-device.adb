@@ -495,7 +495,7 @@ package body STM32.Device is
    begin
       Result.I2SCLK := 0;
 
-      case Source.Val is
+      case Source is
          when 0 =>
             --  HSI as source
             Result.SYSCLK := HSI_VALUE;
@@ -507,13 +507,13 @@ package body STM32.Device is
             declare
                HSE_Source : constant Boolean := RCC_Periph.PLLCFGR.PLLSRC;
                Pllm       : constant UInt32 :=
-                 UInt32 (RCC_Periph.PLLCFGR.PLLM.Val);
+                 UInt32 (RCC_Periph.PLLCFGR.PLLM);
                Plln       : constant
                  UInt32 :=
-                   UInt32 (RCC_Periph.PLLCFGR.PLLN.Val);
+                   UInt32 (RCC_Periph.PLLCFGR.PLLN);
                Pllp       : constant
                  UInt32 :=
-                   (UInt32 (RCC_Periph.PLLCFGR.PLLP.Val) + 1) * 2;
+                   (UInt32 (RCC_Periph.PLLCFGR.PLLP) + 1) * 2;
                Pllvco     : UInt32;
             begin
                if not HSE_Source then
