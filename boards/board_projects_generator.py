@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 
 from subprocess import check_call
 
@@ -16,7 +16,8 @@ BOARDS = {
     'STM32F746_Discovery': { 'rts_profiles': ['ravenscar-sfp', 'ravenscar-full']},
     'STM32F769_Discovery': { 'rts_profiles': ['ravenscar-sfp', 'ravenscar-full']},
     'NUCLEO_F446ZE':       { 'rts_profiles': ['ravenscar-sfp', 'ravenscar-full']},
-    }
+    'NUCLEO_F411RE':       { 'rts_profiles': ['ravenscar-sfp', 'ravenscar-full']},
+}
 
 
 FOLDERS = {'Crazyflie': 'crazyflie',
@@ -30,7 +31,9 @@ FOLDERS = {'Crazyflie': 'crazyflie',
            'STM32F469_Discovery': 'stm32f469_discovery',
            'STM32F746_Discovery': 'stm32f746_discovery',
            'STM32F769_Discovery': 'stm32f769_discovery',
-           'NUCLEO_F446ZE':       'nucleo_f446ze'}
+           'NUCLEO_F446ZE':       'nucleo_f446ze',
+           'NUCLEO_F411RE':       'nucleo_f411re'
+}
 
 USE_STARTUP_GEN = ['HiFive1', 'MicroBit']
 
@@ -58,7 +61,7 @@ def gen_project(board_name, rts):
         object_dir_name = "obj"
         source_dir_name = "config_src"
 
-    args = ["python",
+    args = ["python2",
             "../scripts/project_wizard.py",
             "--script-mode",
             "-d", FOLDERS[board_name],
