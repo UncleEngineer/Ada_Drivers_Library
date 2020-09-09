@@ -174,13 +174,16 @@ package body STM32.ADC is
    ---------------------------------
    -- Configure_Common_Properties --
    ---------------------------------
-
+   pragma Warnings (Off, "formal parameter ""Mode"" is not referenced");
    procedure Configure_Common_Properties
      (Mode           : Multi_ADC_Mode_Selections;
       Prescalar      : ADC_Prescalars;
       DMA_Mode       : Multi_ADC_DMA_Modes;
       Sampling_Delay : Sampling_Delay_Selections)
    is
+      pragma Warnings (On, "formal parameter ""Mode"" is not referenced");
+      --  We ignore this warning to conform to the common spec in STM32
+      --  family
    begin
       -- C_ADC_Periph.CCR.MULT    := Multi_ADC_Mode_Selections'Enum_Rep (Mode);
       ADC_Common_Periph.CCR.DELAY_k :=

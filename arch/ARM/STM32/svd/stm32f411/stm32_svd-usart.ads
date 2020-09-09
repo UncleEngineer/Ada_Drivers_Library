@@ -276,7 +276,7 @@ package STM32_SVD.USART is
    -----------------
 
    --  Universal synchronous asynchronous receiver transmitter
-   type USART1_Peripheral is record
+   type USART_Peripheral is record
       --  Status register
       SR   : aliased SR_Register;
       --  Data register
@@ -294,7 +294,7 @@ package STM32_SVD.USART is
    end record
      with Volatile;
 
-   for USART1_Peripheral use record
+   for USART_Peripheral use record
       SR   at 16#0# range 0 .. 31;
       DR   at 16#4# range 0 .. 31;
       BRR  at 16#8# range 0 .. 31;
@@ -305,15 +305,15 @@ package STM32_SVD.USART is
    end record;
 
    --  Universal synchronous asynchronous receiver transmitter
-   USART1_Periph : aliased USART1_Peripheral
+   USART1_Periph : aliased USART_Peripheral
      with Import, Address => USART1_Base;
 
    --  Universal synchronous asynchronous receiver transmitter
-   USART2_Periph : aliased USART1_Peripheral
+   USART2_Periph : aliased USART_Peripheral
      with Import, Address => USART2_Base;
 
    --  Universal synchronous asynchronous receiver transmitter
-   USART6_Periph : aliased USART1_Peripheral
+   USART6_Periph : aliased USART_Peripheral
      with Import, Address => USART6_Base;
 
 end STM32_SVD.USART;
