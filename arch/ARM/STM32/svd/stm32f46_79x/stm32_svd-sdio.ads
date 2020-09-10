@@ -16,24 +16,23 @@ package STM32_SVD.SDIO is
 
    --  PWRCTRL
    type POWER_PWRCTRL_Field is
-     (
-      --  The clock to card is stopped.
-      Power_Off,
+     (--  The clock to card is stopped.
+      Power_OFF,
       --  The card is clocked.
-      Power_On)
+      Power_ON)
      with Size => 2;
    for POWER_PWRCTRL_Field use
-     (Power_Off => 0,
-      Power_On => 3);
+     (Power_OFF => 0,
+      Power_ON => 3);
 
    --  power control register
    type POWER_Register is record
       --  PWRCTRL
-      PWRCTRL       : POWER_PWRCTRL_Field := STM32_SVD.SDIO.Power_Off;
+      PWRCTRL       : POWER_PWRCTRL_Field := STM32_SVD.SDIO.Power_OFF;
       --  unspecified
       Reserved_2_31 : HAL.UInt30 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for POWER_Register use record
@@ -45,24 +44,22 @@ package STM32_SVD.SDIO is
 
    --  Wide bus mode enable bit
    type CLKCR_WIDBUS_Field is
-     (
-      --  Default bus mode: SDMMC_D0 is used.
-      Bus_Wide_1B,
+     (--  Default bus mode: SDMMC_D0 is used.
+      Bus_Wide_1b,
       --  4-wide bus mode: SDMMC_D[3:0] used.
-      Bus_Wide_4B,
+      Bus_Wide_4b,
       --  8-wide bus mode: SDMMC_D[7:0] used.
-      Bus_Wide_8B)
+      Bus_Wide_8b)
      with Size => 2;
    for CLKCR_WIDBUS_Field use
-     (Bus_Wide_1B => 0,
-      Bus_Wide_4B => 1,
-      Bus_Wide_8B => 2);
+     (Bus_Wide_1b => 0,
+      Bus_Wide_4b => 1,
+      Bus_Wide_8b => 2);
 
    --  SDIO_CK dephasing selection bit
    type CLKCR_NEGEDGE_Field is
-     (
-      --  Cmd and Data changed on the SDMMCCLK falling edge succeeding the
-      --  rising edge of SDMMC_CK.
+     (--  Cmd and Data changed on the SDMMCCLK falling edge succeeding the rising
+--  edge of SDMMC_CK.
       Edge_Rising,
       --  Cmd and Data changed on the SDMMC_CK falling edge.
       Edge_Falling)
@@ -82,7 +79,7 @@ package STM32_SVD.SDIO is
       --  Clock divider bypass enable bit
       BYPASS         : Boolean := False;
       --  Wide bus mode enable bit
-      WIDBUS         : CLKCR_WIDBUS_Field := STM32_SVD.SDIO.Bus_Wide_1B;
+      WIDBUS         : CLKCR_WIDBUS_Field := STM32_SVD.SDIO.Bus_Wide_1b;
       --  SDIO_CK dephasing selection bit
       NEGEDGE        : CLKCR_NEGEDGE_Field := STM32_SVD.SDIO.Edge_Rising;
       --  HW Flow Control enable
@@ -90,7 +87,7 @@ package STM32_SVD.SDIO is
       --  unspecified
       Reserved_15_31 : HAL.UInt17 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CLKCR_Register use record
@@ -108,8 +105,7 @@ package STM32_SVD.SDIO is
 
    --  Wait for response bits
    type CMD_WAITRESP_Field is
-     (
-      --  No response, expect CMDSENT flag.
+     (--  No response, expect CMDSENT flag.
       No_Response,
       --  Short response, expect CMDREND or CCRCFAIL flag.
       Short_Response,
@@ -144,7 +140,7 @@ package STM32_SVD.SDIO is
       --  unspecified
       Reserved_15_31 : HAL.UInt17 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CMD_Register use record
@@ -169,7 +165,7 @@ package STM32_SVD.SDIO is
       --  unspecified
       Reserved_6_31 : HAL.UInt26;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for RESPCMD_Register use record
@@ -186,7 +182,7 @@ package STM32_SVD.SDIO is
       --  unspecified
       Reserved_25_31 : HAL.UInt7 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DLEN_Register use record
@@ -196,8 +192,7 @@ package STM32_SVD.SDIO is
 
    --  Data transfer direction selection
    type DCTRL_DTDIR_Field is
-     (
-      --  Data is sent to the card
+     (--  Data is sent to the card
       Controller_To_Card,
       --  Data is read from the card
       Card_To_Controller)
@@ -208,8 +203,7 @@ package STM32_SVD.SDIO is
 
    --  Data transfer mode selection 1: Stream or SDIO multibyte data transfer.
    type DCTRL_DTMODE_Field is
-     (
-      --  Block data transfer
+     (--  Block data transfer
       Block,
       --  Stream or SDIO multibyte data transfer
       Stream)
@@ -220,54 +214,53 @@ package STM32_SVD.SDIO is
 
    --  Data block size
    type DCTRL_DBLOCKSIZE_Field is
-     (
-      --  Block length = 2**0 = 1 byte
-      Block_1B,
+     (--  Block length = 2**0 = 1 byte
+      Block_1b,
       --  Block length = 2**1 = 2 byte
-      Block_2B,
+      Block_2b,
       --  Block length = 2**2 = 4 byte
-      Block_4B,
+      Block_4b,
       --  Block length = 2**3 = 8 byte
-      Block_8B,
+      Block_8b,
       --  Block length = 2**4 = 16 byte
-      Block_16B,
+      Block_16b,
       --  Block length = 2**5 = 32 byte
-      Block_32B,
+      Block_32b,
       --  Block length = 2**6 = 64 byte
-      Block_64B,
+      Block_64b,
       --  Block length = 2**7 = 128 byte
-      Block_128B,
+      Block_128b,
       --  Block length = 2**8 = 256 byte
-      Block_256B,
+      Block_256b,
       --  Block length = 2**9 = 512 byte
-      Block_512B,
+      Block_512b,
       --  Block length = 2**10 = 1024 byte
-      Block_1024B,
+      Block_1024b,
       --  Block length = 2**11 = 2048 byte
-      Block_2048B,
+      Block_2048b,
       --  Block length = 2**12 = 4096 byte
-      Block_4096B,
+      Block_4096b,
       --  Block length = 2**13 = 8192 byte
-      Block_8192B,
+      Block_8192b,
       --  Block length = 2**14 = 16384 byte
-      Block_16384B)
+      Block_16384b)
      with Size => 4;
    for DCTRL_DBLOCKSIZE_Field use
-     (Block_1B => 0,
-      Block_2B => 1,
-      Block_4B => 2,
-      Block_8B => 3,
-      Block_16B => 4,
-      Block_32B => 5,
-      Block_64B => 6,
-      Block_128B => 7,
-      Block_256B => 8,
-      Block_512B => 9,
-      Block_1024B => 10,
-      Block_2048B => 11,
-      Block_4096B => 12,
-      Block_8192B => 13,
-      Block_16384B => 14);
+     (Block_1b => 0,
+      Block_2b => 1,
+      Block_4b => 2,
+      Block_8b => 3,
+      Block_16b => 4,
+      Block_32b => 5,
+      Block_64b => 6,
+      Block_128b => 7,
+      Block_256b => 8,
+      Block_512b => 9,
+      Block_1024b => 10,
+      Block_2048b => 11,
+      Block_4096b => 12,
+      Block_8192b => 13,
+      Block_16384b => 14);
 
    --  data control register
    type DCTRL_Register is record
@@ -281,7 +274,7 @@ package STM32_SVD.SDIO is
       --  DMA enable bit
       DMAEN          : Boolean := False;
       --  Data block size
-      DBLOCKSIZE     : DCTRL_DBLOCKSIZE_Field := STM32_SVD.SDIO.Block_1B;
+      DBLOCKSIZE     : DCTRL_DBLOCKSIZE_Field := STM32_SVD.SDIO.Block_1b;
       --  Read wait start
       RWSTART        : Boolean := False;
       --  Read wait stop
@@ -293,7 +286,7 @@ package STM32_SVD.SDIO is
       --  unspecified
       Reserved_12_31 : HAL.UInt20 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DCTRL_Register use record
@@ -318,7 +311,7 @@ package STM32_SVD.SDIO is
       --  unspecified
       Reserved_25_31 : HAL.UInt7;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DCOUNT_Register use record
@@ -382,7 +375,7 @@ package STM32_SVD.SDIO is
       --  unspecified
       Reserved_24_31 : HAL.UInt8;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for STA_Register use record
@@ -446,7 +439,7 @@ package STM32_SVD.SDIO is
       --  unspecified
       Reserved_24_31 : HAL.UInt8 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for ICR_Register use record
@@ -520,7 +513,7 @@ package STM32_SVD.SDIO is
       --  unspecified
       Reserved_24_31 : HAL.UInt8 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for MASK_Register use record
@@ -561,7 +554,7 @@ package STM32_SVD.SDIO is
       --  unspecified
       Reserved_24_31 : HAL.UInt8;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for FIFOCNT_Register use record
@@ -637,6 +630,6 @@ package STM32_SVD.SDIO is
 
    --  Secure digital input/output interface
    SDIO_Periph : aliased SDIO_Peripheral
-     with Import, Address => System'To_Address (16#40012C00#);
+     with Import, Address => SDIO_Base;
 
 end STM32_SVD.SDIO;

@@ -18,8 +18,7 @@ package Cortex_M_SVD.MPU is
    --  Indicates support for unified or separate instruction and data memory
    --  maps.
    type TYPE_SEPARATE_Field is
-     (
-      --  Only unified memory maps are supported.
+     (--  Only unified memory maps are supported.
       Unified)
      with Size => 1;
    for TYPE_SEPARATE_Field use
@@ -45,7 +44,7 @@ package Cortex_M_SVD.MPU is
       --  unspecified
       Reserved_24_31 : HAL.UInt8;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for MPU_TYPE_Register use record
@@ -68,7 +67,7 @@ package Cortex_M_SVD.MPU is
       --  unspecified
       Reserved_3_31 : HAL.UInt29 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for MPU_CTRL_Register use record
@@ -88,7 +87,7 @@ package Cortex_M_SVD.MPU is
       --  unspecified
       Reserved_8_31 : HAL.UInt24 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for MPU_RNR_Register use record
@@ -120,7 +119,7 @@ package Cortex_M_SVD.MPU is
       --  example, at 0x00010000 or 0x00020000.
       ADDR   : MPU_RBAR_ADDR_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for MPU_RBAR_Register use record
@@ -159,17 +158,16 @@ package Cortex_M_SVD.MPU is
 
    --  Access permission field
    type RASR_AP_Field is
-     (
-      --  All accesses generate a permission fault.
+     (--  All accesses generate a permission fault.
       No_Access,
       --  Access from privileged software only.
-      Privileged_Rw,
+      Privileged_RW,
       --  Writes by unprivileged software generates a permission fault.
-      Unpriviledged_Ro,
+      Unpriviledged_RO,
       --  Full Access.
       Full_Access,
       --  Reads by privileged software only.
-      Privileged_Ro,
+      Privileged_RO,
       --  Read_Only by privileged or unprivileged software.
       Read_Only,
       --  Read_Only by privileged or unprivileged software.
@@ -177,17 +175,16 @@ package Cortex_M_SVD.MPU is
      with Size => 3;
    for RASR_AP_Field use
      (No_Access => 0,
-      Privileged_Rw => 1,
-      Unpriviledged_Ro => 2,
+      Privileged_RW => 1,
+      Unpriviledged_RO => 2,
       Full_Access => 3,
-      Privileged_Ro => 5,
+      Privileged_RO => 5,
       Read_Only => 6,
       Read_Only_1 => 7);
 
    --  Instruction access disable bit
    type RASR_XN_Field is
-     (
-      --  Instruction fetches enabled.
+     (--  Instruction fetches enabled.
       I_Enabled,
       --  Instruction fetches disabled.
       I_Disabled)
@@ -227,7 +224,7 @@ package Cortex_M_SVD.MPU is
       --  unspecified
       Reserved_29_31 : HAL.UInt3 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for MPU_RASR_Register use record
@@ -270,7 +267,7 @@ package Cortex_M_SVD.MPU is
       --  example, at 0x00010000 or 0x00020000.
       ADDR   : RBAR_A_ADDR_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for RBAR_A_Register use record
@@ -309,17 +306,16 @@ package Cortex_M_SVD.MPU is
 
    --  Access permission field
    type RASR_A1_AP_Field is
-     (
-      --  All accesses generate a permission fault.
+     (--  All accesses generate a permission fault.
       No_Access,
       --  Access from privileged software only.
-      Privileged_Rw,
+      Privileged_RW,
       --  Writes by unprivileged software generates a permission fault.
-      Unpriviledged_Ro,
+      Unpriviledged_RO,
       --  Full Access.
       Full_Access,
       --  Reads by privileged software only.
-      Privileged_Ro,
+      Privileged_RO,
       --  Read_Only by privileged or unprivileged software.
       Read_Only,
       --  Read_Only by privileged or unprivileged software.
@@ -327,17 +323,16 @@ package Cortex_M_SVD.MPU is
      with Size => 3;
    for RASR_A1_AP_Field use
      (No_Access => 0,
-      Privileged_Rw => 1,
-      Unpriviledged_Ro => 2,
+      Privileged_RW => 1,
+      Unpriviledged_RO => 2,
       Full_Access => 3,
-      Privileged_Ro => 5,
+      Privileged_RO => 5,
       Read_Only => 6,
       Read_Only_1 => 7);
 
    --  Instruction access disable bit
    type RASR_A1_XN_Field is
-     (
-      --  Instruction fetches enabled.
+     (--  Instruction fetches enabled.
       I_Enabled,
       --  Instruction fetches disabled.
       I_Disabled)
@@ -376,7 +371,7 @@ package Cortex_M_SVD.MPU is
       --  unspecified
       Reserved_29_31 : HAL.UInt3 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for RASR_A_Register use record

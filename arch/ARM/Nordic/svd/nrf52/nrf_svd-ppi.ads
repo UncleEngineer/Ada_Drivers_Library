@@ -123,12 +123,12 @@ package NRF_SVD.PPI is
    --  Channel 0 enable set register. Writing '0' has no effect
    type CHENSET_CH0_Field_1 is
      (--  Reset value for the field
-      Chenset_Ch0_Field_Reset,
+      CHENSET_CH0_Field_Reset,
       --  Write: Enable channel
       Set)
      with Size => 1;
    for CHENSET_CH0_Field_1 use
-     (Chenset_Ch0_Field_Reset => 0,
+     (CHENSET_CH0_Field_Reset => 0,
       Set => 1);
 
    --  CHENSET_CH array
@@ -170,12 +170,12 @@ package NRF_SVD.PPI is
    --  Channel 0 enable clear register. Writing '0' has no effect
    type CHENCLR_CH0_Field_1 is
      (--  Reset value for the field
-      Chenclr_Ch0_Field_Reset,
+      CHENCLR_CH0_Field_Reset,
       --  Write: disable channel
       Clear)
      with Size => 1;
    for CHENCLR_CH0_Field_1 use
-     (Chenclr_Ch0_Field_Reset => 0,
+     (CHENCLR_CH0_Field_Reset => 0,
       Clear => 1);
 
    --  CHENCLR_CH array

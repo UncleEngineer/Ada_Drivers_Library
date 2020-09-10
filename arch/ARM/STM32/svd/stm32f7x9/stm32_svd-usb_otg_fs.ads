@@ -33,7 +33,7 @@ package STM32_SVD.USB_OTG_FS is
       --  unspecified
       Reserved_13_31 : HAL.UInt19 := 16#1100#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_DCFG_Register use record
@@ -72,7 +72,7 @@ package STM32_SVD.USB_OTG_FS is
       --  unspecified
       Reserved_12_31 : HAL.UInt20 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_DCTL_Register use record
@@ -107,7 +107,7 @@ package STM32_SVD.USB_OTG_FS is
       --  unspecified
       Reserved_22_31 : HAL.UInt10;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_DSTS_Register use record
@@ -139,7 +139,7 @@ package STM32_SVD.USB_OTG_FS is
       --  unspecified
       Reserved_7_31 : HAL.UInt25 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_DIEPMSK_Register use record
@@ -169,7 +169,7 @@ package STM32_SVD.USB_OTG_FS is
       --  unspecified
       Reserved_5_31 : HAL.UInt27 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_DOEPMSK_Register use record
@@ -191,7 +191,7 @@ package STM32_SVD.USB_OTG_FS is
       --  Read-only. OUT endpoint interrupt bits
       OEPINT : OTG_FS_DAINT_OEPINT_Field;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_DAINT_Register use record
@@ -209,7 +209,7 @@ package STM32_SVD.USB_OTG_FS is
       --  OUT EP interrupt mask bits
       OEPM : OTG_FS_DAINTMSK_OEPM_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_DAINTMSK_Register use record
@@ -226,7 +226,7 @@ package STM32_SVD.USB_OTG_FS is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_DVBUSDIS_Register use record
@@ -243,7 +243,7 @@ package STM32_SVD.USB_OTG_FS is
       --  unspecified
       Reserved_12_31 : HAL.UInt20 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_DVBUSPULSE_Register use record
@@ -260,7 +260,7 @@ package STM32_SVD.USB_OTG_FS is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_DIEPEMPMSK_Register use record
@@ -303,7 +303,7 @@ package STM32_SVD.USB_OTG_FS is
       --  Read-only. Endpoint enable
       EPENA          : Boolean := False;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_DIEPCTL0_Register use record
@@ -344,7 +344,7 @@ package STM32_SVD.USB_OTG_FS is
       --  unspecified
       Reserved_8_31 : HAL.UInt24 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_DIEPINT_Register use record
@@ -373,7 +373,7 @@ package STM32_SVD.USB_OTG_FS is
       --  unspecified
       Reserved_21_31 : HAL.UInt11 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_DIEPTSIZ0_Register use record
@@ -392,7 +392,7 @@ package STM32_SVD.USB_OTG_FS is
       --  unspecified
       Reserved_16_31 : HAL.UInt16;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_DTXFSTS_Register use record
@@ -437,7 +437,7 @@ package STM32_SVD.USB_OTG_FS is
       --  EPENA
       EPENA          : Boolean := False;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_DIEPCTL1_Register use record
@@ -473,7 +473,7 @@ package STM32_SVD.USB_OTG_FS is
       --  unspecified
       Reserved_31_31 : HAL.Bit := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_DIEPTSIZ_Register use record
@@ -520,7 +520,7 @@ package STM32_SVD.USB_OTG_FS is
       --  EPENA
       EPENA          : Boolean := False;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_DIEPCTL_Register use record
@@ -575,7 +575,7 @@ package STM32_SVD.USB_OTG_FS is
       --  Write-only. EPENA
       EPENA          : Boolean := False;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_DOEPCTL0_Register use record
@@ -614,7 +614,7 @@ package STM32_SVD.USB_OTG_FS is
       --  unspecified
       Reserved_7_31 : HAL.UInt25 := 16#1#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_DOEPINT_Register use record
@@ -646,7 +646,7 @@ package STM32_SVD.USB_OTG_FS is
       --  unspecified
       Reserved_31_31 : HAL.Bit := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_DOEPTSIZ0_Register use record
@@ -694,7 +694,7 @@ package STM32_SVD.USB_OTG_FS is
       --  EPENA
       EPENA          : Boolean := False;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_DOEPCTL_Register use record
@@ -730,7 +730,7 @@ package STM32_SVD.USB_OTG_FS is
       --  unspecified
       Reserved_31_31 : HAL.Bit := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_DOEPTSIZ_Register use record
@@ -783,7 +783,7 @@ package STM32_SVD.USB_OTG_FS is
       --  unspecified
       Reserved_21_31 : HAL.UInt11 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_GOTGCTL_Register use record
@@ -834,7 +834,7 @@ package STM32_SVD.USB_OTG_FS is
       --  unspecified
       Reserved_21_31 : HAL.UInt11 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_GOTGINT_Register use record
@@ -864,7 +864,7 @@ package STM32_SVD.USB_OTG_FS is
       --  unspecified
       Reserved_9_31 : HAL.UInt23 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_GAHBCFG_Register use record
@@ -903,7 +903,7 @@ package STM32_SVD.USB_OTG_FS is
       --  unspecified
       Reserved_31_31 : HAL.Bit := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_GUSBCFG_Register use record
@@ -943,7 +943,7 @@ package STM32_SVD.USB_OTG_FS is
       --  Read-only. AHB master idle
       AHBIDL         : Boolean := False;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_GRSTCTL_Register use record
@@ -1022,7 +1022,7 @@ package STM32_SVD.USB_OTG_FS is
       --  Resume/remote wakeup detected interrupt
       WKUPINT            : Boolean := False;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_GINTSTS_Register use record
@@ -1122,7 +1122,7 @@ package STM32_SVD.USB_OTG_FS is
       --  Resume/remote wakeup detected interrupt mask
       WUIM             : Boolean := False;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_GINTMSK_Register use record
@@ -1179,7 +1179,7 @@ package STM32_SVD.USB_OTG_FS is
       --  unspecified
       Reserved_25_31 : HAL.UInt7;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_GRXSTSR_Device_Register use record
@@ -1209,7 +1209,7 @@ package STM32_SVD.USB_OTG_FS is
       --  unspecified
       Reserved_21_31 : HAL.UInt11;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_GRXSTSR_Host_Register use record
@@ -1241,7 +1241,7 @@ package STM32_SVD.USB_OTG_FS is
       --  unspecified
       Reserved_25_31 : HAL.UInt7;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_GRXSTSP_Device_Register use record
@@ -1271,7 +1271,7 @@ package STM32_SVD.USB_OTG_FS is
       --  unspecified
       Reserved_21_31 : HAL.UInt11;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_GRXSTSP_Host_Register use record
@@ -1291,7 +1291,7 @@ package STM32_SVD.USB_OTG_FS is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_GRXFSIZ_Register use record
@@ -1309,7 +1309,7 @@ package STM32_SVD.USB_OTG_FS is
       --  Endpoint 0 TxFIFO depth
       TX0FD  : OTG_FS_DIEPTXF0_Device_TX0FD_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_DIEPTXF0_Device_Register use record
@@ -1327,7 +1327,7 @@ package STM32_SVD.USB_OTG_FS is
       --  Non-periodic TxFIFO depth
       NPTXFD  : OTG_FS_HNPTXFSIZ_Host_NPTXFD_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_HNPTXFSIZ_Host_Register use record
@@ -1351,7 +1351,7 @@ package STM32_SVD.USB_OTG_FS is
       --  unspecified
       Reserved_31_31 : HAL.Bit;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_HNPTXSTS_Register use record
@@ -1391,7 +1391,7 @@ package STM32_SVD.USB_OTG_FS is
       --  I2C Busy/Done
       BSYDNE         : Boolean := False;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_GI2CCTL_Register use record
@@ -1435,7 +1435,7 @@ package STM32_SVD.USB_OTG_FS is
       --  unspecified
       Reserved_22_31 : HAL.UInt10 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_GCCFG_Register use record
@@ -1495,7 +1495,7 @@ package STM32_SVD.USB_OTG_FS is
       --  unspecified
       Reserved_29_31 : HAL.UInt3 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_GLPMCFG_Register use record
@@ -1528,7 +1528,7 @@ package STM32_SVD.USB_OTG_FS is
       --  unspecified
       Reserved_24_31 : HAL.UInt8 := 16#2#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_GPWRDN_Register use record
@@ -1579,7 +1579,7 @@ package STM32_SVD.USB_OTG_FS is
       --  unspecified
       Reserved_29_31 : HAL.UInt3 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_GADPCTL_Register use record
@@ -1611,7 +1611,7 @@ package STM32_SVD.USB_OTG_FS is
       --  Host periodic TxFIFO depth
       PTXFSIZ : OTG_FS_HPTXFSIZ_PTXFSIZ_Field := 16#200#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_HPTXFSIZ_Register use record
@@ -1629,7 +1629,7 @@ package STM32_SVD.USB_OTG_FS is
       --  IN endpoint TxFIFO depth
       INEPTXFD : OTG_FS_DIEPTXF_INEPTXFD_Field := 16#200#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_DIEPTXF_Register use record
@@ -1648,7 +1648,7 @@ package STM32_SVD.USB_OTG_FS is
       --  unspecified
       Reserved_3_31 : HAL.UInt29 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_HCFG_Register use record
@@ -1666,7 +1666,7 @@ package STM32_SVD.USB_OTG_FS is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_HFIR_Register use record
@@ -1684,7 +1684,7 @@ package STM32_SVD.USB_OTG_FS is
       --  Read-only. Frame time remaining
       FTREM : OTG_FS_HFNUM_FTREM_Field;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_HFNUM_Register use record
@@ -1706,7 +1706,7 @@ package STM32_SVD.USB_OTG_FS is
       --  Read-only. Top of the periodic transmit request queue
       PTXQTOP  : OTG_FS_HPTXSTS_PTXQTOP_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_HPTXSTS_Register use record
@@ -1724,7 +1724,7 @@ package STM32_SVD.USB_OTG_FS is
       --  unspecified
       Reserved_16_31 : HAL.UInt16;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_HAINT_Register use record
@@ -1741,7 +1741,7 @@ package STM32_SVD.USB_OTG_FS is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_HAINTMSK_Register use record
@@ -1786,7 +1786,7 @@ package STM32_SVD.USB_OTG_FS is
       --  unspecified
       Reserved_19_31 : HAL.UInt13 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_HPRT_Register use record
@@ -1838,7 +1838,7 @@ package STM32_SVD.USB_OTG_FS is
       --  Channel enable
       CHENA          : Boolean := False;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_HCCHAR_Register use record
@@ -1882,7 +1882,7 @@ package STM32_SVD.USB_OTG_FS is
       --  unspecified
       Reserved_11_31 : HAL.UInt21 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_HCINT_Register use record
@@ -1927,7 +1927,7 @@ package STM32_SVD.USB_OTG_FS is
       --  unspecified
       Reserved_11_31 : HAL.UInt21 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_HCINTMSK_Register use record
@@ -1960,7 +1960,7 @@ package STM32_SVD.USB_OTG_FS is
       --  unspecified
       Reserved_31_31 : HAL.Bit := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_HCTSIZ_Register use record
@@ -1983,7 +1983,7 @@ package STM32_SVD.USB_OTG_FS is
       --  unspecified
       Reserved_5_31 : HAL.UInt27 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OTG_FS_PCGCCTL_Register use record
@@ -2167,14 +2167,13 @@ package STM32_SVD.USB_OTG_FS is
 
    --  USB on the go full speed
    OTG_FS_DEVICE_Periph : aliased OTG_FS_DEVICE_Peripheral
-     with Import, Address => System'To_Address (16#50000800#);
+     with Import, Address => OTG_FS_DEVICE_Base;
 
    type OTG_FS_GLOBAL_Disc is
-     (
-      Device,
+     (Device,
       Host,
-      Dieptxf0_Device,
-      Hnptxfsiz_Host);
+      DIEPTXF0_Device,
+      HNPTXFSIZ_Host);
 
    --  USB on the go full speed
    type OTG_FS_GLOBAL_Peripheral
@@ -2239,10 +2238,10 @@ package STM32_SVD.USB_OTG_FS is
             OTG_FS_GRXSTSR_Host : aliased OTG_FS_GRXSTSR_Host_Register;
             --  OTG status read and pop register (Host mode)
             OTG_FS_GRXSTSP_Host : aliased OTG_FS_GRXSTSP_Host_Register;
-         when Dieptxf0_Device =>
+         when DIEPTXF0_Device =>
             --  OTG_FS Endpoint 0 Transmit FIFO size
             OTG_FS_DIEPTXF0_Device : aliased OTG_FS_DIEPTXF0_Device_Register;
-         when Hnptxfsiz_Host =>
+         when HNPTXFSIZ_Host =>
             --  OTG_FS Host non-periodic transmit FIFO size register
             OTG_FS_HNPTXFSIZ_Host : aliased OTG_FS_HNPTXFSIZ_Host_Register;
       end case;
@@ -2281,7 +2280,7 @@ package STM32_SVD.USB_OTG_FS is
 
    --  USB on the go full speed
    OTG_FS_GLOBAL_Periph : aliased OTG_FS_GLOBAL_Peripheral
-     with Import, Address => System'To_Address (16#50000000#);
+     with Import, Address => OTG_FS_GLOBAL_Base;
 
    --  USB on the go full speed
    type OTG_FS_HOST_Peripheral is record
@@ -2459,7 +2458,7 @@ package STM32_SVD.USB_OTG_FS is
 
    --  USB on the go full speed
    OTG_FS_HOST_Periph : aliased OTG_FS_HOST_Peripheral
-     with Import, Address => System'To_Address (16#50000400#);
+     with Import, Address => OTG_FS_HOST_Base;
 
    --  USB on the go full speed
    type OTG_FS_PWRCLK_Peripheral is record
@@ -2474,6 +2473,6 @@ package STM32_SVD.USB_OTG_FS is
 
    --  USB on the go full speed
    OTG_FS_PWRCLK_Periph : aliased OTG_FS_PWRCLK_Peripheral
-     with Import, Address => System'To_Address (16#50000E00#);
+     with Import, Address => OTG_FS_PWRCLK_Base;
 
 end STM32_SVD.USB_OTG_FS;

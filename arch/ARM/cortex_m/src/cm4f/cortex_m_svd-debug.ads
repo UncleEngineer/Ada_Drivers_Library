@@ -30,7 +30,7 @@ package Cortex_M_SVD.Debug is
       --  unspecified
       Reserved_5_31 : HAL.UInt27 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSR_Register use record
@@ -78,7 +78,7 @@ package Cortex_M_SVD.Debug is
       --  unspecified
       Reserved_26_31 : HAL.UInt6;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for Read_DHCSR_Register use record
@@ -121,7 +121,7 @@ package Cortex_M_SVD.Debug is
       --  ignored. Read behavior of bits [31:16] is as listed below.
       S_RESET_ST    : Write_DHCSR_S_RESET_ST_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for Write_DHCSR_Register use record
@@ -136,8 +136,7 @@ package Cortex_M_SVD.Debug is
    end record;
 
    type DHCSR_Disc is
-     (
-      Mode_1,
+     (Mode_1,
       Mode_2);
 
    --  Debug Halting Control and Status Register
@@ -151,7 +150,7 @@ package Cortex_M_SVD.Debug is
             Write : aliased Write_DHCSR_Register;
       end case;
    end record
-     with Unchecked_Union, Volatile, Size => 32;
+     with Unchecked_Union, Size => 32;
 
    for DHCSR_Cluster use record
       Read  at 0 range 0 .. 31;
@@ -159,8 +158,7 @@ package Cortex_M_SVD.Debug is
    end record;
 
    type DCRSR_HALTED_Field is
-     (
-      Register_0,
+     (Register_0,
       Register_1,
       Register_2,
       Register_3,
@@ -173,13 +171,13 @@ package Cortex_M_SVD.Debug is
       Register_10,
       Register_11,
       Register_12,
-      Current_Sp,
+      Current_SP,
       Link_Rregister,
       Debug_Return_Address,
-      XPsr,
-      Msp,
-      Psp,
-      Control_Faultmask_Basepri_Primask)
+      xPSR,
+      MSP,
+      PSP,
+      CONTROL_FAULTMASK_BASEPRI_PRIMASK)
      with Size => 5;
    for DCRSR_HALTED_Field use
      (Register_0 => 0,
@@ -195,17 +193,16 @@ package Cortex_M_SVD.Debug is
       Register_10 => 10,
       Register_11 => 11,
       Register_12 => 12,
-      Current_Sp => 13,
+      Current_SP => 13,
       Link_Rregister => 14,
       Debug_Return_Address => 15,
-      XPsr => 16,
-      Msp => 17,
-      Psp => 18,
-      Control_Faultmask_Basepri_Primask => 19);
+      xPSR => 16,
+      MSP => 17,
+      PSP => 18,
+      CONTROL_FAULTMASK_BASEPRI_PRIMASK => 19);
 
    type DCRSR_REGWnR_Field is
-     (
-      Read,
+     (Read,
       Write)
      with Size => 1;
    for DCRSR_REGWnR_Field use
@@ -227,7 +224,7 @@ package Cortex_M_SVD.Debug is
       --  unspecified
       Reserved_17_31 : HAL.UInt15 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DCRSR_Register use record
@@ -261,7 +258,7 @@ package Cortex_M_SVD.Debug is
       --  unspecified
       Reserved_25_31 : HAL.UInt7 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DEMCR_Register use record

@@ -56,7 +56,7 @@ package STM32_SVD.FSMC is
       --  unspecified
       Reserved_21_31 : HAL.UInt11 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for BCR1_Register use record
@@ -107,7 +107,7 @@ package STM32_SVD.FSMC is
       --  unspecified
       Reserved_30_31 : HAL.UInt2 := 16#3#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for BTR_Register use record
@@ -161,7 +161,7 @@ package STM32_SVD.FSMC is
       --  unspecified
       Reserved_20_31 : HAL.UInt12 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for BCR_Register use record
@@ -214,7 +214,7 @@ package STM32_SVD.FSMC is
       --  unspecified
       Reserved_20_31 : HAL.UInt12 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for PCR_Register use record
@@ -250,7 +250,7 @@ package STM32_SVD.FSMC is
       --  unspecified
       Reserved_7_31 : HAL.UInt25 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for SR_Register use record
@@ -280,7 +280,7 @@ package STM32_SVD.FSMC is
       --  MEMHIZx
       MEMHIZx  : PMEM_MEMHIZx_Field := 16#FC#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for PMEM_Register use record
@@ -306,7 +306,7 @@ package STM32_SVD.FSMC is
       --  ATTHIZx
       ATTHIZx  : PATT_ATTHIZx_Field := 16#FC#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for PATT_Register use record
@@ -332,7 +332,7 @@ package STM32_SVD.FSMC is
       --  IOHIZx
       IOHIZx  : PIO4_IOHIZx_Field := 16#FC#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for PIO4_Register use record
@@ -368,7 +368,7 @@ package STM32_SVD.FSMC is
       --  unspecified
       Reserved_30_31 : HAL.UInt2 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for BWTR_Register use record
@@ -412,7 +412,7 @@ package STM32_SVD.FSMC is
       --  unspecified
       Reserved_15_31 : HAL.UInt17 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for SDCR_Register use record
@@ -455,7 +455,7 @@ package STM32_SVD.FSMC is
       --  unspecified
       Reserved_28_31 : HAL.UInt4 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for SDTR_Register use record
@@ -488,7 +488,7 @@ package STM32_SVD.FSMC is
       --  unspecified
       Reserved_22_31 : HAL.UInt10 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for SDCMR_Register use record
@@ -513,7 +513,7 @@ package STM32_SVD.FSMC is
       --  unspecified
       Reserved_15_31 : HAL.UInt17 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for SDRTR_Register use record
@@ -561,7 +561,7 @@ package STM32_SVD.FSMC is
       --  unspecified
       Reserved_6_31 : HAL.UInt26;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for SDSR_Register use record
@@ -687,6 +687,6 @@ package STM32_SVD.FSMC is
 
    --  Flexible memory controller
    FMC_Periph : aliased FMC_Peripheral
-     with Import, Address => System'To_Address (16#A0000000#);
+     with Import, Address => FMC_Base;
 
 end STM32_SVD.FSMC;

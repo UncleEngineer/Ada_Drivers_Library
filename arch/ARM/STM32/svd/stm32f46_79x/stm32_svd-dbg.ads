@@ -26,7 +26,7 @@ package STM32_SVD.DBG is
       --  Read-only. REV_ID
       REV_ID         : DBGMCU_IDCODE_REV_ID_Field;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DBGMCU_IDCODE_Register use record
@@ -54,7 +54,7 @@ package STM32_SVD.DBG is
       --  unspecified
       Reserved_8_31 : HAL.UInt24 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DBGMCU_CR_Register use record
@@ -110,7 +110,7 @@ package STM32_SVD.DBG is
       --  unspecified
       Reserved_27_31         : HAL.UInt5 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DBGMCU_APB1_FZ_Register use record
@@ -153,7 +153,7 @@ package STM32_SVD.DBG is
       --  unspecified
       Reserved_19_31 : HAL.UInt13 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DBGMCU_APB2_FZ_Register use record
@@ -192,6 +192,6 @@ package STM32_SVD.DBG is
 
    --  Debug support
    DBG_Periph : aliased DBG_Peripheral
-     with Import, Address => System'To_Address (16#E0042000#);
+     with Import, Address => DBG_Base;
 
 end STM32_SVD.DBG;

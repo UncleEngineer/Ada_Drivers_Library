@@ -17,38 +17,32 @@ package Cortex_M_SVD.NVIC is
    --  Interrupt Set-Enable Registers
 
    --  Interrupt Set-Enable Registers
-   type NVIC_ISER_Registers is array (0 .. 7) of HAL.UInt32
-     with Volatile;
+   type NVIC_ISER_Registers is array (0 .. 7) of HAL.UInt32;
 
    --  Interrupt Clear-Enable Registers
 
    --  Interrupt Clear-Enable Registers
-   type NVIC_ICER_Registers is array (0 .. 7) of HAL.UInt32
-     with Volatile;
+   type NVIC_ICER_Registers is array (0 .. 7) of HAL.UInt32;
 
    --  Interrupt Set-Pending Registers
 
    --  Interrupt Set-Pending Registers
-   type NVIC_ISPR_Registers is array (0 .. 7) of HAL.UInt32
-     with Volatile;
+   type NVIC_ISPR_Registers is array (0 .. 7) of HAL.UInt32;
 
    --  Interrupt Clear-Pending Registers
 
    --  Interrupt Clear-Pending Registers
-   type NVIC_ICPR_Registers is array (0 .. 7) of HAL.UInt32
-     with Volatile;
+   type NVIC_ICPR_Registers is array (0 .. 7) of HAL.UInt32;
 
    --  Interrupt Active Bit Register
 
    --  Interrupt Active Bit Register
-   type NVIC_IABR_Registers is array (0 .. 7) of HAL.UInt32
-     with Volatile;
+   type NVIC_IABR_Registers is array (0 .. 7) of HAL.UInt32;
 
    --  Interrupt Priority Register
 
    --  Interrupt Priority Register
-   type NVIC_IPR_Registers is array (0 .. 59) of HAL.UInt32
-     with Volatile;
+   type NVIC_IPR_Registers is array (0 .. 59) of HAL.UInt32;
 
    subtype STIR_INTID_Field is HAL.UInt9;
 
@@ -60,7 +54,7 @@ package Cortex_M_SVD.NVIC is
       --  unspecified
       Reserved_9_31 : HAL.UInt23 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for STIR_Register use record

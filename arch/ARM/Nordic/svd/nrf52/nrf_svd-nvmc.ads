@@ -115,12 +115,12 @@ package NRF_SVD.NVMC is
    --  erase has to be enabled by CONFIG.EEN before the UICR can be erased.
    type ERASEALL_ERASEALL_Field is
      (--  No operation
-      Nooperation,
+      NoOperation,
       --  Start chip erase
       Erase)
      with Size => 1;
    for ERASEALL_ERASEALL_Field use
-     (Nooperation => 0,
+     (NoOperation => 0,
       Erase => 1);
 
    --  Register for erasing all non-volatile user memory
@@ -128,7 +128,7 @@ package NRF_SVD.NVMC is
       --  Erase all non-volatile memory including UICR registers. Note that
       --  code erase has to be enabled by CONFIG.EEN before the UICR can be
       --  erased.
-      ERASEALL      : ERASEALL_ERASEALL_Field := NRF_SVD.NVMC.Nooperation;
+      ERASEALL      : ERASEALL_ERASEALL_Field := NRF_SVD.NVMC.NoOperation;
       --  unspecified
       Reserved_1_31 : HAL.UInt31 := 16#0#;
    end record
@@ -145,12 +145,12 @@ package NRF_SVD.NVMC is
    --  be erased.
    type ERASEUICR_ERASEUICR_Field is
      (--  No operation
-      Nooperation,
+      NoOperation,
       --  Start erase of UICR
       Erase)
      with Size => 1;
    for ERASEUICR_ERASEUICR_Field use
-     (Nooperation => 0,
+     (NoOperation => 0,
       Erase => 1);
 
    --  Register for erasing User Information Configuration Registers
@@ -158,7 +158,7 @@ package NRF_SVD.NVMC is
       --  Register starting erase of all User Information Configuration
       --  Registers. Note that code erase has to be enabled by CONFIG.EEN
       --  before the UICR can be erased.
-      ERASEUICR     : ERASEUICR_ERASEUICR_Field := NRF_SVD.NVMC.Nooperation;
+      ERASEUICR     : ERASEUICR_ERASEUICR_Field := NRF_SVD.NVMC.NoOperation;
       --  unspecified
       Reserved_1_31 : HAL.UInt31 := 16#0#;
    end record
@@ -218,12 +218,12 @@ package NRF_SVD.NVMC is
    -----------------
 
    type NVMC_Disc is
-     (Age,
-      Cr1);
+     (AGE,
+      CR1);
 
    --  Non Volatile Memory Controller
    type NVMC_Peripheral
-     (Discriminent : NVMC_Disc := Age)
+     (Discriminent : NVMC_Disc := AGE)
    is record
       --  Ready flag
       READY     : aliased READY_Register;
@@ -243,10 +243,10 @@ package NRF_SVD.NVMC is
       --  I-Code cache miss counter.
       IMISS     : aliased HAL.UInt32;
       case Discriminent is
-         when Age =>
+         when AGE =>
             --  Register for erasing a page in Code area
             ERASEPAGE : aliased HAL.UInt32;
-         when Cr1 =>
+         when CR1 =>
             --  Deprecated register - Register for erasing a page in Code area.
             --  Equivalent to ERASEPAGE.
             ERASEPCR1 : aliased HAL.UInt32;

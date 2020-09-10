@@ -51,7 +51,7 @@ package STM32_SVD.DFSDM is
       --  Global enable for DFSDM interface
       DFSDMEN        : Boolean := False;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM_CHCFG0R1_Register use record
@@ -108,7 +108,7 @@ package STM32_SVD.DFSDM is
       --  Global enable for DFSDM interface
       DFSDMEN        : Boolean := False;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM_CHCFG1R1_Register use record
@@ -165,7 +165,7 @@ package STM32_SVD.DFSDM is
       --  Global enable for DFSDM interface
       DFSDMEN        : Boolean := False;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM_CHCFG2R1_Register use record
@@ -222,7 +222,7 @@ package STM32_SVD.DFSDM is
       --  Global enable for DFSDM interface
       DFSDMEN        : Boolean := False;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM_CHCFG3R1_Register use record
@@ -279,7 +279,7 @@ package STM32_SVD.DFSDM is
       --  Global enable for DFSDM interface
       DFSDMEN        : Boolean := False;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM_CHCFG4R1_Register use record
@@ -336,7 +336,7 @@ package STM32_SVD.DFSDM is
       --  Global enable for DFSDM interface
       DFSDMEN        : Boolean := False;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM_CHCFG5R1_Register use record
@@ -393,7 +393,7 @@ package STM32_SVD.DFSDM is
       --  Global enable for DFSDM interface
       DFSDMEN        : Boolean := False;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM_CHCFG6R1_Register use record
@@ -450,7 +450,7 @@ package STM32_SVD.DFSDM is
       --  Global enable for DFSDM interface
       DFSDMEN        : Boolean := False;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM_CHCFG7R1_Register use record
@@ -482,7 +482,7 @@ package STM32_SVD.DFSDM is
       --  24-bit calibration offset for channel 0
       OFFSET       : DFSDM_CHCFG0R2_OFFSET_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM_CHCFG0R2_Register use record
@@ -503,7 +503,7 @@ package STM32_SVD.DFSDM is
       --  24-bit calibration offset for channel 1
       OFFSET       : DFSDM_CHCFG1R2_OFFSET_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM_CHCFG1R2_Register use record
@@ -524,7 +524,7 @@ package STM32_SVD.DFSDM is
       --  24-bit calibration offset for channel 2
       OFFSET       : DFSDM_CHCFG2R2_OFFSET_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM_CHCFG2R2_Register use record
@@ -545,7 +545,7 @@ package STM32_SVD.DFSDM is
       --  24-bit calibration offset for channel 3
       OFFSET       : DFSDM_CHCFG3R2_OFFSET_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM_CHCFG3R2_Register use record
@@ -566,7 +566,7 @@ package STM32_SVD.DFSDM is
       --  24-bit calibration offset for channel 4
       OFFSET       : DFSDM_CHCFG4R2_OFFSET_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM_CHCFG4R2_Register use record
@@ -587,7 +587,7 @@ package STM32_SVD.DFSDM is
       --  24-bit calibration offset for channel 5
       OFFSET       : DFSDM_CHCFG5R2_OFFSET_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM_CHCFG5R2_Register use record
@@ -608,7 +608,7 @@ package STM32_SVD.DFSDM is
       --  24-bit calibration offset for channel 6
       OFFSET       : DFSDM_CHCFG6R2_OFFSET_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM_CHCFG6R2_Register use record
@@ -629,7 +629,7 @@ package STM32_SVD.DFSDM is
       --  24-bit calibration offset for channel 7
       OFFSET       : DFSDM_CHCFG7R2_OFFSET_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM_CHCFG7R2_Register use record
@@ -661,7 +661,7 @@ package STM32_SVD.DFSDM is
       --  unspecified
       Reserved_24_31 : HAL.UInt8 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM_AWSCD0R_Register use record
@@ -697,7 +697,7 @@ package STM32_SVD.DFSDM is
       --  unspecified
       Reserved_24_31 : HAL.UInt8 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM_AWSCD1R_Register use record
@@ -733,7 +733,7 @@ package STM32_SVD.DFSDM is
       --  unspecified
       Reserved_24_31 : HAL.UInt8 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM_AWSCD2R_Register use record
@@ -769,7 +769,7 @@ package STM32_SVD.DFSDM is
       --  unspecified
       Reserved_24_31 : HAL.UInt8 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM_AWSCD3R_Register use record
@@ -805,7 +805,7 @@ package STM32_SVD.DFSDM is
       --  unspecified
       Reserved_24_31 : HAL.UInt8 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM_AWSCD4R_Register use record
@@ -841,7 +841,7 @@ package STM32_SVD.DFSDM is
       --  unspecified
       Reserved_24_31 : HAL.UInt8 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM_AWSCD5R_Register use record
@@ -877,7 +877,7 @@ package STM32_SVD.DFSDM is
       --  unspecified
       Reserved_24_31 : HAL.UInt8 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM_AWSCD6R_Register use record
@@ -913,7 +913,7 @@ package STM32_SVD.DFSDM is
       --  unspecified
       Reserved_24_31 : HAL.UInt8 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM_AWSCD7R_Register use record
@@ -935,7 +935,7 @@ package STM32_SVD.DFSDM is
       --  unspecified
       Reserved_16_31 : HAL.UInt16;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM_CHWDAT0R_Register use record
@@ -952,7 +952,7 @@ package STM32_SVD.DFSDM is
       --  unspecified
       Reserved_16_31 : HAL.UInt16;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM_CHWDAT1R_Register use record
@@ -969,7 +969,7 @@ package STM32_SVD.DFSDM is
       --  unspecified
       Reserved_16_31 : HAL.UInt16;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM_CHWDAT2R_Register use record
@@ -986,7 +986,7 @@ package STM32_SVD.DFSDM is
       --  unspecified
       Reserved_16_31 : HAL.UInt16;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM_CHWDAT3R_Register use record
@@ -1003,7 +1003,7 @@ package STM32_SVD.DFSDM is
       --  unspecified
       Reserved_16_31 : HAL.UInt16;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM_CHWDAT4R_Register use record
@@ -1020,7 +1020,7 @@ package STM32_SVD.DFSDM is
       --  unspecified
       Reserved_16_31 : HAL.UInt16;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM_CHWDAT5R_Register use record
@@ -1037,7 +1037,7 @@ package STM32_SVD.DFSDM is
       --  unspecified
       Reserved_16_31 : HAL.UInt16;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM_CHWDAT6R_Register use record
@@ -1054,7 +1054,7 @@ package STM32_SVD.DFSDM is
       --  unspecified
       Reserved_16_31 : HAL.UInt16;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM_CHWDAT7R_Register use record
@@ -1083,7 +1083,7 @@ package STM32_SVD.DFSDM is
             Arr : DFSDM_CHDATIN0R_INDAT_Field_Array;
       end case;
    end record
-     with Unchecked_Union, Size => 32, Volatile_Full_Access,
+     with Unchecked_Union, Size => 32, Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM_CHDATIN0R_Register use record
@@ -1112,7 +1112,7 @@ package STM32_SVD.DFSDM is
             Arr : DFSDM_CHDATIN1R_INDAT_Field_Array;
       end case;
    end record
-     with Unchecked_Union, Size => 32, Volatile_Full_Access,
+     with Unchecked_Union, Size => 32, Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM_CHDATIN1R_Register use record
@@ -1141,7 +1141,7 @@ package STM32_SVD.DFSDM is
             Arr : DFSDM_CHDATIN2R_INDAT_Field_Array;
       end case;
    end record
-     with Unchecked_Union, Size => 32, Volatile_Full_Access,
+     with Unchecked_Union, Size => 32, Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM_CHDATIN2R_Register use record
@@ -1170,7 +1170,7 @@ package STM32_SVD.DFSDM is
             Arr : DFSDM_CHDATIN3R_INDAT_Field_Array;
       end case;
    end record
-     with Unchecked_Union, Size => 32, Volatile_Full_Access,
+     with Unchecked_Union, Size => 32, Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM_CHDATIN3R_Register use record
@@ -1199,7 +1199,7 @@ package STM32_SVD.DFSDM is
             Arr : DFSDM_CHDATIN4R_INDAT_Field_Array;
       end case;
    end record
-     with Unchecked_Union, Size => 32, Volatile_Full_Access,
+     with Unchecked_Union, Size => 32, Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM_CHDATIN4R_Register use record
@@ -1228,7 +1228,7 @@ package STM32_SVD.DFSDM is
             Arr : DFSDM_CHDATIN5R_INDAT_Field_Array;
       end case;
    end record
-     with Unchecked_Union, Size => 32, Volatile_Full_Access,
+     with Unchecked_Union, Size => 32, Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM_CHDATIN5R_Register use record
@@ -1257,7 +1257,7 @@ package STM32_SVD.DFSDM is
             Arr : DFSDM_CHDATIN6R_INDAT_Field_Array;
       end case;
    end record
-     with Unchecked_Union, Size => 32, Volatile_Full_Access,
+     with Unchecked_Union, Size => 32, Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM_CHDATIN6R_Register use record
@@ -1286,7 +1286,7 @@ package STM32_SVD.DFSDM is
             Arr : DFSDM_CHDATIN7R_INDAT_Field_Array;
       end case;
    end record
-     with Unchecked_Union, Size => 32, Volatile_Full_Access,
+     with Unchecked_Union, Size => 32, Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM_CHDATIN7R_Register use record
@@ -1344,7 +1344,7 @@ package STM32_SVD.DFSDM is
       --  unspecified
       Reserved_31_31 : HAL.Bit := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM0_CR1_Register use record
@@ -1421,7 +1421,7 @@ package STM32_SVD.DFSDM is
       --  unspecified
       Reserved_31_31 : HAL.Bit := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM1_CR1_Register use record
@@ -1498,7 +1498,7 @@ package STM32_SVD.DFSDM is
       --  unspecified
       Reserved_31_31 : HAL.Bit := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM2_CR1_Register use record
@@ -1575,7 +1575,7 @@ package STM32_SVD.DFSDM is
       --  unspecified
       Reserved_31_31 : HAL.Bit := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM3_CR1_Register use record
@@ -1630,7 +1630,7 @@ package STM32_SVD.DFSDM is
       --  unspecified
       Reserved_24_31 : HAL.UInt8 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM0_CR2_Register use record
@@ -1675,7 +1675,7 @@ package STM32_SVD.DFSDM is
       --  unspecified
       Reserved_24_31 : HAL.UInt8 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM1_CR2_Register use record
@@ -1720,7 +1720,7 @@ package STM32_SVD.DFSDM is
       --  unspecified
       Reserved_24_31 : HAL.UInt8 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM2_CR2_Register use record
@@ -1765,7 +1765,7 @@ package STM32_SVD.DFSDM is
       --  unspecified
       Reserved_24_31 : HAL.UInt8 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM3_CR2_Register use record
@@ -1810,7 +1810,7 @@ package STM32_SVD.DFSDM is
       --  Read-only. short-circuit detector flag
       SCDF           : DFSDM0_ISR_SCDF_Field;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM0_ISR_Register use record
@@ -1855,7 +1855,7 @@ package STM32_SVD.DFSDM is
       --  Read-only. short-circuit detector flag
       SCDF           : DFSDM1_ISR_SCDF_Field;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM1_ISR_Register use record
@@ -1900,7 +1900,7 @@ package STM32_SVD.DFSDM is
       --  Read-only. short-circuit detector flag
       SCDF           : DFSDM2_ISR_SCDF_Field;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM2_ISR_Register use record
@@ -1945,7 +1945,7 @@ package STM32_SVD.DFSDM is
       --  Read-only. short-circuit detector flag
       SCDF           : DFSDM3_ISR_SCDF_Field;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM3_ISR_Register use record
@@ -1980,7 +1980,7 @@ package STM32_SVD.DFSDM is
       --  Clear the short-circuit detector flag
       CLRSCDF       : DFSDM0_ICR_CLRSCDF_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM0_ICR_Register use record
@@ -2010,7 +2010,7 @@ package STM32_SVD.DFSDM is
       --  Clear the short-circuit detector flag
       CLRSCDF       : DFSDM1_ICR_CLRSCDF_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM1_ICR_Register use record
@@ -2040,7 +2040,7 @@ package STM32_SVD.DFSDM is
       --  Clear the short-circuit detector flag
       CLRSCDF       : DFSDM2_ICR_CLRSCDF_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM2_ICR_Register use record
@@ -2070,7 +2070,7 @@ package STM32_SVD.DFSDM is
       --  Clear the short-circuit detector flag
       CLRSCDF       : DFSDM3_ICR_CLRSCDF_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM3_ICR_Register use record
@@ -2091,7 +2091,7 @@ package STM32_SVD.DFSDM is
       --  unspecified
       Reserved_8_31 : HAL.UInt24 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM0_JCHGR_Register use record
@@ -2108,7 +2108,7 @@ package STM32_SVD.DFSDM is
       --  unspecified
       Reserved_8_31 : HAL.UInt24 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM1_JCHGR_Register use record
@@ -2125,7 +2125,7 @@ package STM32_SVD.DFSDM is
       --  unspecified
       Reserved_8_31 : HAL.UInt24 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM2_JCHGR_Register use record
@@ -2142,7 +2142,7 @@ package STM32_SVD.DFSDM is
       --  unspecified
       Reserved_8_31 : HAL.UInt24 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM3_JCHGR_Register use record
@@ -2167,7 +2167,7 @@ package STM32_SVD.DFSDM is
       --  Sinc filter order
       FORD           : DFSDM0_FCR_FORD_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM0_FCR_Register use record
@@ -2195,7 +2195,7 @@ package STM32_SVD.DFSDM is
       --  Sinc filter order
       FORD           : DFSDM1_FCR_FORD_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM1_FCR_Register use record
@@ -2223,7 +2223,7 @@ package STM32_SVD.DFSDM is
       --  Sinc filter order
       FORD           : DFSDM2_FCR_FORD_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM2_FCR_Register use record
@@ -2251,7 +2251,7 @@ package STM32_SVD.DFSDM is
       --  Sinc filter order
       FORD           : DFSDM3_FCR_FORD_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM3_FCR_Register use record
@@ -2274,7 +2274,7 @@ package STM32_SVD.DFSDM is
       --  Read-only. Injected group conversion data
       JDATA        : DFSDM0_JDATAR_JDATA_Field;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM0_JDATAR_Register use record
@@ -2295,7 +2295,7 @@ package STM32_SVD.DFSDM is
       --  Read-only. Injected group conversion data
       JDATA        : DFSDM1_JDATAR_JDATA_Field;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM1_JDATAR_Register use record
@@ -2316,7 +2316,7 @@ package STM32_SVD.DFSDM is
       --  Read-only. Injected group conversion data
       JDATA        : DFSDM2_JDATAR_JDATA_Field;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM2_JDATAR_Register use record
@@ -2337,7 +2337,7 @@ package STM32_SVD.DFSDM is
       --  Read-only. Injected group conversion data
       JDATA        : DFSDM3_JDATAR_JDATA_Field;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM3_JDATAR_Register use record
@@ -2362,7 +2362,7 @@ package STM32_SVD.DFSDM is
       --  Read-only. Regular channel conversion data
       RDATA        : DFSDM0_RDATAR_RDATA_Field;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM0_RDATAR_Register use record
@@ -2389,7 +2389,7 @@ package STM32_SVD.DFSDM is
       --  Read-only. Regular channel conversion data
       RDATA        : DFSDM1_RDATAR_RDATA_Field;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM1_RDATAR_Register use record
@@ -2416,7 +2416,7 @@ package STM32_SVD.DFSDM is
       --  Read-only. Regular channel conversion data
       RDATA        : DFSDM2_RDATAR_RDATA_Field;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM2_RDATAR_Register use record
@@ -2443,7 +2443,7 @@ package STM32_SVD.DFSDM is
       --  Read-only. Regular channel conversion data
       RDATA        : DFSDM3_RDATAR_RDATA_Field;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM3_RDATAR_Register use record
@@ -2466,7 +2466,7 @@ package STM32_SVD.DFSDM is
       --  Analog watchdog high threshold
       AWHT         : DFSDM0_AWHTR_AWHT_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM0_AWHTR_Register use record
@@ -2487,7 +2487,7 @@ package STM32_SVD.DFSDM is
       --  Analog watchdog high threshold
       AWHT         : DFSDM1_AWHTR_AWHT_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM1_AWHTR_Register use record
@@ -2508,7 +2508,7 @@ package STM32_SVD.DFSDM is
       --  Analog watchdog high threshold
       AWHT         : DFSDM2_AWHTR_AWHT_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM2_AWHTR_Register use record
@@ -2529,7 +2529,7 @@ package STM32_SVD.DFSDM is
       --  Analog watchdog high threshold
       AWHT         : DFSDM3_AWHTR_AWHT_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM3_AWHTR_Register use record
@@ -2550,7 +2550,7 @@ package STM32_SVD.DFSDM is
       --  Analog watchdog low threshold
       AWLT         : DFSDM0_AWLTR_AWLT_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM0_AWLTR_Register use record
@@ -2571,7 +2571,7 @@ package STM32_SVD.DFSDM is
       --  Analog watchdog low threshold
       AWLT         : DFSDM1_AWLTR_AWLT_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM1_AWLTR_Register use record
@@ -2592,7 +2592,7 @@ package STM32_SVD.DFSDM is
       --  Analog watchdog low threshold
       AWLT         : DFSDM2_AWLTR_AWLT_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM2_AWLTR_Register use record
@@ -2613,7 +2613,7 @@ package STM32_SVD.DFSDM is
       --  Analog watchdog low threshold
       AWLT         : DFSDM3_AWLTR_AWLT_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM3_AWLTR_Register use record
@@ -2634,7 +2634,7 @@ package STM32_SVD.DFSDM is
       --  unspecified
       Reserved_16_31 : HAL.UInt16;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM0_AWSR_Register use record
@@ -2655,7 +2655,7 @@ package STM32_SVD.DFSDM is
       --  unspecified
       Reserved_16_31 : HAL.UInt16;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM1_AWSR_Register use record
@@ -2676,7 +2676,7 @@ package STM32_SVD.DFSDM is
       --  unspecified
       Reserved_16_31 : HAL.UInt16;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM2_AWSR_Register use record
@@ -2697,7 +2697,7 @@ package STM32_SVD.DFSDM is
       --  unspecified
       Reserved_16_31 : HAL.UInt16;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM3_AWSR_Register use record
@@ -2718,7 +2718,7 @@ package STM32_SVD.DFSDM is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM0_AWCFR_Register use record
@@ -2739,7 +2739,7 @@ package STM32_SVD.DFSDM is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM1_AWCFR_Register use record
@@ -2760,7 +2760,7 @@ package STM32_SVD.DFSDM is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM2_AWCFR_Register use record
@@ -2781,7 +2781,7 @@ package STM32_SVD.DFSDM is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM3_AWCFR_Register use record
@@ -2802,7 +2802,7 @@ package STM32_SVD.DFSDM is
       --  Read-only. Extremes detector maximum value
       EXMAX        : DFSDM0_EXMAX_EXMAX_Field;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM0_EXMAX_Register use record
@@ -2823,7 +2823,7 @@ package STM32_SVD.DFSDM is
       --  Read-only. Extremes detector maximum value
       EXMAX        : DFSDM1_EXMAX_EXMAX_Field;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM1_EXMAX_Register use record
@@ -2844,7 +2844,7 @@ package STM32_SVD.DFSDM is
       --  Read-only. Extremes detector maximum value
       EXMAX        : DFSDM2_EXMAX_EXMAX_Field;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM2_EXMAX_Register use record
@@ -2865,7 +2865,7 @@ package STM32_SVD.DFSDM is
       --  Read-only. Extremes detector maximum value
       EXMAX        : DFSDM3_EXMAX_EXMAX_Field;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM3_EXMAX_Register use record
@@ -2886,7 +2886,7 @@ package STM32_SVD.DFSDM is
       --  Read-only. Extremes detector minimum value
       EXMIN        : DFSDM0_EXMIN_EXMIN_Field;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM0_EXMIN_Register use record
@@ -2907,7 +2907,7 @@ package STM32_SVD.DFSDM is
       --  Read-only. Extremes detector minimum value
       EXMIN        : DFSDM1_EXMIN_EXMIN_Field;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM1_EXMIN_Register use record
@@ -2928,7 +2928,7 @@ package STM32_SVD.DFSDM is
       --  Read-only. Extremes detector minimum value
       EXMIN        : DFSDM2_EXMIN_EXMIN_Field;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM2_EXMIN_Register use record
@@ -2949,7 +2949,7 @@ package STM32_SVD.DFSDM is
       --  Read-only. Extremes detector minimum value
       EXMIN        : DFSDM3_EXMIN_EXMIN_Field;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM3_EXMIN_Register use record
@@ -2967,7 +2967,7 @@ package STM32_SVD.DFSDM is
       --  Read-only. 28-bit timer counting conversion time
       CNVCNT       : DFSDM0_CNVTIMR_CNVCNT_Field;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM0_CNVTIMR_Register use record
@@ -2984,7 +2984,7 @@ package STM32_SVD.DFSDM is
       --  Read-only. 28-bit timer counting conversion time
       CNVCNT       : DFSDM1_CNVTIMR_CNVCNT_Field;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM1_CNVTIMR_Register use record
@@ -3001,7 +3001,7 @@ package STM32_SVD.DFSDM is
       --  Read-only. 28-bit timer counting conversion time
       CNVCNT       : DFSDM2_CNVTIMR_CNVCNT_Field;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM2_CNVTIMR_Register use record
@@ -3018,7 +3018,7 @@ package STM32_SVD.DFSDM is
       --  Read-only. 28-bit timer counting conversion time
       CNVCNT       : DFSDM3_CNVTIMR_CNVCNT_Field;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DFSDM3_CNVTIMR_Register use record
@@ -3340,6 +3340,6 @@ package STM32_SVD.DFSDM is
 
    --  Digital filter for sigma delta modulators
    DFSDM_Periph : aliased DFSDM_Peripheral
-     with Import, Address => System'To_Address (16#40017400#);
+     with Import, Address => DFSDM_Base;
 
 end STM32_SVD.DFSDM;

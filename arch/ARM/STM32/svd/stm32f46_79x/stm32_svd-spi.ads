@@ -49,7 +49,7 @@ package STM32_SVD.SPI is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CR1_Register use record
@@ -91,7 +91,7 @@ package STM32_SVD.SPI is
       --  unspecified
       Reserved_8_31 : HAL.UInt24 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CR2_Register use record
@@ -129,7 +129,7 @@ package STM32_SVD.SPI is
       --  unspecified
       Reserved_9_31 : HAL.UInt23 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for SR_Register use record
@@ -154,7 +154,7 @@ package STM32_SVD.SPI is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DR_Register use record
@@ -171,7 +171,7 @@ package STM32_SVD.SPI is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CRCPR_Register use record
@@ -188,7 +188,7 @@ package STM32_SVD.SPI is
       --  unspecified
       Reserved_16_31 : HAL.UInt16;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for RXCRCR_Register use record
@@ -205,7 +205,7 @@ package STM32_SVD.SPI is
       --  unspecified
       Reserved_16_31 : HAL.UInt16;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for TXCRCR_Register use record
@@ -240,7 +240,7 @@ package STM32_SVD.SPI is
       --  unspecified
       Reserved_12_31 : HAL.UInt20 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for I2SCFGR_Register use record
@@ -269,7 +269,7 @@ package STM32_SVD.SPI is
       --  unspecified
       Reserved_10_31 : HAL.UInt22 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for I2SPR_Register use record
@@ -320,34 +320,34 @@ package STM32_SVD.SPI is
 
    --  Serial peripheral interface
    I2S2ext_Periph : aliased SPI_Peripheral
-     with Import, Address => System'To_Address (16#40003400#);
+     with Import, Address => I2S2ext_Base;
 
    --  Serial peripheral interface
    I2S3ext_Periph : aliased SPI_Peripheral
-     with Import, Address => System'To_Address (16#40004000#);
+     with Import, Address => I2S3ext_Base;
 
    --  Serial peripheral interface
    SPI1_Periph : aliased SPI_Peripheral
-     with Import, Address => System'To_Address (16#40013000#);
+     with Import, Address => SPI1_Base;
 
    --  Serial peripheral interface
    SPI2_Periph : aliased SPI_Peripheral
-     with Import, Address => System'To_Address (16#40003800#);
+     with Import, Address => SPI2_Base;
 
    --  Serial peripheral interface
    SPI3_Periph : aliased SPI_Peripheral
-     with Import, Address => System'To_Address (16#40003C00#);
+     with Import, Address => SPI3_Base;
 
    --  Serial peripheral interface
    SPI4_Periph : aliased SPI_Peripheral
-     with Import, Address => System'To_Address (16#40013400#);
+     with Import, Address => SPI4_Base;
 
    --  Serial peripheral interface
    SPI5_Periph : aliased SPI_Peripheral
-     with Import, Address => System'To_Address (16#40015000#);
+     with Import, Address => SPI5_Base;
 
    --  Serial peripheral interface
    SPI6_Periph : aliased SPI_Peripheral
-     with Import, Address => System'To_Address (16#40015400#);
+     with Import, Address => SPI6_Base;
 
 end STM32_SVD.SPI;

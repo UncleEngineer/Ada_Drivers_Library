@@ -102,12 +102,12 @@ package NRF_SVD.GPIO is
    --  Pin 0
    type OUTSET_PIN0_Field_1 is
      (--  Reset value for the field
-      Outset_Pin0_Field_Reset,
+      OUTSET_PIN0_Field_Reset,
       --  Write: writing a '1' sets the pin high; writing a '0' has no effect
       Set)
      with Size => 1;
    for OUTSET_PIN0_Field_1 use
-     (Outset_Pin0_Field_Reset => 0,
+     (OUTSET_PIN0_Field_Reset => 0,
       Set => 1);
 
    --  OUTSET_PIN array
@@ -149,12 +149,12 @@ package NRF_SVD.GPIO is
    --  Pin 0
    type OUTCLR_PIN0_Field_1 is
      (--  Reset value for the field
-      Outclr_Pin0_Field_Reset,
+      OUTCLR_PIN0_Field_Reset,
       --  Write: writing a '1' sets the pin low; writing a '0' has no effect
       Clear)
      with Size => 1;
    for OUTCLR_PIN0_Field_1 use
-     (Outclr_Pin0_Field_Reset => 0,
+     (OUTCLR_PIN0_Field_Reset => 0,
       Clear => 1);
 
    --  OUTCLR_PIN array
@@ -268,12 +268,12 @@ package NRF_SVD.GPIO is
    --  Set as output pin 0
    type DIRSET_PIN0_Field_1 is
      (--  Reset value for the field
-      Dirset_Pin0_Field_Reset,
+      DIRSET_PIN0_Field_Reset,
       --  Write: writing a '1' sets pin to output; writing a '0' has no effect
       Set)
      with Size => 1;
    for DIRSET_PIN0_Field_1 use
-     (Dirset_Pin0_Field_Reset => 0,
+     (DIRSET_PIN0_Field_Reset => 0,
       Set => 1);
 
    --  DIRSET_PIN array
@@ -315,12 +315,12 @@ package NRF_SVD.GPIO is
    --  Set as input pin 0
    type DIRCLR_PIN0_Field_1 is
      (--  Reset value for the field
-      Dirclr_Pin0_Field_Reset,
+      DIRCLR_PIN0_Field_Reset,
       --  Write: writing a '1' sets pin to input; writing a '0' has no effect
       Clear)
      with Size => 1;
    for DIRCLR_PIN0_Field_1 use
-     (Dirclr_Pin0_Field_Reset => 0,
+     (DIRCLR_PIN0_Field_Reset => 0,
       Clear => 1);
 
    --  DIRCLR_PIN array
@@ -352,12 +352,12 @@ package NRF_SVD.GPIO is
    --  Write '1' to clear.
    type LATCH_PIN0_Field is
      (--  Criteria has not been met
-      Notlatched,
+      NotLatched,
       --  Criteria has been met
       Latched)
      with Size => 1;
    for LATCH_PIN0_Field use
-     (Notlatched => 0,
+     (NotLatched => 0,
       Latched => 1);
 
    --  LATCH_PIN array
@@ -391,11 +391,11 @@ package NRF_SVD.GPIO is
      (--  DETECT directly connected to PIN DETECT signals
       Default,
       --  Use the latched LDETECT behaviour
-      Ldetect)
+      LDETECT)
      with Size => 1;
    for DETECTMODE_DETECTMODE_Field use
      (Default => 0,
-      Ldetect => 1);
+      LDETECT => 1);
 
    --  Select between default DETECT signal behaviour and LDETECT mode
    type DETECTMODE_Register is record
@@ -571,7 +571,7 @@ package NRF_SVD.GPIO is
    end record;
 
    --  GPIO Port 1
-   GPIO_Periph : aliased GPIO_Peripheral
+   P0_Periph : aliased GPIO_Peripheral
      with Import, Address => P0_Base;
 
 end NRF_SVD.GPIO;

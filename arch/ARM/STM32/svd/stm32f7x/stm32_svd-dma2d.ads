@@ -45,7 +45,7 @@ package STM32_SVD.DMA2D is
       --  unspecified
       Reserved_18_31 : HAL.UInt14 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CR_Register use record
@@ -81,7 +81,7 @@ package STM32_SVD.DMA2D is
       --  unspecified
       Reserved_6_31 : HAL.UInt26;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for ISR_Register use record
@@ -111,7 +111,7 @@ package STM32_SVD.DMA2D is
       --  unspecified
       Reserved_6_31 : HAL.UInt26 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for IFCR_Register use record
@@ -133,7 +133,7 @@ package STM32_SVD.DMA2D is
       --  unspecified
       Reserved_14_31 : HAL.UInt18 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for FGOR_Register use record
@@ -150,7 +150,7 @@ package STM32_SVD.DMA2D is
       --  unspecified
       Reserved_14_31 : HAL.UInt18 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for BGOR_Register use record
@@ -182,7 +182,7 @@ package STM32_SVD.DMA2D is
       --  Alpha value
       ALPHA          : FGPFCCR_ALPHA_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for FGPFCCR_Register use record
@@ -211,7 +211,7 @@ package STM32_SVD.DMA2D is
       --  unspecified
       Reserved_24_31 : HAL.UInt8 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for FGCOLR_Register use record
@@ -245,7 +245,7 @@ package STM32_SVD.DMA2D is
       --  Alpha value
       ALPHA          : BGPFCCR_ALPHA_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for BGPFCCR_Register use record
@@ -274,7 +274,7 @@ package STM32_SVD.DMA2D is
       --  unspecified
       Reserved_24_31 : HAL.UInt8 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for BGCOLR_Register use record
@@ -293,7 +293,7 @@ package STM32_SVD.DMA2D is
       --  unspecified
       Reserved_3_31 : HAL.UInt29 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OPFCCR_Register use record
@@ -317,7 +317,7 @@ package STM32_SVD.DMA2D is
       --  Alpha Channel Value
       APLHA : OCOLR_APLHA_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OCOLR_Register use record
@@ -336,7 +336,7 @@ package STM32_SVD.DMA2D is
       --  unspecified
       Reserved_14_31 : HAL.UInt18 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OOR_Register use record
@@ -356,7 +356,7 @@ package STM32_SVD.DMA2D is
       --  unspecified
       Reserved_30_31 : HAL.UInt2 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for NLR_Register use record
@@ -374,7 +374,7 @@ package STM32_SVD.DMA2D is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for LWR_Register use record
@@ -395,7 +395,7 @@ package STM32_SVD.DMA2D is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for AMTCR_Register use record
@@ -421,7 +421,7 @@ package STM32_SVD.DMA2D is
       --  APLHA
       APLHA : FGCLUT_APLHA_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for FGCLUT_Register use record
@@ -447,7 +447,7 @@ package STM32_SVD.DMA2D is
       --  APLHA
       APLHA : BGCLUT_APLHA_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for BGCLUT_Register use record
@@ -537,6 +537,6 @@ package STM32_SVD.DMA2D is
 
    --  DMA2D controller
    DMA2D_Periph : aliased DMA2D_Peripheral
-     with Import, Address => System'To_Address (16#4002B000#);
+     with Import, Address => DMA2D_Base;
 
 end STM32_SVD.DMA2D;

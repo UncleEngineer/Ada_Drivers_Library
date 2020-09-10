@@ -23,7 +23,7 @@ package STM32_SVD.NVIC is
       --  unspecified
       Reserved_4_31 : HAL.UInt28;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for ICTR_Register use record
@@ -51,7 +51,7 @@ package STM32_SVD.NVIC is
             Arr : IPR_IPR_N_Field_Array;
       end case;
    end record
-     with Unchecked_Union, Size => 32, Volatile_Full_Access,
+     with Unchecked_Union, Size => 32, Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for IPR_Register use record
@@ -68,7 +68,7 @@ package STM32_SVD.NVIC is
       --  unspecified
       Reserved_9_31 : HAL.UInt23 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for STIR_Register use record
@@ -204,6 +204,6 @@ package STM32_SVD.NVIC is
 
    --  Nested Vectored Interrupt Controller
    NVIC_Periph : aliased NVIC_Peripheral
-     with Import, Address => System'To_Address (16#E000E000#);
+     with Import, Address => NVIC_Base;
 
 end STM32_SVD.NVIC;

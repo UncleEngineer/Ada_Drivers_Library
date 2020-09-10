@@ -120,12 +120,12 @@ package NRF_SVD.PDM is
    --  Write '1' to Enable interrupt for STARTED event
    type INTENSET_STARTED_Field_1 is
      (--  Reset value for the field
-      Intenset_Started_Field_Reset,
+      INTENSET_STARTED_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_STARTED_Field_1 use
-     (Intenset_Started_Field_Reset => 0,
+     (INTENSET_STARTED_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for STOPPED event
@@ -142,12 +142,12 @@ package NRF_SVD.PDM is
    --  Write '1' to Enable interrupt for STOPPED event
    type INTENSET_STOPPED_Field_1 is
      (--  Reset value for the field
-      Intenset_Stopped_Field_Reset,
+      INTENSET_STOPPED_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_STOPPED_Field_1 use
-     (Intenset_Stopped_Field_Reset => 0,
+     (INTENSET_STOPPED_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for END event
@@ -164,24 +164,24 @@ package NRF_SVD.PDM is
    --  Write '1' to Enable interrupt for END event
    type INTENSET_END_Field_1 is
      (--  Reset value for the field
-      Intenset_End_Field_Reset,
+      INTENSET_END_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_END_Field_1 use
-     (Intenset_End_Field_Reset => 0,
+     (INTENSET_END_Field_Reset => 0,
       Set => 1);
 
    --  Enable interrupt
    type INTENSET_Register is record
       --  Write '1' to Enable interrupt for STARTED event
       STARTED       : INTENSET_STARTED_Field_1 :=
-                       Intenset_Started_Field_Reset;
+                       INTENSET_STARTED_Field_Reset;
       --  Write '1' to Enable interrupt for STOPPED event
       STOPPED       : INTENSET_STOPPED_Field_1 :=
-                       Intenset_Stopped_Field_Reset;
+                       INTENSET_STOPPED_Field_Reset;
       --  Write '1' to Enable interrupt for END event
-      END_k         : INTENSET_END_Field_1 := Intenset_End_Field_Reset;
+      END_k         : INTENSET_END_Field_1 := INTENSET_END_Field_Reset;
       --  unspecified
       Reserved_3_31 : HAL.UInt29 := 16#0#;
    end record
@@ -209,12 +209,12 @@ package NRF_SVD.PDM is
    --  Write '1' to Disable interrupt for STARTED event
    type INTENCLR_STARTED_Field_1 is
      (--  Reset value for the field
-      Intenclr_Started_Field_Reset,
+      INTENCLR_STARTED_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_STARTED_Field_1 use
-     (Intenclr_Started_Field_Reset => 0,
+     (INTENCLR_STARTED_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for STOPPED event
@@ -231,12 +231,12 @@ package NRF_SVD.PDM is
    --  Write '1' to Disable interrupt for STOPPED event
    type INTENCLR_STOPPED_Field_1 is
      (--  Reset value for the field
-      Intenclr_Stopped_Field_Reset,
+      INTENCLR_STOPPED_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_STOPPED_Field_1 use
-     (Intenclr_Stopped_Field_Reset => 0,
+     (INTENCLR_STOPPED_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for END event
@@ -253,24 +253,24 @@ package NRF_SVD.PDM is
    --  Write '1' to Disable interrupt for END event
    type INTENCLR_END_Field_1 is
      (--  Reset value for the field
-      Intenclr_End_Field_Reset,
+      INTENCLR_END_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_END_Field_1 use
-     (Intenclr_End_Field_Reset => 0,
+     (INTENCLR_END_Field_Reset => 0,
       Clear => 1);
 
    --  Disable interrupt
    type INTENCLR_Register is record
       --  Write '1' to Disable interrupt for STARTED event
       STARTED       : INTENCLR_STARTED_Field_1 :=
-                       Intenclr_Started_Field_Reset;
+                       INTENCLR_STARTED_Field_Reset;
       --  Write '1' to Disable interrupt for STOPPED event
       STOPPED       : INTENCLR_STOPPED_Field_1 :=
-                       Intenclr_Stopped_Field_Reset;
+                       INTENCLR_STOPPED_Field_Reset;
       --  Write '1' to Disable interrupt for END event
-      END_k         : INTENCLR_END_Field_1 := Intenclr_End_Field_Reset;
+      END_k         : INTENCLR_END_Field_1 := INTENCLR_END_Field_Reset;
       --  unspecified
       Reserved_3_31 : HAL.UInt29 := 16#0#;
    end record
@@ -326,20 +326,20 @@ package NRF_SVD.PDM is
    --  Defines on which PDM_CLK edge Left (or mono) is sampled
    type MODE_EDGE_Field is
      (--  Left (or mono) is sampled on falling edge of PDM_CLK
-      Leftfalling,
+      LeftFalling,
       --  Left (or mono) is sampled on rising edge of PDM_CLK
-      Leftrising)
+      LeftRising)
      with Size => 1;
    for MODE_EDGE_Field use
-     (Leftfalling => 0,
-      Leftrising => 1);
+     (LeftFalling => 0,
+      LeftRising => 1);
 
    --  Defines the routing of the connected PDM microphones' signals
    type MODE_Register is record
       --  Mono or stereo operation
       OPERATION     : MODE_OPERATION_Field := NRF_SVD.PDM.Stereo;
       --  Defines on which PDM_CLK edge Left (or mono) is sampled
-      EDGE          : MODE_EDGE_Field := NRF_SVD.PDM.Leftfalling;
+      EDGE          : MODE_EDGE_Field := NRF_SVD.PDM.LeftFalling;
       --  unspecified
       Reserved_2_31 : HAL.UInt30 := 16#0#;
    end record
@@ -359,16 +359,16 @@ package NRF_SVD.PDM is
    --  adjust
    type GAINL_GAINL_Field is
      (--  -20dB gain adjustment (minimum)
-      Mingain,
+      MinGain,
       --  0dB gain adjustment ('2500 RMS' requirement)
-      Defaultgain,
+      DefaultGain,
       --  +20dB gain adjustment (maximum)
-      Maxgain)
+      MaxGain)
      with Size => 7;
    for GAINL_GAINL_Field use
-     (Mingain => 0,
-      Defaultgain => 40,
-      Maxgain => 80);
+     (MinGain => 0,
+      DefaultGain => 40,
+      MaxGain => 80);
 
    --  Left output gain adjustment
    type GAINL_Register is record
@@ -377,7 +377,7 @@ package NRF_SVD.PDM is
       --  -19.5 dB gain adjust (...) 0x27 -0.5 dB gain adjust 0x28 0 dB gain
       --  adjust 0x29 +0.5 dB gain adjust (...) 0x4F +19.5 dB gain adjust 0x50
       --  +20 dB gain adjust
-      GAINL         : GAINL_GAINL_Field := NRF_SVD.PDM.Defaultgain;
+      GAINL         : GAINL_GAINL_Field := NRF_SVD.PDM.DefaultGain;
       --  unspecified
       Reserved_7_31 : HAL.UInt25 := 16#0#;
    end record
@@ -393,22 +393,22 @@ package NRF_SVD.PDM is
    --  gain (see electrical parameters)
    type GAINR_GAINR_Field is
      (--  -20dB gain adjustment (minimum)
-      Mingain,
+      MinGain,
       --  0dB gain adjustment ('2500 RMS' requirement)
-      Defaultgain,
+      DefaultGain,
       --  +20dB gain adjustment (maximum)
-      Maxgain)
+      MaxGain)
      with Size => 8;
    for GAINR_GAINR_Field use
-     (Mingain => 0,
-      Defaultgain => 40,
-      Maxgain => 80);
+     (MinGain => 0,
+      DefaultGain => 40,
+      MaxGain => 80);
 
    --  Right output gain adjustment
    type GAINR_Register is record
       --  Right output gain adjustment, in 0.5 dB steps, around the default
       --  module gain (see electrical parameters)
-      GAINR         : GAINR_GAINR_Field := NRF_SVD.PDM.Defaultgain;
+      GAINR         : GAINR_GAINR_Field := NRF_SVD.PDM.DefaultGain;
       --  unspecified
       Reserved_8_31 : HAL.UInt24 := 16#0#;
    end record

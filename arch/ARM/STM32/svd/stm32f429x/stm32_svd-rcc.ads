@@ -50,7 +50,7 @@ package STM32_SVD.RCC is
       --  unspecified
       Reserved_28_31 : HAL.UInt4 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CR_Register use record
@@ -99,7 +99,7 @@ package STM32_SVD.RCC is
       --  unspecified
       Reserved_28_31 : HAL.UInt4 := 16#2#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for PLLCFGR_Register use record
@@ -175,7 +175,7 @@ package STM32_SVD.RCC is
       --  Microcontroller clock output 2
       MCO2         : CFGR_MCO2_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CFGR_Register use record
@@ -245,7 +245,7 @@ package STM32_SVD.RCC is
       --  unspecified
       Reserved_24_31 : HAL.UInt8 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CIR_Register use record
@@ -323,7 +323,7 @@ package STM32_SVD.RCC is
       --  unspecified
       Reserved_30_31 : HAL.UInt2 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for AHB1RSTR_Register use record
@@ -364,7 +364,7 @@ package STM32_SVD.RCC is
       --  unspecified
       Reserved_8_31 : HAL.UInt24 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for AHB2RSTR_Register use record
@@ -382,7 +382,7 @@ package STM32_SVD.RCC is
       --  unspecified
       Reserved_1_31 : HAL.UInt31 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for AHB3RSTR_Register use record
@@ -453,7 +453,7 @@ package STM32_SVD.RCC is
       --  UART8 reset
       UART8RST       : Boolean := False;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for APB1RSTR_Register use record
@@ -538,7 +538,7 @@ package STM32_SVD.RCC is
       --  unspecified
       Reserved_27_31 : HAL.UInt5 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for APB2RSTR_Register use record
@@ -626,7 +626,7 @@ package STM32_SVD.RCC is
       --  unspecified
       Reserved_31_31 : HAL.Bit := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for AHB1ENR_Register use record
@@ -673,7 +673,7 @@ package STM32_SVD.RCC is
       --  unspecified
       Reserved_8_31 : HAL.UInt24 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for AHB2ENR_Register use record
@@ -691,7 +691,7 @@ package STM32_SVD.RCC is
       --  unspecified
       Reserved_1_31 : HAL.UInt31 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for AHB3ENR_Register use record
@@ -762,7 +762,7 @@ package STM32_SVD.RCC is
       --  UART8 clock enable
       UART8ENR       : Boolean := False;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for APB1ENR_Register use record
@@ -849,7 +849,7 @@ package STM32_SVD.RCC is
       --  unspecified
       Reserved_27_31 : HAL.UInt5 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for APB2ENR_Register use record
@@ -944,7 +944,7 @@ package STM32_SVD.RCC is
       --  unspecified
       Reserved_31_31 : HAL.Bit := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for AHB1LPENR_Register use record
@@ -994,7 +994,7 @@ package STM32_SVD.RCC is
       --  unspecified
       Reserved_8_31 : HAL.UInt24 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for AHB2LPENR_Register use record
@@ -1012,7 +1012,7 @@ package STM32_SVD.RCC is
       --  unspecified
       Reserved_1_31 : HAL.UInt31 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for AHB3LPENR_Register use record
@@ -1083,7 +1083,7 @@ package STM32_SVD.RCC is
       --  UART8 clock enable during Sleep mode
       UART8LPEN      : Boolean := False;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for APB1LPENR_Register use record
@@ -1170,7 +1170,7 @@ package STM32_SVD.RCC is
       --  unspecified
       Reserved_27_31 : HAL.UInt5 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for APB2LPENR_Register use record
@@ -1245,7 +1245,7 @@ package STM32_SVD.RCC is
       --  unspecified
       Reserved_17_31 : HAL.UInt15 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for BDCR_Register use record
@@ -1285,7 +1285,7 @@ package STM32_SVD.RCC is
       --  Low-power reset flag
       LPWRRSTF      : Boolean := False;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CSR_Register use record
@@ -1318,7 +1318,7 @@ package STM32_SVD.RCC is
       --  Spread spectrum modulation enable
       SSCGEN         : Boolean := False;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for SSCGR_Register use record
@@ -1348,7 +1348,7 @@ package STM32_SVD.RCC is
       --  unspecified
       Reserved_31_31 : HAL.Bit := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for PLLI2SCFGR_Register use record
@@ -1379,7 +1379,7 @@ package STM32_SVD.RCC is
       --  unspecified
       Reserved_31_31 : HAL.Bit := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for PLLSAICFGR_Register use record
@@ -1420,7 +1420,7 @@ package STM32_SVD.RCC is
       --  unspecified
       Reserved_25_31 : HAL.UInt7 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DCKCFGR_Register use record
@@ -1525,6 +1525,6 @@ package STM32_SVD.RCC is
 
    --  Reset and clock control
    RCC_Periph : aliased RCC_Peripheral
-     with Import, Address => System'To_Address (16#40023800#);
+     with Import, Address => RCC_Base;
 
 end STM32_SVD.RCC;

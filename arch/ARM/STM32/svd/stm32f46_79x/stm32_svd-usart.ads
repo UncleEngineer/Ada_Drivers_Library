@@ -37,7 +37,7 @@ package STM32_SVD.USART is
       --  unspecified
       Reserved_9_31 : HAL.UInt23 := 16#6000#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for SR_Register use record
@@ -62,7 +62,7 @@ package STM32_SVD.USART is
       --  unspecified
       Reserved_9_31 : HAL.UInt23 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DR_Register use record
@@ -82,7 +82,7 @@ package STM32_SVD.USART is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for BRR_Register use record
@@ -128,7 +128,7 @@ package STM32_SVD.USART is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CR1_Register use record
@@ -173,7 +173,7 @@ package STM32_SVD.USART is
       --  unspecified
       Reserved_15_31 : HAL.UInt17 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CR2_Register use record
@@ -210,7 +210,7 @@ package STM32_SVD.USART is
       --  unspecified
       Reserved_12_31 : HAL.UInt20 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CR3_Register use record
@@ -251,7 +251,7 @@ package STM32_SVD.USART is
       --  unspecified
       Reserved_10_31 : HAL.UInt22 := 16#3000#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for SR_Register_1 use record
@@ -295,7 +295,7 @@ package STM32_SVD.USART is
       --  unspecified
       Reserved_15_31 : HAL.UInt17 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CR2_Register_1 use record
@@ -342,7 +342,7 @@ package STM32_SVD.USART is
       --  unspecified
       Reserved_12_31 : HAL.UInt20 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CR3_Register_1 use record
@@ -373,7 +373,7 @@ package STM32_SVD.USART is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for GTPR_Register use record
@@ -414,19 +414,19 @@ package STM32_SVD.USART is
 
    --  Universal synchronous asynchronous receiver transmitter
    UART4_Periph : aliased UART4_Peripheral
-     with Import, Address => System'To_Address (16#40004C00#);
+     with Import, Address => UART4_Base;
 
    --  Universal synchronous asynchronous receiver transmitter
    UART5_Periph : aliased UART4_Peripheral
-     with Import, Address => System'To_Address (16#40005000#);
+     with Import, Address => UART5_Base;
 
    --  Universal synchronous asynchronous receiver transmitter
    UART7_Periph : aliased UART4_Peripheral
-     with Import, Address => System'To_Address (16#40007800#);
+     with Import, Address => UART7_Base;
 
    --  Universal synchronous asynchronous receiver transmitter
    UART8_Periph : aliased UART4_Peripheral
-     with Import, Address => System'To_Address (16#40007C00#);
+     with Import, Address => UART8_Base;
 
    --  Universal synchronous asynchronous receiver transmitter
    type USART1_Peripheral is record
@@ -459,18 +459,18 @@ package STM32_SVD.USART is
 
    --  Universal synchronous asynchronous receiver transmitter
    USART1_Periph : aliased USART1_Peripheral
-     with Import, Address => System'To_Address (16#40011000#);
+     with Import, Address => USART1_Base;
 
    --  Universal synchronous asynchronous receiver transmitter
    USART2_Periph : aliased USART1_Peripheral
-     with Import, Address => System'To_Address (16#40004400#);
+     with Import, Address => USART2_Base;
 
    --  Universal synchronous asynchronous receiver transmitter
    USART3_Periph : aliased USART1_Peripheral
-     with Import, Address => System'To_Address (16#40004800#);
+     with Import, Address => USART3_Base;
 
    --  Universal synchronous asynchronous receiver transmitter
    USART6_Periph : aliased USART1_Peripheral
-     with Import, Address => System'To_Address (16#40011400#);
+     with Import, Address => USART6_Base;
 
 end STM32_SVD.USART;

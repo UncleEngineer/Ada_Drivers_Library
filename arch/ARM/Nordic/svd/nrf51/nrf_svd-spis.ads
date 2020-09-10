@@ -86,12 +86,12 @@ package NRF_SVD.SPIS is
    --  Enable interrupt on END event.
    type INTENSET_END_Field_1 is
      (--  Reset value for the field
-      Intenset_End_Field_Reset,
+      INTENSET_END_Field_Reset,
       --  Enable interrupt on write.
       Set)
      with Size => 1;
    for INTENSET_END_Field_1 use
-     (Intenset_End_Field_Reset => 0,
+     (INTENSET_END_Field_Reset => 0,
       Set => 1);
 
    --  Enable interrupt on ACQUIRED event.
@@ -108,12 +108,12 @@ package NRF_SVD.SPIS is
    --  Enable interrupt on ACQUIRED event.
    type INTENSET_ACQUIRED_Field_1 is
      (--  Reset value for the field
-      Intenset_Acquired_Field_Reset,
+      INTENSET_ACQUIRED_Field_Reset,
       --  Enable interrupt on write.
       Set)
      with Size => 1;
    for INTENSET_ACQUIRED_Field_1 use
-     (Intenset_Acquired_Field_Reset => 0,
+     (INTENSET_ACQUIRED_Field_Reset => 0,
       Set => 1);
 
    --  Interrupt enable set register.
@@ -121,12 +121,12 @@ package NRF_SVD.SPIS is
       --  unspecified
       Reserved_0_0   : HAL.Bit := 16#0#;
       --  Enable interrupt on END event.
-      END_k          : INTENSET_END_Field_1 := Intenset_End_Field_Reset;
+      END_k          : INTENSET_END_Field_1 := INTENSET_END_Field_Reset;
       --  unspecified
       Reserved_2_9   : HAL.UInt8 := 16#0#;
       --  Enable interrupt on ACQUIRED event.
       ACQUIRED       : INTENSET_ACQUIRED_Field_1 :=
-                        Intenset_Acquired_Field_Reset;
+                        INTENSET_ACQUIRED_Field_Reset;
       --  unspecified
       Reserved_11_31 : HAL.UInt21 := 16#0#;
    end record
@@ -155,12 +155,12 @@ package NRF_SVD.SPIS is
    --  Disable interrupt on END event.
    type INTENCLR_END_Field_1 is
      (--  Reset value for the field
-      Intenclr_End_Field_Reset,
+      INTENCLR_END_Field_Reset,
       --  Disable interrupt on write.
       Clear)
      with Size => 1;
    for INTENCLR_END_Field_1 use
-     (Intenclr_End_Field_Reset => 0,
+     (INTENCLR_END_Field_Reset => 0,
       Clear => 1);
 
    --  Disable interrupt on ACQUIRED event.
@@ -177,12 +177,12 @@ package NRF_SVD.SPIS is
    --  Disable interrupt on ACQUIRED event.
    type INTENCLR_ACQUIRED_Field_1 is
      (--  Reset value for the field
-      Intenclr_Acquired_Field_Reset,
+      INTENCLR_ACQUIRED_Field_Reset,
       --  Disable interrupt on write.
       Clear)
      with Size => 1;
    for INTENCLR_ACQUIRED_Field_1 use
-     (Intenclr_Acquired_Field_Reset => 0,
+     (INTENCLR_ACQUIRED_Field_Reset => 0,
       Clear => 1);
 
    --  Interrupt enable clear register.
@@ -190,12 +190,12 @@ package NRF_SVD.SPIS is
       --  unspecified
       Reserved_0_0   : HAL.Bit := 16#0#;
       --  Disable interrupt on END event.
-      END_k          : INTENCLR_END_Field_1 := Intenclr_End_Field_Reset;
+      END_k          : INTENCLR_END_Field_1 := INTENCLR_END_Field_Reset;
       --  unspecified
       Reserved_2_9   : HAL.UInt8 := 16#0#;
       --  Disable interrupt on ACQUIRED event.
       ACQUIRED       : INTENCLR_ACQUIRED_Field_1 :=
-                        Intenclr_Acquired_Field_Reset;
+                        INTENCLR_ACQUIRED_Field_Reset;
       --  unspecified
       Reserved_11_31 : HAL.UInt21 := 16#0#;
    end record
@@ -215,17 +215,17 @@ package NRF_SVD.SPIS is
      (--  Semaphore is free.
       Free,
       --  Semaphore is assigned to the CPU.
-      Cpu,
+      CPU,
       --  Semaphore is assigned to the SPIS.
-      Spis,
+      SPIS,
       --  Semaphore is assigned to the SPIS, but a handover to the CPU is pending.
-      Cpupending)
+      CPUPending)
      with Size => 2;
    for SEMSTAT_SEMSTAT_Field use
      (Free => 0,
-      Cpu => 1,
-      Spis => 2,
-      Cpupending => 3);
+      CPU => 1,
+      SPIS => 2,
+      CPUPending => 3);
 
    --  Semaphore status.
    type SEMSTAT_Register is record
@@ -245,53 +245,53 @@ package NRF_SVD.SPIS is
    --  TX buffer overread detected, and prevented.
    type STATUS_OVERREAD_Field is
      (--  Error not present.
-      Notpresent,
+      NotPresent,
       --  Error present.
       Present)
      with Size => 1;
    for STATUS_OVERREAD_Field use
-     (Notpresent => 0,
+     (NotPresent => 0,
       Present => 1);
 
    --  TX buffer overread detected, and prevented.
    type STATUS_OVERREAD_Field_1 is
      (--  Reset value for the field
-      Status_Overread_Field_Reset,
+      STATUS_OVERREAD_Field_Reset,
       --  Clear on write.
       Clear)
      with Size => 1;
    for STATUS_OVERREAD_Field_1 use
-     (Status_Overread_Field_Reset => 0,
+     (STATUS_OVERREAD_Field_Reset => 0,
       Clear => 1);
 
    --  RX buffer overflow detected, and prevented.
    type STATUS_OVERFLOW_Field is
      (--  Error not present.
-      Notpresent,
+      NotPresent,
       --  Error present.
       Present)
      with Size => 1;
    for STATUS_OVERFLOW_Field use
-     (Notpresent => 0,
+     (NotPresent => 0,
       Present => 1);
 
    --  RX buffer overflow detected, and prevented.
    type STATUS_OVERFLOW_Field_1 is
      (--  Reset value for the field
-      Status_Overflow_Field_Reset,
+      STATUS_OVERFLOW_Field_Reset,
       --  Clear on write.
       Clear)
      with Size => 1;
    for STATUS_OVERFLOW_Field_1 use
-     (Status_Overflow_Field_Reset => 0,
+     (STATUS_OVERFLOW_Field_Reset => 0,
       Clear => 1);
 
    --  Status from last transaction.
    type STATUS_Register is record
       --  TX buffer overread detected, and prevented.
-      OVERREAD      : STATUS_OVERREAD_Field_1 := Status_Overread_Field_Reset;
+      OVERREAD      : STATUS_OVERREAD_Field_1 := STATUS_OVERREAD_Field_Reset;
       --  RX buffer overflow detected, and prevented.
-      OVERFLOW      : STATUS_OVERFLOW_Field_1 := Status_Overflow_Field_Reset;
+      OVERFLOW      : STATUS_OVERFLOW_Field_1 := STATUS_OVERFLOW_Field_Reset;
       --  unspecified
       Reserved_2_31 : HAL.UInt30 := 16#0#;
    end record
@@ -401,13 +401,13 @@ package NRF_SVD.SPIS is
    --  Bit order.
    type CONFIG_ORDER_Field is
      (--  Most significant bit transmitted out first.
-      Msbfirst,
+      MsbFirst,
       --  Least significant bit transmitted out first.
-      Lsbfirst)
+      LsbFirst)
      with Size => 1;
    for CONFIG_ORDER_Field use
-     (Msbfirst => 0,
-      Lsbfirst => 1);
+     (MsbFirst => 0,
+      LsbFirst => 1);
 
    --  Serial clock (SCK) phase.
    type CONFIG_CPHA_Field is
@@ -423,22 +423,22 @@ package NRF_SVD.SPIS is
    --  Serial clock (SCK) polarity.
    type CONFIG_CPOL_Field is
      (--  Active high.
-      Activehigh,
+      ActiveHigh,
       --  Active low.
-      Activelow)
+      ActiveLow)
      with Size => 1;
    for CONFIG_CPOL_Field use
-     (Activehigh => 0,
-      Activelow => 1);
+     (ActiveHigh => 0,
+      ActiveLow => 1);
 
    --  Configuration register.
    type CONFIG_Register is record
       --  Bit order.
-      ORDER         : CONFIG_ORDER_Field := NRF_SVD.SPIS.Msbfirst;
+      ORDER         : CONFIG_ORDER_Field := NRF_SVD.SPIS.MsbFirst;
       --  Serial clock (SCK) phase.
       CPHA          : CONFIG_CPHA_Field := NRF_SVD.SPIS.Leading;
       --  Serial clock (SCK) polarity.
-      CPOL          : CONFIG_CPOL_Field := NRF_SVD.SPIS.Activehigh;
+      CPOL          : CONFIG_CPOL_Field := NRF_SVD.SPIS.ActiveHigh;
       --  unspecified
       Reserved_3_31 : HAL.UInt29 := 16#0#;
    end record

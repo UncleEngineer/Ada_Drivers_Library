@@ -67,12 +67,12 @@ package NRF_SVD.GPIOTE is
    --  Enable interrupt on IN[0] event.
    type INTENSET_IN0_Field_1 is
      (--  Reset value for the field
-      Intenset_In0_Field_Reset,
+      INTENSET_IN0_Field_Reset,
       --  Enable interrupt on write.
       Set)
      with Size => 1;
    for INTENSET_IN0_Field_1 use
-     (Intenset_In0_Field_Reset => 0,
+     (INTENSET_IN0_Field_Reset => 0,
       Set => 1);
 
    --  INTENSET_IN array
@@ -113,12 +113,12 @@ package NRF_SVD.GPIOTE is
    --  Enable interrupt on PORT event.
    type INTENSET_PORT_Field_1 is
      (--  Reset value for the field
-      Intenset_Port_Field_Reset,
+      INTENSET_PORT_Field_Reset,
       --  Enable interrupt on write.
       Set)
      with Size => 1;
    for INTENSET_PORT_Field_1 use
-     (Intenset_Port_Field_Reset => 0,
+     (INTENSET_PORT_Field_Reset => 0,
       Set => 1);
 
    --  Interrupt enable set register.
@@ -128,7 +128,7 @@ package NRF_SVD.GPIOTE is
       --  unspecified
       Reserved_4_30 : HAL.UInt27 := 16#0#;
       --  Enable interrupt on PORT event.
-      PORT          : INTENSET_PORT_Field_1 := Intenset_Port_Field_Reset;
+      PORT          : INTENSET_PORT_Field_1 := INTENSET_PORT_Field_Reset;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
@@ -153,12 +153,12 @@ package NRF_SVD.GPIOTE is
    --  Disable interrupt on IN[0] event.
    type INTENCLR_IN0_Field_1 is
      (--  Reset value for the field
-      Intenclr_In0_Field_Reset,
+      INTENCLR_IN0_Field_Reset,
       --  Disable interrupt on write.
       Clear)
      with Size => 1;
    for INTENCLR_IN0_Field_1 use
-     (Intenclr_In0_Field_Reset => 0,
+     (INTENCLR_IN0_Field_Reset => 0,
       Clear => 1);
 
    --  INTENCLR_IN array
@@ -199,12 +199,12 @@ package NRF_SVD.GPIOTE is
    --  Disable interrupt on PORT event.
    type INTENCLR_PORT_Field_1 is
      (--  Reset value for the field
-      Intenclr_Port_Field_Reset,
+      INTENCLR_PORT_Field_Reset,
       --  Disable interrupt on write.
       Clear)
      with Size => 1;
    for INTENCLR_PORT_Field_1 use
-     (Intenclr_Port_Field_Reset => 0,
+     (INTENCLR_PORT_Field_Reset => 0,
       Clear => 1);
 
    --  Interrupt enable clear register.
@@ -214,7 +214,7 @@ package NRF_SVD.GPIOTE is
       --  unspecified
       Reserved_4_30 : HAL.UInt27 := 16#0#;
       --  Disable interrupt on PORT event.
-      PORT          : INTENCLR_PORT_Field_1 := Intenclr_Port_Field_Reset;
+      PORT          : INTENCLR_PORT_Field_1 := INTENCLR_PORT_Field_Reset;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
@@ -247,16 +247,16 @@ package NRF_SVD.GPIOTE is
      (--  No task or event.
       None,
       --  Low to high.
-      Lotohi,
+      LoToHi,
       --  High to low.
-      Hitolo,
+      HiToLo,
       --  Toggle.
       Toggle)
      with Size => 2;
    for CONFIG_POLARITY_Field use
      (None => 0,
-      Lotohi => 1,
-      Hitolo => 2,
+      LoToHi => 1,
+      HiToLo => 2,
       Toggle => 3);
 
    --  Initial value of the output when the GPIOTE channel is configured as a

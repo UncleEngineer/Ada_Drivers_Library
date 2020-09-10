@@ -148,12 +148,12 @@ package NRF_SVD.LPCOMP is
    --  Write '1' to Enable interrupt for READY event
    type INTENSET_READY_Field_1 is
      (--  Reset value for the field
-      Intenset_Ready_Field_Reset,
+      INTENSET_READY_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_READY_Field_1 use
-     (Intenset_Ready_Field_Reset => 0,
+     (INTENSET_READY_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for DOWN event
@@ -170,12 +170,12 @@ package NRF_SVD.LPCOMP is
    --  Write '1' to Enable interrupt for DOWN event
    type INTENSET_DOWN_Field_1 is
      (--  Reset value for the field
-      Intenset_Down_Field_Reset,
+      INTENSET_DOWN_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_DOWN_Field_1 use
-     (Intenset_Down_Field_Reset => 0,
+     (INTENSET_DOWN_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for UP event
@@ -192,12 +192,12 @@ package NRF_SVD.LPCOMP is
    --  Write '1' to Enable interrupt for UP event
    type INTENSET_UP_Field_1 is
      (--  Reset value for the field
-      Intenset_Up_Field_Reset,
+      INTENSET_UP_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_UP_Field_1 use
-     (Intenset_Up_Field_Reset => 0,
+     (INTENSET_UP_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for CROSS event
@@ -214,24 +214,24 @@ package NRF_SVD.LPCOMP is
    --  Write '1' to Enable interrupt for CROSS event
    type INTENSET_CROSS_Field_1 is
      (--  Reset value for the field
-      Intenset_Cross_Field_Reset,
+      INTENSET_CROSS_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_CROSS_Field_1 use
-     (Intenset_Cross_Field_Reset => 0,
+     (INTENSET_CROSS_Field_Reset => 0,
       Set => 1);
 
    --  Enable interrupt
    type INTENSET_Register is record
       --  Write '1' to Enable interrupt for READY event
-      READY         : INTENSET_READY_Field_1 := Intenset_Ready_Field_Reset;
+      READY         : INTENSET_READY_Field_1 := INTENSET_READY_Field_Reset;
       --  Write '1' to Enable interrupt for DOWN event
-      DOWN          : INTENSET_DOWN_Field_1 := Intenset_Down_Field_Reset;
+      DOWN          : INTENSET_DOWN_Field_1 := INTENSET_DOWN_Field_Reset;
       --  Write '1' to Enable interrupt for UP event
-      UP            : INTENSET_UP_Field_1 := Intenset_Up_Field_Reset;
+      UP            : INTENSET_UP_Field_1 := INTENSET_UP_Field_Reset;
       --  Write '1' to Enable interrupt for CROSS event
-      CROSS         : INTENSET_CROSS_Field_1 := Intenset_Cross_Field_Reset;
+      CROSS         : INTENSET_CROSS_Field_1 := INTENSET_CROSS_Field_Reset;
       --  unspecified
       Reserved_4_31 : HAL.UInt28 := 16#0#;
    end record
@@ -260,12 +260,12 @@ package NRF_SVD.LPCOMP is
    --  Write '1' to Disable interrupt for READY event
    type INTENCLR_READY_Field_1 is
      (--  Reset value for the field
-      Intenclr_Ready_Field_Reset,
+      INTENCLR_READY_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_READY_Field_1 use
-     (Intenclr_Ready_Field_Reset => 0,
+     (INTENCLR_READY_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for DOWN event
@@ -282,12 +282,12 @@ package NRF_SVD.LPCOMP is
    --  Write '1' to Disable interrupt for DOWN event
    type INTENCLR_DOWN_Field_1 is
      (--  Reset value for the field
-      Intenclr_Down_Field_Reset,
+      INTENCLR_DOWN_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_DOWN_Field_1 use
-     (Intenclr_Down_Field_Reset => 0,
+     (INTENCLR_DOWN_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for UP event
@@ -304,12 +304,12 @@ package NRF_SVD.LPCOMP is
    --  Write '1' to Disable interrupt for UP event
    type INTENCLR_UP_Field_1 is
      (--  Reset value for the field
-      Intenclr_Up_Field_Reset,
+      INTENCLR_UP_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_UP_Field_1 use
-     (Intenclr_Up_Field_Reset => 0,
+     (INTENCLR_UP_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for CROSS event
@@ -326,24 +326,24 @@ package NRF_SVD.LPCOMP is
    --  Write '1' to Disable interrupt for CROSS event
    type INTENCLR_CROSS_Field_1 is
      (--  Reset value for the field
-      Intenclr_Cross_Field_Reset,
+      INTENCLR_CROSS_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_CROSS_Field_1 use
-     (Intenclr_Cross_Field_Reset => 0,
+     (INTENCLR_CROSS_Field_Reset => 0,
       Clear => 1);
 
    --  Disable interrupt
    type INTENCLR_Register is record
       --  Write '1' to Disable interrupt for READY event
-      READY         : INTENCLR_READY_Field_1 := Intenclr_Ready_Field_Reset;
+      READY         : INTENCLR_READY_Field_1 := INTENCLR_READY_Field_Reset;
       --  Write '1' to Disable interrupt for DOWN event
-      DOWN          : INTENCLR_DOWN_Field_1 := Intenclr_Down_Field_Reset;
+      DOWN          : INTENCLR_DOWN_Field_1 := INTENCLR_DOWN_Field_Reset;
       --  Write '1' to Disable interrupt for UP event
-      UP            : INTENCLR_UP_Field_1 := Intenclr_Up_Field_Reset;
+      UP            : INTENCLR_UP_Field_1 := INTENCLR_UP_Field_Reset;
       --  Write '1' to Disable interrupt for CROSS event
-      CROSS         : INTENCLR_CROSS_Field_1 := Intenclr_Cross_Field_Reset;
+      CROSS         : INTENCLR_CROSS_Field_1 := INTENCLR_CROSS_Field_Reset;
       --  unspecified
       Reserved_4_31 : HAL.UInt28 := 16#0#;
    end record
@@ -413,36 +413,36 @@ package NRF_SVD.LPCOMP is
    --  Analog pin select
    type PSEL_PSEL_Field is
      (--  AIN0 selected as analog input
-      Analoginput0,
+      AnalogInput0,
       --  AIN1 selected as analog input
-      Analoginput1,
+      AnalogInput1,
       --  AIN2 selected as analog input
-      Analoginput2,
+      AnalogInput2,
       --  AIN3 selected as analog input
-      Analoginput3,
+      AnalogInput3,
       --  AIN4 selected as analog input
-      Analoginput4,
+      AnalogInput4,
       --  AIN5 selected as analog input
-      Analoginput5,
+      AnalogInput5,
       --  AIN6 selected as analog input
-      Analoginput6,
+      AnalogInput6,
       --  AIN7 selected as analog input
-      Analoginput7)
+      AnalogInput7)
      with Size => 3;
    for PSEL_PSEL_Field use
-     (Analoginput0 => 0,
-      Analoginput1 => 1,
-      Analoginput2 => 2,
-      Analoginput3 => 3,
-      Analoginput4 => 4,
-      Analoginput5 => 5,
-      Analoginput6 => 6,
-      Analoginput7 => 7);
+     (AnalogInput0 => 0,
+      AnalogInput1 => 1,
+      AnalogInput2 => 2,
+      AnalogInput3 => 3,
+      AnalogInput4 => 4,
+      AnalogInput5 => 5,
+      AnalogInput6 => 6,
+      AnalogInput7 => 7);
 
    --  Input pin select
    type PSEL_Register is record
       --  Analog pin select
-      PSEL          : PSEL_PSEL_Field := NRF_SVD.LPCOMP.Analoginput0;
+      PSEL          : PSEL_PSEL_Field := NRF_SVD.LPCOMP.AnalogInput0;
       --  unspecified
       Reserved_3_31 : HAL.UInt29 := 16#0#;
    end record
@@ -471,7 +471,7 @@ package NRF_SVD.LPCOMP is
       --  VDD * 7/8 selected as reference
       Ref7_8Vdd,
       --  External analog reference selected
-      Aref,
+      ARef,
       --  VDD * 1/16 selected as reference
       Ref1_16Vdd,
       --  VDD * 3/16 selected as reference
@@ -497,7 +497,7 @@ package NRF_SVD.LPCOMP is
       Ref5_8Vdd => 4,
       Ref6_8Vdd => 5,
       Ref7_8Vdd => 6,
-      Aref => 7,
+      ARef => 7,
       Ref1_16Vdd => 8,
       Ref3_16Vdd => 9,
       Ref5_16Vdd => 10,
@@ -525,19 +525,19 @@ package NRF_SVD.LPCOMP is
    --  External analog reference select
    type EXTREFSEL_EXTREFSEL_Field is
      (--  Use AIN0 as external analog reference
-      Analogreference0,
+      AnalogReference0,
       --  Use AIN1 as external analog reference
-      Analogreference1)
+      AnalogReference1)
      with Size => 1;
    for EXTREFSEL_EXTREFSEL_Field use
-     (Analogreference0 => 0,
-      Analogreference1 => 1);
+     (AnalogReference0 => 0,
+      AnalogReference1 => 1);
 
    --  External reference select
    type EXTREFSEL_Register is record
       --  External analog reference select
       EXTREFSEL     : EXTREFSEL_EXTREFSEL_Field :=
-                       NRF_SVD.LPCOMP.Analogreference0;
+                       NRF_SVD.LPCOMP.AnalogReference0;
       --  unspecified
       Reserved_1_31 : HAL.UInt31 := 16#0#;
    end record
@@ -581,18 +581,18 @@ package NRF_SVD.LPCOMP is
    --  Comparator hysteresis enable
    type HYST_HYST_Field is
      (--  Comparator hysteresis disabled
-      Nohyst,
+      NoHyst,
       --  Comparator hysteresis disabled (typ. 50 mV)
-      Hyst50MV)
+      Hyst50mV)
      with Size => 1;
    for HYST_HYST_Field use
-     (Nohyst => 0,
-      Hyst50MV => 1);
+     (NoHyst => 0,
+      Hyst50mV => 1);
 
    --  Comparator hysteresis enable
    type HYST_Register is record
       --  Comparator hysteresis enable
-      HYST          : HYST_HYST_Field := NRF_SVD.LPCOMP.Nohyst;
+      HYST          : HYST_HYST_Field := NRF_SVD.LPCOMP.NoHyst;
       --  unspecified
       Reserved_1_31 : HAL.UInt31 := 16#0#;
    end record

@@ -16,8 +16,7 @@ package Cortex_M_SVD.SCB is
 
    --  Disables Interruption Folding
    type ACTLR_DISFOLD_Field is
-     (
-      --  Interruption folding enabled
+     (--  Interruption folding enabled
       Normal,
       --  Interruption folding disabled
       Disable)
@@ -28,8 +27,7 @@ package Cortex_M_SVD.SCB is
 
    --  Disabled FPU exception outputs
    type ACTLR_PFEXCODIS_Field is
-     (
-      --  Normal operation.
+     (--  Normal operation.
       Normal,
       --  FPU exception outputs are disabled.
       Disable)
@@ -41,8 +39,7 @@ package Cortex_M_SVD.SCB is
    --  Disables dynamic read allocate mode for Write-Back Write-Allocate memory
    --  regions:
    type ACTLR_DISRAMODE_Field is
-     (
-      --  Normal operation.
+     (--  Normal operation.
       Normal,
       --  Dynamic disabled.
       Disable)
@@ -53,21 +50,19 @@ package Cortex_M_SVD.SCB is
 
    --  Disables ITM and DWT ATB flush:
    type ACTLR_DISITMATBFLUSH_Field is
-     (
-      --  Reset value for the field
-      Actlr_Disitmatbflush_Field_Reset,
-      --  ITM and DWT ATB flush disabled. AFVALID is ignored and AFREADY is
-      --  held HIGH.
+     (--  Reset value for the field
+      ACTLR_DISITMATBFLUSH_Field_Reset,
+      --  ITM and DWT ATB flush disabled. AFVALID is ignored and AFREADY is held
+--  HIGH.
       Disable)
      with Size => 1;
    for ACTLR_DISITMATBFLUSH_Field use
-     (Actlr_Disitmatbflush_Field_Reset => 0,
+     (ACTLR_DISITMATBFLUSH_Field_Reset => 0,
       Disable => 1);
 
    --  Disables the Branch Target Address Cache (BTAC):
    type ACTLR_DISBTACREAD_Field is
-     (
-      --  Normal operation.
+     (--  Normal operation.
       Normal,
       --  BTAC is not used and only static branch prediction can occur.
       Disable)
@@ -78,11 +73,9 @@ package Cortex_M_SVD.SCB is
 
    --  Disables the Branch Target Address Cache allocation:
    type ACTLR_DISBTACALLOC_Field is
-     (
-      --  Normal operation.
+     (--  Normal operation.
       Normal,
-      --  No new entries are allocated in BTAC, but existing entries can be
-      --  updated.
+      --  No new entries are allocated in BTAC, but existing entries can be updated.
       Disable)
      with Size => 1;
    for ACTLR_DISBTACALLOC_Field use
@@ -91,15 +84,13 @@ package Cortex_M_SVD.SCB is
 
    --  Disables critical AXI Read-Under-Read:
    type ACTLR_DISCRITAXIRUR_Field is
-     (
-      --  Normal operation.
+     (--  Normal operation.
       Normal,
-      --  An AXI read to Strongly-ordered or device memory, or an LDREX to
-      --  shared memory, is not put on AXI if there are any outstanding reads
-      --  on AXI. Transactions on AXI cannot be interrupted. This bit might
-      --  reduce the time that these transactions are in progress and might
-      --  improve worst case interrupt latency. Performance is decreased when
-      --  this bit is set.
+      --  An AXI read to Strongly-ordered or device memory, or an LDREX to shared
+--  memory, is not put on AXI if there are any outstanding reads on AXI.
+--  Transactions on AXI cannot be interrupted. This bit might reduce the time
+--  that these transactions are in progress and might improve worst case
+--  interrupt latency. Performance is decreased when this bit is set.
       Disable)
      with Size => 1;
    for ACTLR_DISCRITAXIRUR_Field use
@@ -108,8 +99,7 @@ package Cortex_M_SVD.SCB is
 
    --  Disables dual-issued direct branches:
    type ACTLR_DISDI_DB_Field is
-     (
-      --  Normal operation.
+     (--  Normal operation.
       Normal,
       --  Direct branches instruction type cannot be dual-issued in channel 0
       Disable)
@@ -120,11 +110,10 @@ package Cortex_M_SVD.SCB is
 
    --  Disables dual-issued indirect branches:
    type ACTLR_DISDI_IB_Field is
-     (
-      --  Normal operation.
+     (--  Normal operation.
       Normal,
       --  Indirect branches, but not loads to PC instruction type cannot be
-      --  dual-issued in channel 0
+--  dual-issued in channel 0
       Disable)
      with Size => 1;
    for ACTLR_DISDI_IB_Field use
@@ -133,8 +122,7 @@ package Cortex_M_SVD.SCB is
 
    --  Disables dual-issued loads to PC:
    type ACTLR_DISDI_LPC_Field is
-     (
-      --  Normal operation.
+     (--  Normal operation.
       Normal,
       --  Loads to PC instruction type cannot be dual-issued in channel 0
       Disable)
@@ -145,11 +133,9 @@ package Cortex_M_SVD.SCB is
 
    --  Disables integer MAC and MUL dual-issued instructions:
    type ACTLR_DISDI_MAC_MUL_Field is
-     (
-      --  Normal operation.
+     (--  Normal operation.
       Normal,
-      --  Integer MAC and MUL instruction type cannot be dual-issued in channel
-      --  0
+      --  Integer MAC and MUL instruction type cannot be dual-issued in channel 0
       Disable)
      with Size => 1;
    for ACTLR_DISDI_MAC_MUL_Field use
@@ -158,8 +144,7 @@ package Cortex_M_SVD.SCB is
 
    --  Disables VFP dual-issued instruction:
    type ACTLR_DISDI_VFP_Field is
-     (
-      --  Normal operation.
+     (--  Normal operation.
       Normal,
       --  VFP instruction type cannot be dual-issued in channel 0
       Disable)
@@ -170,8 +155,7 @@ package Cortex_M_SVD.SCB is
 
    --  Disables direct branches instructions in channel 1:
    type ACTLR_DISISSCH1_DB_Field is
-     (
-      --  Normal operation.
+     (--  Normal operation.
       Normal,
       --  Direct branches instruction type cannot be issued in channel 1
       Disable)
@@ -182,11 +166,10 @@ package Cortex_M_SVD.SCB is
 
    --  Disables indirect branches instructions in channel 1:
    type ACTLR_DISISSCH1_IB_Field is
-     (
-      --  Normal operation.
+     (--  Normal operation.
       Normal,
-      --  Indirect branches, but not loads to PC instruction type cannot be
-      --  issued in channel 1
+      --  Indirect branches, but not loads to PC instruction type cannot be issued in
+--  channel 1
       Disable)
      with Size => 1;
    for ACTLR_DISISSCH1_IB_Field use
@@ -195,8 +178,7 @@ package Cortex_M_SVD.SCB is
 
    --  Disables loads to PC instructions in channel 1:
    type ACTLR_DISISSCH1_LPC_Field is
-     (
-      --  Normal operation.
+     (--  Normal operation.
       Normal,
       --  Loads to PC instruction type cannot be issued in channel 1
       Disable)
@@ -207,8 +189,7 @@ package Cortex_M_SVD.SCB is
 
    --  Disables integer MAC and MUL instructions in channel 1:
    type ACTLR_DISISSCH1_MAC_MUL_Field is
-     (
-      --  Normal operation.
+     (--  Normal operation.
       Normal,
       --  Integer MAC and MUL instruction type cannot be issued in channel 1
       Disable)
@@ -219,8 +200,7 @@ package Cortex_M_SVD.SCB is
 
    --  Disables VFP instructions in channel 1:
    type ACTLR_DISISSCH1_VFP_Field is
-     (
-      --  Normal operation.
+     (--  Normal operation.
       Normal,
       --  VFP instruction type cannot be issued in channel 1
       Disable)
@@ -231,8 +211,7 @@ package Cortex_M_SVD.SCB is
 
    --  Disables dybnamic allocation of ADD ans SUB instructions:
    type ACTLR_DISDYNADD_Field is
-     (
-      --  Normal operation. Some ADD and SUB instructions are resolved in EX1.
+     (--  Normal operation. Some ADD and SUB instructions are resolved in EX1.
       Normal,
       --  All ADD and SUB instructions are resolved in EX2.
       Disable)
@@ -261,7 +240,7 @@ package Cortex_M_SVD.SCB is
       DISRAMODE         : ACTLR_DISRAMODE_Field := Cortex_M_SVD.SCB.Normal;
       --  Read-only. Disables ITM and DWT ATB flush:
       DISITMATBFLUSH    : ACTLR_DISITMATBFLUSH_Field :=
-                           Actlr_Disitmatbflush_Field_Reset;
+                           ACTLR_DISITMATBFLUSH_Field_Reset;
       --  Disables the Branch Target Address Cache (BTAC):
       DISBTACREAD       : ACTLR_DISBTACREAD_Field := Cortex_M_SVD.SCB.Normal;
       --  Disables the Branch Target Address Cache allocation:
@@ -298,7 +277,7 @@ package Cortex_M_SVD.SCB is
       --  unspecified
       Reserved_27_31    : HAL.UInt5 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for ACTLR_Register use record
@@ -327,23 +306,21 @@ package Cortex_M_SVD.SCB is
 
    --  Revision number, the p value in the rnpn product revision identifier.
    type CPUID_Revision_Field is
-     (
-      --  Patch 0
-      P0,
+     (--  Patch 0
+      p0,
       --  Patch 1
-      P1,
+      p1,
       --  Patch 2
-      P2)
+      p2)
      with Size => 4;
    for CPUID_Revision_Field use
-     (P0 => 0,
-      P1 => 1,
-      P2 => 2);
+     (p0 => 0,
+      p1 => 1,
+      p2 => 2);
 
    --  Part number of the processor.
    type CPUID_PartNo_Field is
-     (
-      --  Cortes-M7
+     (--  Cortes-M7
       Cortex_M7)
      with Size => 12;
    for CPUID_PartNo_Field use
@@ -353,24 +330,22 @@ package Cortex_M_SVD.SCB is
 
    --  Variant number, the r value in the rnpn product revision identifier.
    type CPUID_Variant_Field is
-     (
-      --  Revision 0
-      R0,
+     (--  Revision 0
+      r0,
       --  Revision 1
-      R1)
+      r1)
      with Size => 4;
    for CPUID_Variant_Field use
-     (R0 => 0,
-      R1 => 1);
+     (r0 => 0,
+      r1 => 1);
 
    --  Implementer code.
    type CPUID_Implementer_Field is
-     (
-      --  ARM
-      Arm)
+     (--  ARM
+      ARM)
      with Size => 8;
    for CPUID_Implementer_Field use
-     (Arm => 65);
+     (ARM => 65);
 
    --  CPUID Base Register
    type CPUID_Register is record
@@ -387,7 +362,7 @@ package Cortex_M_SVD.SCB is
       --  Read-only. Implementer code.
       Implementer : CPUID_Implementer_Field;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CPUID_Register use record
@@ -402,11 +377,10 @@ package Cortex_M_SVD.SCB is
 
    --  Indicates whether there are preempted active exceptions.
    type ICSR_RETTOBASE_Field is
-     (
-      --  There are preempted active exceptions to execute.
+     (--  There are preempted active exceptions to execute.
       Preempted,
-      --  There are no active exceptions, or the currently-executing exception
-      --  is the only active exception.
+      --  There are no active exceptions, or the currently-executing exception is the
+--  only active exception.
       No_Preempted)
      with Size => 1;
    for ICSR_RETTOBASE_Field use
@@ -448,7 +422,7 @@ package Cortex_M_SVD.SCB is
       --  NMI set-pending bit.
       NMIPENDSET     : Boolean := False;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for ICSR_Register use record
@@ -470,38 +444,36 @@ package Cortex_M_SVD.SCB is
    --  Interrupt priority grouping field. This field determines the split of
    --  group priority from subpriority.
    type AIRCR_PRIGROUP_Field is
-     (
-      --  Group priority bits: [7:1], subpriority bits [0]
-      Bxxxxxxx_Y,
+     (--  Group priority bits: [7:1], subpriority bits [0]
+      Bxxxxxxx_y,
       --  Group priority bits: [7:2], subpriority bits [1:0]
-      Bxxxxxx_YY,
+      Bxxxxxx_yy,
       --  Group priority bits: [7:3], subpriority bits [2:0]
-      Bxxxxx_YYY,
+      Bxxxxx_yyy,
       --  Group priority bits: [7:4], subpriority bits [3:0]
-      Bxxxx_YYYY,
+      Bxxxx_yyyy,
       --  Group priority bits: [7:5], subpriority bits [4:0]
-      Bxxx_YYYYY,
+      Bxxx_yyyyy,
       --  Group priority bits: [7:6], subpriority bits [5:0]
-      Bxx_YYYYYY,
+      Bxx_yyyyyy,
       --  Group priority bits: [7], subpriority bits [6:0]
-      Bx_YYYYYYY,
+      Bx_yyyyyyy,
       --  Group priority bits: None, subpriority bits [7:0]
-      B_YYYYYYYY)
+      B_yyyyyyyy)
      with Size => 3;
    for AIRCR_PRIGROUP_Field use
-     (Bxxxxxxx_Y => 0,
-      Bxxxxxx_YY => 1,
-      Bxxxxx_YYY => 2,
-      Bxxxx_YYYY => 3,
-      Bxxx_YYYYY => 4,
-      Bxx_YYYYYY => 5,
-      Bx_YYYYYYY => 6,
-      B_YYYYYYYY => 7);
+     (Bxxxxxxx_y => 0,
+      Bxxxxxx_yy => 1,
+      Bxxxxx_yyy => 2,
+      Bxxxx_yyyy => 3,
+      Bxxx_yyyyy => 4,
+      Bxx_yyyyyy => 5,
+      Bx_yyyyyyy => 6,
+      B_yyyyyyyy => 7);
 
    --  Data endianness bit setting is implementation defined.
    type AIRCR_ENDIANNESS_Field is
-     (
-      --  Data is little endian
+     (--  Data is little endian
       Little_Endian,
       --  Data is big endian
       Big_Endian)
@@ -513,8 +485,7 @@ package Cortex_M_SVD.SCB is
    --  Register key. On write, write 0x5FA to VECTKEY, otherwise the write is
    --  ignored. Reads as 0xFA05
    type AIRCR_VECTKEY_Field is
-     (
-      --  The write key
+     (--  The write key
       Key,
       --  The read key
       Key_Read)
@@ -534,7 +505,7 @@ package Cortex_M_SVD.SCB is
       Reserved_3_7   : HAL.UInt5 := 16#0#;
       --  Interrupt priority grouping field. This field determines the split of
       --  group priority from subpriority.
-      PRIGROUP       : AIRCR_PRIGROUP_Field := Cortex_M_SVD.SCB.Bxxxxxxx_Y;
+      PRIGROUP       : AIRCR_PRIGROUP_Field := Cortex_M_SVD.SCB.Bxxxxxxx_y;
       --  unspecified
       Reserved_11_14 : HAL.UInt4 := 16#0#;
       --  Read-only. Data endianness bit setting is implementation defined.
@@ -544,7 +515,7 @@ package Cortex_M_SVD.SCB is
       --  is ignored. Reads as 0xFA05
       VECTKEY        : AIRCR_VECTKEY_Field := Cortex_M_SVD.SCB.Key_Read;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for AIRCR_Register use record
@@ -574,7 +545,7 @@ package Cortex_M_SVD.SCB is
       --  unspecified
       Reserved_5_31 : HAL.UInt27 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for SCR_Register use record
@@ -588,11 +559,10 @@ package Cortex_M_SVD.SCB is
 
    --  Indicates how the processor enters Thread mode
    type CCR_NONBASETHREADENA_Field is
-     (
-      --  Processor can enter Thread mode only when no exception is active
+     (--  Processor can enter Thread mode only when no exception is active
       No_Active_Exception,
-      --  Processor can enter Thread mode from any level under the control of
-      --  an EXC_RETURN value
+      --  Processor can enter Thread mode from any level under the control of an
+--  EXC_RETURN value
       On_Exc_Return)
      with Size => 1;
    for CCR_NONBASETHREADENA_Field use
@@ -631,7 +601,7 @@ package Cortex_M_SVD.SCB is
       --  unspecified
       Reserved_18_31   : HAL.UInt14 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CCR_Register use record
@@ -664,7 +634,7 @@ package Cortex_M_SVD.SCB is
       --  unspecified
       Reserved_24_31 : HAL.UInt8 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for SHPR1_Register use record
@@ -683,7 +653,7 @@ package Cortex_M_SVD.SCB is
       --  Priority of the system handler, SVCall
       PRI_11        : SHPR2_PRI_11_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for SHPR2_Register use record
@@ -703,7 +673,7 @@ package Cortex_M_SVD.SCB is
       --  Priority of the system handler, SysTick
       PRI_15        : SHPR3_PRI_15_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for SHPR3_Register use record
@@ -760,7 +730,7 @@ package Cortex_M_SVD.SCB is
       --  unspecified
       Reserved_19_31 : HAL.UInt13 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for SHPRS_Register use record
@@ -803,7 +773,8 @@ package Cortex_M_SVD.SCB is
       --  MemManage fault address register valid flag.
       MMARVALID    : Boolean := False;
    end record
-     with Volatile_Full_Access, Size => 8, Bit_Order => System.Low_Order_First;
+     with Volatile_Full_Access, Object_Size => 8,
+          Bit_Order => System.Low_Order_First;
 
    for MMSR_Register use record
       IACCVIOL     at 0 range 0 .. 0;
@@ -835,7 +806,8 @@ package Cortex_M_SVD.SCB is
       --  BusFault Address Register valid flag.
       BFARVALID    : Boolean := False;
    end record
-     with Volatile_Full_Access, Size => 8, Bit_Order => System.Low_Order_First;
+     with Volatile_Full_Access, Object_Size => 8,
+          Bit_Order => System.Low_Order_First;
 
    for BFSR_Register use record
       IBUSERR      at 0 range 0 .. 0;
@@ -868,7 +840,7 @@ package Cortex_M_SVD.SCB is
       --  unspecified
       Reserved_10_15 : HAL.UInt6 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 16,
+     with Volatile_Full_Access, Object_Size => 16,
           Bit_Order => System.Low_Order_First;
 
    for UFSR_Register use record
@@ -899,7 +871,7 @@ package Cortex_M_SVD.SCB is
       --  1 to this bit, otherwise behavior is UNPREDICTABLE.
       DEBUGEVT      : Boolean := False;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for HFSR_Register use record
@@ -980,6 +952,6 @@ package Cortex_M_SVD.SCB is
 
    --  System control block
    SCB_Periph : aliased SCB_Peripheral
-     with Import, Address => System'To_Address (16#E000E000#);
+     with Import, Address => SCB_Base;
 
 end Cortex_M_SVD.SCB;

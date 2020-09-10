@@ -66,12 +66,12 @@ package NRF_SVD.CLOCK is
    --  Write '1' to Enable interrupt for HFCLKSTARTED event
    type INTENSET_HFCLKSTARTED_Field_1 is
      (--  Reset value for the field
-      Intenset_Hfclkstarted_Field_Reset,
+      INTENSET_HFCLKSTARTED_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_HFCLKSTARTED_Field_1 use
-     (Intenset_Hfclkstarted_Field_Reset => 0,
+     (INTENSET_HFCLKSTARTED_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for LFCLKSTARTED event
@@ -88,12 +88,12 @@ package NRF_SVD.CLOCK is
    --  Write '1' to Enable interrupt for LFCLKSTARTED event
    type INTENSET_LFCLKSTARTED_Field_1 is
      (--  Reset value for the field
-      Intenset_Lfclkstarted_Field_Reset,
+      INTENSET_LFCLKSTARTED_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_LFCLKSTARTED_Field_1 use
-     (Intenset_Lfclkstarted_Field_Reset => 0,
+     (INTENSET_LFCLKSTARTED_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for DONE event
@@ -110,12 +110,12 @@ package NRF_SVD.CLOCK is
    --  Write '1' to Enable interrupt for DONE event
    type INTENSET_DONE_Field_1 is
      (--  Reset value for the field
-      Intenset_Done_Field_Reset,
+      INTENSET_DONE_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_DONE_Field_1 use
-     (Intenset_Done_Field_Reset => 0,
+     (INTENSET_DONE_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for CTTO event
@@ -132,28 +132,28 @@ package NRF_SVD.CLOCK is
    --  Write '1' to Enable interrupt for CTTO event
    type INTENSET_CTTO_Field_1 is
      (--  Reset value for the field
-      Intenset_Ctto_Field_Reset,
+      INTENSET_CTTO_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_CTTO_Field_1 use
-     (Intenset_Ctto_Field_Reset => 0,
+     (INTENSET_CTTO_Field_Reset => 0,
       Set => 1);
 
    --  Enable interrupt
    type INTENSET_Register is record
       --  Write '1' to Enable interrupt for HFCLKSTARTED event
       HFCLKSTARTED  : INTENSET_HFCLKSTARTED_Field_1 :=
-                       Intenset_Hfclkstarted_Field_Reset;
+                       INTENSET_HFCLKSTARTED_Field_Reset;
       --  Write '1' to Enable interrupt for LFCLKSTARTED event
       LFCLKSTARTED  : INTENSET_LFCLKSTARTED_Field_1 :=
-                       Intenset_Lfclkstarted_Field_Reset;
+                       INTENSET_LFCLKSTARTED_Field_Reset;
       --  unspecified
       Reserved_2_2  : HAL.Bit := 16#0#;
       --  Write '1' to Enable interrupt for DONE event
-      DONE          : INTENSET_DONE_Field_1 := Intenset_Done_Field_Reset;
+      DONE          : INTENSET_DONE_Field_1 := INTENSET_DONE_Field_Reset;
       --  Write '1' to Enable interrupt for CTTO event
-      CTTO          : INTENSET_CTTO_Field_1 := Intenset_Ctto_Field_Reset;
+      CTTO          : INTENSET_CTTO_Field_1 := INTENSET_CTTO_Field_Reset;
       --  unspecified
       Reserved_5_31 : HAL.UInt27 := 16#0#;
    end record
@@ -183,12 +183,12 @@ package NRF_SVD.CLOCK is
    --  Write '1' to Disable interrupt for HFCLKSTARTED event
    type INTENCLR_HFCLKSTARTED_Field_1 is
      (--  Reset value for the field
-      Intenclr_Hfclkstarted_Field_Reset,
+      INTENCLR_HFCLKSTARTED_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_HFCLKSTARTED_Field_1 use
-     (Intenclr_Hfclkstarted_Field_Reset => 0,
+     (INTENCLR_HFCLKSTARTED_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for LFCLKSTARTED event
@@ -205,12 +205,12 @@ package NRF_SVD.CLOCK is
    --  Write '1' to Disable interrupt for LFCLKSTARTED event
    type INTENCLR_LFCLKSTARTED_Field_1 is
      (--  Reset value for the field
-      Intenclr_Lfclkstarted_Field_Reset,
+      INTENCLR_LFCLKSTARTED_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_LFCLKSTARTED_Field_1 use
-     (Intenclr_Lfclkstarted_Field_Reset => 0,
+     (INTENCLR_LFCLKSTARTED_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for DONE event
@@ -227,12 +227,12 @@ package NRF_SVD.CLOCK is
    --  Write '1' to Disable interrupt for DONE event
    type INTENCLR_DONE_Field_1 is
      (--  Reset value for the field
-      Intenclr_Done_Field_Reset,
+      INTENCLR_DONE_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_DONE_Field_1 use
-     (Intenclr_Done_Field_Reset => 0,
+     (INTENCLR_DONE_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for CTTO event
@@ -249,28 +249,28 @@ package NRF_SVD.CLOCK is
    --  Write '1' to Disable interrupt for CTTO event
    type INTENCLR_CTTO_Field_1 is
      (--  Reset value for the field
-      Intenclr_Ctto_Field_Reset,
+      INTENCLR_CTTO_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_CTTO_Field_1 use
-     (Intenclr_Ctto_Field_Reset => 0,
+     (INTENCLR_CTTO_Field_Reset => 0,
       Clear => 1);
 
    --  Disable interrupt
    type INTENCLR_Register is record
       --  Write '1' to Disable interrupt for HFCLKSTARTED event
       HFCLKSTARTED  : INTENCLR_HFCLKSTARTED_Field_1 :=
-                       Intenclr_Hfclkstarted_Field_Reset;
+                       INTENCLR_HFCLKSTARTED_Field_Reset;
       --  Write '1' to Disable interrupt for LFCLKSTARTED event
       LFCLKSTARTED  : INTENCLR_LFCLKSTARTED_Field_1 :=
-                       Intenclr_Lfclkstarted_Field_Reset;
+                       INTENCLR_LFCLKSTARTED_Field_Reset;
       --  unspecified
       Reserved_2_2  : HAL.Bit := 16#0#;
       --  Write '1' to Disable interrupt for DONE event
-      DONE          : INTENCLR_DONE_Field_1 := Intenclr_Done_Field_Reset;
+      DONE          : INTENCLR_DONE_Field_1 := INTENCLR_DONE_Field_Reset;
       --  Write '1' to Disable interrupt for CTTO event
-      CTTO          : INTENCLR_CTTO_Field_1 := Intenclr_Ctto_Field_Reset;
+      CTTO          : INTENCLR_CTTO_Field_1 := INTENCLR_CTTO_Field_Reset;
       --  unspecified
       Reserved_5_31 : HAL.UInt27 := 16#0#;
    end record
@@ -289,12 +289,12 @@ package NRF_SVD.CLOCK is
    --  HFCLKSTART task triggered or not
    type HFCLKRUN_STATUS_Field is
      (--  Task not triggered
-      Nottriggered,
+      NotTriggered,
       --  Task triggered
       Triggered)
      with Size => 1;
    for HFCLKRUN_STATUS_Field use
-     (Nottriggered => 0,
+     (NotTriggered => 0,
       Triggered => 1);
 
    --  Status indicating that HFCLKSTART task has been triggered
@@ -315,23 +315,23 @@ package NRF_SVD.CLOCK is
    --  Source of HFCLK
    type HFCLKSTAT_SRC_Field is
      (--  64 MHz internal oscillator (HFINT)
-      Rc,
+      RC,
       --  64 MHz crystal oscillator (HFXO)
       Xtal)
      with Size => 1;
    for HFCLKSTAT_SRC_Field use
-     (Rc => 0,
+     (RC => 0,
       Xtal => 1);
 
    --  HFCLK state
    type HFCLKSTAT_STATE_Field is
      (--  HFCLK not running
-      Notrunning,
+      NotRunning,
       --  HFCLK running
       Running)
      with Size => 1;
    for HFCLKSTAT_STATE_Field use
-     (Notrunning => 0,
+     (NotRunning => 0,
       Running => 1);
 
    --  HFCLK status
@@ -358,12 +358,12 @@ package NRF_SVD.CLOCK is
    --  LFCLKSTART task triggered or not
    type LFCLKRUN_STATUS_Field is
      (--  Task not triggered
-      Nottriggered,
+      NotTriggered,
       --  Task triggered
       Triggered)
      with Size => 1;
    for LFCLKRUN_STATUS_Field use
-     (Nottriggered => 0,
+     (NotTriggered => 0,
       Triggered => 1);
 
    --  Status indicating that LFCLKSTART task has been triggered
@@ -384,26 +384,26 @@ package NRF_SVD.CLOCK is
    --  Source of LFCLK
    type LFCLKSTAT_SRC_Field is
      (--  32.768 kHz RC oscillator
-      Rc,
+      RC,
       --  32.768 kHz crystal oscillator
       Xtal,
       --  32.768 kHz synthesized from HFCLK
       Synth)
      with Size => 2;
    for LFCLKSTAT_SRC_Field use
-     (Rc => 0,
+     (RC => 0,
       Xtal => 1,
       Synth => 2);
 
    --  LFCLK state
    type LFCLKSTAT_STATE_Field is
      (--  LFCLK not running
-      Notrunning,
+      NotRunning,
       --  LFCLK running
       Running)
      with Size => 1;
    for LFCLKSTAT_STATE_Field use
-     (Notrunning => 0,
+     (NotRunning => 0,
       Running => 1);
 
    --  LFCLK status
@@ -430,14 +430,14 @@ package NRF_SVD.CLOCK is
    --  Clock source
    type LFCLKSRCCOPY_SRC_Field is
      (--  32.768 kHz RC oscillator
-      Rc,
+      RC,
       --  32.768 kHz crystal oscillator
       Xtal,
       --  32.768 kHz synthesized from HFCLK
       Synth)
      with Size => 2;
    for LFCLKSRCCOPY_SRC_Field use
-     (Rc => 0,
+     (RC => 0,
       Xtal => 1,
       Synth => 2);
 
@@ -459,14 +459,14 @@ package NRF_SVD.CLOCK is
    --  Clock source
    type LFCLKSRC_SRC_Field is
      (--  32.768 kHz RC oscillator
-      Rc,
+      RC,
       --  32.768 kHz crystal oscillator
       Xtal,
       --  32.768 kHz synthesized from HFCLK
       Synth)
      with Size => 2;
    for LFCLKSRC_SRC_Field use
-     (Rc => 0,
+     (RC => 0,
       Xtal => 1,
       Synth => 2);
 
@@ -496,7 +496,7 @@ package NRF_SVD.CLOCK is
    --  Clock source for the LFCLK
    type LFCLKSRC_Register is record
       --  Clock source
-      SRC            : LFCLKSRC_SRC_Field := NRF_SVD.CLOCK.Rc;
+      SRC            : LFCLKSRC_SRC_Field := NRF_SVD.CLOCK.RC;
       --  unspecified
       Reserved_2_15  : HAL.UInt14 := 16#0#;
       --  Enable or disable bypass of LFCLK crystal oscillator with external
@@ -540,24 +540,24 @@ package NRF_SVD.CLOCK is
    --  clock divided by two.
    type TRACECONFIG_TRACEPORTSPEED_Field is
      (--  32 MHz Trace Port clock (TRACECLK = 16 MHz)
-      Val_32Mhz,
+      Val_32MHz,
       --  16 MHz Trace Port clock (TRACECLK = 8 MHz)
-      Val_16Mhz,
+      Val_16MHz,
       --  8 MHz Trace Port clock (TRACECLK = 4 MHz)
-      Val_8Mhz,
+      Val_8MHz,
       --  4 MHz Trace Port clock (TRACECLK = 2 MHz)
-      Val_4Mhz)
+      Val_4MHz)
      with Size => 2;
    for TRACECONFIG_TRACEPORTSPEED_Field use
-     (Val_32Mhz => 0,
-      Val_16Mhz => 1,
-      Val_8Mhz => 2,
-      Val_4Mhz => 3);
+     (Val_32MHz => 0,
+      Val_16MHz => 1,
+      Val_8MHz => 2,
+      Val_4MHz => 3);
 
    --  Pin multiplexing of trace signals.
    type TRACECONFIG_TRACEMUX_Field is
      (--  GPIOs multiplexed onto all trace-pins
-      Gpio,
+      GPIO,
       --  SWO multiplexed onto P0.18, GPIO multiplexed onto other trace pins
       Serial,
       --  TRACECLK and TRACEDATA multiplexed onto P0.20, P0.18, P0.16, P0.15 and
@@ -565,7 +565,7 @@ package NRF_SVD.CLOCK is
       Parallel)
      with Size => 2;
    for TRACECONFIG_TRACEMUX_Field use
-     (Gpio => 0,
+     (GPIO => 0,
       Serial => 1,
       Parallel => 2);
 
@@ -574,11 +574,11 @@ package NRF_SVD.CLOCK is
       --  Speed of Trace Port clock. Note that the TRACECLK pin will output
       --  this clock divided by two.
       TRACEPORTSPEED : TRACECONFIG_TRACEPORTSPEED_Field :=
-                        NRF_SVD.CLOCK.Val_32Mhz;
+                        NRF_SVD.CLOCK.Val_32MHz;
       --  unspecified
       Reserved_2_15  : HAL.UInt14 := 16#0#;
       --  Pin multiplexing of trace signals.
-      TRACEMUX       : TRACECONFIG_TRACEMUX_Field := NRF_SVD.CLOCK.Gpio;
+      TRACEMUX       : TRACECONFIG_TRACEMUX_Field := NRF_SVD.CLOCK.GPIO;
       --  unspecified
       Reserved_18_31 : HAL.UInt14 := 16#0#;
    end record

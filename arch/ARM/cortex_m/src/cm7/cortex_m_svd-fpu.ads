@@ -17,11 +17,9 @@ package Cortex_M_SVD.FPU is
 
    --  Access privileges for coprocessor 10.
    type CPACR_CP10_Field is
-     (
-      --  Any attempted access generates a NOCP UsageFault.
+     (--  Any attempted access generates a NOCP UsageFault.
       Access_Denied,
-      --  Privileged access only. An unprivileged addess generates a NOCP
-      --  UsageFault.
+      --  Privileged access only. An unprivileged addess generates a NOCP UsageFault.
       Privileged,
       --  Full access.
       Full_Access)
@@ -64,7 +62,7 @@ package Cortex_M_SVD.FPU is
       --  unspecified
       Reserved_24_31 : HAL.UInt8 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CPACR_Register use record
@@ -113,7 +111,7 @@ package Cortex_M_SVD.FPU is
       --  exit.
       ASPEN         : Boolean := True;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for FPCCR_Register use record
@@ -141,7 +139,7 @@ package Cortex_M_SVD.FPU is
       --  floating-point register space allocated on an exception stack frame.
       ADDRESS      : FPCAR_ADDRESS_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for FPCAR_Register use record
@@ -166,7 +164,7 @@ package Cortex_M_SVD.FPU is
       --  unspecified
       Reserved_27_31 : HAL.UInt5 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for FPDSCR_Register use record

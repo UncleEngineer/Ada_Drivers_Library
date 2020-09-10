@@ -28,7 +28,7 @@ package FE310_SVD.PRIC is
       ENABLE         : Boolean := False;
       READY          : Boolean := False;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for HFROSCCFG_Register use record
@@ -47,7 +47,7 @@ package FE310_SVD.PRIC is
       ENABLE        : Boolean := False;
       READY         : Boolean := False;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for HFXOSCCFG_Register use record
@@ -61,19 +61,17 @@ package FE310_SVD.PRIC is
    subtype PLLCFG_Q_Field is HAL.UInt2;
 
    type PLLCFG_SEL_Field is
-     (
-      --  The HFROSCCLK directly drives HFCLK.
+     (--  The HFROSCCLK directly drives HFCLK.
       Internal,
       --  Drive the final HFCLK with PLL output, bypassed or otherwise.
-      Pll)
+      PLL)
      with Size => 1;
    for PLLCFG_SEL_Field use
      (Internal => 0,
-      Pll => 1);
+      PLL => 1);
 
    type PLLCFG_REFSEL_Field is
-     (
-      --  Internal Oscillator.
+     (--  Internal Oscillator.
       Internal,
       --  Crystal OScillator.
       Crystal)
@@ -98,7 +96,7 @@ package FE310_SVD.PRIC is
       Reserved_19_30 : HAL.UInt12 := 16#0#;
       LOCK           : Boolean := False;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for PLLCFG_Register use record
@@ -125,7 +123,7 @@ package FE310_SVD.PRIC is
       --  unspecified
       Reserved_9_31 : HAL.UInt23 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for PLLOUTDIV_Register use record
@@ -161,6 +159,6 @@ package FE310_SVD.PRIC is
 
    --  Power, Reset, Clock, Interrupt.
    PRIC_Periph : aliased PRIC_Peripheral
-     with Import, Address => System'To_Address (16#10008000#);
+     with Import, Address => PRIC_Base;
 
 end FE310_SVD.PRIC;

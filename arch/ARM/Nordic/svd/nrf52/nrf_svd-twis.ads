@@ -217,12 +217,12 @@ package NRF_SVD.TWIS is
    --  Write '1' to Enable interrupt for STOPPED event
    type INTENSET_STOPPED_Field_1 is
      (--  Reset value for the field
-      Intenset_Stopped_Field_Reset,
+      INTENSET_STOPPED_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_STOPPED_Field_1 use
-     (Intenset_Stopped_Field_Reset => 0,
+     (INTENSET_STOPPED_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for ERROR event
@@ -239,12 +239,12 @@ package NRF_SVD.TWIS is
    --  Write '1' to Enable interrupt for ERROR event
    type INTENSET_ERROR_Field_1 is
      (--  Reset value for the field
-      Intenset_Error_Field_Reset,
+      INTENSET_ERROR_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_ERROR_Field_1 use
-     (Intenset_Error_Field_Reset => 0,
+     (INTENSET_ERROR_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for RXSTARTED event
@@ -261,12 +261,12 @@ package NRF_SVD.TWIS is
    --  Write '1' to Enable interrupt for RXSTARTED event
    type INTENSET_RXSTARTED_Field_1 is
      (--  Reset value for the field
-      Intenset_Rxstarted_Field_Reset,
+      INTENSET_RXSTARTED_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_RXSTARTED_Field_1 use
-     (Intenset_Rxstarted_Field_Reset => 0,
+     (INTENSET_RXSTARTED_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for TXSTARTED event
@@ -283,12 +283,12 @@ package NRF_SVD.TWIS is
    --  Write '1' to Enable interrupt for TXSTARTED event
    type INTENSET_TXSTARTED_Field_1 is
      (--  Reset value for the field
-      Intenset_Txstarted_Field_Reset,
+      INTENSET_TXSTARTED_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_TXSTARTED_Field_1 use
-     (Intenset_Txstarted_Field_Reset => 0,
+     (INTENSET_TXSTARTED_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for WRITE event
@@ -305,12 +305,12 @@ package NRF_SVD.TWIS is
    --  Write '1' to Enable interrupt for WRITE event
    type INTENSET_WRITE_Field_1 is
      (--  Reset value for the field
-      Intenset_Write_Field_Reset,
+      INTENSET_WRITE_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_WRITE_Field_1 use
-     (Intenset_Write_Field_Reset => 0,
+     (INTENSET_WRITE_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for READ event
@@ -327,12 +327,12 @@ package NRF_SVD.TWIS is
    --  Write '1' to Enable interrupt for READ event
    type INTENSET_READ_Field_1 is
      (--  Reset value for the field
-      Intenset_Read_Field_Reset,
+      INTENSET_READ_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_READ_Field_1 use
-     (Intenset_Read_Field_Reset => 0,
+     (INTENSET_READ_Field_Reset => 0,
       Set => 1);
 
    --  Enable interrupt
@@ -341,25 +341,25 @@ package NRF_SVD.TWIS is
       Reserved_0_0   : HAL.Bit := 16#0#;
       --  Write '1' to Enable interrupt for STOPPED event
       STOPPED        : INTENSET_STOPPED_Field_1 :=
-                        Intenset_Stopped_Field_Reset;
+                        INTENSET_STOPPED_Field_Reset;
       --  unspecified
       Reserved_2_8   : HAL.UInt7 := 16#0#;
       --  Write '1' to Enable interrupt for ERROR event
-      ERROR          : INTENSET_ERROR_Field_1 := Intenset_Error_Field_Reset;
+      ERROR          : INTENSET_ERROR_Field_1 := INTENSET_ERROR_Field_Reset;
       --  unspecified
       Reserved_10_18 : HAL.UInt9 := 16#0#;
       --  Write '1' to Enable interrupt for RXSTARTED event
       RXSTARTED      : INTENSET_RXSTARTED_Field_1 :=
-                        Intenset_Rxstarted_Field_Reset;
+                        INTENSET_RXSTARTED_Field_Reset;
       --  Write '1' to Enable interrupt for TXSTARTED event
       TXSTARTED      : INTENSET_TXSTARTED_Field_1 :=
-                        Intenset_Txstarted_Field_Reset;
+                        INTENSET_TXSTARTED_Field_Reset;
       --  unspecified
       Reserved_21_24 : HAL.UInt4 := 16#0#;
       --  Write '1' to Enable interrupt for WRITE event
-      WRITE          : INTENSET_WRITE_Field_1 := Intenset_Write_Field_Reset;
+      WRITE          : INTENSET_WRITE_Field_1 := INTENSET_WRITE_Field_Reset;
       --  Write '1' to Enable interrupt for READ event
-      READ           : INTENSET_READ_Field_1 := Intenset_Read_Field_Reset;
+      READ           : INTENSET_READ_Field_1 := INTENSET_READ_Field_Reset;
       --  unspecified
       Reserved_27_31 : HAL.UInt5 := 16#0#;
    end record
@@ -394,12 +394,12 @@ package NRF_SVD.TWIS is
    --  Write '1' to Disable interrupt for STOPPED event
    type INTENCLR_STOPPED_Field_1 is
      (--  Reset value for the field
-      Intenclr_Stopped_Field_Reset,
+      INTENCLR_STOPPED_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_STOPPED_Field_1 use
-     (Intenclr_Stopped_Field_Reset => 0,
+     (INTENCLR_STOPPED_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for ERROR event
@@ -416,12 +416,12 @@ package NRF_SVD.TWIS is
    --  Write '1' to Disable interrupt for ERROR event
    type INTENCLR_ERROR_Field_1 is
      (--  Reset value for the field
-      Intenclr_Error_Field_Reset,
+      INTENCLR_ERROR_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_ERROR_Field_1 use
-     (Intenclr_Error_Field_Reset => 0,
+     (INTENCLR_ERROR_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for RXSTARTED event
@@ -438,12 +438,12 @@ package NRF_SVD.TWIS is
    --  Write '1' to Disable interrupt for RXSTARTED event
    type INTENCLR_RXSTARTED_Field_1 is
      (--  Reset value for the field
-      Intenclr_Rxstarted_Field_Reset,
+      INTENCLR_RXSTARTED_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_RXSTARTED_Field_1 use
-     (Intenclr_Rxstarted_Field_Reset => 0,
+     (INTENCLR_RXSTARTED_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for TXSTARTED event
@@ -460,12 +460,12 @@ package NRF_SVD.TWIS is
    --  Write '1' to Disable interrupt for TXSTARTED event
    type INTENCLR_TXSTARTED_Field_1 is
      (--  Reset value for the field
-      Intenclr_Txstarted_Field_Reset,
+      INTENCLR_TXSTARTED_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_TXSTARTED_Field_1 use
-     (Intenclr_Txstarted_Field_Reset => 0,
+     (INTENCLR_TXSTARTED_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for WRITE event
@@ -482,12 +482,12 @@ package NRF_SVD.TWIS is
    --  Write '1' to Disable interrupt for WRITE event
    type INTENCLR_WRITE_Field_1 is
      (--  Reset value for the field
-      Intenclr_Write_Field_Reset,
+      INTENCLR_WRITE_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_WRITE_Field_1 use
-     (Intenclr_Write_Field_Reset => 0,
+     (INTENCLR_WRITE_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for READ event
@@ -504,12 +504,12 @@ package NRF_SVD.TWIS is
    --  Write '1' to Disable interrupt for READ event
    type INTENCLR_READ_Field_1 is
      (--  Reset value for the field
-      Intenclr_Read_Field_Reset,
+      INTENCLR_READ_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_READ_Field_1 use
-     (Intenclr_Read_Field_Reset => 0,
+     (INTENCLR_READ_Field_Reset => 0,
       Clear => 1);
 
    --  Disable interrupt
@@ -518,25 +518,25 @@ package NRF_SVD.TWIS is
       Reserved_0_0   : HAL.Bit := 16#0#;
       --  Write '1' to Disable interrupt for STOPPED event
       STOPPED        : INTENCLR_STOPPED_Field_1 :=
-                        Intenclr_Stopped_Field_Reset;
+                        INTENCLR_STOPPED_Field_Reset;
       --  unspecified
       Reserved_2_8   : HAL.UInt7 := 16#0#;
       --  Write '1' to Disable interrupt for ERROR event
-      ERROR          : INTENCLR_ERROR_Field_1 := Intenclr_Error_Field_Reset;
+      ERROR          : INTENCLR_ERROR_Field_1 := INTENCLR_ERROR_Field_Reset;
       --  unspecified
       Reserved_10_18 : HAL.UInt9 := 16#0#;
       --  Write '1' to Disable interrupt for RXSTARTED event
       RXSTARTED      : INTENCLR_RXSTARTED_Field_1 :=
-                        Intenclr_Rxstarted_Field_Reset;
+                        INTENCLR_RXSTARTED_Field_Reset;
       --  Write '1' to Disable interrupt for TXSTARTED event
       TXSTARTED      : INTENCLR_TXSTARTED_Field_1 :=
-                        Intenclr_Txstarted_Field_Reset;
+                        INTENCLR_TXSTARTED_Field_Reset;
       --  unspecified
       Reserved_21_24 : HAL.UInt4 := 16#0#;
       --  Write '1' to Disable interrupt for WRITE event
-      WRITE          : INTENCLR_WRITE_Field_1 := Intenclr_Write_Field_Reset;
+      WRITE          : INTENCLR_WRITE_Field_1 := INTENCLR_WRITE_Field_Reset;
       --  Write '1' to Disable interrupt for READ event
-      READ           : INTENCLR_READ_Field_1 := Intenclr_Read_Field_Reset;
+      READ           : INTENCLR_READ_Field_1 := INTENCLR_READ_Field_Reset;
       --  unspecified
       Reserved_27_31 : HAL.UInt5 := 16#0#;
    end record
@@ -560,46 +560,46 @@ package NRF_SVD.TWIS is
    --  RX buffer overflow detected, and prevented
    type ERRORSRC_OVERFLOW_Field is
      (--  Error did not occur
-      Notdetected,
+      NotDetected,
       --  Error occurred
       Detected)
      with Size => 1;
    for ERRORSRC_OVERFLOW_Field use
-     (Notdetected => 0,
+     (NotDetected => 0,
       Detected => 1);
 
    --  NACK sent after receiving a data byte
    type ERRORSRC_DNACK_Field is
      (--  Error did not occur
-      Notreceived,
+      NotReceived,
       --  Error occurred
       Received)
      with Size => 1;
    for ERRORSRC_DNACK_Field use
-     (Notreceived => 0,
+     (NotReceived => 0,
       Received => 1);
 
    --  TX buffer over-read detected, and prevented
    type ERRORSRC_OVERREAD_Field is
      (--  Error did not occur
-      Notdetected,
+      NotDetected,
       --  Error occurred
       Detected)
      with Size => 1;
    for ERRORSRC_OVERREAD_Field use
-     (Notdetected => 0,
+     (NotDetected => 0,
       Detected => 1);
 
    --  Error source
    type ERRORSRC_Register is record
       --  RX buffer overflow detected, and prevented
-      OVERFLOW      : ERRORSRC_OVERFLOW_Field := NRF_SVD.TWIS.Notdetected;
+      OVERFLOW      : ERRORSRC_OVERFLOW_Field := NRF_SVD.TWIS.NotDetected;
       --  unspecified
       Reserved_1_1  : HAL.Bit := 16#0#;
       --  NACK sent after receiving a data byte
-      DNACK         : ERRORSRC_DNACK_Field := NRF_SVD.TWIS.Notreceived;
+      DNACK         : ERRORSRC_DNACK_Field := NRF_SVD.TWIS.NotReceived;
       --  TX buffer over-read detected, and prevented
-      OVERREAD      : ERRORSRC_OVERREAD_Field := NRF_SVD.TWIS.Notdetected;
+      OVERREAD      : ERRORSRC_OVERREAD_Field := NRF_SVD.TWIS.NotDetected;
       --  unspecified
       Reserved_4_31 : HAL.UInt28 := 16#0#;
    end record

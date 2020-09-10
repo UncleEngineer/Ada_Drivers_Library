@@ -340,12 +340,12 @@ package NRF_SVD.NFCT is
    --  Write '1' to Enable interrupt for READY event
    type INTENSET_READY_Field_1 is
      (--  Reset value for the field
-      Intenset_Ready_Field_Reset,
+      INTENSET_READY_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_READY_Field_1 use
-     (Intenset_Ready_Field_Reset => 0,
+     (INTENSET_READY_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for FIELDDETECTED event
@@ -362,12 +362,12 @@ package NRF_SVD.NFCT is
    --  Write '1' to Enable interrupt for FIELDDETECTED event
    type INTENSET_FIELDDETECTED_Field_1 is
      (--  Reset value for the field
-      Intenset_Fielddetected_Field_Reset,
+      INTENSET_FIELDDETECTED_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_FIELDDETECTED_Field_1 use
-     (Intenset_Fielddetected_Field_Reset => 0,
+     (INTENSET_FIELDDETECTED_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for FIELDLOST event
@@ -384,12 +384,12 @@ package NRF_SVD.NFCT is
    --  Write '1' to Enable interrupt for FIELDLOST event
    type INTENSET_FIELDLOST_Field_1 is
      (--  Reset value for the field
-      Intenset_Fieldlost_Field_Reset,
+      INTENSET_FIELDLOST_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_FIELDLOST_Field_1 use
-     (Intenset_Fieldlost_Field_Reset => 0,
+     (INTENSET_FIELDLOST_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for TXFRAMESTART event
@@ -406,12 +406,12 @@ package NRF_SVD.NFCT is
    --  Write '1' to Enable interrupt for TXFRAMESTART event
    type INTENSET_TXFRAMESTART_Field_1 is
      (--  Reset value for the field
-      Intenset_Txframestart_Field_Reset,
+      INTENSET_TXFRAMESTART_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_TXFRAMESTART_Field_1 use
-     (Intenset_Txframestart_Field_Reset => 0,
+     (INTENSET_TXFRAMESTART_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for TXFRAMEEND event
@@ -428,12 +428,12 @@ package NRF_SVD.NFCT is
    --  Write '1' to Enable interrupt for TXFRAMEEND event
    type INTENSET_TXFRAMEEND_Field_1 is
      (--  Reset value for the field
-      Intenset_Txframeend_Field_Reset,
+      INTENSET_TXFRAMEEND_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_TXFRAMEEND_Field_1 use
-     (Intenset_Txframeend_Field_Reset => 0,
+     (INTENSET_TXFRAMEEND_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for RXFRAMESTART event
@@ -450,12 +450,12 @@ package NRF_SVD.NFCT is
    --  Write '1' to Enable interrupt for RXFRAMESTART event
    type INTENSET_RXFRAMESTART_Field_1 is
      (--  Reset value for the field
-      Intenset_Rxframestart_Field_Reset,
+      INTENSET_RXFRAMESTART_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_RXFRAMESTART_Field_1 use
-     (Intenset_Rxframestart_Field_Reset => 0,
+     (INTENSET_RXFRAMESTART_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for RXFRAMEEND event
@@ -472,12 +472,12 @@ package NRF_SVD.NFCT is
    --  Write '1' to Enable interrupt for RXFRAMEEND event
    type INTENSET_RXFRAMEEND_Field_1 is
      (--  Reset value for the field
-      Intenset_Rxframeend_Field_Reset,
+      INTENSET_RXFRAMEEND_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_RXFRAMEEND_Field_1 use
-     (Intenset_Rxframeend_Field_Reset => 0,
+     (INTENSET_RXFRAMEEND_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for ERROR event
@@ -494,12 +494,12 @@ package NRF_SVD.NFCT is
    --  Write '1' to Enable interrupt for ERROR event
    type INTENSET_ERROR_Field_1 is
      (--  Reset value for the field
-      Intenset_Error_Field_Reset,
+      INTENSET_ERROR_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_ERROR_Field_1 use
-     (Intenset_Error_Field_Reset => 0,
+     (INTENSET_ERROR_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for RXERROR event
@@ -516,12 +516,12 @@ package NRF_SVD.NFCT is
    --  Write '1' to Enable interrupt for RXERROR event
    type INTENSET_RXERROR_Field_1 is
      (--  Reset value for the field
-      Intenset_Rxerror_Field_Reset,
+      INTENSET_RXERROR_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_RXERROR_Field_1 use
-     (Intenset_Rxerror_Field_Reset => 0,
+     (INTENSET_RXERROR_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for ENDRX event
@@ -538,12 +538,12 @@ package NRF_SVD.NFCT is
    --  Write '1' to Enable interrupt for ENDRX event
    type INTENSET_ENDRX_Field_1 is
      (--  Reset value for the field
-      Intenset_Endrx_Field_Reset,
+      INTENSET_ENDRX_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_ENDRX_Field_1 use
-     (Intenset_Endrx_Field_Reset => 0,
+     (INTENSET_ENDRX_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for ENDTX event
@@ -560,12 +560,12 @@ package NRF_SVD.NFCT is
    --  Write '1' to Enable interrupt for ENDTX event
    type INTENSET_ENDTX_Field_1 is
      (--  Reset value for the field
-      Intenset_Endtx_Field_Reset,
+      INTENSET_ENDTX_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_ENDTX_Field_1 use
-     (Intenset_Endtx_Field_Reset => 0,
+     (INTENSET_ENDTX_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for AUTOCOLRESSTARTED event
@@ -582,12 +582,12 @@ package NRF_SVD.NFCT is
    --  Write '1' to Enable interrupt for AUTOCOLRESSTARTED event
    type INTENSET_AUTOCOLRESSTARTED_Field_1 is
      (--  Reset value for the field
-      Intenset_Autocolresstarted_Field_Reset,
+      INTENSET_AUTOCOLRESSTARTED_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_AUTOCOLRESSTARTED_Field_1 use
-     (Intenset_Autocolresstarted_Field_Reset => 0,
+     (INTENSET_AUTOCOLRESSTARTED_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for COLLISION event
@@ -604,12 +604,12 @@ package NRF_SVD.NFCT is
    --  Write '1' to Enable interrupt for COLLISION event
    type INTENSET_COLLISION_Field_1 is
      (--  Reset value for the field
-      Intenset_Collision_Field_Reset,
+      INTENSET_COLLISION_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_COLLISION_Field_1 use
-     (Intenset_Collision_Field_Reset => 0,
+     (INTENSET_COLLISION_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for SELECTED event
@@ -626,12 +626,12 @@ package NRF_SVD.NFCT is
    --  Write '1' to Enable interrupt for SELECTED event
    type INTENSET_SELECTED_Field_1 is
      (--  Reset value for the field
-      Intenset_Selected_Field_Reset,
+      INTENSET_SELECTED_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_SELECTED_Field_1 use
-     (Intenset_Selected_Field_Reset => 0,
+     (INTENSET_SELECTED_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for STARTED event
@@ -648,67 +648,67 @@ package NRF_SVD.NFCT is
    --  Write '1' to Enable interrupt for STARTED event
    type INTENSET_STARTED_Field_1 is
      (--  Reset value for the field
-      Intenset_Started_Field_Reset,
+      INTENSET_STARTED_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_STARTED_Field_1 use
-     (Intenset_Started_Field_Reset => 0,
+     (INTENSET_STARTED_Field_Reset => 0,
       Set => 1);
 
    --  Enable interrupt
    type INTENSET_Register is record
       --  Write '1' to Enable interrupt for READY event
       READY             : INTENSET_READY_Field_1 :=
-                           Intenset_Ready_Field_Reset;
+                           INTENSET_READY_Field_Reset;
       --  Write '1' to Enable interrupt for FIELDDETECTED event
       FIELDDETECTED     : INTENSET_FIELDDETECTED_Field_1 :=
-                           Intenset_Fielddetected_Field_Reset;
+                           INTENSET_FIELDDETECTED_Field_Reset;
       --  Write '1' to Enable interrupt for FIELDLOST event
       FIELDLOST         : INTENSET_FIELDLOST_Field_1 :=
-                           Intenset_Fieldlost_Field_Reset;
+                           INTENSET_FIELDLOST_Field_Reset;
       --  Write '1' to Enable interrupt for TXFRAMESTART event
       TXFRAMESTART      : INTENSET_TXFRAMESTART_Field_1 :=
-                           Intenset_Txframestart_Field_Reset;
+                           INTENSET_TXFRAMESTART_Field_Reset;
       --  Write '1' to Enable interrupt for TXFRAMEEND event
       TXFRAMEEND        : INTENSET_TXFRAMEEND_Field_1 :=
-                           Intenset_Txframeend_Field_Reset;
+                           INTENSET_TXFRAMEEND_Field_Reset;
       --  Write '1' to Enable interrupt for RXFRAMESTART event
       RXFRAMESTART      : INTENSET_RXFRAMESTART_Field_1 :=
-                           Intenset_Rxframestart_Field_Reset;
+                           INTENSET_RXFRAMESTART_Field_Reset;
       --  Write '1' to Enable interrupt for RXFRAMEEND event
       RXFRAMEEND        : INTENSET_RXFRAMEEND_Field_1 :=
-                           Intenset_Rxframeend_Field_Reset;
+                           INTENSET_RXFRAMEEND_Field_Reset;
       --  Write '1' to Enable interrupt for ERROR event
       ERROR             : INTENSET_ERROR_Field_1 :=
-                           Intenset_Error_Field_Reset;
+                           INTENSET_ERROR_Field_Reset;
       --  unspecified
       Reserved_8_9      : HAL.UInt2 := 16#0#;
       --  Write '1' to Enable interrupt for RXERROR event
       RXERROR           : INTENSET_RXERROR_Field_1 :=
-                           Intenset_Rxerror_Field_Reset;
+                           INTENSET_RXERROR_Field_Reset;
       --  Write '1' to Enable interrupt for ENDRX event
       ENDRX             : INTENSET_ENDRX_Field_1 :=
-                           Intenset_Endrx_Field_Reset;
+                           INTENSET_ENDRX_Field_Reset;
       --  Write '1' to Enable interrupt for ENDTX event
       ENDTX             : INTENSET_ENDTX_Field_1 :=
-                           Intenset_Endtx_Field_Reset;
+                           INTENSET_ENDTX_Field_Reset;
       --  unspecified
       Reserved_13_13    : HAL.Bit := 16#0#;
       --  Write '1' to Enable interrupt for AUTOCOLRESSTARTED event
       AUTOCOLRESSTARTED : INTENSET_AUTOCOLRESSTARTED_Field_1 :=
-                           Intenset_Autocolresstarted_Field_Reset;
+                           INTENSET_AUTOCOLRESSTARTED_Field_Reset;
       --  unspecified
       Reserved_15_17    : HAL.UInt3 := 16#0#;
       --  Write '1' to Enable interrupt for COLLISION event
       COLLISION         : INTENSET_COLLISION_Field_1 :=
-                           Intenset_Collision_Field_Reset;
+                           INTENSET_COLLISION_Field_Reset;
       --  Write '1' to Enable interrupt for SELECTED event
       SELECTED          : INTENSET_SELECTED_Field_1 :=
-                           Intenset_Selected_Field_Reset;
+                           INTENSET_SELECTED_Field_Reset;
       --  Write '1' to Enable interrupt for STARTED event
       STARTED           : INTENSET_STARTED_Field_1 :=
-                           Intenset_Started_Field_Reset;
+                           INTENSET_STARTED_Field_Reset;
       --  unspecified
       Reserved_21_31    : HAL.UInt11 := 16#0#;
    end record
@@ -751,12 +751,12 @@ package NRF_SVD.NFCT is
    --  Write '1' to Disable interrupt for READY event
    type INTENCLR_READY_Field_1 is
      (--  Reset value for the field
-      Intenclr_Ready_Field_Reset,
+      INTENCLR_READY_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_READY_Field_1 use
-     (Intenclr_Ready_Field_Reset => 0,
+     (INTENCLR_READY_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for FIELDDETECTED event
@@ -773,12 +773,12 @@ package NRF_SVD.NFCT is
    --  Write '1' to Disable interrupt for FIELDDETECTED event
    type INTENCLR_FIELDDETECTED_Field_1 is
      (--  Reset value for the field
-      Intenclr_Fielddetected_Field_Reset,
+      INTENCLR_FIELDDETECTED_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_FIELDDETECTED_Field_1 use
-     (Intenclr_Fielddetected_Field_Reset => 0,
+     (INTENCLR_FIELDDETECTED_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for FIELDLOST event
@@ -795,12 +795,12 @@ package NRF_SVD.NFCT is
    --  Write '1' to Disable interrupt for FIELDLOST event
    type INTENCLR_FIELDLOST_Field_1 is
      (--  Reset value for the field
-      Intenclr_Fieldlost_Field_Reset,
+      INTENCLR_FIELDLOST_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_FIELDLOST_Field_1 use
-     (Intenclr_Fieldlost_Field_Reset => 0,
+     (INTENCLR_FIELDLOST_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for TXFRAMESTART event
@@ -817,12 +817,12 @@ package NRF_SVD.NFCT is
    --  Write '1' to Disable interrupt for TXFRAMESTART event
    type INTENCLR_TXFRAMESTART_Field_1 is
      (--  Reset value for the field
-      Intenclr_Txframestart_Field_Reset,
+      INTENCLR_TXFRAMESTART_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_TXFRAMESTART_Field_1 use
-     (Intenclr_Txframestart_Field_Reset => 0,
+     (INTENCLR_TXFRAMESTART_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for TXFRAMEEND event
@@ -839,12 +839,12 @@ package NRF_SVD.NFCT is
    --  Write '1' to Disable interrupt for TXFRAMEEND event
    type INTENCLR_TXFRAMEEND_Field_1 is
      (--  Reset value for the field
-      Intenclr_Txframeend_Field_Reset,
+      INTENCLR_TXFRAMEEND_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_TXFRAMEEND_Field_1 use
-     (Intenclr_Txframeend_Field_Reset => 0,
+     (INTENCLR_TXFRAMEEND_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for RXFRAMESTART event
@@ -861,12 +861,12 @@ package NRF_SVD.NFCT is
    --  Write '1' to Disable interrupt for RXFRAMESTART event
    type INTENCLR_RXFRAMESTART_Field_1 is
      (--  Reset value for the field
-      Intenclr_Rxframestart_Field_Reset,
+      INTENCLR_RXFRAMESTART_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_RXFRAMESTART_Field_1 use
-     (Intenclr_Rxframestart_Field_Reset => 0,
+     (INTENCLR_RXFRAMESTART_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for RXFRAMEEND event
@@ -883,12 +883,12 @@ package NRF_SVD.NFCT is
    --  Write '1' to Disable interrupt for RXFRAMEEND event
    type INTENCLR_RXFRAMEEND_Field_1 is
      (--  Reset value for the field
-      Intenclr_Rxframeend_Field_Reset,
+      INTENCLR_RXFRAMEEND_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_RXFRAMEEND_Field_1 use
-     (Intenclr_Rxframeend_Field_Reset => 0,
+     (INTENCLR_RXFRAMEEND_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for ERROR event
@@ -905,12 +905,12 @@ package NRF_SVD.NFCT is
    --  Write '1' to Disable interrupt for ERROR event
    type INTENCLR_ERROR_Field_1 is
      (--  Reset value for the field
-      Intenclr_Error_Field_Reset,
+      INTENCLR_ERROR_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_ERROR_Field_1 use
-     (Intenclr_Error_Field_Reset => 0,
+     (INTENCLR_ERROR_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for RXERROR event
@@ -927,12 +927,12 @@ package NRF_SVD.NFCT is
    --  Write '1' to Disable interrupt for RXERROR event
    type INTENCLR_RXERROR_Field_1 is
      (--  Reset value for the field
-      Intenclr_Rxerror_Field_Reset,
+      INTENCLR_RXERROR_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_RXERROR_Field_1 use
-     (Intenclr_Rxerror_Field_Reset => 0,
+     (INTENCLR_RXERROR_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for ENDRX event
@@ -949,12 +949,12 @@ package NRF_SVD.NFCT is
    --  Write '1' to Disable interrupt for ENDRX event
    type INTENCLR_ENDRX_Field_1 is
      (--  Reset value for the field
-      Intenclr_Endrx_Field_Reset,
+      INTENCLR_ENDRX_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_ENDRX_Field_1 use
-     (Intenclr_Endrx_Field_Reset => 0,
+     (INTENCLR_ENDRX_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for ENDTX event
@@ -971,12 +971,12 @@ package NRF_SVD.NFCT is
    --  Write '1' to Disable interrupt for ENDTX event
    type INTENCLR_ENDTX_Field_1 is
      (--  Reset value for the field
-      Intenclr_Endtx_Field_Reset,
+      INTENCLR_ENDTX_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_ENDTX_Field_1 use
-     (Intenclr_Endtx_Field_Reset => 0,
+     (INTENCLR_ENDTX_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for AUTOCOLRESSTARTED event
@@ -993,12 +993,12 @@ package NRF_SVD.NFCT is
    --  Write '1' to Disable interrupt for AUTOCOLRESSTARTED event
    type INTENCLR_AUTOCOLRESSTARTED_Field_1 is
      (--  Reset value for the field
-      Intenclr_Autocolresstarted_Field_Reset,
+      INTENCLR_AUTOCOLRESSTARTED_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_AUTOCOLRESSTARTED_Field_1 use
-     (Intenclr_Autocolresstarted_Field_Reset => 0,
+     (INTENCLR_AUTOCOLRESSTARTED_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for COLLISION event
@@ -1015,12 +1015,12 @@ package NRF_SVD.NFCT is
    --  Write '1' to Disable interrupt for COLLISION event
    type INTENCLR_COLLISION_Field_1 is
      (--  Reset value for the field
-      Intenclr_Collision_Field_Reset,
+      INTENCLR_COLLISION_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_COLLISION_Field_1 use
-     (Intenclr_Collision_Field_Reset => 0,
+     (INTENCLR_COLLISION_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for SELECTED event
@@ -1037,12 +1037,12 @@ package NRF_SVD.NFCT is
    --  Write '1' to Disable interrupt for SELECTED event
    type INTENCLR_SELECTED_Field_1 is
      (--  Reset value for the field
-      Intenclr_Selected_Field_Reset,
+      INTENCLR_SELECTED_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_SELECTED_Field_1 use
-     (Intenclr_Selected_Field_Reset => 0,
+     (INTENCLR_SELECTED_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for STARTED event
@@ -1059,67 +1059,67 @@ package NRF_SVD.NFCT is
    --  Write '1' to Disable interrupt for STARTED event
    type INTENCLR_STARTED_Field_1 is
      (--  Reset value for the field
-      Intenclr_Started_Field_Reset,
+      INTENCLR_STARTED_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_STARTED_Field_1 use
-     (Intenclr_Started_Field_Reset => 0,
+     (INTENCLR_STARTED_Field_Reset => 0,
       Clear => 1);
 
    --  Disable interrupt
    type INTENCLR_Register is record
       --  Write '1' to Disable interrupt for READY event
       READY             : INTENCLR_READY_Field_1 :=
-                           Intenclr_Ready_Field_Reset;
+                           INTENCLR_READY_Field_Reset;
       --  Write '1' to Disable interrupt for FIELDDETECTED event
       FIELDDETECTED     : INTENCLR_FIELDDETECTED_Field_1 :=
-                           Intenclr_Fielddetected_Field_Reset;
+                           INTENCLR_FIELDDETECTED_Field_Reset;
       --  Write '1' to Disable interrupt for FIELDLOST event
       FIELDLOST         : INTENCLR_FIELDLOST_Field_1 :=
-                           Intenclr_Fieldlost_Field_Reset;
+                           INTENCLR_FIELDLOST_Field_Reset;
       --  Write '1' to Disable interrupt for TXFRAMESTART event
       TXFRAMESTART      : INTENCLR_TXFRAMESTART_Field_1 :=
-                           Intenclr_Txframestart_Field_Reset;
+                           INTENCLR_TXFRAMESTART_Field_Reset;
       --  Write '1' to Disable interrupt for TXFRAMEEND event
       TXFRAMEEND        : INTENCLR_TXFRAMEEND_Field_1 :=
-                           Intenclr_Txframeend_Field_Reset;
+                           INTENCLR_TXFRAMEEND_Field_Reset;
       --  Write '1' to Disable interrupt for RXFRAMESTART event
       RXFRAMESTART      : INTENCLR_RXFRAMESTART_Field_1 :=
-                           Intenclr_Rxframestart_Field_Reset;
+                           INTENCLR_RXFRAMESTART_Field_Reset;
       --  Write '1' to Disable interrupt for RXFRAMEEND event
       RXFRAMEEND        : INTENCLR_RXFRAMEEND_Field_1 :=
-                           Intenclr_Rxframeend_Field_Reset;
+                           INTENCLR_RXFRAMEEND_Field_Reset;
       --  Write '1' to Disable interrupt for ERROR event
       ERROR             : INTENCLR_ERROR_Field_1 :=
-                           Intenclr_Error_Field_Reset;
+                           INTENCLR_ERROR_Field_Reset;
       --  unspecified
       Reserved_8_9      : HAL.UInt2 := 16#0#;
       --  Write '1' to Disable interrupt for RXERROR event
       RXERROR           : INTENCLR_RXERROR_Field_1 :=
-                           Intenclr_Rxerror_Field_Reset;
+                           INTENCLR_RXERROR_Field_Reset;
       --  Write '1' to Disable interrupt for ENDRX event
       ENDRX             : INTENCLR_ENDRX_Field_1 :=
-                           Intenclr_Endrx_Field_Reset;
+                           INTENCLR_ENDRX_Field_Reset;
       --  Write '1' to Disable interrupt for ENDTX event
       ENDTX             : INTENCLR_ENDTX_Field_1 :=
-                           Intenclr_Endtx_Field_Reset;
+                           INTENCLR_ENDTX_Field_Reset;
       --  unspecified
       Reserved_13_13    : HAL.Bit := 16#0#;
       --  Write '1' to Disable interrupt for AUTOCOLRESSTARTED event
       AUTOCOLRESSTARTED : INTENCLR_AUTOCOLRESSTARTED_Field_1 :=
-                           Intenclr_Autocolresstarted_Field_Reset;
+                           INTENCLR_AUTOCOLRESSTARTED_Field_Reset;
       --  unspecified
       Reserved_15_17    : HAL.UInt3 := 16#0#;
       --  Write '1' to Disable interrupt for COLLISION event
       COLLISION         : INTENCLR_COLLISION_Field_1 :=
-                           Intenclr_Collision_Field_Reset;
+                           INTENCLR_COLLISION_Field_Reset;
       --  Write '1' to Disable interrupt for SELECTED event
       SELECTED          : INTENCLR_SELECTED_Field_1 :=
-                           Intenclr_Selected_Field_Reset;
+                           INTENCLR_SELECTED_Field_Reset;
       --  Write '1' to Disable interrupt for STARTED event
       STARTED           : INTENCLR_STARTED_Field_1 :=
-                           Intenclr_Started_Field_Reset;
+                           INTENCLR_STARTED_Field_Reset;
       --  unspecified
       Reserved_21_31    : HAL.UInt11 := 16#0#;
    end record
@@ -1180,46 +1180,46 @@ package NRF_SVD.NFCT is
    --  No valid End of Frame detected
    type RX_CRCERROR_Field is
      (--  Valid CRC detected
-      Crccorrect,
+      CRCCorrect,
       --  CRC received does not match local check
-      Crcerror)
+      CRCError)
      with Size => 1;
    for RX_CRCERROR_Field use
-     (Crccorrect => 0,
-      Crcerror => 1);
+     (CRCCorrect => 0,
+      CRCError => 1);
 
    --  Parity status of received frame
    type RX_PARITYSTATUS_Field is
      (--  Frame received with parity OK
-      Parityok,
+      ParityOK,
       --  Frame received with parity error
-      Parityerror)
+      ParityError)
      with Size => 1;
    for RX_PARITYSTATUS_Field use
-     (Parityok => 0,
-      Parityerror => 1);
+     (ParityOK => 0,
+      ParityError => 1);
 
    --  Overrun detected
    type RX_OVERRUN_Field is
      (--  No overrun detected
-      Nooverrun,
+      NoOverrun,
       --  Overrun error
       Overrun)
      with Size => 1;
    for RX_OVERRUN_Field use
-     (Nooverrun => 0,
+     (NoOverrun => 0,
       Overrun => 1);
 
    --  Result of last incoming frames
    type RX_FRAMESTATUS_Register is record
       --  No valid End of Frame detected
-      CRCERROR      : RX_CRCERROR_Field := NRF_SVD.NFCT.Crccorrect;
+      CRCERROR      : RX_CRCERROR_Field := NRF_SVD.NFCT.CRCCorrect;
       --  unspecified
       Reserved_1_1  : HAL.Bit := 16#0#;
       --  Parity status of received frame
-      PARITYSTATUS  : RX_PARITYSTATUS_Field := NRF_SVD.NFCT.Parityok;
+      PARITYSTATUS  : RX_PARITYSTATUS_Field := NRF_SVD.NFCT.ParityOK;
       --  Overrun detected
-      OVERRUN       : RX_OVERRUN_Field := NRF_SVD.NFCT.Nooverrun;
+      OVERRUN       : RX_OVERRUN_Field := NRF_SVD.NFCT.NoOverrun;
       --  unspecified
       Reserved_4_31 : HAL.UInt28 := 16#0#;
    end record
@@ -1266,23 +1266,23 @@ package NRF_SVD.NFCT is
    --  activated state.
    type FIELDPRESENT_FIELDPRESENT_Field is
      (--  No valid field detected
-      Nofield,
+      NoField,
       --  Valid field detected
-      Fieldpresent)
+      FieldPresent)
      with Size => 1;
    for FIELDPRESENT_FIELDPRESENT_Field use
-     (Nofield => 0,
-      Fieldpresent => 1);
+     (NoField => 0,
+      FieldPresent => 1);
 
    --  Indicates if the low level has locked to the field
    type FIELDPRESENT_LOCKDETECT_Field is
      (--  Not locked to field
-      Notlocked,
+      NotLocked,
       --  Locked to field
       Locked)
      with Size => 1;
    for FIELDPRESENT_LOCKDETECT_Field use
-     (Notlocked => 0,
+     (NotLocked => 0,
       Locked => 1);
 
    --  Indicates the presence or not of a valid field
@@ -1342,19 +1342,19 @@ package NRF_SVD.NFCT is
    type FRAMEDELAYMODE_FRAMEDELAYMODE_Field is
      (--  Transmission is independent of frame timer and will start when the STARTTX
 --  task is triggered. No timeout.
-      Freerun,
+      FreeRun,
       --  Frame is transmitted between FRAMEDELAYMIN and FRAMEDELAYMAX
       Window,
       --  Frame is transmitted exactly at FRAMEDELAYMAX
-      Exactval,
+      ExactVal,
       --  Frame is transmitted on a bit grid between FRAMEDELAYMIN and FRAMEDELAYMAX
-      Windowgrid)
+      WindowGrid)
      with Size => 2;
    for FRAMEDELAYMODE_FRAMEDELAYMODE_Field use
-     (Freerun => 0,
+     (FreeRun => 0,
       Window => 1,
-      Exactval => 2,
-      Windowgrid => 3);
+      ExactVal => 2,
+      WindowGrid => 3);
 
    --  Configuration register for the Frame Delay Timer
    type FRAMEDELAYMODE_Register is record
@@ -1396,47 +1396,47 @@ package NRF_SVD.NFCT is
    --  Adding parity or not in the frame
    type FRAMECONFIG_PARITY_Field is
      (--  Parity is not added in TX frames
-      Noparity,
+      NoParity,
       --  Parity is added TX frames
       Parity)
      with Size => 1;
    for FRAMECONFIG_PARITY_Field use
-     (Noparity => 0,
+     (NoParity => 0,
       Parity => 1);
 
    --  Discarding unused bits in start or at end of a Frame
    type FRAMECONFIG_DISCARDMODE_Field is
      (--  Unused bits is discarded at end of frame
-      Discardend,
+      DiscardEnd,
       --  Unused bits is discarded at start of frame
-      Discardstart)
+      DiscardStart)
      with Size => 1;
    for FRAMECONFIG_DISCARDMODE_Field use
-     (Discardend => 0,
-      Discardstart => 1);
+     (DiscardEnd => 0,
+      DiscardStart => 1);
 
    --  Adding SoF or not in TX frames
    type FRAMECONFIG_SOF_Field is
      (--  Start of Frame symbol not added
-      Nosof,
+      NoSoF,
       --  Start of Frame symbol added
-      Sof)
+      SoF)
      with Size => 1;
    for FRAMECONFIG_SOF_Field use
-     (Nosof => 0,
-      Sof => 1);
+     (NoSoF => 0,
+      SoF => 1);
 
    --  CRC mode for outgoing frames
    type FRAMECONFIG_CRCMODETX_Field is
      (--  CRC is not added to the frame
-      Nocrctx,
+      NoCRCTX,
       --  16 bit CRC added to the frame based on all the data read from RAM that is
 --  used in the frame
-      Crc16Tx)
+      CRC16TX)
      with Size => 1;
    for FRAMECONFIG_CRCMODETX_Field use
-     (Nocrctx => 0,
-      Crc16Tx => 1);
+     (NoCRCTX => 0,
+      CRC16TX => 1);
 
    --  Configuration of outgoing frames
    type FRAMECONFIG_TXD_Register is record
@@ -1444,13 +1444,13 @@ package NRF_SVD.NFCT is
       PARITY        : FRAMECONFIG_PARITY_Field := NRF_SVD.NFCT.Parity;
       --  Discarding unused bits in start or at end of a Frame
       DISCARDMODE   : FRAMECONFIG_DISCARDMODE_Field :=
-                       NRF_SVD.NFCT.Discardstart;
+                       NRF_SVD.NFCT.DiscardStart;
       --  Adding SoF or not in TX frames
-      SOF           : FRAMECONFIG_SOF_Field := NRF_SVD.NFCT.Sof;
+      SOF           : FRAMECONFIG_SOF_Field := NRF_SVD.NFCT.SoF;
       --  unspecified
       Reserved_3_3  : HAL.Bit := 16#0#;
       --  CRC mode for outgoing frames
-      CRCMODETX     : FRAMECONFIG_CRCMODETX_Field := NRF_SVD.NFCT.Crc16Tx;
+      CRCMODETX     : FRAMECONFIG_CRCMODETX_Field := NRF_SVD.NFCT.CRC16TX;
       --  unspecified
       Reserved_5_31 : HAL.UInt27 := 16#0#;
    end record
@@ -1510,13 +1510,13 @@ package NRF_SVD.NFCT is
    --  CRC mode for incoming frames
    type FRAMECONFIG_CRCMODERX_Field is
      (--  CRC is not expected in RX frames
-      Nocrcrx,
+      NoCRCRX,
       --  Last 16 bits in RX frame is CRC, CRC is checked and CRCSTATUS updated
-      Crc16Rx)
+      CRC16RX)
      with Size => 1;
    for FRAMECONFIG_CRCMODERX_Field use
-     (Nocrcrx => 0,
-      Crc16Rx => 1);
+     (NoCRCRX => 0,
+      CRC16RX => 1);
 
    --  Configuration of incoming frames
    type FRAMECONFIG_RXD_Register is record
@@ -1525,11 +1525,11 @@ package NRF_SVD.NFCT is
       --  unspecified
       Reserved_1_1  : HAL.Bit := 16#0#;
       --  SoF expected or not in RX frames
-      SOF           : FRAMECONFIG_SOF_Field := NRF_SVD.NFCT.Sof;
+      SOF           : FRAMECONFIG_SOF_Field := NRF_SVD.NFCT.SoF;
       --  unspecified
       Reserved_3_3  : HAL.Bit := 16#0#;
       --  CRC mode for incoming frames
-      CRCMODERX     : FRAMECONFIG_CRCMODERX_Field := NRF_SVD.NFCT.Crc16Rx;
+      CRCMODERX     : FRAMECONFIG_CRCMODERX_Field := NRF_SVD.NFCT.CRC16RX;
       --  unspecified
       Reserved_5_31 : HAL.UInt27 := 16#0#;
    end record
@@ -1662,39 +1662,39 @@ package NRF_SVD.NFCT is
    --  the NFC Forum, NFC Digital Protocol Technical Specification
    type SENSRES_BITFRAMESDD_Field is
      (--  SDD pattern 00000
-      Sdd00000,
+      SDD00000,
       --  SDD pattern 00001
-      Sdd00001,
+      SDD00001,
       --  SDD pattern 00010
-      Sdd00010,
+      SDD00010,
       --  SDD pattern 00100
-      Sdd00100,
+      SDD00100,
       --  SDD pattern 01000
-      Sdd01000,
+      SDD01000,
       --  SDD pattern 10000
-      Sdd10000)
+      SDD10000)
      with Size => 5;
    for SENSRES_BITFRAMESDD_Field use
-     (Sdd00000 => 0,
-      Sdd00001 => 1,
-      Sdd00010 => 2,
-      Sdd00100 => 4,
-      Sdd01000 => 8,
-      Sdd10000 => 16);
+     (SDD00000 => 0,
+      SDD00001 => 1,
+      SDD00010 => 2,
+      SDD00100 => 4,
+      SDD01000 => 8,
+      SDD10000 => 16);
 
    --  NFCID1 size. This value is used by the Auto collision resolution engine.
    type SENSRES_NFCIDSIZE_Field is
      (--  NFCID1 size: single (4 bytes)
-      Nfcid1Single,
+      NFCID1Single,
       --  NFCID1 size: double (7 bytes)
-      Nfcid1Double,
+      NFCID1Double,
       --  NFCID1 size: triple (10 bytes)
-      Nfcid1Triple)
+      NFCID1Triple)
      with Size => 2;
    for SENSRES_NFCIDSIZE_Field use
-     (Nfcid1Single => 0,
-      Nfcid1Double => 1,
-      Nfcid1Triple => 2);
+     (NFCID1Single => 0,
+      NFCID1Double => 1,
+      NFCID1Triple => 2);
 
    subtype SENSRES_PLATFCONFIG_Field is HAL.UInt4;
    subtype SENSRES_RFU74_Field is HAL.UInt4;
@@ -1703,12 +1703,12 @@ package NRF_SVD.NFCT is
    type SENSRES_Register is record
       --  Bit frame SDD as defined by the b5:b1 of byte 1 in SENS_RES response
       --  in the NFC Forum, NFC Digital Protocol Technical Specification
-      BITFRAMESDD    : SENSRES_BITFRAMESDD_Field := NRF_SVD.NFCT.Sdd00001;
+      BITFRAMESDD    : SENSRES_BITFRAMESDD_Field := NRF_SVD.NFCT.SDD00001;
       --  Reserved for future use. Shall be 0.
       RFU5           : Boolean := False;
       --  NFCID1 size. This value is used by the Auto collision resolution
       --  engine.
-      NFCIDSIZE      : SENSRES_NFCIDSIZE_Field := NRF_SVD.NFCT.Nfcid1Single;
+      NFCIDSIZE      : SENSRES_NFCIDSIZE_Field := NRF_SVD.NFCT.NFCID1Single;
       --  Tag platform configuration as defined by the b4:b1 of byte 2 in
       --  SENS_RES response in the NFC Forum, NFC Digital Protocol Technical
       --  Specification
@@ -1737,11 +1737,11 @@ package NRF_SVD.NFCT is
      (--  NFCID1 complete
       Complete,
       --  NFCID1 not complete
-      Notcomplete)
+      NotComplete)
      with Size => 1;
    for SELRES_CASCADE_Field use
      (Complete => 0,
-      Notcomplete => 1);
+      NotComplete => 1);
 
    subtype SELRES_RFU43_Field is HAL.UInt2;
    subtype SELRES_PROTOCOL_Field is HAL.UInt2;

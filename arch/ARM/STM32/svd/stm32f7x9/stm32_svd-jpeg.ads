@@ -21,7 +21,7 @@ package STM32_SVD.JPEG is
       --  unspecified
       Reserved_1_31 : HAL.UInt31 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for JPEG_CONFR0_Register use record
@@ -53,7 +53,7 @@ package STM32_SVD.JPEG is
       --  Y Size
       YSIZE         : JPEG_CONFR1_YSIZE_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for JPEG_CONFR1_Register use record
@@ -76,7 +76,7 @@ package STM32_SVD.JPEG is
       --  unspecified
       Reserved_26_31 : HAL.UInt6 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for JPEG_CONFR2_Register use record
@@ -93,7 +93,7 @@ package STM32_SVD.JPEG is
       --  X size
       XSIZE         : JPEG_CONFR3_XSIZE_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for JPEG_CONFR3_Register use record
@@ -123,7 +123,7 @@ package STM32_SVD.JPEG is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for JPEG_CONFR_Register use record
@@ -165,7 +165,7 @@ package STM32_SVD.JPEG is
       --  unspecified
       Reserved_15_31 : HAL.UInt17 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for JPEG_CR_Register use record
@@ -205,7 +205,7 @@ package STM32_SVD.JPEG is
       --  unspecified
       Reserved_8_31 : HAL.UInt24;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for JPEG_SR_Register use record
@@ -231,7 +231,7 @@ package STM32_SVD.JPEG is
       --  unspecified
       Reserved_7_31 : HAL.UInt25 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for JPEG_CFR_Register use record
@@ -244,44 +244,37 @@ package STM32_SVD.JPEG is
    --  Quantization table
 
    --  Quantization table
-   type QMEM_Registers is array (0 .. 15) of HAL.UInt32
-     with Volatile;
+   type QMEM_Registers is array (0 .. 15) of HAL.UInt32;
 
    --  HuffMin register
 
    --  HuffMin register
-   type HUFFMIN_Registers is array (0 .. 15) of HAL.UInt32
-     with Volatile;
+   type HUFFMIN_Registers is array (0 .. 15) of HAL.UInt32;
 
    --  HuffBase register
 
    --  HuffBase register
-   type HUFFBASE_Registers is array (0 .. 31) of HAL.UInt32
-     with Volatile;
+   type HUFFBASE_Registers is array (0 .. 31) of HAL.UInt32;
 
    --  HuffSymb register
 
    --  HuffSymb register
-   type HUFFSYMB_Registers is array (0 .. 83) of HAL.UInt32
-     with Volatile;
+   type HUFFSYMB_Registers is array (0 .. 83) of HAL.UInt32;
 
    --  JPEG DHTMem tables
 
    --  JPEG DHTMem tables
-   type DHTMEM_Registers is array (0 .. 102) of HAL.UInt32
-     with Volatile;
+   type DHTMEM_Registers is array (0 .. 102) of HAL.UInt32;
 
    --  JPEG encoder, AC Huffman table 0
 
    --  JPEG encoder, AC Huffman table 0
-   type HUFFENC_AC_Registers is array (0 .. 87) of HAL.UInt32
-     with Volatile;
+   type HUFFENC_AC_Registers is array (0 .. 87) of HAL.UInt32;
 
    --  JPEG encoder, DC Huffman table 0
 
    --  JPEG encoder, DC Huffman table 0
-   type HUFFENC_DC_Registers is array (0 .. 7) of HAL.UInt32
-     with Volatile;
+   type HUFFENC_DC_Registers is array (0 .. 7) of HAL.UInt32;
 
    -----------------
    -- Peripherals --
@@ -372,6 +365,6 @@ package STM32_SVD.JPEG is
 
    --  JPEG codec
    JPEG_Periph : aliased JPEG_Peripheral
-     with Import, Address => System'To_Address (16#50051000#);
+     with Import, Address => JPEG_Base;
 
 end STM32_SVD.JPEG;
