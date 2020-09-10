@@ -48,7 +48,7 @@ package STM32_SVD.HASH is
       --  unspecified
       Reserved_19_31 : HAL.UInt13 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CR_Register use record
@@ -81,7 +81,7 @@ package STM32_SVD.HASH is
       --  unspecified
       Reserved_9_31 : HAL.UInt23 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for STR_Register use record
@@ -100,7 +100,7 @@ package STM32_SVD.HASH is
       --  unspecified
       Reserved_2_31 : HAL.UInt30 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for IMR_Register use record
@@ -122,7 +122,7 @@ package STM32_SVD.HASH is
       --  unspecified
       Reserved_4_31 : HAL.UInt28 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for SR_Register use record
@@ -363,6 +363,6 @@ package STM32_SVD.HASH is
 
    --  Hash processor
    HASH_Periph : aliased HASH_Peripheral
-     with Import, Address => System'To_Address (16#50060400#);
+     with Import, Address => HASH_Base;
 
 end STM32_SVD.HASH;

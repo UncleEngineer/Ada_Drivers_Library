@@ -32,7 +32,7 @@ package Cortex_M_SVD.Cache is
       --  0, 1, 2 and 3 are supported..
       Way            : DCISW_Way_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DCISW_Register use record
@@ -59,7 +59,7 @@ package Cortex_M_SVD.Cache is
       --  0, 1, 2 and 3 are supported..
       Way            : DCCSW_Way_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DCCSW_Register use record
@@ -86,7 +86,7 @@ package Cortex_M_SVD.Cache is
       --  0, 1, 2 and 3 are supported..
       Way            : DCCISW_Way_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DCCISW_Register use record

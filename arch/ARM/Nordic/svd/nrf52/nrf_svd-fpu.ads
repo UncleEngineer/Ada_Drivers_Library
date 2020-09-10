@@ -43,6 +43,7 @@ pragma Ada_2012;
 pragma Style_Checks (Off);
 
 with HAL;
+with System;
 
 package NRF_SVD.FPU is
    pragma Preelaborate;

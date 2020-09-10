@@ -83,12 +83,12 @@ package NRF_SVD.CCM is
    --  Enable interrupt on ENDKSGEN event.
    type INTENSET_ENDKSGEN_Field_1 is
      (--  Reset value for the field
-      Intenset_Endksgen_Field_Reset,
+      INTENSET_ENDKSGEN_Field_Reset,
       --  Enable interrupt on write.
       Set)
      with Size => 1;
    for INTENSET_ENDKSGEN_Field_1 use
-     (Intenset_Endksgen_Field_Reset => 0,
+     (INTENSET_ENDKSGEN_Field_Reset => 0,
       Set => 1);
 
    --  Enable interrupt on ENDCRYPT event.
@@ -105,12 +105,12 @@ package NRF_SVD.CCM is
    --  Enable interrupt on ENDCRYPT event.
    type INTENSET_ENDCRYPT_Field_1 is
      (--  Reset value for the field
-      Intenset_Endcrypt_Field_Reset,
+      INTENSET_ENDCRYPT_Field_Reset,
       --  Enable interrupt on write.
       Set)
      with Size => 1;
    for INTENSET_ENDCRYPT_Field_1 use
-     (Intenset_Endcrypt_Field_Reset => 0,
+     (INTENSET_ENDCRYPT_Field_Reset => 0,
       Set => 1);
 
    --  Enable interrupt on ERROR event.
@@ -127,24 +127,24 @@ package NRF_SVD.CCM is
    --  Enable interrupt on ERROR event.
    type INTENSET_ERROR_Field_1 is
      (--  Reset value for the field
-      Intenset_Error_Field_Reset,
+      INTENSET_ERROR_Field_Reset,
       --  Enable interrupt on write.
       Set)
      with Size => 1;
    for INTENSET_ERROR_Field_1 use
-     (Intenset_Error_Field_Reset => 0,
+     (INTENSET_ERROR_Field_Reset => 0,
       Set => 1);
 
    --  Interrupt enable set register.
    type INTENSET_Register is record
       --  Enable interrupt on ENDKSGEN event.
       ENDKSGEN      : INTENSET_ENDKSGEN_Field_1 :=
-                       Intenset_Endksgen_Field_Reset;
+                       INTENSET_ENDKSGEN_Field_Reset;
       --  Enable interrupt on ENDCRYPT event.
       ENDCRYPT      : INTENSET_ENDCRYPT_Field_1 :=
-                       Intenset_Endcrypt_Field_Reset;
+                       INTENSET_ENDCRYPT_Field_Reset;
       --  Enable interrupt on ERROR event.
-      ERROR         : INTENSET_ERROR_Field_1 := Intenset_Error_Field_Reset;
+      ERROR         : INTENSET_ERROR_Field_1 := INTENSET_ERROR_Field_Reset;
       --  unspecified
       Reserved_3_31 : HAL.UInt29 := 16#0#;
    end record
@@ -172,12 +172,12 @@ package NRF_SVD.CCM is
    --  Disable interrupt on ENDKSGEN event.
    type INTENCLR_ENDKSGEN_Field_1 is
      (--  Reset value for the field
-      Intenclr_Endksgen_Field_Reset,
+      INTENCLR_ENDKSGEN_Field_Reset,
       --  Disable interrupt on write.
       Clear)
      with Size => 1;
    for INTENCLR_ENDKSGEN_Field_1 use
-     (Intenclr_Endksgen_Field_Reset => 0,
+     (INTENCLR_ENDKSGEN_Field_Reset => 0,
       Clear => 1);
 
    --  Disable interrupt on ENDCRYPT event.
@@ -194,12 +194,12 @@ package NRF_SVD.CCM is
    --  Disable interrupt on ENDCRYPT event.
    type INTENCLR_ENDCRYPT_Field_1 is
      (--  Reset value for the field
-      Intenclr_Endcrypt_Field_Reset,
+      INTENCLR_ENDCRYPT_Field_Reset,
       --  Disable interrupt on write.
       Clear)
      with Size => 1;
    for INTENCLR_ENDCRYPT_Field_1 use
-     (Intenclr_Endcrypt_Field_Reset => 0,
+     (INTENCLR_ENDCRYPT_Field_Reset => 0,
       Clear => 1);
 
    --  Disable interrupt on ERROR event.
@@ -216,24 +216,24 @@ package NRF_SVD.CCM is
    --  Disable interrupt on ERROR event.
    type INTENCLR_ERROR_Field_1 is
      (--  Reset value for the field
-      Intenclr_Error_Field_Reset,
+      INTENCLR_ERROR_Field_Reset,
       --  Disable interrupt on write.
       Clear)
      with Size => 1;
    for INTENCLR_ERROR_Field_1 use
-     (Intenclr_Error_Field_Reset => 0,
+     (INTENCLR_ERROR_Field_Reset => 0,
       Clear => 1);
 
    --  Interrupt enable clear register.
    type INTENCLR_Register is record
       --  Disable interrupt on ENDKSGEN event.
       ENDKSGEN      : INTENCLR_ENDKSGEN_Field_1 :=
-                       Intenclr_Endksgen_Field_Reset;
+                       INTENCLR_ENDKSGEN_Field_Reset;
       --  Disable interrupt on ENDCRYPT event.
       ENDCRYPT      : INTENCLR_ENDCRYPT_Field_1 :=
-                       Intenclr_Endcrypt_Field_Reset;
+                       INTENCLR_ENDCRYPT_Field_Reset;
       --  Disable interrupt on ERROR event.
-      ERROR         : INTENCLR_ERROR_Field_1 := Intenclr_Error_Field_Reset;
+      ERROR         : INTENCLR_ERROR_Field_1 := INTENCLR_ERROR_Field_Reset;
       --  unspecified
       Reserved_3_31 : HAL.UInt29 := 16#0#;
    end record
@@ -250,13 +250,13 @@ package NRF_SVD.CCM is
    --  Result of the MIC check performed during the previous CCM RX STARTCRYPT
    type MICSTATUS_MICSTATUS_Field is
      (--  MIC check failed.
-      Checkfailed,
+      CheckFailed,
       --  MIC check passed.
-      Checkpassed)
+      CheckPassed)
      with Size => 1;
    for MICSTATUS_MICSTATUS_Field use
-     (Checkfailed => 0,
-      Checkpassed => 1);
+     (CheckFailed => 0,
+      CheckPassed => 1);
 
    --  CCM RX MIC check result.
    type MICSTATUS_Register is record

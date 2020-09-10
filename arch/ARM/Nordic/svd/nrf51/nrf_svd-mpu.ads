@@ -46,90 +46,90 @@ package NRF_SVD.MPU is
    --  POWER_CLOCK region configuration.
    type PERR0_POWER_CLOCK_Field is
      (--  Peripheral configured in region 1.
-      Inregion1,
+      InRegion1,
       --  Peripheral configured in region 0.
-      Inregion0)
+      InRegion0)
      with Size => 1;
    for PERR0_POWER_CLOCK_Field use
-     (Inregion1 => 0,
-      Inregion0 => 1);
+     (InRegion1 => 0,
+      InRegion0 => 1);
 
    --  RADIO region configuration.
    type PERR0_RADIO_Field is
      (--  Peripheral configured in region 1.
-      Inregion1,
+      InRegion1,
       --  Peripheral configured in region 0.
-      Inregion0)
+      InRegion0)
      with Size => 1;
    for PERR0_RADIO_Field use
-     (Inregion1 => 0,
-      Inregion0 => 1);
+     (InRegion1 => 0,
+      InRegion0 => 1);
 
    --  UART0 region configuration.
    type PERR0_UART0_Field is
      (--  Peripheral configured in region 1.
-      Inregion1,
+      InRegion1,
       --  Peripheral configured in region 0.
-      Inregion0)
+      InRegion0)
      with Size => 1;
    for PERR0_UART0_Field use
-     (Inregion1 => 0,
-      Inregion0 => 1);
+     (InRegion1 => 0,
+      InRegion0 => 1);
 
    --  SPI0 and TWI0 region configuration.
    type PERR0_SPI0_TWI0_Field is
      (--  Peripheral configured in region 1.
-      Inregion1,
+      InRegion1,
       --  Peripheral configured in region 0.
-      Inregion0)
+      InRegion0)
      with Size => 1;
    for PERR0_SPI0_TWI0_Field use
-     (Inregion1 => 0,
-      Inregion0 => 1);
+     (InRegion1 => 0,
+      InRegion0 => 1);
 
    --  SPI1 and TWI1 region configuration.
    type PERR0_SPI1_TWI1_Field is
      (--  Peripheral configured in region 1.
-      Inregion1,
+      InRegion1,
       --  Peripheral configured in region 0.
-      Inregion0)
+      InRegion0)
      with Size => 1;
    for PERR0_SPI1_TWI1_Field use
-     (Inregion1 => 0,
-      Inregion0 => 1);
+     (InRegion1 => 0,
+      InRegion0 => 1);
 
    --  GPIOTE region configuration.
    type PERR0_GPIOTE_Field is
      (--  Peripheral configured in region 1.
-      Inregion1,
+      InRegion1,
       --  Peripheral configured in region 0.
-      Inregion0)
+      InRegion0)
      with Size => 1;
    for PERR0_GPIOTE_Field use
-     (Inregion1 => 0,
-      Inregion0 => 1);
+     (InRegion1 => 0,
+      InRegion0 => 1);
 
    --  ADC region configuration.
    type PERR0_ADC_Field is
      (--  Peripheral configured in region 1.
-      Inregion1,
+      InRegion1,
       --  Peripheral configured in region 0.
-      Inregion0)
+      InRegion0)
      with Size => 1;
    for PERR0_ADC_Field use
-     (Inregion1 => 0,
-      Inregion0 => 1);
+     (InRegion1 => 0,
+      InRegion0 => 1);
 
    --  TIMER0 region configuration.
    type PERR0_TIMER0_Field is
      (--  Peripheral configured in region 1.
-      Inregion1,
+      InRegion1,
       --  Peripheral configured in region 0.
-      Inregion0)
+      InRegion0)
      with Size => 1;
    for PERR0_TIMER0_Field use
-     (Inregion1 => 0,
-      Inregion0 => 1);
+     (InRegion1 => 0,
+      InRegion0 => 1);
 
    --  PERR0_TIMER array
    type PERR0_TIMER_Field_Array is array (0 .. 2) of PERR0_TIMER0_Field
@@ -158,168 +158,168 @@ package NRF_SVD.MPU is
    --  RTC0 region configuration.
    type PERR0_RTC0_Field is
      (--  Peripheral configured in region 1.
-      Inregion1,
+      InRegion1,
       --  Peripheral configured in region 0.
-      Inregion0)
+      InRegion0)
      with Size => 1;
    for PERR0_RTC0_Field use
-     (Inregion1 => 0,
-      Inregion0 => 1);
+     (InRegion1 => 0,
+      InRegion0 => 1);
 
    --  TEMP region configuration.
    type PERR0_TEMP_Field is
      (--  Peripheral configured in region 1.
-      Inregion1,
+      InRegion1,
       --  Peripheral configured in region 0.
-      Inregion0)
+      InRegion0)
      with Size => 1;
    for PERR0_TEMP_Field use
-     (Inregion1 => 0,
-      Inregion0 => 1);
+     (InRegion1 => 0,
+      InRegion0 => 1);
 
    --  RNG region configuration.
    type PERR0_RNG_Field is
      (--  Peripheral configured in region 1.
-      Inregion1,
+      InRegion1,
       --  Peripheral configured in region 0.
-      Inregion0)
+      InRegion0)
      with Size => 1;
    for PERR0_RNG_Field use
-     (Inregion1 => 0,
-      Inregion0 => 1);
+     (InRegion1 => 0,
+      InRegion0 => 1);
 
    --  ECB region configuration.
    type PERR0_ECB_Field is
      (--  Peripheral configured in region 1.
-      Inregion1,
+      InRegion1,
       --  Peripheral configured in region 0.
-      Inregion0)
+      InRegion0)
      with Size => 1;
    for PERR0_ECB_Field use
-     (Inregion1 => 0,
-      Inregion0 => 1);
+     (InRegion1 => 0,
+      InRegion0 => 1);
 
    --  CCM and AAR region configuration.
    type PERR0_CCM_AAR_Field is
      (--  Peripheral configured in region 1.
-      Inregion1,
+      InRegion1,
       --  Peripheral configured in region 0.
-      Inregion0)
+      InRegion0)
      with Size => 1;
    for PERR0_CCM_AAR_Field use
-     (Inregion1 => 0,
-      Inregion0 => 1);
+     (InRegion1 => 0,
+      InRegion0 => 1);
 
    --  WDT region configuration.
    type PERR0_WDT_Field is
      (--  Peripheral configured in region 1.
-      Inregion1,
+      InRegion1,
       --  Peripheral configured in region 0.
-      Inregion0)
+      InRegion0)
      with Size => 1;
    for PERR0_WDT_Field use
-     (Inregion1 => 0,
-      Inregion0 => 1);
+     (InRegion1 => 0,
+      InRegion0 => 1);
 
    --  RTC1 region configuration.
    type PERR0_RTC1_Field is
      (--  Peripheral configured in region 1.
-      Inregion1,
+      InRegion1,
       --  Peripheral configured in region 0.
-      Inregion0)
+      InRegion0)
      with Size => 1;
    for PERR0_RTC1_Field use
-     (Inregion1 => 0,
-      Inregion0 => 1);
+     (InRegion1 => 0,
+      InRegion0 => 1);
 
    --  QDEC region configuration.
    type PERR0_QDEC_Field is
      (--  Peripheral configured in region 1.
-      Inregion1,
+      InRegion1,
       --  Peripheral configured in region 0.
-      Inregion0)
+      InRegion0)
      with Size => 1;
    for PERR0_QDEC_Field use
-     (Inregion1 => 0,
-      Inregion0 => 1);
+     (InRegion1 => 0,
+      InRegion0 => 1);
 
    --  LPCOMP region configuration.
    type PERR0_LPCOMP_Field is
      (--  Peripheral configured in region 1.
-      Inregion1,
+      InRegion1,
       --  Peripheral configured in region 0.
-      Inregion0)
+      InRegion0)
      with Size => 1;
    for PERR0_LPCOMP_Field use
-     (Inregion1 => 0,
-      Inregion0 => 1);
+     (InRegion1 => 0,
+      InRegion0 => 1);
 
    --  NVMC region configuration.
    type PERR0_NVMC_Field is
      (--  Peripheral configured in region 1.
-      Inregion1,
+      InRegion1,
       --  Peripheral configured in region 0.
-      Inregion0)
+      InRegion0)
      with Size => 1;
    for PERR0_NVMC_Field use
-     (Inregion1 => 0,
-      Inregion0 => 1);
+     (InRegion1 => 0,
+      InRegion0 => 1);
 
    --  PPI region configuration.
    type PERR0_PPI_Field is
      (--  Peripheral configured in region 1.
-      Inregion1,
+      InRegion1,
       --  Peripheral configured in region 0.
-      Inregion0)
+      InRegion0)
      with Size => 1;
    for PERR0_PPI_Field use
-     (Inregion1 => 0,
-      Inregion0 => 1);
+     (InRegion1 => 0,
+      InRegion0 => 1);
 
    --  Configuration of peripherals in mpu regions.
    type PERR0_Register is record
       --  POWER_CLOCK region configuration.
-      POWER_CLOCK    : PERR0_POWER_CLOCK_Field := NRF_SVD.MPU.Inregion1;
+      POWER_CLOCK    : PERR0_POWER_CLOCK_Field := NRF_SVD.MPU.InRegion1;
       --  RADIO region configuration.
-      RADIO          : PERR0_RADIO_Field := NRF_SVD.MPU.Inregion1;
+      RADIO          : PERR0_RADIO_Field := NRF_SVD.MPU.InRegion1;
       --  UART0 region configuration.
-      UART0          : PERR0_UART0_Field := NRF_SVD.MPU.Inregion1;
+      UART0          : PERR0_UART0_Field := NRF_SVD.MPU.InRegion1;
       --  SPI0 and TWI0 region configuration.
-      SPI0_TWI0      : PERR0_SPI0_TWI0_Field := NRF_SVD.MPU.Inregion1;
+      SPI0_TWI0      : PERR0_SPI0_TWI0_Field := NRF_SVD.MPU.InRegion1;
       --  SPI1 and TWI1 region configuration.
-      SPI1_TWI1      : PERR0_SPI1_TWI1_Field := NRF_SVD.MPU.Inregion1;
+      SPI1_TWI1      : PERR0_SPI1_TWI1_Field := NRF_SVD.MPU.InRegion1;
       --  unspecified
       Reserved_5_5   : HAL.Bit := 16#0#;
       --  GPIOTE region configuration.
-      GPIOTE         : PERR0_GPIOTE_Field := NRF_SVD.MPU.Inregion1;
+      GPIOTE         : PERR0_GPIOTE_Field := NRF_SVD.MPU.InRegion1;
       --  ADC region configuration.
-      ADC            : PERR0_ADC_Field := NRF_SVD.MPU.Inregion1;
+      ADC            : PERR0_ADC_Field := NRF_SVD.MPU.InRegion1;
       --  TIMER0 region configuration.
       TIMER          : PERR0_TIMER_Field := (As_Array => False, Val => 16#0#);
       --  RTC0 region configuration.
-      RTC0           : PERR0_RTC0_Field := NRF_SVD.MPU.Inregion1;
+      RTC0           : PERR0_RTC0_Field := NRF_SVD.MPU.InRegion1;
       --  TEMP region configuration.
-      TEMP           : PERR0_TEMP_Field := NRF_SVD.MPU.Inregion1;
+      TEMP           : PERR0_TEMP_Field := NRF_SVD.MPU.InRegion1;
       --  RNG region configuration.
-      RNG            : PERR0_RNG_Field := NRF_SVD.MPU.Inregion1;
+      RNG            : PERR0_RNG_Field := NRF_SVD.MPU.InRegion1;
       --  ECB region configuration.
-      ECB            : PERR0_ECB_Field := NRF_SVD.MPU.Inregion1;
+      ECB            : PERR0_ECB_Field := NRF_SVD.MPU.InRegion1;
       --  CCM and AAR region configuration.
-      CCM_AAR        : PERR0_CCM_AAR_Field := NRF_SVD.MPU.Inregion1;
+      CCM_AAR        : PERR0_CCM_AAR_Field := NRF_SVD.MPU.InRegion1;
       --  WDT region configuration.
-      WDT            : PERR0_WDT_Field := NRF_SVD.MPU.Inregion1;
+      WDT            : PERR0_WDT_Field := NRF_SVD.MPU.InRegion1;
       --  RTC1 region configuration.
-      RTC1           : PERR0_RTC1_Field := NRF_SVD.MPU.Inregion1;
+      RTC1           : PERR0_RTC1_Field := NRF_SVD.MPU.InRegion1;
       --  QDEC region configuration.
-      QDEC           : PERR0_QDEC_Field := NRF_SVD.MPU.Inregion1;
+      QDEC           : PERR0_QDEC_Field := NRF_SVD.MPU.InRegion1;
       --  LPCOMP region configuration.
-      LPCOMP         : PERR0_LPCOMP_Field := NRF_SVD.MPU.Inregion1;
+      LPCOMP         : PERR0_LPCOMP_Field := NRF_SVD.MPU.InRegion1;
       --  unspecified
       Reserved_20_29 : HAL.UInt10 := 16#0#;
       --  NVMC region configuration.
-      NVMC           : PERR0_NVMC_Field := NRF_SVD.MPU.Inregion1;
+      NVMC           : PERR0_NVMC_Field := NRF_SVD.MPU.InRegion1;
       --  PPI region configuration.
-      PPI            : PERR0_PPI_Field := NRF_SVD.MPU.Inregion1;
+      PPI            : PERR0_PPI_Field := NRF_SVD.MPU.InRegion1;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
@@ -362,12 +362,12 @@ package NRF_SVD.MPU is
    --  Protection enable for region 0.
    type PROTENSET0_PROTREG0_Field_1 is
      (--  Reset value for the field
-      Protenset0_Protreg0_Field_Reset,
+      PROTENSET0_PROTREG0_Field_Reset,
       --  Enable protection on write.
       Set)
      with Size => 1;
    for PROTENSET0_PROTREG0_Field_1 use
-     (Protenset0_Protreg0_Field_Reset => 0,
+     (PROTENSET0_PROTREG0_Field_Reset => 0,
       Set => 1);
 
    --  PROTENSET0_PROTREG array
@@ -410,12 +410,12 @@ package NRF_SVD.MPU is
    --  Protection enable for region 32.
    type PROTENSET1_PROTREG32_Field_1 is
      (--  Reset value for the field
-      Protenset1_Protreg32_Field_Reset,
+      PROTENSET1_PROTREG32_Field_Reset,
       --  Enable protection on write.
       Set)
      with Size => 1;
    for PROTENSET1_PROTREG32_Field_1 use
-     (Protenset1_Protreg32_Field_Reset => 0,
+     (PROTENSET1_PROTREG32_Field_Reset => 0,
       Set => 1);
 
    --  PROTENSET1_PROTREG array
@@ -474,15 +474,15 @@ package NRF_SVD.MPU is
    --  Erase and write protection block size.
    type PROTBLOCKSIZE_PROTBLOCKSIZE_Field is
      (--  Erase and write protection block size is 4k.
-      Val_4K)
+      Val_4k)
      with Size => 2;
    for PROTBLOCKSIZE_PROTBLOCKSIZE_Field use
-     (Val_4K => 0);
+     (Val_4k => 0);
 
    --  Erase and write protection block size.
    type PROTBLOCKSIZE_Register is record
       --  Erase and write protection block size.
-      PROTBLOCKSIZE : PROTBLOCKSIZE_PROTBLOCKSIZE_Field := NRF_SVD.MPU.Val_4K;
+      PROTBLOCKSIZE : PROTBLOCKSIZE_PROTBLOCKSIZE_Field := NRF_SVD.MPU.Val_4k;
       --  unspecified
       Reserved_2_31 : HAL.UInt30 := 16#0#;
    end record

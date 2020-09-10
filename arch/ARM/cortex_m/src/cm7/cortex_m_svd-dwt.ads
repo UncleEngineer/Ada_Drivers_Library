@@ -64,7 +64,7 @@ package Cortex_M_SVD.DWT is
       --  Number of comparators
       NUMCOMP        : CTRL_NUMCOMP_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CTRL_Register use record

@@ -272,10 +272,10 @@ package body STM32.SDMMC is
    is
    begin
       --  Make sure the POWER register is writable by waiting a bit after
-      --  the Power_Off command
+      --  the Power_OFF command
       DCTRL_Write_Delay;
 
-      This.Periph.POWER.PWRCTRL := Power_Off;
+      This.Periph.POWER.PWRCTRL := Power_OFF;
 
       --  Use the Default SDMMC peripheral configuration for SD card init
       This.Periph.CLKCR := (others => <>);
@@ -284,7 +284,7 @@ package body STM32.SDMMC is
 
       This.Periph.CLKCR.CLKEN   := False;
       DCTRL_Write_Delay;
-      This.Periph.POWER.PWRCTRL := Power_On;
+      This.Periph.POWER.PWRCTRL := Power_ON;
 
       --  Wait for the clock to stabilize.
       DCTRL_Write_Delay;
@@ -310,7 +310,7 @@ package body STM32.SDMMC is
       Div := (This.CLK_In + UInt32 (Freq) - 1) / UInt32 (Freq);
 
       --  Make sure the POWER register is writable by waiting a bit after
-      --  the Power_Off command
+      --  the Power_OFF command
       DCTRL_Write_Delay;
 
       if Div <= 1 then
@@ -1137,7 +1137,7 @@ package body STM32.SDMMC is
       Configure_Data
         (This,
          Data_Length        => Data'Length,
-         Data_Block_Size    => Block_512B,
+         Data_Block_Size    => Block_512b,
          Transfer_Direction => Read,
          Transfer_Mode      => False,
          DPSM               => True,
@@ -1275,7 +1275,7 @@ package body STM32.SDMMC is
       Configure_Data
         (This,
          Data_Length        => UInt25 (N_Blocks) * 512,
-         Data_Block_Size    => Block_512B,
+         Data_Block_Size    => Block_512b,
          Transfer_Direction => Read,
          Transfer_Mode      => False,
          DPSM               => True,
@@ -1397,7 +1397,7 @@ package body STM32.SDMMC is
       Configure_Data
         (This,
          Data_Length        => UInt25 (N_Blocks) * 512,
-         Data_Block_Size    => Block_512B,
+         Data_Block_Size    => Block_512b,
          Transfer_Direction => Write,
          Transfer_Mode      => False,
          DPSM               => True,

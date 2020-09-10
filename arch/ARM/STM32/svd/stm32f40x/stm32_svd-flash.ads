@@ -35,7 +35,7 @@ package STM32_SVD.FLASH is
       --  unspecified
       Reserved_13_31 : HAL.UInt19 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for ACR_Register use record
@@ -72,7 +72,7 @@ package STM32_SVD.FLASH is
       --  unspecified
       Reserved_17_31 : HAL.UInt15 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for SR_Register use record
@@ -120,7 +120,7 @@ package STM32_SVD.FLASH is
       --  Lock
       LOCK           : Boolean := True;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CR_Register use record
@@ -166,7 +166,7 @@ package STM32_SVD.FLASH is
       --  unspecified
       Reserved_28_31 : HAL.UInt4 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OPTCR_Register use record
@@ -214,6 +214,6 @@ package STM32_SVD.FLASH is
 
    --  FLASH
    FLASH_Periph : aliased FLASH_Peripheral
-     with Import, Address => System'To_Address (16#40023C00#);
+     with Import, Address => FLASH_Base;
 
 end STM32_SVD.FLASH;

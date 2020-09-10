@@ -28,7 +28,7 @@ package STM32_SVD.LTDC is
       --  unspecified
       Reserved_26_31 : HAL.UInt6 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for SSCR_Register use record
@@ -52,7 +52,7 @@ package STM32_SVD.LTDC is
       --  unspecified
       Reserved_26_31 : HAL.UInt6 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for BPCR_Register use record
@@ -76,7 +76,7 @@ package STM32_SVD.LTDC is
       --  unspecified
       Reserved_28_31 : HAL.UInt4 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for AWCR_Register use record
@@ -100,7 +100,7 @@ package STM32_SVD.LTDC is
       --  unspecified
       Reserved_28_31 : HAL.UInt4 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for TWCR_Register use record
@@ -145,7 +145,7 @@ package STM32_SVD.LTDC is
       --  Horizontal Synchronization Polarity
       HSPOL          : Boolean := False;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for GCR_Register use record
@@ -174,7 +174,7 @@ package STM32_SVD.LTDC is
       --  unspecified
       Reserved_2_31 : HAL.UInt30 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for SRCR_Register use record
@@ -192,7 +192,7 @@ package STM32_SVD.LTDC is
       --  unspecified
       Reserved_24_31 : HAL.UInt8 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for BCCR_Register use record
@@ -213,7 +213,7 @@ package STM32_SVD.LTDC is
       --  unspecified
       Reserved_4_31 : HAL.UInt28 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for IER_Register use record
@@ -237,7 +237,7 @@ package STM32_SVD.LTDC is
       --  unspecified
       Reserved_4_31 : HAL.UInt28;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for ISR_Register use record
@@ -261,7 +261,7 @@ package STM32_SVD.LTDC is
       --  unspecified
       Reserved_4_31 : HAL.UInt28 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for ICR_Register use record
@@ -281,7 +281,7 @@ package STM32_SVD.LTDC is
       --  unspecified
       Reserved_11_31 : HAL.UInt21 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for LIPCR_Register use record
@@ -299,7 +299,7 @@ package STM32_SVD.LTDC is
       --  Read-only. Current X Position
       CXPOS : CPSR_CXPOS_Field;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CPSR_Register use record
@@ -320,7 +320,7 @@ package STM32_SVD.LTDC is
       --  unspecified
       Reserved_4_31 : HAL.UInt28;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CDSR_Register use record
@@ -344,7 +344,7 @@ package STM32_SVD.LTDC is
       --  unspecified
       Reserved_5_31 : HAL.UInt27 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for L1CR_Register use record
@@ -369,7 +369,7 @@ package STM32_SVD.LTDC is
       --  unspecified
       Reserved_28_31 : HAL.UInt4 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for L1WHPCR_Register use record
@@ -393,7 +393,7 @@ package STM32_SVD.LTDC is
       --  unspecified
       Reserved_27_31 : HAL.UInt5 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for L1WVPCR_Register use record
@@ -418,7 +418,7 @@ package STM32_SVD.LTDC is
       --  unspecified
       Reserved_24_31 : HAL.UInt8 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for L1CKCR_Register use record
@@ -437,7 +437,7 @@ package STM32_SVD.LTDC is
       --  unspecified
       Reserved_3_31 : HAL.UInt29 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for L1PFCR_Register use record
@@ -454,7 +454,7 @@ package STM32_SVD.LTDC is
       --  unspecified
       Reserved_8_31 : HAL.UInt24 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for L1CACR_Register use record
@@ -478,7 +478,7 @@ package STM32_SVD.LTDC is
       --  Default Color Alpha
       DCALPHA : L1DCCR_DCALPHA_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for L1DCCR_Register use record
@@ -502,7 +502,7 @@ package STM32_SVD.LTDC is
       --  unspecified
       Reserved_11_31 : HAL.UInt21 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for L1BFCR_Register use record
@@ -526,7 +526,7 @@ package STM32_SVD.LTDC is
       --  unspecified
       Reserved_29_31 : HAL.UInt3 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for L1CFBLR_Register use record
@@ -545,7 +545,7 @@ package STM32_SVD.LTDC is
       --  unspecified
       Reserved_11_31 : HAL.UInt21 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for L1CFBLNR_Register use record
@@ -569,7 +569,7 @@ package STM32_SVD.LTDC is
       --  Write-only. CLUT Address
       CLUTADD : L1CLUTWR_CLUTADD_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for L1CLUTWR_Register use record
@@ -592,7 +592,7 @@ package STM32_SVD.LTDC is
       --  unspecified
       Reserved_5_31 : HAL.UInt27 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for L2CR_Register use record
@@ -617,7 +617,7 @@ package STM32_SVD.LTDC is
       --  unspecified
       Reserved_28_31 : HAL.UInt4 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for L2WHPCR_Register use record
@@ -641,7 +641,7 @@ package STM32_SVD.LTDC is
       --  unspecified
       Reserved_27_31 : HAL.UInt5 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for L2WVPCR_Register use record
@@ -666,7 +666,7 @@ package STM32_SVD.LTDC is
       --  unspecified
       Reserved_24_31 : HAL.UInt8 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for L2CKCR_Register use record
@@ -685,7 +685,7 @@ package STM32_SVD.LTDC is
       --  unspecified
       Reserved_3_31 : HAL.UInt29 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for L2PFCR_Register use record
@@ -702,7 +702,7 @@ package STM32_SVD.LTDC is
       --  unspecified
       Reserved_8_31 : HAL.UInt24 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for L2CACR_Register use record
@@ -726,7 +726,7 @@ package STM32_SVD.LTDC is
       --  Default Color Alpha
       DCALPHA : L2DCCR_DCALPHA_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for L2DCCR_Register use record
@@ -750,7 +750,7 @@ package STM32_SVD.LTDC is
       --  unspecified
       Reserved_11_31 : HAL.UInt21 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for L2BFCR_Register use record
@@ -774,7 +774,7 @@ package STM32_SVD.LTDC is
       --  unspecified
       Reserved_29_31 : HAL.UInt3 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for L2CFBLR_Register use record
@@ -793,7 +793,7 @@ package STM32_SVD.LTDC is
       --  unspecified
       Reserved_11_31 : HAL.UInt21 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for L2CFBLNR_Register use record
@@ -817,7 +817,7 @@ package STM32_SVD.LTDC is
       --  Write-only. CLUT Address
       CLUTADD : L2CLUTWR_CLUTADD_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for L2CLUTWR_Register use record
@@ -952,6 +952,6 @@ package STM32_SVD.LTDC is
 
    --  LCD-TFT Controller
    LTDC_Periph : aliased LTDC_Peripheral
-     with Import, Address => System'To_Address (16#40016800#);
+     with Import, Address => LTDC_Base;
 
 end STM32_SVD.LTDC;

@@ -31,7 +31,7 @@ package FE310_SVD.GPIO is
             Arr : VALUE_PIN_Field_Array;
       end case;
    end record
-     with Unchecked_Union, Size => 32, Volatile_Full_Access,
+     with Unchecked_Union, Size => 32, Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for VALUE_Register use record
@@ -56,7 +56,7 @@ package FE310_SVD.GPIO is
             Arr : INPUT_EN_PIN_Field_Array;
       end case;
    end record
-     with Unchecked_Union, Size => 32, Volatile_Full_Access,
+     with Unchecked_Union, Size => 32, Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for INPUT_EN_Register use record
@@ -81,7 +81,7 @@ package FE310_SVD.GPIO is
             Arr : OUTPUT_EN_PIN_Field_Array;
       end case;
    end record
-     with Unchecked_Union, Size => 32, Volatile_Full_Access,
+     with Unchecked_Union, Size => 32, Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OUTPUT_EN_Register use record
@@ -106,7 +106,7 @@ package FE310_SVD.GPIO is
             Arr : PORT_PIN_Field_Array;
       end case;
    end record
-     with Unchecked_Union, Size => 32, Volatile_Full_Access,
+     with Unchecked_Union, Size => 32, Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for PORT_Register use record
@@ -131,7 +131,7 @@ package FE310_SVD.GPIO is
             Arr : PULLUP_PIN_Field_Array;
       end case;
    end record
-     with Unchecked_Union, Size => 32, Volatile_Full_Access,
+     with Unchecked_Union, Size => 32, Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for PULLUP_Register use record
@@ -156,7 +156,7 @@ package FE310_SVD.GPIO is
             Arr : DRIVE_PIN_Field_Array;
       end case;
    end record
-     with Unchecked_Union, Size => 32, Volatile_Full_Access,
+     with Unchecked_Union, Size => 32, Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DRIVE_Register use record
@@ -181,7 +181,7 @@ package FE310_SVD.GPIO is
             Arr : RISE_INT_EN_PIN_Field_Array;
       end case;
    end record
-     with Unchecked_Union, Size => 32, Volatile_Full_Access,
+     with Unchecked_Union, Size => 32, Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for RISE_INT_EN_Register use record
@@ -189,12 +189,12 @@ package FE310_SVD.GPIO is
       Arr at 0 range 0 .. 31;
    end record;
 
-   --  RISE_INT_PEMD_PIN array
-   type RISE_INT_PEMD_PIN_Field_Array is array (0 .. 31) of Boolean
+   --  RISE_INT_PEND_PIN array
+   type RISE_INT_PEND_PIN_Field_Array is array (0 .. 31) of Boolean
      with Component_Size => 1, Size => 32;
 
    --  Rise interrupt pending.
-   type RISE_INT_PEMD_Register
+   type RISE_INT_PEND_Register
      (As_Array : Boolean := False)
    is record
       case As_Array is
@@ -203,13 +203,13 @@ package FE310_SVD.GPIO is
             Val : HAL.UInt32;
          when True =>
             --  PIN as an array
-            Arr : RISE_INT_PEMD_PIN_Field_Array;
+            Arr : RISE_INT_PEND_PIN_Field_Array;
       end case;
    end record
-     with Unchecked_Union, Size => 32, Volatile_Full_Access,
+     with Unchecked_Union, Size => 32, Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for RISE_INT_PEMD_Register use record
+   for RISE_INT_PEND_Register use record
       Val at 0 range 0 .. 31;
       Arr at 0 range 0 .. 31;
    end record;
@@ -231,7 +231,7 @@ package FE310_SVD.GPIO is
             Arr : FALL_INT_EN_PIN_Field_Array;
       end case;
    end record
-     with Unchecked_Union, Size => 32, Volatile_Full_Access,
+     with Unchecked_Union, Size => 32, Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for FALL_INT_EN_Register use record
@@ -256,7 +256,7 @@ package FE310_SVD.GPIO is
             Arr : FALL_INT_PEND_PIN_Field_Array;
       end case;
    end record
-     with Unchecked_Union, Size => 32, Volatile_Full_Access,
+     with Unchecked_Union, Size => 32, Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for FALL_INT_PEND_Register use record
@@ -281,7 +281,7 @@ package FE310_SVD.GPIO is
             Arr : HIGH_INT_EN_PIN_Field_Array;
       end case;
    end record
-     with Unchecked_Union, Size => 32, Volatile_Full_Access,
+     with Unchecked_Union, Size => 32, Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for HIGH_INT_EN_Register use record
@@ -306,7 +306,7 @@ package FE310_SVD.GPIO is
             Arr : HIGH_INT_PEND_PIN_Field_Array;
       end case;
    end record
-     with Unchecked_Union, Size => 32, Volatile_Full_Access,
+     with Unchecked_Union, Size => 32, Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for HIGH_INT_PEND_Register use record
@@ -331,7 +331,7 @@ package FE310_SVD.GPIO is
             Arr : LOW_INT_EN_PIN_Field_Array;
       end case;
    end record
-     with Unchecked_Union, Size => 32, Volatile_Full_Access,
+     with Unchecked_Union, Size => 32, Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for LOW_INT_EN_Register use record
@@ -356,7 +356,7 @@ package FE310_SVD.GPIO is
             Arr : LOW_INT_PEND_PIN_Field_Array;
       end case;
    end record
-     with Unchecked_Union, Size => 32, Volatile_Full_Access,
+     with Unchecked_Union, Size => 32, Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for LOW_INT_PEND_Register use record
@@ -381,7 +381,7 @@ package FE310_SVD.GPIO is
             Arr : IO_FUNC_EN_PIN_Field_Array;
       end case;
    end record
-     with Unchecked_Union, Size => 32, Volatile_Full_Access,
+     with Unchecked_Union, Size => 32, Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for IO_FUNC_EN_Register use record
@@ -406,7 +406,7 @@ package FE310_SVD.GPIO is
             Arr : IO_FUNC_SEL_PIN_Field_Array;
       end case;
    end record
-     with Unchecked_Union, Size => 32, Volatile_Full_Access,
+     with Unchecked_Union, Size => 32, Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for IO_FUNC_SEL_Register use record
@@ -431,7 +431,7 @@ package FE310_SVD.GPIO is
             Arr : OUT_XOR_PIN_Field_Array;
       end case;
    end record
-     with Unchecked_Union, Size => 32, Volatile_Full_Access,
+     with Unchecked_Union, Size => 32, Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OUT_XOR_Register use record
@@ -460,7 +460,7 @@ package FE310_SVD.GPIO is
       --  Rise interrupt enable.
       RISE_INT_EN   : aliased RISE_INT_EN_Register;
       --  Rise interrupt pending.
-      RISE_INT_PEMD : aliased RISE_INT_PEMD_Register;
+      RISE_INT_PEND : aliased RISE_INT_PEND_Register;
       --  Fall interrupt enable.
       FALL_INT_EN   : aliased FALL_INT_EN_Register;
       --  Fall interrupt pending.
@@ -490,7 +490,7 @@ package FE310_SVD.GPIO is
       PULLUP        at 16#10# range 0 .. 31;
       DRIVE         at 16#14# range 0 .. 31;
       RISE_INT_EN   at 16#18# range 0 .. 31;
-      RISE_INT_PEMD at 16#1C# range 0 .. 31;
+      RISE_INT_PEND at 16#1C# range 0 .. 31;
       FALL_INT_EN   at 16#20# range 0 .. 31;
       FALL_INT_PEND at 16#24# range 0 .. 31;
       HIGH_INT_EN   at 16#28# range 0 .. 31;
@@ -504,6 +504,6 @@ package FE310_SVD.GPIO is
 
    --  General purpose input/output controller.
    GPIO0_Periph : aliased GPIO0_Peripheral
-     with Import, Address => System'To_Address (16#10012000#);
+     with Import, Address => GPIO0_Base;
 
 end FE310_SVD.GPIO;

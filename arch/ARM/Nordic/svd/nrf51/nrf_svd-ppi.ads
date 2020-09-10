@@ -218,12 +218,12 @@ package NRF_SVD.PPI is
    --  Enable PPI channel 0.
    type CHENSET_CH0_Field_1 is
      (--  Reset value for the field
-      Chenset_Ch0_Field_Reset,
+      CHENSET_CH0_Field_Reset,
       --  Enable channel on write.
       Set)
      with Size => 1;
    for CHENSET_CH0_Field_1 use
-     (Chenset_Ch0_Field_Reset => 0,
+     (CHENSET_CH0_Field_Reset => 0,
       Set => 1);
 
    --  CHENSET_CH array
@@ -264,12 +264,12 @@ package NRF_SVD.PPI is
    --  Enable PPI channel 20.
    type CHENSET_CH20_Field_1 is
      (--  Reset value for the field
-      Chenset_Ch20_Field_Reset,
+      CHENSET_CH20_Field_Reset,
       --  Enable channel on write.
       Set)
      with Size => 1;
    for CHENSET_CH20_Field_1 use
-     (Chenset_Ch20_Field_Reset => 0,
+     (CHENSET_CH20_Field_Reset => 0,
       Set => 1);
 
    --  CHENSET_CH array
@@ -329,12 +329,12 @@ package NRF_SVD.PPI is
    --  Disable PPI channel 0.
    type CHENCLR_CH0_Field_1 is
      (--  Reset value for the field
-      Chenclr_Ch0_Field_Reset,
+      CHENCLR_CH0_Field_Reset,
       --  Disable channel on write.
       Clear)
      with Size => 1;
    for CHENCLR_CH0_Field_1 use
-     (Chenclr_Ch0_Field_Reset => 0,
+     (CHENCLR_CH0_Field_Reset => 0,
       Clear => 1);
 
    --  CHENCLR_CH array
@@ -375,12 +375,12 @@ package NRF_SVD.PPI is
    --  Disable PPI channel 20.
    type CHENCLR_CH20_Field_1 is
      (--  Reset value for the field
-      Chenclr_Ch20_Field_Reset,
+      CHENCLR_CH20_Field_Reset,
       --  Disable channel on write.
       Clear)
      with Size => 1;
    for CHENCLR_CH20_Field_1 use
-     (Chenclr_Ch20_Field_Reset => 0,
+     (CHENCLR_CH20_Field_Reset => 0,
       Clear => 1);
 
    --  CHENCLR_CH array

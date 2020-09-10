@@ -93,12 +93,12 @@ package NRF_SVD.GPIO is
    --  Pin 0.
    type OUTSET_PIN0_Field_1 is
      (--  Reset value for the field
-      Outset_Pin0_Field_Reset,
+      OUTSET_PIN0_Field_Reset,
       --  Set pin driver high.
       Set)
      with Size => 1;
    for OUTSET_PIN0_Field_1 use
-     (Outset_Pin0_Field_Reset => 0,
+     (OUTSET_PIN0_Field_Reset => 0,
       Set => 1);
 
    --  OUTSET_PIN array
@@ -140,12 +140,12 @@ package NRF_SVD.GPIO is
    --  Pin 0.
    type OUTCLR_PIN0_Field_1 is
      (--  Reset value for the field
-      Outclr_Pin0_Field_Reset,
+      OUTCLR_PIN0_Field_Reset,
       --  Set pin driver low.
       Clear)
      with Size => 1;
    for OUTCLR_PIN0_Field_1 use
-     (Outclr_Pin0_Field_Reset => 0,
+     (OUTCLR_PIN0_Field_Reset => 0,
       Clear => 1);
 
    --  OUTCLR_PIN array
@@ -259,12 +259,12 @@ package NRF_SVD.GPIO is
    --  Set as output pin 0.
    type DIRSET_PIN0_Field_1 is
      (--  Reset value for the field
-      Dirset_Pin0_Field_Reset,
+      DIRSET_PIN0_Field_Reset,
       --  Set pin as output.
       Set)
      with Size => 1;
    for DIRSET_PIN0_Field_1 use
-     (Dirset_Pin0_Field_Reset => 0,
+     (DIRSET_PIN0_Field_Reset => 0,
       Set => 1);
 
    --  DIRSET_PIN array
@@ -306,12 +306,12 @@ package NRF_SVD.GPIO is
    --  Set as input pin 0.
    type DIRCLR_PIN0_Field_1 is
      (--  Reset value for the field
-      Dirclr_Pin0_Field_Reset,
+      DIRCLR_PIN0_Field_Reset,
       --  Set pin as input.
       Clear)
      with Size => 1;
    for DIRCLR_PIN0_Field_1 use
-     (Dirclr_Pin0_Field_Reset => 0,
+     (DIRCLR_PIN0_Field_Reset => 0,
       Clear => 1);
 
    --  DIRCLR_PIN array

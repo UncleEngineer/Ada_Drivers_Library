@@ -46,7 +46,7 @@ package STM32_SVD.CRYP is
       --  unspecified
       Reserved_20_31 : HAL.UInt12 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CR_Register use record
@@ -79,7 +79,7 @@ package STM32_SVD.CRYP is
       --  unspecified
       Reserved_5_31 : HAL.UInt27;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for SR_Register use record
@@ -100,7 +100,7 @@ package STM32_SVD.CRYP is
       --  unspecified
       Reserved_2_31 : HAL.UInt30 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DMACR_Register use record
@@ -118,7 +118,7 @@ package STM32_SVD.CRYP is
       --  unspecified
       Reserved_2_31 : HAL.UInt30 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for IMSCR_Register use record
@@ -136,7 +136,7 @@ package STM32_SVD.CRYP is
       --  unspecified
       Reserved_2_31 : HAL.UInt30;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for RISR_Register use record
@@ -154,7 +154,7 @@ package STM32_SVD.CRYP is
       --  unspecified
       Reserved_2_31 : HAL.UInt30;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for MISR_Register use record
@@ -180,7 +180,7 @@ package STM32_SVD.CRYP is
             Arr : K0LR_b_Field_Array;
       end case;
    end record
-     with Unchecked_Union, Size => 32, Volatile_Full_Access,
+     with Unchecked_Union, Size => 32, Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for K0LR_Register use record
@@ -205,7 +205,7 @@ package STM32_SVD.CRYP is
             Arr : K0RR_b_Field_Array;
       end case;
    end record
-     with Unchecked_Union, Size => 32, Volatile_Full_Access,
+     with Unchecked_Union, Size => 32, Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for K0RR_Register use record
@@ -230,7 +230,7 @@ package STM32_SVD.CRYP is
             Arr : K1LR_b_Field_Array;
       end case;
    end record
-     with Unchecked_Union, Size => 32, Volatile_Full_Access,
+     with Unchecked_Union, Size => 32, Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for K1LR_Register use record
@@ -255,7 +255,7 @@ package STM32_SVD.CRYP is
             Arr : K1RR_b_Field_Array;
       end case;
    end record
-     with Unchecked_Union, Size => 32, Volatile_Full_Access,
+     with Unchecked_Union, Size => 32, Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for K1RR_Register use record
@@ -280,7 +280,7 @@ package STM32_SVD.CRYP is
             Arr : K2LR_b_Field_Array;
       end case;
    end record
-     with Unchecked_Union, Size => 32, Volatile_Full_Access,
+     with Unchecked_Union, Size => 32, Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for K2LR_Register use record
@@ -305,7 +305,7 @@ package STM32_SVD.CRYP is
             Arr : K2RR_b_Field_Array;
       end case;
    end record
-     with Unchecked_Union, Size => 32, Volatile_Full_Access,
+     with Unchecked_Union, Size => 32, Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for K2RR_Register use record
@@ -330,7 +330,7 @@ package STM32_SVD.CRYP is
             Arr : K3LR_b_Field_Array;
       end case;
    end record
-     with Unchecked_Union, Size => 32, Volatile_Full_Access,
+     with Unchecked_Union, Size => 32, Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for K3LR_Register use record
@@ -355,7 +355,7 @@ package STM32_SVD.CRYP is
             Arr : K3RR_b_Field_Array;
       end case;
    end record
-     with Unchecked_Union, Size => 32, Volatile_Full_Access,
+     with Unchecked_Union, Size => 32, Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for K3RR_Register use record
@@ -430,7 +430,7 @@ package STM32_SVD.CRYP is
       --  IV0
       IV0  : Boolean := False;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for IV0LR_Register use record
@@ -535,7 +535,7 @@ package STM32_SVD.CRYP is
       --  IV32
       IV32 : Boolean := False;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for IV0RR_Register use record
@@ -640,7 +640,7 @@ package STM32_SVD.CRYP is
       --  IV64
       IV64 : Boolean := False;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for IV1LR_Register use record
@@ -745,7 +745,7 @@ package STM32_SVD.CRYP is
       --  IV96
       IV96  : Boolean := False;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for IV1RR_Register use record
@@ -905,6 +905,6 @@ package STM32_SVD.CRYP is
 
    --  Cryptographic processor
    CRYP_Periph : aliased CRYP_Peripheral
-     with Import, Address => System'To_Address (16#50060000#);
+     with Import, Address => CRYP_Base;
 
 end STM32_SVD.CRYP;

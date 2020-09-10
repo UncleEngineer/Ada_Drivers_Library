@@ -46,7 +46,7 @@ package STM32_SVD.DCMI is
       --  unspecified
       Reserved_15_31 : HAL.UInt17 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CR_Register use record
@@ -76,7 +76,7 @@ package STM32_SVD.DCMI is
       --  unspecified
       Reserved_3_31 : HAL.UInt29;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for SR_Register use record
@@ -101,7 +101,7 @@ package STM32_SVD.DCMI is
       --  unspecified
       Reserved_5_31 : HAL.UInt27;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for RIS_Register use record
@@ -128,7 +128,7 @@ package STM32_SVD.DCMI is
       --  unspecified
       Reserved_5_31 : HAL.UInt27 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for IER_Register use record
@@ -155,7 +155,7 @@ package STM32_SVD.DCMI is
       --  unspecified
       Reserved_5_31 : HAL.UInt27;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for MIS_Register use record
@@ -182,7 +182,7 @@ package STM32_SVD.DCMI is
       --  unspecified
       Reserved_5_31 : HAL.UInt27 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for ICR_Register use record
@@ -210,7 +210,7 @@ package STM32_SVD.DCMI is
       --  Frame end delimiter code
       FEC : ESCR_FEC_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for ESCR_Register use record
@@ -236,7 +236,7 @@ package STM32_SVD.DCMI is
       --  Frame end delimiter unmask
       FEU : ESUR_FEU_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for ESUR_Register use record
@@ -260,7 +260,7 @@ package STM32_SVD.DCMI is
       --  unspecified
       Reserved_29_31 : HAL.UInt3 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CWSTRT_Register use record
@@ -284,7 +284,7 @@ package STM32_SVD.DCMI is
       --  unspecified
       Reserved_30_31 : HAL.UInt2 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CWSIZE_Register use record
@@ -314,7 +314,7 @@ package STM32_SVD.DCMI is
             Arr : DR_Byte_Field_Array;
       end case;
    end record
-     with Unchecked_Union, Size => 32, Volatile_Full_Access,
+     with Unchecked_Union, Size => 32, Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DR_Register use record
@@ -369,6 +369,6 @@ package STM32_SVD.DCMI is
 
    --  Digital camera interface
    DCMI_Periph : aliased DCMI_Peripheral
-     with Import, Address => System'To_Address (16#50050000#);
+     with Import, Address => DCMI_Base;
 
 end STM32_SVD.DCMI;

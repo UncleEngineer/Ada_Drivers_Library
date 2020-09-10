@@ -38,7 +38,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_10_31 : HAL.UInt22 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CR1_Register use record
@@ -86,7 +86,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_15_31 : HAL.UInt17 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CR2_Register use record
@@ -132,7 +132,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for SMCR_Register use record
@@ -182,7 +182,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_15_31 : HAL.UInt17 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DIER_Register use record
@@ -235,7 +235,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_13_31 : HAL.UInt19 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for SR_Register use record
@@ -276,7 +276,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_8_31 : HAL.UInt24 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for EGR_Register use record
@@ -321,7 +321,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CCMR1_Output_Register use record
@@ -362,7 +362,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CCMR1_Input_Register use record
@@ -405,7 +405,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CCMR2_Output_Register use record
@@ -446,7 +446,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CCMR2_Input_Register use record
@@ -492,7 +492,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_14_31 : HAL.UInt18 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CCER_Register use record
@@ -522,7 +522,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CNT_Register use record
@@ -539,7 +539,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for PSC_Register use record
@@ -556,7 +556,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for ARR_Register use record
@@ -573,7 +573,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_8_31 : HAL.UInt24 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for RCR_Register use record
@@ -590,7 +590,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CCR1_Register use record
@@ -607,7 +607,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CCR2_Register use record
@@ -624,7 +624,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CCR3_Register use record
@@ -641,7 +641,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CCR4_Register use record
@@ -673,7 +673,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for BDTR_Register use record
@@ -702,7 +702,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_13_31 : HAL.UInt19 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DCR_Register use record
@@ -721,7 +721,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DMAR_Register use record
@@ -742,7 +742,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_8_31 : HAL.UInt24 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CR2_Register_1 use record
@@ -788,7 +788,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_15_31 : HAL.UInt17 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DIER_Register_1 use record
@@ -839,7 +839,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_13_31 : HAL.UInt19 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for SR_Register_1 use record
@@ -877,7 +877,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_7_31 : HAL.UInt25 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for EGR_Register_1 use record
@@ -916,7 +916,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CCMR2_Output_Register_1 use record
@@ -970,7 +970,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CCER_Register_1 use record
@@ -1003,7 +1003,7 @@ package STM32_SVD.TIM is
       --  High counter value
       CNT_H : CNT_CNT_H_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CNT_Register_1 use record
@@ -1021,7 +1021,7 @@ package STM32_SVD.TIM is
       --  High Auto-reload value
       ARR_H : ARR_ARR_H_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for ARR_Register_1 use record
@@ -1039,7 +1039,7 @@ package STM32_SVD.TIM is
       --  High Capture/Compare 1 value
       CCR1_H : CCR1_CCR1_H_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CCR1_Register_1 use record
@@ -1057,7 +1057,7 @@ package STM32_SVD.TIM is
       --  High Capture/Compare 2 value
       CCR2_H : CCR2_CCR2_H_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CCR2_Register_1 use record
@@ -1075,7 +1075,7 @@ package STM32_SVD.TIM is
       --  High Capture/Compare value
       CCR3_H : CCR3_CCR3_H_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CCR3_Register_1 use record
@@ -1093,7 +1093,7 @@ package STM32_SVD.TIM is
       --  High Capture/Compare value
       CCR4_H : CCR4_CCR4_H_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CCR4_Register_1 use record
@@ -1112,7 +1112,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_12_31 : HAL.UInt20 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OR_Register use record
@@ -1132,7 +1132,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_8_31 : HAL.UInt24 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OR_Register_1 use record
@@ -1158,7 +1158,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_8_31 : HAL.UInt24 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CR1_Register_1 use record
@@ -1180,7 +1180,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_7_31 : HAL.UInt25 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CR2_Register_2 use record
@@ -1200,7 +1200,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_9_31 : HAL.UInt23 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DIER_Register_2 use record
@@ -1217,7 +1217,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_1_31 : HAL.UInt31 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for SR_Register_2 use record
@@ -1232,7 +1232,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_1_31 : HAL.UInt31 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for EGR_Register_2 use record
@@ -1259,7 +1259,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_10_31 : HAL.UInt22 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CR1_Register_2 use record
@@ -1286,7 +1286,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_8_31 : HAL.UInt24 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for SMCR_Register_1 use record
@@ -1312,7 +1312,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_7_31 : HAL.UInt25 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DIER_Register_3 use record
@@ -1345,7 +1345,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_11_31 : HAL.UInt21 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for SR_Register_3 use record
@@ -1375,7 +1375,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_7_31 : HAL.UInt25 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for EGR_Register_3 use record
@@ -1410,7 +1410,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_15_31 : HAL.UInt17 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CCMR1_Output_Register_1 use record
@@ -1448,7 +1448,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_15_31 : HAL.UInt17 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CCMR1_Input_Register_1 use record
@@ -1483,7 +1483,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_8_31 : HAL.UInt24 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CCER_Register_2 use record
@@ -1515,7 +1515,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_10_31 : HAL.UInt22 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CR1_Register_3 use record
@@ -1537,7 +1537,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_2_31 : HAL.UInt30 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DIER_Register_4 use record
@@ -1559,7 +1559,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_10_31 : HAL.UInt22 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for SR_Register_4 use record
@@ -1579,7 +1579,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_2_31 : HAL.UInt30 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for EGR_Register_4 use record
@@ -1601,7 +1601,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_7_31 : HAL.UInt25 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CCMR1_Output_Register_2 use record
@@ -1623,7 +1623,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_8_31 : HAL.UInt24 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CCMR1_Input_Register_2 use record
@@ -1646,7 +1646,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_4_31 : HAL.UInt28 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CCER_Register_3 use record
@@ -1666,7 +1666,7 @@ package STM32_SVD.TIM is
       --  unspecified
       Reserved_2_31 : HAL.UInt30 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OR_Register_2 use record
@@ -1679,8 +1679,7 @@ package STM32_SVD.TIM is
    -----------------
 
    type TIM1_Disc is
-     (
-      Output,
+     (Output,
       Input);
 
    --  Advanced-timers
@@ -1765,15 +1764,14 @@ package STM32_SVD.TIM is
 
    --  Advanced-timers
    TIM1_Periph : aliased TIM1_Peripheral
-     with Import, Address => System'To_Address (16#40010000#);
+     with Import, Address => TIM1_Base;
 
    --  Advanced-timers
    TIM8_Periph : aliased TIM1_Peripheral
-     with Import, Address => System'To_Address (16#40010400#);
+     with Import, Address => TIM8_Base;
 
    type TIM2_Disc is
-     (
-      Output,
+     (Output,
       Input);
 
    --  General purpose timers
@@ -1855,11 +1853,10 @@ package STM32_SVD.TIM is
 
    --  General purpose timers
    TIM2_Periph : aliased TIM2_Peripheral
-     with Import, Address => System'To_Address (16#40000000#);
+     with Import, Address => TIM2_Base;
 
    type TIM3_Disc is
-     (
-      Output,
+     (Output,
       Input);
 
    --  General purpose timers
@@ -1938,15 +1935,14 @@ package STM32_SVD.TIM is
 
    --  General purpose timers
    TIM3_Periph : aliased TIM3_Peripheral
-     with Import, Address => System'To_Address (16#40000400#);
+     with Import, Address => TIM3_Base;
 
    --  General purpose timers
    TIM4_Periph : aliased TIM3_Peripheral
-     with Import, Address => System'To_Address (16#40000800#);
+     with Import, Address => TIM4_Base;
 
    type TIM5_Disc is
-     (
-      Output,
+     (Output,
       Input);
 
    --  General-purpose-timers
@@ -2028,7 +2024,7 @@ package STM32_SVD.TIM is
 
    --  General-purpose-timers
    TIM5_Periph : aliased TIM5_Peripheral
-     with Import, Address => System'To_Address (16#40000C00#);
+     with Import, Address => TIM5_Base;
 
    --  Basic timers
    type TIM6_Peripheral is record
@@ -2064,15 +2060,14 @@ package STM32_SVD.TIM is
 
    --  Basic timers
    TIM6_Periph : aliased TIM6_Peripheral
-     with Import, Address => System'To_Address (16#40001000#);
+     with Import, Address => TIM6_Base;
 
    --  Basic timers
    TIM7_Periph : aliased TIM6_Peripheral
-     with Import, Address => System'To_Address (16#40001400#);
+     with Import, Address => TIM7_Base;
 
    type TIM9_Disc is
-     (
-      Output,
+     (Output,
       Input);
 
    --  General purpose timers
@@ -2130,15 +2125,14 @@ package STM32_SVD.TIM is
 
    --  General purpose timers
    TIM9_Periph : aliased TIM9_Peripheral
-     with Import, Address => System'To_Address (16#40014000#);
+     with Import, Address => TIM9_Base;
 
    --  General purpose timers
    TIM12_Periph : aliased TIM9_Peripheral
-     with Import, Address => System'To_Address (16#40001800#);
+     with Import, Address => TIM12_Base;
 
    type TIM10_Disc is
-     (
-      Output,
+     (Output,
       Input);
 
    --  General-purpose-timers
@@ -2190,19 +2184,18 @@ package STM32_SVD.TIM is
 
    --  General-purpose-timers
    TIM10_Periph : aliased TIM10_Peripheral
-     with Import, Address => System'To_Address (16#40014400#);
+     with Import, Address => TIM10_Base;
 
    --  General-purpose-timers
    TIM13_Periph : aliased TIM10_Peripheral
-     with Import, Address => System'To_Address (16#40001C00#);
+     with Import, Address => TIM13_Base;
 
    --  General-purpose-timers
    TIM14_Periph : aliased TIM10_Peripheral
-     with Import, Address => System'To_Address (16#40002000#);
+     with Import, Address => TIM14_Base;
 
    type TIM11_Disc is
-     (
-      Output,
+     (Output,
       Input);
 
    --  General-purpose-timers
@@ -2257,6 +2250,6 @@ package STM32_SVD.TIM is
 
    --  General-purpose-timers
    TIM11_Periph : aliased TIM11_Peripheral
-     with Import, Address => System'To_Address (16#40014800#);
+     with Import, Address => TIM11_Base;
 
 end STM32_SVD.TIM;

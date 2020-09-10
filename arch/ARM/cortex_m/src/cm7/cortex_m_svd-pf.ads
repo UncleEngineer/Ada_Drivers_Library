@@ -17,8 +17,7 @@ package Cortex_M_SVD.PF is
 
    --  Level of Coherency
    type CLIDR_LoC_Field is
-     (
-      --  Level 1, if neither instruction nor data cache is implemented
+     (--  Level 1, if neither instruction nor data cache is implemented
       Level_1,
       --  Level 2, if either cache is implemented
       Level_2)
@@ -29,8 +28,7 @@ package Cortex_M_SVD.PF is
 
    --  Level of Unification
    type CLIDR_LoU_Field is
-     (
-      --  Level 1, if neither instruction nor data cache is implemented
+     (--  Level 1, if neither instruction nor data cache is implemented
       Level_1,
       --  Level 2, if either cache is implemented
       Level_2)
@@ -56,7 +54,7 @@ package Cortex_M_SVD.PF is
       --  unspecified
       Reserved_30_31 : HAL.UInt2;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CLIDR_Register use record
@@ -71,8 +69,7 @@ package Cortex_M_SVD.PF is
 
    --  Smallest cache line of all the instruction caches.
    type CTR_IMinLine_Field is
-     (
-      --  8 words for the Cortex-M7 processor.
+     (--  8 words for the Cortex-M7 processor.
       Line_8_Words)
      with Size => 4;
    for CTR_IMinLine_Field use
@@ -80,8 +77,7 @@ package Cortex_M_SVD.PF is
 
    --  Smallest cache line of all the data caches.
    type CTR_DMinLine_Field is
-     (
-      --  8 words for the Cortex-M7 processor.
+     (--  8 words for the Cortex-M7 processor.
       Line_8_Words)
      with Size => 4;
    for CTR_DMinLine_Field use
@@ -91,8 +87,7 @@ package Cortex_M_SVD.PF is
 
    --  Cache Writable Granule.
    type CTR_CWG_Field is
-     (
-      --  8 words granularity for the Cortex-M7 processor.
+     (--  8 words granularity for the Cortex-M7 processor.
       Granularity_8_Words)
      with Size => 4;
    for CTR_CWG_Field use
@@ -100,12 +95,11 @@ package Cortex_M_SVD.PF is
 
    --  Cache Writable Granule.
    type CTR_Format_Field is
-     (
-      --  ARMv7 register forat.
-      Armv7)
+     (--  ARMv7 register forat.
+      ARMv7)
      with Size => 3;
    for CTR_Format_Field use
-     (Armv7 => 4);
+     (ARMv7 => 4);
 
    --  Cache Type Register
    type CTR_Register is record
@@ -128,7 +122,7 @@ package Cortex_M_SVD.PF is
       --  Read-only. Cache Writable Granule.
       Format         : CTR_Format_Field;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CTR_Register use record
@@ -163,7 +157,7 @@ package Cortex_M_SVD.PF is
       --  Read-only. Indicates support available for write through.
       WT            : Boolean;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CCSIDR_Register use record
@@ -178,8 +172,7 @@ package Cortex_M_SVD.PF is
 
    --  Selects the cache currently visible in the CCSIDR.
    type CSSELR_InD_Field is
-     (
-      --  Data cache is selected.
+     (--  Data cache is selected.
       Data_Cache,
       --  Instruction cache is selected.
       Instruction_Cache)
@@ -190,8 +183,7 @@ package Cortex_M_SVD.PF is
 
    --  Identifies the cache level selected.
    type CSSELR_Level_Field is
-     (
-      --  Level 1 cache is selected.
+     (--  Level 1 cache is selected.
       Level_1)
      with Size => 3;
    for CSSELR_Level_Field use
@@ -206,7 +198,7 @@ package Cortex_M_SVD.PF is
       --  unspecified
       Reserved_4_31 : HAL.UInt28 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CSSELR_Register use record

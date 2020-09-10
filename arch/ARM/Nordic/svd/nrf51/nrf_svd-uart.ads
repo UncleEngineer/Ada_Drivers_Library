@@ -100,12 +100,12 @@ package NRF_SVD.UART is
    --  Enable interrupt on CTS event.
    type INTENSET_CTS_Field_1 is
      (--  Reset value for the field
-      Intenset_Cts_Field_Reset,
+      INTENSET_CTS_Field_Reset,
       --  Enable interrupt on write.
       Set)
      with Size => 1;
    for INTENSET_CTS_Field_1 use
-     (Intenset_Cts_Field_Reset => 0,
+     (INTENSET_CTS_Field_Reset => 0,
       Set => 1);
 
    --  Enable interrupt on NCTS event.
@@ -122,12 +122,12 @@ package NRF_SVD.UART is
    --  Enable interrupt on NCTS event.
    type INTENSET_NCTS_Field_1 is
      (--  Reset value for the field
-      Intenset_Ncts_Field_Reset,
+      INTENSET_NCTS_Field_Reset,
       --  Enable interrupt on write.
       Set)
      with Size => 1;
    for INTENSET_NCTS_Field_1 use
-     (Intenset_Ncts_Field_Reset => 0,
+     (INTENSET_NCTS_Field_Reset => 0,
       Set => 1);
 
    --  Enable interrupt on RXRDY event.
@@ -144,12 +144,12 @@ package NRF_SVD.UART is
    --  Enable interrupt on RXRDY event.
    type INTENSET_RXDRDY_Field_1 is
      (--  Reset value for the field
-      Intenset_Rxdrdy_Field_Reset,
+      INTENSET_RXDRDY_Field_Reset,
       --  Enable interrupt on write.
       Set)
      with Size => 1;
    for INTENSET_RXDRDY_Field_1 use
-     (Intenset_Rxdrdy_Field_Reset => 0,
+     (INTENSET_RXDRDY_Field_Reset => 0,
       Set => 1);
 
    --  Enable interrupt on TXRDY event.
@@ -166,12 +166,12 @@ package NRF_SVD.UART is
    --  Enable interrupt on TXRDY event.
    type INTENSET_TXDRDY_Field_1 is
      (--  Reset value for the field
-      Intenset_Txdrdy_Field_Reset,
+      INTENSET_TXDRDY_Field_Reset,
       --  Enable interrupt on write.
       Set)
      with Size => 1;
    for INTENSET_TXDRDY_Field_1 use
-     (Intenset_Txdrdy_Field_Reset => 0,
+     (INTENSET_TXDRDY_Field_Reset => 0,
       Set => 1);
 
    --  Enable interrupt on ERROR event.
@@ -188,12 +188,12 @@ package NRF_SVD.UART is
    --  Enable interrupt on ERROR event.
    type INTENSET_ERROR_Field_1 is
      (--  Reset value for the field
-      Intenset_Error_Field_Reset,
+      INTENSET_ERROR_Field_Reset,
       --  Enable interrupt on write.
       Set)
      with Size => 1;
    for INTENSET_ERROR_Field_1 use
-     (Intenset_Error_Field_Reset => 0,
+     (INTENSET_ERROR_Field_Reset => 0,
       Set => 1);
 
    --  Enable interrupt on RXTO event.
@@ -210,34 +210,34 @@ package NRF_SVD.UART is
    --  Enable interrupt on RXTO event.
    type INTENSET_RXTO_Field_1 is
      (--  Reset value for the field
-      Intenset_Rxto_Field_Reset,
+      INTENSET_RXTO_Field_Reset,
       --  Enable interrupt on write.
       Set)
      with Size => 1;
    for INTENSET_RXTO_Field_1 use
-     (Intenset_Rxto_Field_Reset => 0,
+     (INTENSET_RXTO_Field_Reset => 0,
       Set => 1);
 
    --  Interrupt enable set register.
    type INTENSET_Register is record
       --  Enable interrupt on CTS event.
-      CTS            : INTENSET_CTS_Field_1 := Intenset_Cts_Field_Reset;
+      CTS            : INTENSET_CTS_Field_1 := INTENSET_CTS_Field_Reset;
       --  Enable interrupt on NCTS event.
-      NCTS           : INTENSET_NCTS_Field_1 := Intenset_Ncts_Field_Reset;
+      NCTS           : INTENSET_NCTS_Field_1 := INTENSET_NCTS_Field_Reset;
       --  Enable interrupt on RXRDY event.
-      RXDRDY         : INTENSET_RXDRDY_Field_1 := Intenset_Rxdrdy_Field_Reset;
+      RXDRDY         : INTENSET_RXDRDY_Field_1 := INTENSET_RXDRDY_Field_Reset;
       --  unspecified
       Reserved_3_6   : HAL.UInt4 := 16#0#;
       --  Enable interrupt on TXRDY event.
-      TXDRDY         : INTENSET_TXDRDY_Field_1 := Intenset_Txdrdy_Field_Reset;
+      TXDRDY         : INTENSET_TXDRDY_Field_1 := INTENSET_TXDRDY_Field_Reset;
       --  unspecified
       Reserved_8_8   : HAL.Bit := 16#0#;
       --  Enable interrupt on ERROR event.
-      ERROR          : INTENSET_ERROR_Field_1 := Intenset_Error_Field_Reset;
+      ERROR          : INTENSET_ERROR_Field_1 := INTENSET_ERROR_Field_Reset;
       --  unspecified
       Reserved_10_16 : HAL.UInt7 := 16#0#;
       --  Enable interrupt on RXTO event.
-      RXTO           : INTENSET_RXTO_Field_1 := Intenset_Rxto_Field_Reset;
+      RXTO           : INTENSET_RXTO_Field_1 := INTENSET_RXTO_Field_Reset;
       --  unspecified
       Reserved_18_31 : HAL.UInt14 := 16#0#;
    end record
@@ -271,12 +271,12 @@ package NRF_SVD.UART is
    --  Disable interrupt on CTS event.
    type INTENCLR_CTS_Field_1 is
      (--  Reset value for the field
-      Intenclr_Cts_Field_Reset,
+      INTENCLR_CTS_Field_Reset,
       --  Disable interrupt on write.
       Clear)
      with Size => 1;
    for INTENCLR_CTS_Field_1 use
-     (Intenclr_Cts_Field_Reset => 0,
+     (INTENCLR_CTS_Field_Reset => 0,
       Clear => 1);
 
    --  Disable interrupt on NCTS event.
@@ -293,12 +293,12 @@ package NRF_SVD.UART is
    --  Disable interrupt on NCTS event.
    type INTENCLR_NCTS_Field_1 is
      (--  Reset value for the field
-      Intenclr_Ncts_Field_Reset,
+      INTENCLR_NCTS_Field_Reset,
       --  Disable interrupt on write.
       Clear)
      with Size => 1;
    for INTENCLR_NCTS_Field_1 use
-     (Intenclr_Ncts_Field_Reset => 0,
+     (INTENCLR_NCTS_Field_Reset => 0,
       Clear => 1);
 
    --  Disable interrupt on RXRDY event.
@@ -315,12 +315,12 @@ package NRF_SVD.UART is
    --  Disable interrupt on RXRDY event.
    type INTENCLR_RXDRDY_Field_1 is
      (--  Reset value for the field
-      Intenclr_Rxdrdy_Field_Reset,
+      INTENCLR_RXDRDY_Field_Reset,
       --  Disable interrupt on write.
       Clear)
      with Size => 1;
    for INTENCLR_RXDRDY_Field_1 use
-     (Intenclr_Rxdrdy_Field_Reset => 0,
+     (INTENCLR_RXDRDY_Field_Reset => 0,
       Clear => 1);
 
    --  Disable interrupt on TXRDY event.
@@ -337,12 +337,12 @@ package NRF_SVD.UART is
    --  Disable interrupt on TXRDY event.
    type INTENCLR_TXDRDY_Field_1 is
      (--  Reset value for the field
-      Intenclr_Txdrdy_Field_Reset,
+      INTENCLR_TXDRDY_Field_Reset,
       --  Disable interrupt on write.
       Clear)
      with Size => 1;
    for INTENCLR_TXDRDY_Field_1 use
-     (Intenclr_Txdrdy_Field_Reset => 0,
+     (INTENCLR_TXDRDY_Field_Reset => 0,
       Clear => 1);
 
    --  Disable interrupt on ERROR event.
@@ -359,12 +359,12 @@ package NRF_SVD.UART is
    --  Disable interrupt on ERROR event.
    type INTENCLR_ERROR_Field_1 is
      (--  Reset value for the field
-      Intenclr_Error_Field_Reset,
+      INTENCLR_ERROR_Field_Reset,
       --  Disable interrupt on write.
       Clear)
      with Size => 1;
    for INTENCLR_ERROR_Field_1 use
-     (Intenclr_Error_Field_Reset => 0,
+     (INTENCLR_ERROR_Field_Reset => 0,
       Clear => 1);
 
    --  Disable interrupt on RXTO event.
@@ -381,34 +381,34 @@ package NRF_SVD.UART is
    --  Disable interrupt on RXTO event.
    type INTENCLR_RXTO_Field_1 is
      (--  Reset value for the field
-      Intenclr_Rxto_Field_Reset,
+      INTENCLR_RXTO_Field_Reset,
       --  Disable interrupt on write.
       Clear)
      with Size => 1;
    for INTENCLR_RXTO_Field_1 use
-     (Intenclr_Rxto_Field_Reset => 0,
+     (INTENCLR_RXTO_Field_Reset => 0,
       Clear => 1);
 
    --  Interrupt enable clear register.
    type INTENCLR_Register is record
       --  Disable interrupt on CTS event.
-      CTS            : INTENCLR_CTS_Field_1 := Intenclr_Cts_Field_Reset;
+      CTS            : INTENCLR_CTS_Field_1 := INTENCLR_CTS_Field_Reset;
       --  Disable interrupt on NCTS event.
-      NCTS           : INTENCLR_NCTS_Field_1 := Intenclr_Ncts_Field_Reset;
+      NCTS           : INTENCLR_NCTS_Field_1 := INTENCLR_NCTS_Field_Reset;
       --  Disable interrupt on RXRDY event.
-      RXDRDY         : INTENCLR_RXDRDY_Field_1 := Intenclr_Rxdrdy_Field_Reset;
+      RXDRDY         : INTENCLR_RXDRDY_Field_1 := INTENCLR_RXDRDY_Field_Reset;
       --  unspecified
       Reserved_3_6   : HAL.UInt4 := 16#0#;
       --  Disable interrupt on TXRDY event.
-      TXDRDY         : INTENCLR_TXDRDY_Field_1 := Intenclr_Txdrdy_Field_Reset;
+      TXDRDY         : INTENCLR_TXDRDY_Field_1 := INTENCLR_TXDRDY_Field_Reset;
       --  unspecified
       Reserved_8_8   : HAL.Bit := 16#0#;
       --  Disable interrupt on ERROR event.
-      ERROR          : INTENCLR_ERROR_Field_1 := Intenclr_Error_Field_Reset;
+      ERROR          : INTENCLR_ERROR_Field_1 := INTENCLR_ERROR_Field_Reset;
       --  unspecified
       Reserved_10_16 : HAL.UInt7 := 16#0#;
       --  Disable interrupt on RXTO event.
-      RXTO           : INTENCLR_RXTO_Field_1 := Intenclr_Rxto_Field_Reset;
+      RXTO           : INTENCLR_RXTO_Field_1 := INTENCLR_RXTO_Field_Reset;
       --  unspecified
       Reserved_18_31 : HAL.UInt14 := 16#0#;
    end record
@@ -432,94 +432,94 @@ package NRF_SVD.UART is
    --  loss).
    type ERRORSRC_OVERRUN_Field is
      (--  Error not present.
-      Notpresent,
+      NotPresent,
       --  Error present.
       Present)
      with Size => 1;
    for ERRORSRC_OVERRUN_Field use
-     (Notpresent => 0,
+     (NotPresent => 0,
       Present => 1);
 
    --  A start bit is received while the previous data still lies in RXD. (Data
    --  loss).
    type ERRORSRC_OVERRUN_Field_1 is
      (--  Reset value for the field
-      Errorsrc_Overrun_Field_Reset,
+      ERRORSRC_OVERRUN_Field_Reset,
       --  Clear error on write.
       Clear)
      with Size => 1;
    for ERRORSRC_OVERRUN_Field_1 use
-     (Errorsrc_Overrun_Field_Reset => 0,
+     (ERRORSRC_OVERRUN_Field_Reset => 0,
       Clear => 1);
 
    --  A character with bad parity is received. Only checked if HW parity
    --  control is enabled.
    type ERRORSRC_PARITY_Field is
      (--  Error not present.
-      Notpresent,
+      NotPresent,
       --  Error present.
       Present)
      with Size => 1;
    for ERRORSRC_PARITY_Field use
-     (Notpresent => 0,
+     (NotPresent => 0,
       Present => 1);
 
    --  A character with bad parity is received. Only checked if HW parity
    --  control is enabled.
    type ERRORSRC_PARITY_Field_1 is
      (--  Reset value for the field
-      Errorsrc_Parity_Field_Reset,
+      ERRORSRC_PARITY_Field_Reset,
       --  Clear error on write.
       Clear)
      with Size => 1;
    for ERRORSRC_PARITY_Field_1 use
-     (Errorsrc_Parity_Field_Reset => 0,
+     (ERRORSRC_PARITY_Field_Reset => 0,
       Clear => 1);
 
    --  A valid stop bit is not detected on the serial data input after all bits
    --  in a character have been received.
    type ERRORSRC_FRAMING_Field is
      (--  Error not present.
-      Notpresent,
+      NotPresent,
       --  Error present.
       Present)
      with Size => 1;
    for ERRORSRC_FRAMING_Field use
-     (Notpresent => 0,
+     (NotPresent => 0,
       Present => 1);
 
    --  A valid stop bit is not detected on the serial data input after all bits
    --  in a character have been received.
    type ERRORSRC_FRAMING_Field_1 is
      (--  Reset value for the field
-      Errorsrc_Framing_Field_Reset,
+      ERRORSRC_FRAMING_Field_Reset,
       --  Clear error on write.
       Clear)
      with Size => 1;
    for ERRORSRC_FRAMING_Field_1 use
-     (Errorsrc_Framing_Field_Reset => 0,
+     (ERRORSRC_FRAMING_Field_Reset => 0,
       Clear => 1);
 
    --  The serial data input is '0' for longer than the length of a data frame.
    type ERRORSRC_BREAK_Field is
      (--  Error not present.
-      Notpresent,
+      NotPresent,
       --  Error present.
       Present)
      with Size => 1;
    for ERRORSRC_BREAK_Field use
-     (Notpresent => 0,
+     (NotPresent => 0,
       Present => 1);
 
    --  The serial data input is '0' for longer than the length of a data frame.
    type ERRORSRC_BREAK_Field_1 is
      (--  Reset value for the field
-      Errorsrc_Break_Field_Reset,
+      ERRORSRC_BREAK_Field_Reset,
       --  Clear error on write.
       Clear)
      with Size => 1;
    for ERRORSRC_BREAK_Field_1 use
-     (Errorsrc_Break_Field_Reset => 0,
+     (ERRORSRC_BREAK_Field_Reset => 0,
       Clear => 1);
 
    --  Error source. Write error field to 1 to clear error.
@@ -527,17 +527,17 @@ package NRF_SVD.UART is
       --  A start bit is received while the previous data still lies in RXD.
       --  (Data loss).
       OVERRUN       : ERRORSRC_OVERRUN_Field_1 :=
-                       Errorsrc_Overrun_Field_Reset;
+                       ERRORSRC_OVERRUN_Field_Reset;
       --  A character with bad parity is received. Only checked if HW parity
       --  control is enabled.
-      PARITY        : ERRORSRC_PARITY_Field_1 := Errorsrc_Parity_Field_Reset;
+      PARITY        : ERRORSRC_PARITY_Field_1 := ERRORSRC_PARITY_Field_Reset;
       --  A valid stop bit is not detected on the serial data input after all
       --  bits in a character have been received.
       FRAMING       : ERRORSRC_FRAMING_Field_1 :=
-                       Errorsrc_Framing_Field_Reset;
+                       ERRORSRC_FRAMING_Field_Reset;
       --  The serial data input is '0' for longer than the length of a data
       --  frame.
-      BREAK         : ERRORSRC_BREAK_Field_1 := Errorsrc_Break_Field_Reset;
+      BREAK         : ERRORSRC_BREAK_Field_1 := ERRORSRC_BREAK_Field_Reset;
       --  unspecified
       Reserved_4_31 : HAL.UInt28 := 16#0#;
    end record

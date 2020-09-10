@@ -66,12 +66,12 @@ package NRF_SVD.ECB is
    --  Write '1' to Enable interrupt for ENDECB event
    type INTENSET_ENDECB_Field_1 is
      (--  Reset value for the field
-      Intenset_Endecb_Field_Reset,
+      INTENSET_ENDECB_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_ENDECB_Field_1 use
-     (Intenset_Endecb_Field_Reset => 0,
+     (INTENSET_ENDECB_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for ERRORECB event
@@ -88,21 +88,21 @@ package NRF_SVD.ECB is
    --  Write '1' to Enable interrupt for ERRORECB event
    type INTENSET_ERRORECB_Field_1 is
      (--  Reset value for the field
-      Intenset_Errorecb_Field_Reset,
+      INTENSET_ERRORECB_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_ERRORECB_Field_1 use
-     (Intenset_Errorecb_Field_Reset => 0,
+     (INTENSET_ERRORECB_Field_Reset => 0,
       Set => 1);
 
    --  Enable interrupt
    type INTENSET_Register is record
       --  Write '1' to Enable interrupt for ENDECB event
-      ENDECB        : INTENSET_ENDECB_Field_1 := Intenset_Endecb_Field_Reset;
+      ENDECB        : INTENSET_ENDECB_Field_1 := INTENSET_ENDECB_Field_Reset;
       --  Write '1' to Enable interrupt for ERRORECB event
       ERRORECB      : INTENSET_ERRORECB_Field_1 :=
-                       Intenset_Errorecb_Field_Reset;
+                       INTENSET_ERRORECB_Field_Reset;
       --  unspecified
       Reserved_2_31 : HAL.UInt30 := 16#0#;
    end record
@@ -129,12 +129,12 @@ package NRF_SVD.ECB is
    --  Write '1' to Disable interrupt for ENDECB event
    type INTENCLR_ENDECB_Field_1 is
      (--  Reset value for the field
-      Intenclr_Endecb_Field_Reset,
+      INTENCLR_ENDECB_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_ENDECB_Field_1 use
-     (Intenclr_Endecb_Field_Reset => 0,
+     (INTENCLR_ENDECB_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for ERRORECB event
@@ -151,21 +151,21 @@ package NRF_SVD.ECB is
    --  Write '1' to Disable interrupt for ERRORECB event
    type INTENCLR_ERRORECB_Field_1 is
      (--  Reset value for the field
-      Intenclr_Errorecb_Field_Reset,
+      INTENCLR_ERRORECB_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_ERRORECB_Field_1 use
-     (Intenclr_Errorecb_Field_Reset => 0,
+     (INTENCLR_ERRORECB_Field_Reset => 0,
       Clear => 1);
 
    --  Disable interrupt
    type INTENCLR_Register is record
       --  Write '1' to Disable interrupt for ENDECB event
-      ENDECB        : INTENCLR_ENDECB_Field_1 := Intenclr_Endecb_Field_Reset;
+      ENDECB        : INTENCLR_ENDECB_Field_1 := INTENCLR_ENDECB_Field_Reset;
       --  Write '1' to Disable interrupt for ERRORECB event
       ERRORECB      : INTENCLR_ERRORECB_Field_1 :=
-                       Intenclr_Errorecb_Field_Reset;
+                       INTENCLR_ERRORECB_Field_Reset;
       --  unspecified
       Reserved_2_31 : HAL.UInt30 := 16#0#;
    end record

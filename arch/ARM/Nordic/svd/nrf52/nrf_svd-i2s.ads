@@ -126,12 +126,12 @@ package NRF_SVD.I2S is
    --  Write '1' to Enable interrupt for RXPTRUPD event
    type INTENSET_RXPTRUPD_Field_1 is
      (--  Reset value for the field
-      Intenset_Rxptrupd_Field_Reset,
+      INTENSET_RXPTRUPD_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_RXPTRUPD_Field_1 use
-     (Intenset_Rxptrupd_Field_Reset => 0,
+     (INTENSET_RXPTRUPD_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for STOPPED event
@@ -148,12 +148,12 @@ package NRF_SVD.I2S is
    --  Write '1' to Enable interrupt for STOPPED event
    type INTENSET_STOPPED_Field_1 is
      (--  Reset value for the field
-      Intenset_Stopped_Field_Reset,
+      INTENSET_STOPPED_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_STOPPED_Field_1 use
-     (Intenset_Stopped_Field_Reset => 0,
+     (INTENSET_STOPPED_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for TXPTRUPD event
@@ -170,12 +170,12 @@ package NRF_SVD.I2S is
    --  Write '1' to Enable interrupt for TXPTRUPD event
    type INTENSET_TXPTRUPD_Field_1 is
      (--  Reset value for the field
-      Intenset_Txptrupd_Field_Reset,
+      INTENSET_TXPTRUPD_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_TXPTRUPD_Field_1 use
-     (Intenset_Txptrupd_Field_Reset => 0,
+     (INTENSET_TXPTRUPD_Field_Reset => 0,
       Set => 1);
 
    --  Enable interrupt
@@ -184,15 +184,15 @@ package NRF_SVD.I2S is
       Reserved_0_0  : HAL.Bit := 16#0#;
       --  Write '1' to Enable interrupt for RXPTRUPD event
       RXPTRUPD      : INTENSET_RXPTRUPD_Field_1 :=
-                       Intenset_Rxptrupd_Field_Reset;
+                       INTENSET_RXPTRUPD_Field_Reset;
       --  Write '1' to Enable interrupt for STOPPED event
       STOPPED       : INTENSET_STOPPED_Field_1 :=
-                       Intenset_Stopped_Field_Reset;
+                       INTENSET_STOPPED_Field_Reset;
       --  unspecified
       Reserved_3_4  : HAL.UInt2 := 16#0#;
       --  Write '1' to Enable interrupt for TXPTRUPD event
       TXPTRUPD      : INTENSET_TXPTRUPD_Field_1 :=
-                       Intenset_Txptrupd_Field_Reset;
+                       INTENSET_TXPTRUPD_Field_Reset;
       --  unspecified
       Reserved_6_31 : HAL.UInt26 := 16#0#;
    end record
@@ -222,12 +222,12 @@ package NRF_SVD.I2S is
    --  Write '1' to Disable interrupt for RXPTRUPD event
    type INTENCLR_RXPTRUPD_Field_1 is
      (--  Reset value for the field
-      Intenclr_Rxptrupd_Field_Reset,
+      INTENCLR_RXPTRUPD_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_RXPTRUPD_Field_1 use
-     (Intenclr_Rxptrupd_Field_Reset => 0,
+     (INTENCLR_RXPTRUPD_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for STOPPED event
@@ -244,12 +244,12 @@ package NRF_SVD.I2S is
    --  Write '1' to Disable interrupt for STOPPED event
    type INTENCLR_STOPPED_Field_1 is
      (--  Reset value for the field
-      Intenclr_Stopped_Field_Reset,
+      INTENCLR_STOPPED_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_STOPPED_Field_1 use
-     (Intenclr_Stopped_Field_Reset => 0,
+     (INTENCLR_STOPPED_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for TXPTRUPD event
@@ -266,12 +266,12 @@ package NRF_SVD.I2S is
    --  Write '1' to Disable interrupt for TXPTRUPD event
    type INTENCLR_TXPTRUPD_Field_1 is
      (--  Reset value for the field
-      Intenclr_Txptrupd_Field_Reset,
+      INTENCLR_TXPTRUPD_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_TXPTRUPD_Field_1 use
-     (Intenclr_Txptrupd_Field_Reset => 0,
+     (INTENCLR_TXPTRUPD_Field_Reset => 0,
       Clear => 1);
 
    --  Disable interrupt
@@ -280,15 +280,15 @@ package NRF_SVD.I2S is
       Reserved_0_0  : HAL.Bit := 16#0#;
       --  Write '1' to Disable interrupt for RXPTRUPD event
       RXPTRUPD      : INTENCLR_RXPTRUPD_Field_1 :=
-                       Intenclr_Rxptrupd_Field_Reset;
+                       INTENCLR_RXPTRUPD_Field_Reset;
       --  Write '1' to Disable interrupt for STOPPED event
       STOPPED       : INTENCLR_STOPPED_Field_1 :=
-                       Intenclr_Stopped_Field_Reset;
+                       INTENCLR_STOPPED_Field_Reset;
       --  unspecified
       Reserved_3_4  : HAL.UInt2 := 16#0#;
       --  Write '1' to Disable interrupt for TXPTRUPD event
       TXPTRUPD      : INTENCLR_TXPTRUPD_Field_1 :=
-                       Intenclr_Txptrupd_Field_Reset;
+                       INTENCLR_TXPTRUPD_Field_Reset;
       --  unspecified
       Reserved_6_31 : HAL.UInt26 := 16#0#;
    end record

@@ -21,7 +21,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_1_31 : HAL.UInt31 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_CR_Register use record
@@ -41,7 +41,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_CCR_Register use record
@@ -59,7 +59,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_2_31 : HAL.UInt30 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_LVCIDR_Register use record
@@ -80,7 +80,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_9_31 : HAL.UInt23 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_LCOLCR_Register use record
@@ -101,7 +101,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_3_31 : HAL.UInt29 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_LPCR_Register use record
@@ -125,7 +125,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_24_31 : HAL.UInt8 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_LPMCR_Register use record
@@ -150,7 +150,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_5_31 : HAL.UInt27 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_PCR_Register use record
@@ -171,7 +171,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_2_31 : HAL.UInt30 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_GVCIDR_Register use record
@@ -186,7 +186,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_1_31 : HAL.UInt31 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_MCR_Register use record
@@ -231,7 +231,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_25_31 : HAL.UInt7 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_VMCR_Register use record
@@ -262,7 +262,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_14_31 : HAL.UInt18 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_VPCR_Register use record
@@ -279,7 +279,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_13_31 : HAL.UInt19 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_VCCR_Register use record
@@ -296,7 +296,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_13_31 : HAL.UInt19 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_VNPCR_Register use record
@@ -313,7 +313,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_12_31 : HAL.UInt20 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_VHSACR_Register use record
@@ -330,7 +330,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_12_31 : HAL.UInt20 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_VHBPCR_Register use record
@@ -347,7 +347,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_15_31 : HAL.UInt17 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_VLCR_Register use record
@@ -364,7 +364,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_10_31 : HAL.UInt22 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_VVSACR_Register use record
@@ -381,7 +381,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_10_31 : HAL.UInt22 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_VVBPCR_Register use record
@@ -398,7 +398,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_10_31 : HAL.UInt22 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_VVFPCR_Register use record
@@ -415,7 +415,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_14_31 : HAL.UInt18 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_VVACR_Register use record
@@ -432,7 +432,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_LCCR_Register use record
@@ -479,7 +479,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_25_31 : HAL.UInt7 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_CMCR_Register use record
@@ -521,7 +521,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_24_31 : HAL.UInt8 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_GHCR_Register use record
@@ -552,7 +552,7 @@ package STM32_SVD.DSI is
             Arr : DSI_GPDR_DATA_Field_Array;
       end case;
    end record
-     with Unchecked_Union, Size => 32, Volatile_Full_Access,
+     with Unchecked_Union, Size => 32, Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_GPDR_Register use record
@@ -579,7 +579,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_7_31 : HAL.UInt25;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_GPSR_Register use record
@@ -603,7 +603,7 @@ package STM32_SVD.DSI is
       --  High-Speed Transmission Timeout Counter
       HSTX_TOCNT : DSI_TCCR0_HSTX_TOCNT_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_TCCR0_Register use record
@@ -620,7 +620,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_TCCR1_Register use record
@@ -637,7 +637,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_TCCR2_Register use record
@@ -658,7 +658,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_25_31 : HAL.UInt7 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_TCCR3_Register use record
@@ -677,7 +677,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_TCCR4_Register use record
@@ -694,7 +694,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_TCCR5_Register use record
@@ -711,7 +711,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_2_31 : HAL.UInt30 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_CLCR_Register use record
@@ -734,7 +734,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_26_31 : HAL.UInt6 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_CLTCR_Register use record
@@ -759,7 +759,7 @@ package STM32_SVD.DSI is
       --  High-Speed To Low-Power Time
       HS2LP_TIME     : DSI_DLTCR_HS2LP_TIME_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_DLTCR_Register use record
@@ -780,7 +780,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_3_31 : HAL.UInt29 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_PCTLR_Register use record
@@ -804,7 +804,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_PCONFR_Register use record
@@ -827,7 +827,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_4_31 : HAL.UInt28 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_PUCR_Register use record
@@ -847,7 +847,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_4_31 : HAL.UInt28 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_PTTCR_Register use record
@@ -878,7 +878,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_9_31 : HAL.UInt23;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_PSR_Register use record
@@ -951,7 +951,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_21_31 : HAL.UInt11;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_ISR0_Register use record
@@ -991,7 +991,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_13_31 : HAL.UInt19;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_ISR1_Register use record
@@ -1058,7 +1058,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_21_31 : HAL.UInt11 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_IER0_Register use record
@@ -1117,7 +1117,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_13_31 : HAL.UInt19 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_IER1_Register use record
@@ -1196,7 +1196,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_21_31 : HAL.UInt11 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_FIR0_Register use record
@@ -1236,7 +1236,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_13_31 : HAL.UInt19 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_FIR1_Register use record
@@ -1267,7 +1267,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_9_31 : HAL.UInt23 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_VSCR_Register use record
@@ -1286,7 +1286,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_2_31 : HAL.UInt30;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_LCVCIDR_Register use record
@@ -1307,7 +1307,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_9_31 : HAL.UInt23;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_LCCCR_Register use record
@@ -1331,7 +1331,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_24_31 : HAL.UInt8;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_LPMCCR_Register use record
@@ -1366,7 +1366,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_10_31 : HAL.UInt22;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_VMCCR_Register use record
@@ -1391,7 +1391,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_14_31 : HAL.UInt18;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_VPCCR_Register use record
@@ -1408,7 +1408,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_13_31 : HAL.UInt19;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_VCCCR_Register use record
@@ -1425,7 +1425,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_13_31 : HAL.UInt19;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_VNPCCR_Register use record
@@ -1442,7 +1442,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_12_31 : HAL.UInt20;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_VHSACCR_Register use record
@@ -1459,7 +1459,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_12_31 : HAL.UInt20;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_VHBPCCR_Register use record
@@ -1476,7 +1476,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_15_31 : HAL.UInt17;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_VLCCR_Register use record
@@ -1493,7 +1493,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_10_31 : HAL.UInt22;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_VVSACCR_Register use record
@@ -1510,7 +1510,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_10_31 : HAL.UInt22;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_VVBPCCR_Register use record
@@ -1527,7 +1527,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_10_31 : HAL.UInt22;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_VVFPCCR_Register use record
@@ -1544,7 +1544,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_14_31 : HAL.UInt18;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_VVACCR_Register use record
@@ -1571,7 +1571,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_8_31 : HAL.UInt24 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_WCFGR_Register use record
@@ -1597,7 +1597,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_4_31 : HAL.UInt28 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_WCR_Register use record
@@ -1627,7 +1627,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_14_31 : HAL.UInt18 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_WIER_Register use record
@@ -1666,7 +1666,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_14_31 : HAL.UInt18;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_WISR_Register use record
@@ -1702,7 +1702,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_14_31 : HAL.UInt18 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_WIFCR_Register use record
@@ -1815,7 +1815,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_28_31 : HAL.UInt4 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_WPCR1_Register use record
@@ -1884,7 +1884,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_27_31 : HAL.UInt5 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_WPCR2_Register use record
@@ -1921,7 +1921,7 @@ package STM32_SVD.DSI is
       --  tHSTRAIL
       THSTRAIL : DSI_WPCR3_THSTRAIL_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_WPCR3_Register use record
@@ -1947,7 +1947,7 @@ package STM32_SVD.DSI is
       --  tLPXC for Clock lane
       TLPXC   : DSI_WPCR4_TLPXC_Field := 16#31#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_WPCR4_Register use record
@@ -1966,7 +1966,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_8_31 : HAL.UInt24 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_WPCR5_Register use record
@@ -2001,7 +2001,7 @@ package STM32_SVD.DSI is
       --  unspecified
       Reserved_25_31 : HAL.UInt7 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DSI_WRPCR_Register use record
@@ -2247,6 +2247,6 @@ package STM32_SVD.DSI is
 
    --  DSI Host
    DSI_Periph : aliased DSI_Peripheral
-     with Import, Address => System'To_Address (16#40016C00#);
+     with Import, Address => DSI_Base;
 
 end STM32_SVD.DSI;

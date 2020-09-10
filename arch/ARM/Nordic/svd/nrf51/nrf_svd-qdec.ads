@@ -99,12 +99,12 @@ package NRF_SVD.QDEC is
    --  Enable interrupt on SAMPLERDY event.
    type INTENSET_SAMPLERDY_Field_1 is
      (--  Reset value for the field
-      Intenset_Samplerdy_Field_Reset,
+      INTENSET_SAMPLERDY_Field_Reset,
       --  Enable interrupt on write.
       Set)
      with Size => 1;
    for INTENSET_SAMPLERDY_Field_1 use
-     (Intenset_Samplerdy_Field_Reset => 0,
+     (INTENSET_SAMPLERDY_Field_Reset => 0,
       Set => 1);
 
    --  Enable interrupt on REPORTRDY event.
@@ -121,12 +121,12 @@ package NRF_SVD.QDEC is
    --  Enable interrupt on REPORTRDY event.
    type INTENSET_REPORTRDY_Field_1 is
      (--  Reset value for the field
-      Intenset_Reportrdy_Field_Reset,
+      INTENSET_REPORTRDY_Field_Reset,
       --  Enable interrupt on write.
       Set)
      with Size => 1;
    for INTENSET_REPORTRDY_Field_1 use
-     (Intenset_Reportrdy_Field_Reset => 0,
+     (INTENSET_REPORTRDY_Field_Reset => 0,
       Set => 1);
 
    --  Enable interrupt on ACCOF event.
@@ -143,24 +143,24 @@ package NRF_SVD.QDEC is
    --  Enable interrupt on ACCOF event.
    type INTENSET_ACCOF_Field_1 is
      (--  Reset value for the field
-      Intenset_Accof_Field_Reset,
+      INTENSET_ACCOF_Field_Reset,
       --  Enable interrupt on write.
       Set)
      with Size => 1;
    for INTENSET_ACCOF_Field_1 use
-     (Intenset_Accof_Field_Reset => 0,
+     (INTENSET_ACCOF_Field_Reset => 0,
       Set => 1);
 
    --  Interrupt enable set register.
    type INTENSET_Register is record
       --  Enable interrupt on SAMPLERDY event.
       SAMPLERDY     : INTENSET_SAMPLERDY_Field_1 :=
-                       Intenset_Samplerdy_Field_Reset;
+                       INTENSET_SAMPLERDY_Field_Reset;
       --  Enable interrupt on REPORTRDY event.
       REPORTRDY     : INTENSET_REPORTRDY_Field_1 :=
-                       Intenset_Reportrdy_Field_Reset;
+                       INTENSET_REPORTRDY_Field_Reset;
       --  Enable interrupt on ACCOF event.
-      ACCOF         : INTENSET_ACCOF_Field_1 := Intenset_Accof_Field_Reset;
+      ACCOF         : INTENSET_ACCOF_Field_1 := INTENSET_ACCOF_Field_Reset;
       --  unspecified
       Reserved_3_31 : HAL.UInt29 := 16#0#;
    end record
@@ -188,12 +188,12 @@ package NRF_SVD.QDEC is
    --  Disable interrupt on SAMPLERDY event.
    type INTENCLR_SAMPLERDY_Field_1 is
      (--  Reset value for the field
-      Intenclr_Samplerdy_Field_Reset,
+      INTENCLR_SAMPLERDY_Field_Reset,
       --  Disable interrupt on write.
       Clear)
      with Size => 1;
    for INTENCLR_SAMPLERDY_Field_1 use
-     (Intenclr_Samplerdy_Field_Reset => 0,
+     (INTENCLR_SAMPLERDY_Field_Reset => 0,
       Clear => 1);
 
    --  Disable interrupt on REPORTRDY event.
@@ -210,12 +210,12 @@ package NRF_SVD.QDEC is
    --  Disable interrupt on REPORTRDY event.
    type INTENCLR_REPORTRDY_Field_1 is
      (--  Reset value for the field
-      Intenclr_Reportrdy_Field_Reset,
+      INTENCLR_REPORTRDY_Field_Reset,
       --  Disable interrupt on write.
       Clear)
      with Size => 1;
    for INTENCLR_REPORTRDY_Field_1 use
-     (Intenclr_Reportrdy_Field_Reset => 0,
+     (INTENCLR_REPORTRDY_Field_Reset => 0,
       Clear => 1);
 
    --  Disable interrupt on ACCOF event.
@@ -232,24 +232,24 @@ package NRF_SVD.QDEC is
    --  Disable interrupt on ACCOF event.
    type INTENCLR_ACCOF_Field_1 is
      (--  Reset value for the field
-      Intenclr_Accof_Field_Reset,
+      INTENCLR_ACCOF_Field_Reset,
       --  Disable interrupt on write.
       Clear)
      with Size => 1;
    for INTENCLR_ACCOF_Field_1 use
-     (Intenclr_Accof_Field_Reset => 0,
+     (INTENCLR_ACCOF_Field_Reset => 0,
       Clear => 1);
 
    --  Interrupt enable clear register.
    type INTENCLR_Register is record
       --  Disable interrupt on SAMPLERDY event.
       SAMPLERDY     : INTENCLR_SAMPLERDY_Field_1 :=
-                       Intenclr_Samplerdy_Field_Reset;
+                       INTENCLR_SAMPLERDY_Field_Reset;
       --  Disable interrupt on REPORTRDY event.
       REPORTRDY     : INTENCLR_REPORTRDY_Field_1 :=
-                       Intenclr_Reportrdy_Field_Reset;
+                       INTENCLR_REPORTRDY_Field_Reset;
       --  Disable interrupt on ACCOF event.
-      ACCOF         : INTENCLR_ACCOF_Field_1 := Intenclr_Accof_Field_Reset;
+      ACCOF         : INTENCLR_ACCOF_Field_1 := INTENCLR_ACCOF_Field_Reset;
       --  unspecified
       Reserved_3_31 : HAL.UInt29 := 16#0#;
    end record
@@ -292,18 +292,18 @@ package NRF_SVD.QDEC is
    --  LED output pin polarity.
    type LEDPOL_LEDPOL_Field is
      (--  LED output is active low.
-      Activelow,
+      ActiveLow,
       --  LED output is active high.
-      Activehigh)
+      ActiveHigh)
      with Size => 1;
    for LEDPOL_LEDPOL_Field use
-     (Activelow => 0,
-      Activehigh => 1);
+     (ActiveLow => 0,
+      ActiveHigh => 1);
 
    --  LED output pin polarity.
    type LEDPOL_Register is record
       --  LED output pin polarity.
-      LEDPOL        : LEDPOL_LEDPOL_Field := NRF_SVD.QDEC.Activelow;
+      LEDPOL        : LEDPOL_LEDPOL_Field := NRF_SVD.QDEC.ActiveLow;
       --  unspecified
       Reserved_1_31 : HAL.UInt31 := 16#0#;
    end record
@@ -318,36 +318,36 @@ package NRF_SVD.QDEC is
    --  Sample period.
    type SAMPLEPER_SAMPLEPER_Field is
      (--  128us sample period.
-      Val_128US,
+      Val_128us,
       --  256us sample period.
-      Val_256US,
+      Val_256us,
       --  512us sample period.
-      Val_512US,
+      Val_512us,
       --  1024us sample period.
-      Val_1024US,
+      Val_1024us,
       --  2048us sample period.
-      Val_2048US,
+      Val_2048us,
       --  4096us sample period.
-      Val_4096US,
+      Val_4096us,
       --  8192us sample period.
-      Val_8192US,
+      Val_8192us,
       --  16384us sample period.
-      Val_16384US)
+      Val_16384us)
      with Size => 3;
    for SAMPLEPER_SAMPLEPER_Field use
-     (Val_128US => 0,
-      Val_256US => 1,
-      Val_512US => 2,
-      Val_1024US => 3,
-      Val_2048US => 4,
-      Val_4096US => 5,
-      Val_8192US => 6,
-      Val_16384US => 7);
+     (Val_128us => 0,
+      Val_256us => 1,
+      Val_512us => 2,
+      Val_1024us => 3,
+      Val_2048us => 4,
+      Val_4096us => 5,
+      Val_8192us => 6,
+      Val_16384us => 7);
 
    --  Sample period.
    type SAMPLEPER_Register is record
       --  Sample period.
-      SAMPLEPER     : SAMPLEPER_SAMPLEPER_Field := NRF_SVD.QDEC.Val_128US;
+      SAMPLEPER     : SAMPLEPER_SAMPLEPER_Field := NRF_SVD.QDEC.Val_128us;
       --  unspecified
       Reserved_3_31 : HAL.UInt29 := 16#0#;
    end record

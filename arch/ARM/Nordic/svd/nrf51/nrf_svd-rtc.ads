@@ -62,12 +62,12 @@ package NRF_SVD.RTC is
    --  Enable interrupt on TICK event.
    type INTENSET_TICK_Field_1 is
      (--  Reset value for the field
-      Intenset_Tick_Field_Reset,
+      INTENSET_TICK_Field_Reset,
       --  Enable interrupt on write.
       Set)
      with Size => 1;
    for INTENSET_TICK_Field_1 use
-     (Intenset_Tick_Field_Reset => 0,
+     (INTENSET_TICK_Field_Reset => 0,
       Set => 1);
 
    --  Enable interrupt on OVRFLW event.
@@ -84,12 +84,12 @@ package NRF_SVD.RTC is
    --  Enable interrupt on OVRFLW event.
    type INTENSET_OVRFLW_Field_1 is
      (--  Reset value for the field
-      Intenset_Ovrflw_Field_Reset,
+      INTENSET_OVRFLW_Field_Reset,
       --  Enable interrupt on write.
       Set)
      with Size => 1;
    for INTENSET_OVRFLW_Field_1 use
-     (Intenset_Ovrflw_Field_Reset => 0,
+     (INTENSET_OVRFLW_Field_Reset => 0,
       Set => 1);
 
    --  Enable interrupt on COMPARE[0] event.
@@ -106,12 +106,12 @@ package NRF_SVD.RTC is
    --  Enable interrupt on COMPARE[0] event.
    type INTENSET_COMPARE0_Field_1 is
      (--  Reset value for the field
-      Intenset_Compare0_Field_Reset,
+      INTENSET_COMPARE0_Field_Reset,
       --  Enable interrupt on write.
       Set)
      with Size => 1;
    for INTENSET_COMPARE0_Field_1 use
-     (Intenset_Compare0_Field_Reset => 0,
+     (INTENSET_COMPARE0_Field_Reset => 0,
       Set => 1);
 
    --  INTENSET_COMPARE array
@@ -142,9 +142,9 @@ package NRF_SVD.RTC is
    --  Interrupt enable set register.
    type INTENSET_Register is record
       --  Enable interrupt on TICK event.
-      TICK           : INTENSET_TICK_Field_1 := Intenset_Tick_Field_Reset;
+      TICK           : INTENSET_TICK_Field_1 := INTENSET_TICK_Field_Reset;
       --  Enable interrupt on OVRFLW event.
-      OVRFLW         : INTENSET_OVRFLW_Field_1 := Intenset_Ovrflw_Field_Reset;
+      OVRFLW         : INTENSET_OVRFLW_Field_1 := INTENSET_OVRFLW_Field_Reset;
       --  unspecified
       Reserved_2_15  : HAL.UInt14 := 16#0#;
       --  Enable interrupt on COMPARE[0] event.
@@ -178,12 +178,12 @@ package NRF_SVD.RTC is
    --  Disable interrupt on TICK event.
    type INTENCLR_TICK_Field_1 is
      (--  Reset value for the field
-      Intenclr_Tick_Field_Reset,
+      INTENCLR_TICK_Field_Reset,
       --  Disable interrupt on write.
       Clear)
      with Size => 1;
    for INTENCLR_TICK_Field_1 use
-     (Intenclr_Tick_Field_Reset => 0,
+     (INTENCLR_TICK_Field_Reset => 0,
       Clear => 1);
 
    --  Disable interrupt on OVRFLW event.
@@ -200,12 +200,12 @@ package NRF_SVD.RTC is
    --  Disable interrupt on OVRFLW event.
    type INTENCLR_OVRFLW_Field_1 is
      (--  Reset value for the field
-      Intenclr_Ovrflw_Field_Reset,
+      INTENCLR_OVRFLW_Field_Reset,
       --  Disable interrupt on write.
       Clear)
      with Size => 1;
    for INTENCLR_OVRFLW_Field_1 use
-     (Intenclr_Ovrflw_Field_Reset => 0,
+     (INTENCLR_OVRFLW_Field_Reset => 0,
       Clear => 1);
 
    --  Disable interrupt on COMPARE[0] event.
@@ -222,12 +222,12 @@ package NRF_SVD.RTC is
    --  Disable interrupt on COMPARE[0] event.
    type INTENCLR_COMPARE0_Field_1 is
      (--  Reset value for the field
-      Intenclr_Compare0_Field_Reset,
+      INTENCLR_COMPARE0_Field_Reset,
       --  Disable interrupt on write.
       Clear)
      with Size => 1;
    for INTENCLR_COMPARE0_Field_1 use
-     (Intenclr_Compare0_Field_Reset => 0,
+     (INTENCLR_COMPARE0_Field_Reset => 0,
       Clear => 1);
 
    --  INTENCLR_COMPARE array
@@ -258,9 +258,9 @@ package NRF_SVD.RTC is
    --  Interrupt enable clear register.
    type INTENCLR_Register is record
       --  Disable interrupt on TICK event.
-      TICK           : INTENCLR_TICK_Field_1 := Intenclr_Tick_Field_Reset;
+      TICK           : INTENCLR_TICK_Field_1 := INTENCLR_TICK_Field_Reset;
       --  Disable interrupt on OVRFLW event.
-      OVRFLW         : INTENCLR_OVRFLW_Field_1 := Intenclr_Ovrflw_Field_Reset;
+      OVRFLW         : INTENCLR_OVRFLW_Field_1 := INTENCLR_OVRFLW_Field_Reset;
       --  unspecified
       Reserved_2_15  : HAL.UInt14 := 16#0#;
       --  Disable interrupt on COMPARE[0] event.
@@ -376,12 +376,12 @@ package NRF_SVD.RTC is
    --  Enable routing to PPI of TICK event.
    type EVTENSET_TICK_Field_1 is
      (--  Reset value for the field
-      Evtenset_Tick_Field_Reset,
+      EVTENSET_TICK_Field_Reset,
       --  Enable event on write.
       Set)
      with Size => 1;
    for EVTENSET_TICK_Field_1 use
-     (Evtenset_Tick_Field_Reset => 0,
+     (EVTENSET_TICK_Field_Reset => 0,
       Set => 1);
 
    --  Enable routing to PPI of OVRFLW event.
@@ -398,12 +398,12 @@ package NRF_SVD.RTC is
    --  Enable routing to PPI of OVRFLW event.
    type EVTENSET_OVRFLW_Field_1 is
      (--  Reset value for the field
-      Evtenset_Ovrflw_Field_Reset,
+      EVTENSET_OVRFLW_Field_Reset,
       --  Enable event on write.
       Set)
      with Size => 1;
    for EVTENSET_OVRFLW_Field_1 use
-     (Evtenset_Ovrflw_Field_Reset => 0,
+     (EVTENSET_OVRFLW_Field_Reset => 0,
       Set => 1);
 
    --  Enable routing to PPI of COMPARE[0] event.
@@ -420,12 +420,12 @@ package NRF_SVD.RTC is
    --  Enable routing to PPI of COMPARE[0] event.
    type EVTENSET_COMPARE0_Field_1 is
      (--  Reset value for the field
-      Evtenset_Compare0_Field_Reset,
+      EVTENSET_COMPARE0_Field_Reset,
       --  Enable event on write.
       Set)
      with Size => 1;
    for EVTENSET_COMPARE0_Field_1 use
-     (Evtenset_Compare0_Field_Reset => 0,
+     (EVTENSET_COMPARE0_Field_Reset => 0,
       Set => 1);
 
    --  EVTENSET_COMPARE array
@@ -457,9 +457,9 @@ package NRF_SVD.RTC is
    --  value of EVTEN.
    type EVTENSET_Register is record
       --  Enable routing to PPI of TICK event.
-      TICK           : EVTENSET_TICK_Field_1 := Evtenset_Tick_Field_Reset;
+      TICK           : EVTENSET_TICK_Field_1 := EVTENSET_TICK_Field_Reset;
       --  Enable routing to PPI of OVRFLW event.
-      OVRFLW         : EVTENSET_OVRFLW_Field_1 := Evtenset_Ovrflw_Field_Reset;
+      OVRFLW         : EVTENSET_OVRFLW_Field_1 := EVTENSET_OVRFLW_Field_Reset;
       --  unspecified
       Reserved_2_15  : HAL.UInt14 := 16#0#;
       --  Enable routing to PPI of COMPARE[0] event.
@@ -493,12 +493,12 @@ package NRF_SVD.RTC is
    --  Disable routing to PPI of TICK event.
    type EVTENCLR_TICK_Field_1 is
      (--  Reset value for the field
-      Evtenclr_Tick_Field_Reset,
+      EVTENCLR_TICK_Field_Reset,
       --  Disable event on write.
       Clear)
      with Size => 1;
    for EVTENCLR_TICK_Field_1 use
-     (Evtenclr_Tick_Field_Reset => 0,
+     (EVTENCLR_TICK_Field_Reset => 0,
       Clear => 1);
 
    --  Disable routing to PPI of OVRFLW event.
@@ -515,12 +515,12 @@ package NRF_SVD.RTC is
    --  Disable routing to PPI of OVRFLW event.
    type EVTENCLR_OVRFLW_Field_1 is
      (--  Reset value for the field
-      Evtenclr_Ovrflw_Field_Reset,
+      EVTENCLR_OVRFLW_Field_Reset,
       --  Disable event on write.
       Clear)
      with Size => 1;
    for EVTENCLR_OVRFLW_Field_1 use
-     (Evtenclr_Ovrflw_Field_Reset => 0,
+     (EVTENCLR_OVRFLW_Field_Reset => 0,
       Clear => 1);
 
    --  Disable routing to PPI of COMPARE[0] event.
@@ -537,12 +537,12 @@ package NRF_SVD.RTC is
    --  Disable routing to PPI of COMPARE[0] event.
    type EVTENCLR_COMPARE0_Field_1 is
      (--  Reset value for the field
-      Evtenclr_Compare0_Field_Reset,
+      EVTENCLR_COMPARE0_Field_Reset,
       --  Disable event on write.
       Clear)
      with Size => 1;
    for EVTENCLR_COMPARE0_Field_1 use
-     (Evtenclr_Compare0_Field_Reset => 0,
+     (EVTENCLR_COMPARE0_Field_Reset => 0,
       Clear => 1);
 
    --  EVTENCLR_COMPARE array
@@ -574,9 +574,9 @@ package NRF_SVD.RTC is
    --  value of EVTEN.
    type EVTENCLR_Register is record
       --  Disable routing to PPI of TICK event.
-      TICK           : EVTENCLR_TICK_Field_1 := Evtenclr_Tick_Field_Reset;
+      TICK           : EVTENCLR_TICK_Field_1 := EVTENCLR_TICK_Field_Reset;
       --  Disable routing to PPI of OVRFLW event.
-      OVRFLW         : EVTENCLR_OVRFLW_Field_1 := Evtenclr_Ovrflw_Field_Reset;
+      OVRFLW         : EVTENCLR_OVRFLW_Field_1 := EVTENCLR_OVRFLW_Field_Reset;
       --  unspecified
       Reserved_2_15  : HAL.UInt14 := 16#0#;
       --  Disable routing to PPI of COMPARE[0] event.

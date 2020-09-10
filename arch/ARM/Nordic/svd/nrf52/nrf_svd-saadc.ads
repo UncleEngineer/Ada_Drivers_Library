@@ -409,12 +409,12 @@ package NRF_SVD.SAADC is
    --  Write '1' to Enable interrupt for STARTED event
    type INTENSET_STARTED_Field_1 is
      (--  Reset value for the field
-      Intenset_Started_Field_Reset,
+      INTENSET_STARTED_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_STARTED_Field_1 use
-     (Intenset_Started_Field_Reset => 0,
+     (INTENSET_STARTED_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for END event
@@ -431,12 +431,12 @@ package NRF_SVD.SAADC is
    --  Write '1' to Enable interrupt for END event
    type INTENSET_END_Field_1 is
      (--  Reset value for the field
-      Intenset_End_Field_Reset,
+      INTENSET_END_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_END_Field_1 use
-     (Intenset_End_Field_Reset => 0,
+     (INTENSET_END_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for DONE event
@@ -453,12 +453,12 @@ package NRF_SVD.SAADC is
    --  Write '1' to Enable interrupt for DONE event
    type INTENSET_DONE_Field_1 is
      (--  Reset value for the field
-      Intenset_Done_Field_Reset,
+      INTENSET_DONE_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_DONE_Field_1 use
-     (Intenset_Done_Field_Reset => 0,
+     (INTENSET_DONE_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for RESULTDONE event
@@ -475,12 +475,12 @@ package NRF_SVD.SAADC is
    --  Write '1' to Enable interrupt for RESULTDONE event
    type INTENSET_RESULTDONE_Field_1 is
      (--  Reset value for the field
-      Intenset_Resultdone_Field_Reset,
+      INTENSET_RESULTDONE_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_RESULTDONE_Field_1 use
-     (Intenset_Resultdone_Field_Reset => 0,
+     (INTENSET_RESULTDONE_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for CALIBRATEDONE event
@@ -497,12 +497,12 @@ package NRF_SVD.SAADC is
    --  Write '1' to Enable interrupt for CALIBRATEDONE event
    type INTENSET_CALIBRATEDONE_Field_1 is
      (--  Reset value for the field
-      Intenset_Calibratedone_Field_Reset,
+      INTENSET_CALIBRATEDONE_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_CALIBRATEDONE_Field_1 use
-     (Intenset_Calibratedone_Field_Reset => 0,
+     (INTENSET_CALIBRATEDONE_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for STOPPED event
@@ -519,12 +519,12 @@ package NRF_SVD.SAADC is
    --  Write '1' to Enable interrupt for STOPPED event
    type INTENSET_STOPPED_Field_1 is
      (--  Reset value for the field
-      Intenset_Stopped_Field_Reset,
+      INTENSET_STOPPED_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_STOPPED_Field_1 use
-     (Intenset_Stopped_Field_Reset => 0,
+     (INTENSET_STOPPED_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for CH[0].LIMITH event
@@ -541,12 +541,12 @@ package NRF_SVD.SAADC is
    --  Write '1' to Enable interrupt for CH[0].LIMITH event
    type INTENSET_CH0LIMITH_Field_1 is
      (--  Reset value for the field
-      Intenset_Ch0Limith_Field_Reset,
+      INTENSET_CH0LIMITH_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_CH0LIMITH_Field_1 use
-     (Intenset_Ch0Limith_Field_Reset => 0,
+     (INTENSET_CH0LIMITH_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for CH[0].LIMITL event
@@ -563,12 +563,12 @@ package NRF_SVD.SAADC is
    --  Write '1' to Enable interrupt for CH[0].LIMITL event
    type INTENSET_CH0LIMITL_Field_1 is
      (--  Reset value for the field
-      Intenset_Ch0Limitl_Field_Reset,
+      INTENSET_CH0LIMITL_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_CH0LIMITL_Field_1 use
-     (Intenset_Ch0Limitl_Field_Reset => 0,
+     (INTENSET_CH0LIMITL_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for CH[1].LIMITH event
@@ -585,12 +585,12 @@ package NRF_SVD.SAADC is
    --  Write '1' to Enable interrupt for CH[1].LIMITH event
    type INTENSET_CH1LIMITH_Field_1 is
      (--  Reset value for the field
-      Intenset_Ch1Limith_Field_Reset,
+      INTENSET_CH1LIMITH_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_CH1LIMITH_Field_1 use
-     (Intenset_Ch1Limith_Field_Reset => 0,
+     (INTENSET_CH1LIMITH_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for CH[1].LIMITL event
@@ -607,12 +607,12 @@ package NRF_SVD.SAADC is
    --  Write '1' to Enable interrupt for CH[1].LIMITL event
    type INTENSET_CH1LIMITL_Field_1 is
      (--  Reset value for the field
-      Intenset_Ch1Limitl_Field_Reset,
+      INTENSET_CH1LIMITL_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_CH1LIMITL_Field_1 use
-     (Intenset_Ch1Limitl_Field_Reset => 0,
+     (INTENSET_CH1LIMITL_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for CH[2].LIMITH event
@@ -629,12 +629,12 @@ package NRF_SVD.SAADC is
    --  Write '1' to Enable interrupt for CH[2].LIMITH event
    type INTENSET_CH2LIMITH_Field_1 is
      (--  Reset value for the field
-      Intenset_Ch2Limith_Field_Reset,
+      INTENSET_CH2LIMITH_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_CH2LIMITH_Field_1 use
-     (Intenset_Ch2Limith_Field_Reset => 0,
+     (INTENSET_CH2LIMITH_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for CH[2].LIMITL event
@@ -651,12 +651,12 @@ package NRF_SVD.SAADC is
    --  Write '1' to Enable interrupt for CH[2].LIMITL event
    type INTENSET_CH2LIMITL_Field_1 is
      (--  Reset value for the field
-      Intenset_Ch2Limitl_Field_Reset,
+      INTENSET_CH2LIMITL_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_CH2LIMITL_Field_1 use
-     (Intenset_Ch2Limitl_Field_Reset => 0,
+     (INTENSET_CH2LIMITL_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for CH[3].LIMITH event
@@ -673,12 +673,12 @@ package NRF_SVD.SAADC is
    --  Write '1' to Enable interrupt for CH[3].LIMITH event
    type INTENSET_CH3LIMITH_Field_1 is
      (--  Reset value for the field
-      Intenset_Ch3Limith_Field_Reset,
+      INTENSET_CH3LIMITH_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_CH3LIMITH_Field_1 use
-     (Intenset_Ch3Limith_Field_Reset => 0,
+     (INTENSET_CH3LIMITH_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for CH[3].LIMITL event
@@ -695,12 +695,12 @@ package NRF_SVD.SAADC is
    --  Write '1' to Enable interrupt for CH[3].LIMITL event
    type INTENSET_CH3LIMITL_Field_1 is
      (--  Reset value for the field
-      Intenset_Ch3Limitl_Field_Reset,
+      INTENSET_CH3LIMITL_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_CH3LIMITL_Field_1 use
-     (Intenset_Ch3Limitl_Field_Reset => 0,
+     (INTENSET_CH3LIMITL_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for CH[4].LIMITH event
@@ -717,12 +717,12 @@ package NRF_SVD.SAADC is
    --  Write '1' to Enable interrupt for CH[4].LIMITH event
    type INTENSET_CH4LIMITH_Field_1 is
      (--  Reset value for the field
-      Intenset_Ch4Limith_Field_Reset,
+      INTENSET_CH4LIMITH_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_CH4LIMITH_Field_1 use
-     (Intenset_Ch4Limith_Field_Reset => 0,
+     (INTENSET_CH4LIMITH_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for CH[4].LIMITL event
@@ -739,12 +739,12 @@ package NRF_SVD.SAADC is
    --  Write '1' to Enable interrupt for CH[4].LIMITL event
    type INTENSET_CH4LIMITL_Field_1 is
      (--  Reset value for the field
-      Intenset_Ch4Limitl_Field_Reset,
+      INTENSET_CH4LIMITL_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_CH4LIMITL_Field_1 use
-     (Intenset_Ch4Limitl_Field_Reset => 0,
+     (INTENSET_CH4LIMITL_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for CH[5].LIMITH event
@@ -761,12 +761,12 @@ package NRF_SVD.SAADC is
    --  Write '1' to Enable interrupt for CH[5].LIMITH event
    type INTENSET_CH5LIMITH_Field_1 is
      (--  Reset value for the field
-      Intenset_Ch5Limith_Field_Reset,
+      INTENSET_CH5LIMITH_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_CH5LIMITH_Field_1 use
-     (Intenset_Ch5Limith_Field_Reset => 0,
+     (INTENSET_CH5LIMITH_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for CH[5].LIMITL event
@@ -783,12 +783,12 @@ package NRF_SVD.SAADC is
    --  Write '1' to Enable interrupt for CH[5].LIMITL event
    type INTENSET_CH5LIMITL_Field_1 is
      (--  Reset value for the field
-      Intenset_Ch5Limitl_Field_Reset,
+      INTENSET_CH5LIMITL_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_CH5LIMITL_Field_1 use
-     (Intenset_Ch5Limitl_Field_Reset => 0,
+     (INTENSET_CH5LIMITL_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for CH[6].LIMITH event
@@ -805,12 +805,12 @@ package NRF_SVD.SAADC is
    --  Write '1' to Enable interrupt for CH[6].LIMITH event
    type INTENSET_CH6LIMITH_Field_1 is
      (--  Reset value for the field
-      Intenset_Ch6Limith_Field_Reset,
+      INTENSET_CH6LIMITH_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_CH6LIMITH_Field_1 use
-     (Intenset_Ch6Limith_Field_Reset => 0,
+     (INTENSET_CH6LIMITH_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for CH[6].LIMITL event
@@ -827,12 +827,12 @@ package NRF_SVD.SAADC is
    --  Write '1' to Enable interrupt for CH[6].LIMITL event
    type INTENSET_CH6LIMITL_Field_1 is
      (--  Reset value for the field
-      Intenset_Ch6Limitl_Field_Reset,
+      INTENSET_CH6LIMITL_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_CH6LIMITL_Field_1 use
-     (Intenset_Ch6Limitl_Field_Reset => 0,
+     (INTENSET_CH6LIMITL_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for CH[7].LIMITH event
@@ -849,12 +849,12 @@ package NRF_SVD.SAADC is
    --  Write '1' to Enable interrupt for CH[7].LIMITH event
    type INTENSET_CH7LIMITH_Field_1 is
      (--  Reset value for the field
-      Intenset_Ch7Limith_Field_Reset,
+      INTENSET_CH7LIMITH_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_CH7LIMITH_Field_1 use
-     (Intenset_Ch7Limith_Field_Reset => 0,
+     (INTENSET_CH7LIMITH_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for CH[7].LIMITL event
@@ -871,80 +871,80 @@ package NRF_SVD.SAADC is
    --  Write '1' to Enable interrupt for CH[7].LIMITL event
    type INTENSET_CH7LIMITL_Field_1 is
      (--  Reset value for the field
-      Intenset_Ch7Limitl_Field_Reset,
+      INTENSET_CH7LIMITL_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_CH7LIMITL_Field_1 use
-     (Intenset_Ch7Limitl_Field_Reset => 0,
+     (INTENSET_CH7LIMITL_Field_Reset => 0,
       Set => 1);
 
    --  Enable interrupt
    type INTENSET_Register is record
       --  Write '1' to Enable interrupt for STARTED event
       STARTED        : INTENSET_STARTED_Field_1 :=
-                        Intenset_Started_Field_Reset;
+                        INTENSET_STARTED_Field_Reset;
       --  Write '1' to Enable interrupt for END event
-      END_k          : INTENSET_END_Field_1 := Intenset_End_Field_Reset;
+      END_k          : INTENSET_END_Field_1 := INTENSET_END_Field_Reset;
       --  Write '1' to Enable interrupt for DONE event
-      DONE           : INTENSET_DONE_Field_1 := Intenset_Done_Field_Reset;
+      DONE           : INTENSET_DONE_Field_1 := INTENSET_DONE_Field_Reset;
       --  Write '1' to Enable interrupt for RESULTDONE event
       RESULTDONE     : INTENSET_RESULTDONE_Field_1 :=
-                        Intenset_Resultdone_Field_Reset;
+                        INTENSET_RESULTDONE_Field_Reset;
       --  Write '1' to Enable interrupt for CALIBRATEDONE event
       CALIBRATEDONE  : INTENSET_CALIBRATEDONE_Field_1 :=
-                        Intenset_Calibratedone_Field_Reset;
+                        INTENSET_CALIBRATEDONE_Field_Reset;
       --  Write '1' to Enable interrupt for STOPPED event
       STOPPED        : INTENSET_STOPPED_Field_1 :=
-                        Intenset_Stopped_Field_Reset;
+                        INTENSET_STOPPED_Field_Reset;
       --  Write '1' to Enable interrupt for CH[0].LIMITH event
       CH0LIMITH      : INTENSET_CH0LIMITH_Field_1 :=
-                        Intenset_Ch0Limith_Field_Reset;
+                        INTENSET_CH0LIMITH_Field_Reset;
       --  Write '1' to Enable interrupt for CH[0].LIMITL event
       CH0LIMITL      : INTENSET_CH0LIMITL_Field_1 :=
-                        Intenset_Ch0Limitl_Field_Reset;
+                        INTENSET_CH0LIMITL_Field_Reset;
       --  Write '1' to Enable interrupt for CH[1].LIMITH event
       CH1LIMITH      : INTENSET_CH1LIMITH_Field_1 :=
-                        Intenset_Ch1Limith_Field_Reset;
+                        INTENSET_CH1LIMITH_Field_Reset;
       --  Write '1' to Enable interrupt for CH[1].LIMITL event
       CH1LIMITL      : INTENSET_CH1LIMITL_Field_1 :=
-                        Intenset_Ch1Limitl_Field_Reset;
+                        INTENSET_CH1LIMITL_Field_Reset;
       --  Write '1' to Enable interrupt for CH[2].LIMITH event
       CH2LIMITH      : INTENSET_CH2LIMITH_Field_1 :=
-                        Intenset_Ch2Limith_Field_Reset;
+                        INTENSET_CH2LIMITH_Field_Reset;
       --  Write '1' to Enable interrupt for CH[2].LIMITL event
       CH2LIMITL      : INTENSET_CH2LIMITL_Field_1 :=
-                        Intenset_Ch2Limitl_Field_Reset;
+                        INTENSET_CH2LIMITL_Field_Reset;
       --  Write '1' to Enable interrupt for CH[3].LIMITH event
       CH3LIMITH      : INTENSET_CH3LIMITH_Field_1 :=
-                        Intenset_Ch3Limith_Field_Reset;
+                        INTENSET_CH3LIMITH_Field_Reset;
       --  Write '1' to Enable interrupt for CH[3].LIMITL event
       CH3LIMITL      : INTENSET_CH3LIMITL_Field_1 :=
-                        Intenset_Ch3Limitl_Field_Reset;
+                        INTENSET_CH3LIMITL_Field_Reset;
       --  Write '1' to Enable interrupt for CH[4].LIMITH event
       CH4LIMITH      : INTENSET_CH4LIMITH_Field_1 :=
-                        Intenset_Ch4Limith_Field_Reset;
+                        INTENSET_CH4LIMITH_Field_Reset;
       --  Write '1' to Enable interrupt for CH[4].LIMITL event
       CH4LIMITL      : INTENSET_CH4LIMITL_Field_1 :=
-                        Intenset_Ch4Limitl_Field_Reset;
+                        INTENSET_CH4LIMITL_Field_Reset;
       --  Write '1' to Enable interrupt for CH[5].LIMITH event
       CH5LIMITH      : INTENSET_CH5LIMITH_Field_1 :=
-                        Intenset_Ch5Limith_Field_Reset;
+                        INTENSET_CH5LIMITH_Field_Reset;
       --  Write '1' to Enable interrupt for CH[5].LIMITL event
       CH5LIMITL      : INTENSET_CH5LIMITL_Field_1 :=
-                        Intenset_Ch5Limitl_Field_Reset;
+                        INTENSET_CH5LIMITL_Field_Reset;
       --  Write '1' to Enable interrupt for CH[6].LIMITH event
       CH6LIMITH      : INTENSET_CH6LIMITH_Field_1 :=
-                        Intenset_Ch6Limith_Field_Reset;
+                        INTENSET_CH6LIMITH_Field_Reset;
       --  Write '1' to Enable interrupt for CH[6].LIMITL event
       CH6LIMITL      : INTENSET_CH6LIMITL_Field_1 :=
-                        Intenset_Ch6Limitl_Field_Reset;
+                        INTENSET_CH6LIMITL_Field_Reset;
       --  Write '1' to Enable interrupt for CH[7].LIMITH event
       CH7LIMITH      : INTENSET_CH7LIMITH_Field_1 :=
-                        Intenset_Ch7Limith_Field_Reset;
+                        INTENSET_CH7LIMITH_Field_Reset;
       --  Write '1' to Enable interrupt for CH[7].LIMITL event
       CH7LIMITL      : INTENSET_CH7LIMITL_Field_1 :=
-                        Intenset_Ch7Limitl_Field_Reset;
+                        INTENSET_CH7LIMITL_Field_Reset;
       --  unspecified
       Reserved_22_31 : HAL.UInt10 := 16#0#;
    end record
@@ -991,12 +991,12 @@ package NRF_SVD.SAADC is
    --  Write '1' to Disable interrupt for STARTED event
    type INTENCLR_STARTED_Field_1 is
      (--  Reset value for the field
-      Intenclr_Started_Field_Reset,
+      INTENCLR_STARTED_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_STARTED_Field_1 use
-     (Intenclr_Started_Field_Reset => 0,
+     (INTENCLR_STARTED_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for END event
@@ -1013,12 +1013,12 @@ package NRF_SVD.SAADC is
    --  Write '1' to Disable interrupt for END event
    type INTENCLR_END_Field_1 is
      (--  Reset value for the field
-      Intenclr_End_Field_Reset,
+      INTENCLR_END_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_END_Field_1 use
-     (Intenclr_End_Field_Reset => 0,
+     (INTENCLR_END_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for DONE event
@@ -1035,12 +1035,12 @@ package NRF_SVD.SAADC is
    --  Write '1' to Disable interrupt for DONE event
    type INTENCLR_DONE_Field_1 is
      (--  Reset value for the field
-      Intenclr_Done_Field_Reset,
+      INTENCLR_DONE_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_DONE_Field_1 use
-     (Intenclr_Done_Field_Reset => 0,
+     (INTENCLR_DONE_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for RESULTDONE event
@@ -1057,12 +1057,12 @@ package NRF_SVD.SAADC is
    --  Write '1' to Disable interrupt for RESULTDONE event
    type INTENCLR_RESULTDONE_Field_1 is
      (--  Reset value for the field
-      Intenclr_Resultdone_Field_Reset,
+      INTENCLR_RESULTDONE_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_RESULTDONE_Field_1 use
-     (Intenclr_Resultdone_Field_Reset => 0,
+     (INTENCLR_RESULTDONE_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for CALIBRATEDONE event
@@ -1079,12 +1079,12 @@ package NRF_SVD.SAADC is
    --  Write '1' to Disable interrupt for CALIBRATEDONE event
    type INTENCLR_CALIBRATEDONE_Field_1 is
      (--  Reset value for the field
-      Intenclr_Calibratedone_Field_Reset,
+      INTENCLR_CALIBRATEDONE_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_CALIBRATEDONE_Field_1 use
-     (Intenclr_Calibratedone_Field_Reset => 0,
+     (INTENCLR_CALIBRATEDONE_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for STOPPED event
@@ -1101,12 +1101,12 @@ package NRF_SVD.SAADC is
    --  Write '1' to Disable interrupt for STOPPED event
    type INTENCLR_STOPPED_Field_1 is
      (--  Reset value for the field
-      Intenclr_Stopped_Field_Reset,
+      INTENCLR_STOPPED_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_STOPPED_Field_1 use
-     (Intenclr_Stopped_Field_Reset => 0,
+     (INTENCLR_STOPPED_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for CH[0].LIMITH event
@@ -1123,12 +1123,12 @@ package NRF_SVD.SAADC is
    --  Write '1' to Disable interrupt for CH[0].LIMITH event
    type INTENCLR_CH0LIMITH_Field_1 is
      (--  Reset value for the field
-      Intenclr_Ch0Limith_Field_Reset,
+      INTENCLR_CH0LIMITH_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_CH0LIMITH_Field_1 use
-     (Intenclr_Ch0Limith_Field_Reset => 0,
+     (INTENCLR_CH0LIMITH_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for CH[0].LIMITL event
@@ -1145,12 +1145,12 @@ package NRF_SVD.SAADC is
    --  Write '1' to Disable interrupt for CH[0].LIMITL event
    type INTENCLR_CH0LIMITL_Field_1 is
      (--  Reset value for the field
-      Intenclr_Ch0Limitl_Field_Reset,
+      INTENCLR_CH0LIMITL_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_CH0LIMITL_Field_1 use
-     (Intenclr_Ch0Limitl_Field_Reset => 0,
+     (INTENCLR_CH0LIMITL_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for CH[1].LIMITH event
@@ -1167,12 +1167,12 @@ package NRF_SVD.SAADC is
    --  Write '1' to Disable interrupt for CH[1].LIMITH event
    type INTENCLR_CH1LIMITH_Field_1 is
      (--  Reset value for the field
-      Intenclr_Ch1Limith_Field_Reset,
+      INTENCLR_CH1LIMITH_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_CH1LIMITH_Field_1 use
-     (Intenclr_Ch1Limith_Field_Reset => 0,
+     (INTENCLR_CH1LIMITH_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for CH[1].LIMITL event
@@ -1189,12 +1189,12 @@ package NRF_SVD.SAADC is
    --  Write '1' to Disable interrupt for CH[1].LIMITL event
    type INTENCLR_CH1LIMITL_Field_1 is
      (--  Reset value for the field
-      Intenclr_Ch1Limitl_Field_Reset,
+      INTENCLR_CH1LIMITL_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_CH1LIMITL_Field_1 use
-     (Intenclr_Ch1Limitl_Field_Reset => 0,
+     (INTENCLR_CH1LIMITL_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for CH[2].LIMITH event
@@ -1211,12 +1211,12 @@ package NRF_SVD.SAADC is
    --  Write '1' to Disable interrupt for CH[2].LIMITH event
    type INTENCLR_CH2LIMITH_Field_1 is
      (--  Reset value for the field
-      Intenclr_Ch2Limith_Field_Reset,
+      INTENCLR_CH2LIMITH_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_CH2LIMITH_Field_1 use
-     (Intenclr_Ch2Limith_Field_Reset => 0,
+     (INTENCLR_CH2LIMITH_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for CH[2].LIMITL event
@@ -1233,12 +1233,12 @@ package NRF_SVD.SAADC is
    --  Write '1' to Disable interrupt for CH[2].LIMITL event
    type INTENCLR_CH2LIMITL_Field_1 is
      (--  Reset value for the field
-      Intenclr_Ch2Limitl_Field_Reset,
+      INTENCLR_CH2LIMITL_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_CH2LIMITL_Field_1 use
-     (Intenclr_Ch2Limitl_Field_Reset => 0,
+     (INTENCLR_CH2LIMITL_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for CH[3].LIMITH event
@@ -1255,12 +1255,12 @@ package NRF_SVD.SAADC is
    --  Write '1' to Disable interrupt for CH[3].LIMITH event
    type INTENCLR_CH3LIMITH_Field_1 is
      (--  Reset value for the field
-      Intenclr_Ch3Limith_Field_Reset,
+      INTENCLR_CH3LIMITH_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_CH3LIMITH_Field_1 use
-     (Intenclr_Ch3Limith_Field_Reset => 0,
+     (INTENCLR_CH3LIMITH_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for CH[3].LIMITL event
@@ -1277,12 +1277,12 @@ package NRF_SVD.SAADC is
    --  Write '1' to Disable interrupt for CH[3].LIMITL event
    type INTENCLR_CH3LIMITL_Field_1 is
      (--  Reset value for the field
-      Intenclr_Ch3Limitl_Field_Reset,
+      INTENCLR_CH3LIMITL_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_CH3LIMITL_Field_1 use
-     (Intenclr_Ch3Limitl_Field_Reset => 0,
+     (INTENCLR_CH3LIMITL_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for CH[4].LIMITH event
@@ -1299,12 +1299,12 @@ package NRF_SVD.SAADC is
    --  Write '1' to Disable interrupt for CH[4].LIMITH event
    type INTENCLR_CH4LIMITH_Field_1 is
      (--  Reset value for the field
-      Intenclr_Ch4Limith_Field_Reset,
+      INTENCLR_CH4LIMITH_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_CH4LIMITH_Field_1 use
-     (Intenclr_Ch4Limith_Field_Reset => 0,
+     (INTENCLR_CH4LIMITH_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for CH[4].LIMITL event
@@ -1321,12 +1321,12 @@ package NRF_SVD.SAADC is
    --  Write '1' to Disable interrupt for CH[4].LIMITL event
    type INTENCLR_CH4LIMITL_Field_1 is
      (--  Reset value for the field
-      Intenclr_Ch4Limitl_Field_Reset,
+      INTENCLR_CH4LIMITL_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_CH4LIMITL_Field_1 use
-     (Intenclr_Ch4Limitl_Field_Reset => 0,
+     (INTENCLR_CH4LIMITL_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for CH[5].LIMITH event
@@ -1343,12 +1343,12 @@ package NRF_SVD.SAADC is
    --  Write '1' to Disable interrupt for CH[5].LIMITH event
    type INTENCLR_CH5LIMITH_Field_1 is
      (--  Reset value for the field
-      Intenclr_Ch5Limith_Field_Reset,
+      INTENCLR_CH5LIMITH_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_CH5LIMITH_Field_1 use
-     (Intenclr_Ch5Limith_Field_Reset => 0,
+     (INTENCLR_CH5LIMITH_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for CH[5].LIMITL event
@@ -1365,12 +1365,12 @@ package NRF_SVD.SAADC is
    --  Write '1' to Disable interrupt for CH[5].LIMITL event
    type INTENCLR_CH5LIMITL_Field_1 is
      (--  Reset value for the field
-      Intenclr_Ch5Limitl_Field_Reset,
+      INTENCLR_CH5LIMITL_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_CH5LIMITL_Field_1 use
-     (Intenclr_Ch5Limitl_Field_Reset => 0,
+     (INTENCLR_CH5LIMITL_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for CH[6].LIMITH event
@@ -1387,12 +1387,12 @@ package NRF_SVD.SAADC is
    --  Write '1' to Disable interrupt for CH[6].LIMITH event
    type INTENCLR_CH6LIMITH_Field_1 is
      (--  Reset value for the field
-      Intenclr_Ch6Limith_Field_Reset,
+      INTENCLR_CH6LIMITH_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_CH6LIMITH_Field_1 use
-     (Intenclr_Ch6Limith_Field_Reset => 0,
+     (INTENCLR_CH6LIMITH_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for CH[6].LIMITL event
@@ -1409,12 +1409,12 @@ package NRF_SVD.SAADC is
    --  Write '1' to Disable interrupt for CH[6].LIMITL event
    type INTENCLR_CH6LIMITL_Field_1 is
      (--  Reset value for the field
-      Intenclr_Ch6Limitl_Field_Reset,
+      INTENCLR_CH6LIMITL_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_CH6LIMITL_Field_1 use
-     (Intenclr_Ch6Limitl_Field_Reset => 0,
+     (INTENCLR_CH6LIMITL_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for CH[7].LIMITH event
@@ -1431,12 +1431,12 @@ package NRF_SVD.SAADC is
    --  Write '1' to Disable interrupt for CH[7].LIMITH event
    type INTENCLR_CH7LIMITH_Field_1 is
      (--  Reset value for the field
-      Intenclr_Ch7Limith_Field_Reset,
+      INTENCLR_CH7LIMITH_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_CH7LIMITH_Field_1 use
-     (Intenclr_Ch7Limith_Field_Reset => 0,
+     (INTENCLR_CH7LIMITH_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for CH[7].LIMITL event
@@ -1453,80 +1453,80 @@ package NRF_SVD.SAADC is
    --  Write '1' to Disable interrupt for CH[7].LIMITL event
    type INTENCLR_CH7LIMITL_Field_1 is
      (--  Reset value for the field
-      Intenclr_Ch7Limitl_Field_Reset,
+      INTENCLR_CH7LIMITL_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_CH7LIMITL_Field_1 use
-     (Intenclr_Ch7Limitl_Field_Reset => 0,
+     (INTENCLR_CH7LIMITL_Field_Reset => 0,
       Clear => 1);
 
    --  Disable interrupt
    type INTENCLR_Register is record
       --  Write '1' to Disable interrupt for STARTED event
       STARTED        : INTENCLR_STARTED_Field_1 :=
-                        Intenclr_Started_Field_Reset;
+                        INTENCLR_STARTED_Field_Reset;
       --  Write '1' to Disable interrupt for END event
-      END_k          : INTENCLR_END_Field_1 := Intenclr_End_Field_Reset;
+      END_k          : INTENCLR_END_Field_1 := INTENCLR_END_Field_Reset;
       --  Write '1' to Disable interrupt for DONE event
-      DONE           : INTENCLR_DONE_Field_1 := Intenclr_Done_Field_Reset;
+      DONE           : INTENCLR_DONE_Field_1 := INTENCLR_DONE_Field_Reset;
       --  Write '1' to Disable interrupt for RESULTDONE event
       RESULTDONE     : INTENCLR_RESULTDONE_Field_1 :=
-                        Intenclr_Resultdone_Field_Reset;
+                        INTENCLR_RESULTDONE_Field_Reset;
       --  Write '1' to Disable interrupt for CALIBRATEDONE event
       CALIBRATEDONE  : INTENCLR_CALIBRATEDONE_Field_1 :=
-                        Intenclr_Calibratedone_Field_Reset;
+                        INTENCLR_CALIBRATEDONE_Field_Reset;
       --  Write '1' to Disable interrupt for STOPPED event
       STOPPED        : INTENCLR_STOPPED_Field_1 :=
-                        Intenclr_Stopped_Field_Reset;
+                        INTENCLR_STOPPED_Field_Reset;
       --  Write '1' to Disable interrupt for CH[0].LIMITH event
       CH0LIMITH      : INTENCLR_CH0LIMITH_Field_1 :=
-                        Intenclr_Ch0Limith_Field_Reset;
+                        INTENCLR_CH0LIMITH_Field_Reset;
       --  Write '1' to Disable interrupt for CH[0].LIMITL event
       CH0LIMITL      : INTENCLR_CH0LIMITL_Field_1 :=
-                        Intenclr_Ch0Limitl_Field_Reset;
+                        INTENCLR_CH0LIMITL_Field_Reset;
       --  Write '1' to Disable interrupt for CH[1].LIMITH event
       CH1LIMITH      : INTENCLR_CH1LIMITH_Field_1 :=
-                        Intenclr_Ch1Limith_Field_Reset;
+                        INTENCLR_CH1LIMITH_Field_Reset;
       --  Write '1' to Disable interrupt for CH[1].LIMITL event
       CH1LIMITL      : INTENCLR_CH1LIMITL_Field_1 :=
-                        Intenclr_Ch1Limitl_Field_Reset;
+                        INTENCLR_CH1LIMITL_Field_Reset;
       --  Write '1' to Disable interrupt for CH[2].LIMITH event
       CH2LIMITH      : INTENCLR_CH2LIMITH_Field_1 :=
-                        Intenclr_Ch2Limith_Field_Reset;
+                        INTENCLR_CH2LIMITH_Field_Reset;
       --  Write '1' to Disable interrupt for CH[2].LIMITL event
       CH2LIMITL      : INTENCLR_CH2LIMITL_Field_1 :=
-                        Intenclr_Ch2Limitl_Field_Reset;
+                        INTENCLR_CH2LIMITL_Field_Reset;
       --  Write '1' to Disable interrupt for CH[3].LIMITH event
       CH3LIMITH      : INTENCLR_CH3LIMITH_Field_1 :=
-                        Intenclr_Ch3Limith_Field_Reset;
+                        INTENCLR_CH3LIMITH_Field_Reset;
       --  Write '1' to Disable interrupt for CH[3].LIMITL event
       CH3LIMITL      : INTENCLR_CH3LIMITL_Field_1 :=
-                        Intenclr_Ch3Limitl_Field_Reset;
+                        INTENCLR_CH3LIMITL_Field_Reset;
       --  Write '1' to Disable interrupt for CH[4].LIMITH event
       CH4LIMITH      : INTENCLR_CH4LIMITH_Field_1 :=
-                        Intenclr_Ch4Limith_Field_Reset;
+                        INTENCLR_CH4LIMITH_Field_Reset;
       --  Write '1' to Disable interrupt for CH[4].LIMITL event
       CH4LIMITL      : INTENCLR_CH4LIMITL_Field_1 :=
-                        Intenclr_Ch4Limitl_Field_Reset;
+                        INTENCLR_CH4LIMITL_Field_Reset;
       --  Write '1' to Disable interrupt for CH[5].LIMITH event
       CH5LIMITH      : INTENCLR_CH5LIMITH_Field_1 :=
-                        Intenclr_Ch5Limith_Field_Reset;
+                        INTENCLR_CH5LIMITH_Field_Reset;
       --  Write '1' to Disable interrupt for CH[5].LIMITL event
       CH5LIMITL      : INTENCLR_CH5LIMITL_Field_1 :=
-                        Intenclr_Ch5Limitl_Field_Reset;
+                        INTENCLR_CH5LIMITL_Field_Reset;
       --  Write '1' to Disable interrupt for CH[6].LIMITH event
       CH6LIMITH      : INTENCLR_CH6LIMITH_Field_1 :=
-                        Intenclr_Ch6Limith_Field_Reset;
+                        INTENCLR_CH6LIMITH_Field_Reset;
       --  Write '1' to Disable interrupt for CH[6].LIMITL event
       CH6LIMITL      : INTENCLR_CH6LIMITL_Field_1 :=
-                        Intenclr_Ch6Limitl_Field_Reset;
+                        INTENCLR_CH6LIMITL_Field_Reset;
       --  Write '1' to Disable interrupt for CH[7].LIMITH event
       CH7LIMITH      : INTENCLR_CH7LIMITH_Field_1 :=
-                        Intenclr_Ch7Limith_Field_Reset;
+                        INTENCLR_CH7LIMITH_Field_Reset;
       --  Write '1' to Disable interrupt for CH[7].LIMITL event
       CH7LIMITL      : INTENCLR_CH7LIMITL_Field_1 :=
-                        Intenclr_Ch7Limitl_Field_Reset;
+                        INTENCLR_CH7LIMITL_Field_Reset;
       --  unspecified
       Reserved_22_31 : HAL.UInt10 := 16#0#;
    end record
@@ -1618,42 +1618,42 @@ package NRF_SVD.SAADC is
    --  Analog positive input channel
    type PSELP_PSELP_Field is
      (--  Not connected
-      Nc,
+      NC,
       --  AIN0
-      Analoginput0,
+      AnalogInput0,
       --  AIN1
-      Analoginput1,
+      AnalogInput1,
       --  AIN2
-      Analoginput2,
+      AnalogInput2,
       --  AIN3
-      Analoginput3,
+      AnalogInput3,
       --  AIN4
-      Analoginput4,
+      AnalogInput4,
       --  AIN5
-      Analoginput5,
+      AnalogInput5,
       --  AIN6
-      Analoginput6,
+      AnalogInput6,
       --  AIN7
-      Analoginput7,
+      AnalogInput7,
       --  VDD
-      Vdd)
+      VDD)
      with Size => 5;
    for PSELP_PSELP_Field use
-     (Nc => 0,
-      Analoginput0 => 1,
-      Analoginput1 => 2,
-      Analoginput2 => 3,
-      Analoginput3 => 4,
-      Analoginput4 => 5,
-      Analoginput5 => 6,
-      Analoginput6 => 7,
-      Analoginput7 => 8,
-      Vdd => 9);
+     (NC => 0,
+      AnalogInput0 => 1,
+      AnalogInput1 => 2,
+      AnalogInput2 => 3,
+      AnalogInput3 => 4,
+      AnalogInput4 => 5,
+      AnalogInput5 => 6,
+      AnalogInput6 => 7,
+      AnalogInput7 => 8,
+      VDD => 9);
 
    --  Description cluster[0]: Input positive pin selection for CH[0]
    type PSELP_CH_Register is record
       --  Analog positive input channel
-      PSELP         : PSELP_PSELP_Field := NRF_SVD.SAADC.Nc;
+      PSELP         : PSELP_PSELP_Field := NRF_SVD.SAADC.NC;
       --  unspecified
       Reserved_5_31 : HAL.UInt27 := 16#0#;
    end record
@@ -1668,42 +1668,42 @@ package NRF_SVD.SAADC is
    --  Analog negative input, enables differential channel
    type PSELN_PSELN_Field is
      (--  Not connected
-      Nc,
+      NC,
       --  AIN0
-      Analoginput0,
+      AnalogInput0,
       --  AIN1
-      Analoginput1,
+      AnalogInput1,
       --  AIN2
-      Analoginput2,
+      AnalogInput2,
       --  AIN3
-      Analoginput3,
+      AnalogInput3,
       --  AIN4
-      Analoginput4,
+      AnalogInput4,
       --  AIN5
-      Analoginput5,
+      AnalogInput5,
       --  AIN6
-      Analoginput6,
+      AnalogInput6,
       --  AIN7
-      Analoginput7,
+      AnalogInput7,
       --  VDD
-      Vdd)
+      VDD)
      with Size => 5;
    for PSELN_PSELN_Field use
-     (Nc => 0,
-      Analoginput0 => 1,
-      Analoginput1 => 2,
-      Analoginput2 => 3,
-      Analoginput3 => 4,
-      Analoginput4 => 5,
-      Analoginput5 => 6,
-      Analoginput6 => 7,
-      Analoginput7 => 8,
-      Vdd => 9);
+     (NC => 0,
+      AnalogInput0 => 1,
+      AnalogInput1 => 2,
+      AnalogInput2 => 3,
+      AnalogInput3 => 4,
+      AnalogInput4 => 5,
+      AnalogInput5 => 6,
+      AnalogInput6 => 7,
+      AnalogInput7 => 8,
+      VDD => 9);
 
    --  Description cluster[0]: Input negative pin selection for CH[0]
    type PSELN_CH_Register is record
       --  Analog negative input, enables differential channel
-      PSELN         : PSELN_PSELN_Field := NRF_SVD.SAADC.Nc;
+      PSELN         : PSELN_PSELN_Field := NRF_SVD.SAADC.NC;
       --  unspecified
       Reserved_5_31 : HAL.UInt27 := 16#0#;
    end record
@@ -1724,13 +1724,13 @@ package NRF_SVD.SAADC is
       --  Pull-up to VDD
       Pullup,
       --  Set input at VDD/2
-      Vdd1_2)
+      VDD1_2)
      with Size => 2;
    for CONFIG_RESP_Field use
      (Bypass => 0,
       Pulldown => 1,
       Pullup => 2,
-      Vdd1_2 => 3);
+      VDD1_2 => 3);
 
    --  Negative channel resistor control
    type CONFIG_RESN_Field is
@@ -1741,13 +1741,13 @@ package NRF_SVD.SAADC is
       --  Pull-up to VDD
       Pullup,
       --  Set input at VDD/2
-      Vdd1_2)
+      VDD1_2)
      with Size => 2;
    for CONFIG_RESN_Field use
      (Bypass => 0,
       Pulldown => 1,
       Pullup => 2,
-      Vdd1_2 => 3);
+      VDD1_2 => 3);
 
    --  Gain control
    type CONFIG_GAIN_Field is
@@ -1783,44 +1783,44 @@ package NRF_SVD.SAADC is
      (--  Internal reference (0.6 V)
       Internal,
       --  VDD/4 as reference
-      Vdd1_4)
+      VDD1_4)
      with Size => 1;
    for CONFIG_REFSEL_Field use
      (Internal => 0,
-      Vdd1_4 => 1);
+      VDD1_4 => 1);
 
    --  Acquisition time, the time the ADC uses to sample the input voltage
    type CONFIG_TACQ_Field is
      (--  3 us
-      Val_3US,
+      Val_3us,
       --  5 us
-      Val_5US,
+      Val_5us,
       --  10 us
-      Val_10US,
+      Val_10us,
       --  15 us
-      Val_15US,
+      Val_15us,
       --  20 us
-      Val_20US,
+      Val_20us,
       --  40 us
-      Val_40US)
+      Val_40us)
      with Size => 3;
    for CONFIG_TACQ_Field use
-     (Val_3US => 0,
-      Val_5US => 1,
-      Val_10US => 2,
-      Val_15US => 3,
-      Val_20US => 4,
-      Val_40US => 5);
+     (Val_3us => 0,
+      Val_5us => 1,
+      Val_10us => 2,
+      Val_15us => 3,
+      Val_20us => 4,
+      Val_40us => 5);
 
    --  Enable differential mode
    type CONFIG_MODE_Field is
      (--  Single ended, PSELN will be ignored, negative input to ADC shorted to GND
-      Se,
+      SE,
       --  Differential
       Diff)
      with Size => 1;
    for CONFIG_MODE_Field use
-     (Se => 0,
+     (SE => 0,
       Diff => 1);
 
    --  Enable burst mode
@@ -1854,11 +1854,11 @@ package NRF_SVD.SAADC is
       --  unspecified
       Reserved_13_15 : HAL.UInt3 := 16#0#;
       --  Acquisition time, the time the ADC uses to sample the input voltage
-      TACQ           : CONFIG_TACQ_Field := NRF_SVD.SAADC.Val_10US;
+      TACQ           : CONFIG_TACQ_Field := NRF_SVD.SAADC.Val_10us;
       --  unspecified
       Reserved_19_19 : HAL.Bit := 16#0#;
       --  Enable differential mode
-      MODE           : CONFIG_MODE_Field := NRF_SVD.SAADC.Se;
+      MODE           : CONFIG_MODE_Field := NRF_SVD.SAADC.SE;
       --  unspecified
       Reserved_21_23 : HAL.UInt3 := 16#0#;
       --  Enable burst mode
@@ -1931,24 +1931,24 @@ package NRF_SVD.SAADC is
    --  Set the resolution
    type RESOLUTION_VAL_Field is
      (--  8 bit
-      Val_8BIT,
+      Val_8bit,
       --  10 bit
-      Val_10BIT,
+      Val_10bit,
       --  12 bit
-      Val_12BIT,
+      Val_12bit,
       --  14 bit
-      Val_14BIT)
+      Val_14bit)
      with Size => 3;
    for RESOLUTION_VAL_Field use
-     (Val_8BIT => 0,
-      Val_10BIT => 1,
-      Val_12BIT => 2,
-      Val_14BIT => 3);
+     (Val_8bit => 0,
+      Val_10bit => 1,
+      Val_12bit => 2,
+      Val_14bit => 3);
 
    --  Resolution configuration
    type RESOLUTION_Register is record
       --  Set the resolution
-      VAL           : RESOLUTION_VAL_Field := NRF_SVD.SAADC.Val_10BIT;
+      VAL           : RESOLUTION_VAL_Field := NRF_SVD.SAADC.Val_10bit;
       --  unspecified
       Reserved_3_31 : HAL.UInt29 := 16#0#;
    end record
@@ -1965,32 +1965,32 @@ package NRF_SVD.SAADC is
      (--  Bypass oversampling
       Bypass,
       --  Oversample 2x
-      Over2X,
+      Over2x,
       --  Oversample 4x
-      Over4X,
+      Over4x,
       --  Oversample 8x
-      Over8X,
+      Over8x,
       --  Oversample 16x
-      Over16X,
+      Over16x,
       --  Oversample 32x
-      Over32X,
+      Over32x,
       --  Oversample 64x
-      Over64X,
+      Over64x,
       --  Oversample 128x
-      Over128X,
+      Over128x,
       --  Oversample 256x
-      Over256X)
+      Over256x)
      with Size => 4;
    for OVERSAMPLE_OVERSAMPLE_Field use
      (Bypass => 0,
-      Over2X => 1,
-      Over4X => 2,
-      Over8X => 3,
-      Over16X => 4,
-      Over32X => 5,
-      Over64X => 6,
-      Over128X => 7,
-      Over256X => 8);
+      Over2x => 1,
+      Over4x => 2,
+      Over8x => 3,
+      Over16x => 4,
+      Over32x => 5,
+      Over64x => 6,
+      Over128x => 7,
+      Over256x => 8);
 
    --  Oversampling configuration. OVERSAMPLE should not be combined with SCAN.
    --  The RESOLUTION is applied before averaging, thus for high OVERSAMPLE a

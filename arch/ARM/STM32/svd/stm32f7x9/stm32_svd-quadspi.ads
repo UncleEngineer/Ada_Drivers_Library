@@ -58,7 +58,7 @@ package STM32_SVD.QUADSPI is
       --  Clock prescaler
       PRESCALER      : CR_PRESCALER_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CR_Register use record
@@ -101,7 +101,7 @@ package STM32_SVD.QUADSPI is
       --  unspecified
       Reserved_21_31 : HAL.UInt11 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DCR_Register use record
@@ -136,7 +136,7 @@ package STM32_SVD.QUADSPI is
       --  unspecified
       Reserved_15_31 : HAL.UInt17;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for SR_Register use record
@@ -166,7 +166,7 @@ package STM32_SVD.QUADSPI is
       --  unspecified
       Reserved_5_31 : HAL.UInt27 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for FCR_Register use record
@@ -219,7 +219,7 @@ package STM32_SVD.QUADSPI is
       --  Double data rate mode
       DDRM           : Boolean := False;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CCR_Register use record
@@ -248,7 +248,7 @@ package STM32_SVD.QUADSPI is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for PIR_Register use record
@@ -265,7 +265,7 @@ package STM32_SVD.QUADSPI is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for LPTR_Register use record
@@ -326,6 +326,6 @@ package STM32_SVD.QUADSPI is
 
    --  QuadSPI interface
    QUADSPI_Periph : aliased QUADSPI_Peripheral
-     with Import, Address => System'To_Address (16#A0001000#);
+     with Import, Address => QUADSPI_Base;
 
 end STM32_SVD.QUADSPI;

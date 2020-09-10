@@ -16,23 +16,21 @@ package Cortex_M_SVD.SCB is
 
    --  Revision number, the p value in the rnpn product revision identifier.
    type CPUID_Revision_Field is
-     (
-      --  Patch 0
-      P0,
+     (--  Patch 0
+      p0,
       --  Patch 1
-      P1,
+      p1,
       --  Patch 2
-      P2)
+      p2)
      with Size => 4;
    for CPUID_Revision_Field use
-     (P0 => 0,
-      P1 => 1,
-      P2 => 2);
+     (p0 => 0,
+      p1 => 1,
+      p2 => 2);
 
    --  Part number of the processor.
    type CPUID_PartNo_Field is
-     (
-      --  Cortes-M7
+     (--  Cortes-M7
       Cortex_M7)
      with Size => 12;
    for CPUID_PartNo_Field use
@@ -42,24 +40,22 @@ package Cortex_M_SVD.SCB is
 
    --  Variant number, the r value in the rnpn product revision identifier.
    type CPUID_Variant_Field is
-     (
-      --  Revision 0
-      R0,
+     (--  Revision 0
+      r0,
       --  Revision 1
-      R1)
+      r1)
      with Size => 4;
    for CPUID_Variant_Field use
-     (R0 => 0,
-      R1 => 1);
+     (r0 => 0,
+      r1 => 1);
 
    --  Implementer code.
    type CPUID_Implementer_Field is
-     (
-      --  ARM
-      Arm)
+     (--  ARM
+      ARM)
      with Size => 8;
    for CPUID_Implementer_Field use
-     (Arm => 65);
+     (ARM => 65);
 
    --  CPUID Base Register
    type CPUID_Register is record
@@ -76,7 +72,7 @@ package Cortex_M_SVD.SCB is
       --  Read-only. Implementer code.
       Implementer : CPUID_Implementer_Field;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CPUID_Register use record
@@ -121,7 +117,7 @@ package Cortex_M_SVD.SCB is
       --  NMI set-pending bit.
       NMIPENDSET     : Boolean := False;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for ICSR_Register use record
@@ -141,8 +137,7 @@ package Cortex_M_SVD.SCB is
 
    --  Data endianness bit setting is implementation defined.
    type AIRCR_ENDIANNESS_Field is
-     (
-      --  Data is little endian
+     (--  Data is little endian
       Little_Endian,
       --  Data is big endian
       Big_Endian)
@@ -154,8 +149,7 @@ package Cortex_M_SVD.SCB is
    --  Register key. On write, write 0x5FA to VECTKEY, otherwise the write is
    --  ignored. Reads as 0xFA05
    type AIRCR_VECTKEY_Field is
-     (
-      --  The write key
+     (--  The write key
       Key,
       --  The read key
       Key_Read)
@@ -184,7 +178,7 @@ package Cortex_M_SVD.SCB is
       --  is ignored. Reads as 0xFA05
       VECTKEY       : AIRCR_VECTKEY_Field := Cortex_M_SVD.SCB.Key_Read;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for AIRCR_Register use record
@@ -213,7 +207,7 @@ package Cortex_M_SVD.SCB is
       --  unspecified
       Reserved_5_31 : HAL.UInt27 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for SCR_Register use record
@@ -239,7 +233,7 @@ package Cortex_M_SVD.SCB is
       --  unspecified
       Reserved_10_31 : HAL.UInt22 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CCR_Register use record
@@ -259,7 +253,7 @@ package Cortex_M_SVD.SCB is
       --  Priority of the system handler, SVCall
       PRI_11        : SHPR2_PRI_11_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for SHPR2_Register use record
@@ -279,7 +273,7 @@ package Cortex_M_SVD.SCB is
       --  Priority of the system handler, SysTick
       PRI_15        : SHPR3_PRI_15_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for SHPR3_Register use record
@@ -323,6 +317,6 @@ package Cortex_M_SVD.SCB is
 
    --  System control block
    SCB_Periph : aliased SCB_Peripheral
-     with Import, Address => System'To_Address (16#E000ED00#);
+     with Import, Address => SCB_Base;
 
 end Cortex_M_SVD.SCB;

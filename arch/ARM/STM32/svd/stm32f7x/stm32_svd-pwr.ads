@@ -55,7 +55,7 @@ package STM32_SVD.PWR is
       --  unspecified
       Reserved_20_31 : HAL.UInt12 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CR1_Register use record
@@ -109,7 +109,7 @@ package STM32_SVD.PWR is
       --  unspecified
       Reserved_20_31 : HAL.UInt12 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CSR1_Register use record
@@ -187,7 +187,7 @@ package STM32_SVD.PWR is
       --  unspecified
       Reserved_14_31 : HAL.UInt18 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CR2_Register use record
@@ -256,7 +256,7 @@ package STM32_SVD.PWR is
       --  unspecified
       Reserved_14_31 : HAL.UInt18 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CSR2_Register use record
@@ -292,6 +292,6 @@ package STM32_SVD.PWR is
 
    --  Power control
    PWR_Periph : aliased PWR_Peripheral
-     with Import, Address => System'To_Address (16#40007000#);
+     with Import, Address => PWR_Base;
 
 end STM32_SVD.PWR;

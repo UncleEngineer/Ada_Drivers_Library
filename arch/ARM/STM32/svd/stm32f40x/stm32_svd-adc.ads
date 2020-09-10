@@ -31,7 +31,7 @@ package STM32_SVD.ADC is
       --  unspecified
       Reserved_6_31 : HAL.UInt26 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for SR_Register use record
@@ -83,7 +83,7 @@ package STM32_SVD.ADC is
       --  unspecified
       Reserved_27_31 : HAL.UInt5 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CR1_Register use record
@@ -145,7 +145,7 @@ package STM32_SVD.ADC is
       --  unspecified
       Reserved_31_31 : HAL.Bit := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CR2_Register use record
@@ -201,7 +201,7 @@ package STM32_SVD.ADC is
       --  unspecified
       Reserved_27_31 : HAL.UInt5 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for SMPR1_Register use record
@@ -243,7 +243,7 @@ package STM32_SVD.ADC is
       --  unspecified
       Reserved_30_31 : HAL.UInt2 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for SMPR2_Register use record
@@ -260,7 +260,7 @@ package STM32_SVD.ADC is
       --  unspecified
       Reserved_12_31 : HAL.UInt20 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for JOFR1_Register use record
@@ -277,7 +277,7 @@ package STM32_SVD.ADC is
       --  unspecified
       Reserved_12_31 : HAL.UInt20 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for JOFR2_Register use record
@@ -294,7 +294,7 @@ package STM32_SVD.ADC is
       --  unspecified
       Reserved_12_31 : HAL.UInt20 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for JOFR3_Register use record
@@ -311,7 +311,7 @@ package STM32_SVD.ADC is
       --  unspecified
       Reserved_12_31 : HAL.UInt20 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for JOFR4_Register use record
@@ -328,7 +328,7 @@ package STM32_SVD.ADC is
       --  unspecified
       Reserved_12_31 : HAL.UInt20 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for HTR_Register use record
@@ -345,7 +345,7 @@ package STM32_SVD.ADC is
       --  unspecified
       Reserved_12_31 : HAL.UInt20 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for LTR_Register use record
@@ -391,7 +391,7 @@ package STM32_SVD.ADC is
       --  unspecified
       Reserved_24_31 : HAL.UInt8 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for SQR1_Register use record
@@ -434,7 +434,7 @@ package STM32_SVD.ADC is
       --  unspecified
       Reserved_30_31 : HAL.UInt2 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for SQR2_Register use record
@@ -476,7 +476,7 @@ package STM32_SVD.ADC is
       --  unspecified
       Reserved_30_31 : HAL.UInt2 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for SQR3_Register use record
@@ -522,7 +522,7 @@ package STM32_SVD.ADC is
       --  unspecified
       Reserved_22_31 : HAL.UInt10 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for JSQR_Register use record
@@ -540,7 +540,7 @@ package STM32_SVD.ADC is
       --  unspecified
       Reserved_16_31 : HAL.UInt16;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for JDR_Register use record
@@ -557,7 +557,7 @@ package STM32_SVD.ADC is
       --  unspecified
       Reserved_16_31 : HAL.UInt16;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DR_Register use record
@@ -610,7 +610,7 @@ package STM32_SVD.ADC is
       --  unspecified
       Reserved_22_31 : HAL.UInt10;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CSR_Register use record
@@ -667,7 +667,7 @@ package STM32_SVD.ADC is
       --  unspecified
       Reserved_24_31 : HAL.UInt8 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CCR_Register use record
@@ -704,7 +704,7 @@ package STM32_SVD.ADC is
             Arr : CDR_DATA_Field_Array;
       end case;
    end record
-     with Unchecked_Union, Size => 32, Volatile_Full_Access,
+     with Unchecked_Union, Size => 32, Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CDR_Register use record
@@ -786,15 +786,15 @@ package STM32_SVD.ADC is
 
    --  Analog-to-digital converter
    ADC1_Periph : aliased ADC1_Peripheral
-     with Import, Address => System'To_Address (16#40012000#);
+     with Import, Address => ADC1_Base;
 
    --  Analog-to-digital converter
    ADC2_Periph : aliased ADC1_Peripheral
-     with Import, Address => System'To_Address (16#40012100#);
+     with Import, Address => ADC2_Base;
 
    --  Analog-to-digital converter
    ADC3_Periph : aliased ADC1_Peripheral
-     with Import, Address => System'To_Address (16#40012200#);
+     with Import, Address => ADC3_Base;
 
    --  Common ADC registers
    type C_ADC_Peripheral is record
@@ -815,6 +815,6 @@ package STM32_SVD.ADC is
 
    --  Common ADC registers
    C_ADC_Periph : aliased C_ADC_Peripheral
-     with Import, Address => System'To_Address (16#40012300#);
+     with Import, Address => C_ADC_Base;
 
 end STM32_SVD.ADC;

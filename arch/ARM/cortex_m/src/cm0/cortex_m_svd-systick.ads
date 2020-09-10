@@ -17,8 +17,7 @@ package Cortex_M_SVD.SysTick is
 
    --  Enable SysTick Timer
    type CSR_ENABLE_Field is
-     (
-      --  counter disabled
+     (--  counter disabled
       Disable,
       --  counter enabled
       Enable)
@@ -40,15 +39,14 @@ package Cortex_M_SVD.SysTick is
 
    --  Source to count from
    type CSR_CLKSOURCE_Field is
-     (
-      --  External Clock
+     (--  External Clock
       External_Clk,
       --  CPU Clock
-      Cpu_Clk)
+      CPU_Clk)
      with Size => 1;
    for CSR_CLKSOURCE_Field use
      (External_Clk => 0,
-      Cpu_Clk => 1);
+      CPU_Clk => 1);
 
    --  SysTick Control and Status Register
    type SYST_CSR_Register is record
@@ -66,7 +64,7 @@ package Cortex_M_SVD.SysTick is
       --  unspecified
       Reserved_17_31 : HAL.UInt15 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for SYST_CSR_Register use record
@@ -87,7 +85,7 @@ package Cortex_M_SVD.SysTick is
       --  unspecified
       Reserved_24_31 : HAL.UInt8 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for SYST_RVR_Register use record
@@ -104,7 +102,7 @@ package Cortex_M_SVD.SysTick is
       --  unspecified
       Reserved_24_31 : HAL.UInt8 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for SYST_CVR_Register use record
@@ -116,8 +114,7 @@ package Cortex_M_SVD.SysTick is
 
    --  Clock Skew
    type CALIB_SKEW_Field is
-     (
-      --  10ms calibration value is exact
+     (--  10ms calibration value is exact
       Exact,
       --  10ms calibration value is inexact, because of the clock frequency
       Inexact)
@@ -128,8 +125,7 @@ package Cortex_M_SVD.SysTick is
 
    --  No Ref
    type CALIB_NOREF_Field is
-     (
-      --  Ref Clk available
+     (--  Ref Clk available
       Ref_Clk_Available,
       --  Ref Clk not available
       Ref_Clk_Unavailable)
@@ -149,7 +145,7 @@ package Cortex_M_SVD.SysTick is
       --  Read-only. No Ref
       NOREF          : CALIB_NOREF_Field;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for SYST_CALIB_Register use record
