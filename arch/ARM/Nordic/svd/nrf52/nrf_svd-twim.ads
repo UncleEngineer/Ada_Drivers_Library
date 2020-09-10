@@ -276,12 +276,12 @@ package NRF_SVD.TWIM is
    --  Write '1' to Enable interrupt for STOPPED event
    type INTENSET_STOPPED_Field_1 is
      (--  Reset value for the field
-      Intenset_Stopped_Field_Reset,
+      INTENSET_STOPPED_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_STOPPED_Field_1 use
-     (Intenset_Stopped_Field_Reset => 0,
+     (INTENSET_STOPPED_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for ERROR event
@@ -298,12 +298,12 @@ package NRF_SVD.TWIM is
    --  Write '1' to Enable interrupt for ERROR event
    type INTENSET_ERROR_Field_1 is
      (--  Reset value for the field
-      Intenset_Error_Field_Reset,
+      INTENSET_ERROR_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_ERROR_Field_1 use
-     (Intenset_Error_Field_Reset => 0,
+     (INTENSET_ERROR_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for SUSPENDED event
@@ -320,12 +320,12 @@ package NRF_SVD.TWIM is
    --  Write '1' to Enable interrupt for SUSPENDED event
    type INTENSET_SUSPENDED_Field_1 is
      (--  Reset value for the field
-      Intenset_Suspended_Field_Reset,
+      INTENSET_SUSPENDED_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_SUSPENDED_Field_1 use
-     (Intenset_Suspended_Field_Reset => 0,
+     (INTENSET_SUSPENDED_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for RXSTARTED event
@@ -342,12 +342,12 @@ package NRF_SVD.TWIM is
    --  Write '1' to Enable interrupt for RXSTARTED event
    type INTENSET_RXSTARTED_Field_1 is
      (--  Reset value for the field
-      Intenset_Rxstarted_Field_Reset,
+      INTENSET_RXSTARTED_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_RXSTARTED_Field_1 use
-     (Intenset_Rxstarted_Field_Reset => 0,
+     (INTENSET_RXSTARTED_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for TXSTARTED event
@@ -364,12 +364,12 @@ package NRF_SVD.TWIM is
    --  Write '1' to Enable interrupt for TXSTARTED event
    type INTENSET_TXSTARTED_Field_1 is
      (--  Reset value for the field
-      Intenset_Txstarted_Field_Reset,
+      INTENSET_TXSTARTED_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_TXSTARTED_Field_1 use
-     (Intenset_Txstarted_Field_Reset => 0,
+     (INTENSET_TXSTARTED_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for LASTRX event
@@ -386,12 +386,12 @@ package NRF_SVD.TWIM is
    --  Write '1' to Enable interrupt for LASTRX event
    type INTENSET_LASTRX_Field_1 is
      (--  Reset value for the field
-      Intenset_Lastrx_Field_Reset,
+      INTENSET_LASTRX_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_LASTRX_Field_1 use
-     (Intenset_Lastrx_Field_Reset => 0,
+     (INTENSET_LASTRX_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for LASTTX event
@@ -408,12 +408,12 @@ package NRF_SVD.TWIM is
    --  Write '1' to Enable interrupt for LASTTX event
    type INTENSET_LASTTX_Field_1 is
      (--  Reset value for the field
-      Intenset_Lasttx_Field_Reset,
+      INTENSET_LASTTX_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_LASTTX_Field_1 use
-     (Intenset_Lasttx_Field_Reset => 0,
+     (INTENSET_LASTTX_Field_Reset => 0,
       Set => 1);
 
    --  Enable interrupt
@@ -422,28 +422,28 @@ package NRF_SVD.TWIM is
       Reserved_0_0   : HAL.Bit := 16#0#;
       --  Write '1' to Enable interrupt for STOPPED event
       STOPPED        : INTENSET_STOPPED_Field_1 :=
-                        Intenset_Stopped_Field_Reset;
+                        INTENSET_STOPPED_Field_Reset;
       --  unspecified
       Reserved_2_8   : HAL.UInt7 := 16#0#;
       --  Write '1' to Enable interrupt for ERROR event
-      ERROR          : INTENSET_ERROR_Field_1 := Intenset_Error_Field_Reset;
+      ERROR          : INTENSET_ERROR_Field_1 := INTENSET_ERROR_Field_Reset;
       --  unspecified
       Reserved_10_17 : HAL.UInt8 := 16#0#;
       --  Write '1' to Enable interrupt for SUSPENDED event
       SUSPENDED      : INTENSET_SUSPENDED_Field_1 :=
-                        Intenset_Suspended_Field_Reset;
+                        INTENSET_SUSPENDED_Field_Reset;
       --  Write '1' to Enable interrupt for RXSTARTED event
       RXSTARTED      : INTENSET_RXSTARTED_Field_1 :=
-                        Intenset_Rxstarted_Field_Reset;
+                        INTENSET_RXSTARTED_Field_Reset;
       --  Write '1' to Enable interrupt for TXSTARTED event
       TXSTARTED      : INTENSET_TXSTARTED_Field_1 :=
-                        Intenset_Txstarted_Field_Reset;
+                        INTENSET_TXSTARTED_Field_Reset;
       --  unspecified
       Reserved_21_22 : HAL.UInt2 := 16#0#;
       --  Write '1' to Enable interrupt for LASTRX event
-      LASTRX         : INTENSET_LASTRX_Field_1 := Intenset_Lastrx_Field_Reset;
+      LASTRX         : INTENSET_LASTRX_Field_1 := INTENSET_LASTRX_Field_Reset;
       --  Write '1' to Enable interrupt for LASTTX event
-      LASTTX         : INTENSET_LASTTX_Field_1 := Intenset_Lasttx_Field_Reset;
+      LASTTX         : INTENSET_LASTTX_Field_1 := INTENSET_LASTTX_Field_Reset;
       --  unspecified
       Reserved_25_31 : HAL.UInt7 := 16#0#;
    end record
@@ -479,12 +479,12 @@ package NRF_SVD.TWIM is
    --  Write '1' to Disable interrupt for STOPPED event
    type INTENCLR_STOPPED_Field_1 is
      (--  Reset value for the field
-      Intenclr_Stopped_Field_Reset,
+      INTENCLR_STOPPED_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_STOPPED_Field_1 use
-     (Intenclr_Stopped_Field_Reset => 0,
+     (INTENCLR_STOPPED_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for ERROR event
@@ -501,12 +501,12 @@ package NRF_SVD.TWIM is
    --  Write '1' to Disable interrupt for ERROR event
    type INTENCLR_ERROR_Field_1 is
      (--  Reset value for the field
-      Intenclr_Error_Field_Reset,
+      INTENCLR_ERROR_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_ERROR_Field_1 use
-     (Intenclr_Error_Field_Reset => 0,
+     (INTENCLR_ERROR_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for SUSPENDED event
@@ -523,12 +523,12 @@ package NRF_SVD.TWIM is
    --  Write '1' to Disable interrupt for SUSPENDED event
    type INTENCLR_SUSPENDED_Field_1 is
      (--  Reset value for the field
-      Intenclr_Suspended_Field_Reset,
+      INTENCLR_SUSPENDED_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_SUSPENDED_Field_1 use
-     (Intenclr_Suspended_Field_Reset => 0,
+     (INTENCLR_SUSPENDED_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for RXSTARTED event
@@ -545,12 +545,12 @@ package NRF_SVD.TWIM is
    --  Write '1' to Disable interrupt for RXSTARTED event
    type INTENCLR_RXSTARTED_Field_1 is
      (--  Reset value for the field
-      Intenclr_Rxstarted_Field_Reset,
+      INTENCLR_RXSTARTED_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_RXSTARTED_Field_1 use
-     (Intenclr_Rxstarted_Field_Reset => 0,
+     (INTENCLR_RXSTARTED_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for TXSTARTED event
@@ -567,12 +567,12 @@ package NRF_SVD.TWIM is
    --  Write '1' to Disable interrupt for TXSTARTED event
    type INTENCLR_TXSTARTED_Field_1 is
      (--  Reset value for the field
-      Intenclr_Txstarted_Field_Reset,
+      INTENCLR_TXSTARTED_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_TXSTARTED_Field_1 use
-     (Intenclr_Txstarted_Field_Reset => 0,
+     (INTENCLR_TXSTARTED_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for LASTRX event
@@ -589,12 +589,12 @@ package NRF_SVD.TWIM is
    --  Write '1' to Disable interrupt for LASTRX event
    type INTENCLR_LASTRX_Field_1 is
      (--  Reset value for the field
-      Intenclr_Lastrx_Field_Reset,
+      INTENCLR_LASTRX_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_LASTRX_Field_1 use
-     (Intenclr_Lastrx_Field_Reset => 0,
+     (INTENCLR_LASTRX_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for LASTTX event
@@ -611,12 +611,12 @@ package NRF_SVD.TWIM is
    --  Write '1' to Disable interrupt for LASTTX event
    type INTENCLR_LASTTX_Field_1 is
      (--  Reset value for the field
-      Intenclr_Lasttx_Field_Reset,
+      INTENCLR_LASTTX_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_LASTTX_Field_1 use
-     (Intenclr_Lasttx_Field_Reset => 0,
+     (INTENCLR_LASTTX_Field_Reset => 0,
       Clear => 1);
 
    --  Disable interrupt
@@ -625,28 +625,28 @@ package NRF_SVD.TWIM is
       Reserved_0_0   : HAL.Bit := 16#0#;
       --  Write '1' to Disable interrupt for STOPPED event
       STOPPED        : INTENCLR_STOPPED_Field_1 :=
-                        Intenclr_Stopped_Field_Reset;
+                        INTENCLR_STOPPED_Field_Reset;
       --  unspecified
       Reserved_2_8   : HAL.UInt7 := 16#0#;
       --  Write '1' to Disable interrupt for ERROR event
-      ERROR          : INTENCLR_ERROR_Field_1 := Intenclr_Error_Field_Reset;
+      ERROR          : INTENCLR_ERROR_Field_1 := INTENCLR_ERROR_Field_Reset;
       --  unspecified
       Reserved_10_17 : HAL.UInt8 := 16#0#;
       --  Write '1' to Disable interrupt for SUSPENDED event
       SUSPENDED      : INTENCLR_SUSPENDED_Field_1 :=
-                        Intenclr_Suspended_Field_Reset;
+                        INTENCLR_SUSPENDED_Field_Reset;
       --  Write '1' to Disable interrupt for RXSTARTED event
       RXSTARTED      : INTENCLR_RXSTARTED_Field_1 :=
-                        Intenclr_Rxstarted_Field_Reset;
+                        INTENCLR_RXSTARTED_Field_Reset;
       --  Write '1' to Disable interrupt for TXSTARTED event
       TXSTARTED      : INTENCLR_TXSTARTED_Field_1 :=
-                        Intenclr_Txstarted_Field_Reset;
+                        INTENCLR_TXSTARTED_Field_Reset;
       --  unspecified
       Reserved_21_22 : HAL.UInt2 := 16#0#;
       --  Write '1' to Disable interrupt for LASTRX event
-      LASTRX         : INTENCLR_LASTRX_Field_1 := Intenclr_Lastrx_Field_Reset;
+      LASTRX         : INTENCLR_LASTRX_Field_1 := INTENCLR_LASTRX_Field_Reset;
       --  Write '1' to Disable interrupt for LASTTX event
-      LASTTX         : INTENCLR_LASTTX_Field_1 := Intenclr_Lasttx_Field_Reset;
+      LASTTX         : INTENCLR_LASTTX_Field_1 := INTENCLR_LASTTX_Field_Reset;
       --  unspecified
       Reserved_25_31 : HAL.UInt7 := 16#0#;
    end record
@@ -671,44 +671,44 @@ package NRF_SVD.TWIM is
    --  Overrun error
    type ERRORSRC_OVERRUN_Field is
      (--  Error did not occur
-      Notreceived,
+      NotReceived,
       --  Error occurred
       Received)
      with Size => 1;
    for ERRORSRC_OVERRUN_Field use
-     (Notreceived => 0,
+     (NotReceived => 0,
       Received => 1);
 
    --  NACK received after sending the address (write '1' to clear)
    type ERRORSRC_ANACK_Field is
      (--  Error did not occur
-      Notreceived,
+      NotReceived,
       --  Error occurred
       Received)
      with Size => 1;
    for ERRORSRC_ANACK_Field use
-     (Notreceived => 0,
+     (NotReceived => 0,
       Received => 1);
 
    --  NACK received after sending a data byte (write '1' to clear)
    type ERRORSRC_DNACK_Field is
      (--  Error did not occur
-      Notreceived,
+      NotReceived,
       --  Error occurred
       Received)
      with Size => 1;
    for ERRORSRC_DNACK_Field use
-     (Notreceived => 0,
+     (NotReceived => 0,
       Received => 1);
 
    --  Error source
    type ERRORSRC_Register is record
       --  Overrun error
-      OVERRUN       : ERRORSRC_OVERRUN_Field := NRF_SVD.TWIM.Notreceived;
+      OVERRUN       : ERRORSRC_OVERRUN_Field := NRF_SVD.TWIM.NotReceived;
       --  NACK received after sending the address (write '1' to clear)
-      ANACK         : ERRORSRC_ANACK_Field := NRF_SVD.TWIM.Notreceived;
+      ANACK         : ERRORSRC_ANACK_Field := NRF_SVD.TWIM.NotReceived;
       --  NACK received after sending a data byte (write '1' to clear)
-      DNACK         : ERRORSRC_DNACK_Field := NRF_SVD.TWIM.Notreceived;
+      DNACK         : ERRORSRC_DNACK_Field := NRF_SVD.TWIM.NotReceived;
       --  unspecified
       Reserved_3_31 : HAL.UInt29 := 16#0#;
    end record
@@ -872,11 +872,11 @@ package NRF_SVD.TWIM is
      (--  Disable EasyDMA list
       Disabled,
       --  Use array list
-      Arraylist)
+      ArrayList)
      with Size => 3;
    for LIST_LIST_Field use
      (Disabled => 0,
-      Arraylist => 1);
+      ArrayList => 1);
 
    --  EasyDMA list type
    type LIST_RXD_Register is record

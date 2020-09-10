@@ -57,12 +57,12 @@ package NRF_SVD.AAR is
    --  Enable interrupt on END event.
    type INTENSET_END_Field_1 is
      (--  Reset value for the field
-      Intenset_End_Field_Reset,
+      INTENSET_END_Field_Reset,
       --  Enable interrupt on write.
       Set)
      with Size => 1;
    for INTENSET_END_Field_1 use
-     (Intenset_End_Field_Reset => 0,
+     (INTENSET_END_Field_Reset => 0,
       Set => 1);
 
    --  Enable interrupt on RESOLVED event.
@@ -79,12 +79,12 @@ package NRF_SVD.AAR is
    --  Enable interrupt on RESOLVED event.
    type INTENSET_RESOLVED_Field_1 is
      (--  Reset value for the field
-      Intenset_Resolved_Field_Reset,
+      INTENSET_RESOLVED_Field_Reset,
       --  Enable interrupt on write.
       Set)
      with Size => 1;
    for INTENSET_RESOLVED_Field_1 use
-     (Intenset_Resolved_Field_Reset => 0,
+     (INTENSET_RESOLVED_Field_Reset => 0,
       Set => 1);
 
    --  Enable interrupt on NOTRESOLVED event.
@@ -101,24 +101,24 @@ package NRF_SVD.AAR is
    --  Enable interrupt on NOTRESOLVED event.
    type INTENSET_NOTRESOLVED_Field_1 is
      (--  Reset value for the field
-      Intenset_Notresolved_Field_Reset,
+      INTENSET_NOTRESOLVED_Field_Reset,
       --  Enable interrupt on write.
       Set)
      with Size => 1;
    for INTENSET_NOTRESOLVED_Field_1 use
-     (Intenset_Notresolved_Field_Reset => 0,
+     (INTENSET_NOTRESOLVED_Field_Reset => 0,
       Set => 1);
 
    --  Interrupt enable set register.
    type INTENSET_Register is record
       --  Enable interrupt on END event.
-      END_k         : INTENSET_END_Field_1 := Intenset_End_Field_Reset;
+      END_k         : INTENSET_END_Field_1 := INTENSET_END_Field_Reset;
       --  Enable interrupt on RESOLVED event.
       RESOLVED      : INTENSET_RESOLVED_Field_1 :=
-                       Intenset_Resolved_Field_Reset;
+                       INTENSET_RESOLVED_Field_Reset;
       --  Enable interrupt on NOTRESOLVED event.
       NOTRESOLVED   : INTENSET_NOTRESOLVED_Field_1 :=
-                       Intenset_Notresolved_Field_Reset;
+                       INTENSET_NOTRESOLVED_Field_Reset;
       --  unspecified
       Reserved_3_31 : HAL.UInt29 := 16#0#;
    end record
@@ -146,12 +146,12 @@ package NRF_SVD.AAR is
    --  Disable interrupt on ENDKSGEN event.
    type INTENCLR_END_Field_1 is
      (--  Reset value for the field
-      Intenclr_End_Field_Reset,
+      INTENCLR_END_Field_Reset,
       --  Disable interrupt on write.
       Clear)
      with Size => 1;
    for INTENCLR_END_Field_1 use
-     (Intenclr_End_Field_Reset => 0,
+     (INTENCLR_END_Field_Reset => 0,
       Clear => 1);
 
    --  Disable interrupt on RESOLVED event.
@@ -168,12 +168,12 @@ package NRF_SVD.AAR is
    --  Disable interrupt on RESOLVED event.
    type INTENCLR_RESOLVED_Field_1 is
      (--  Reset value for the field
-      Intenclr_Resolved_Field_Reset,
+      INTENCLR_RESOLVED_Field_Reset,
       --  Disable interrupt on write.
       Clear)
      with Size => 1;
    for INTENCLR_RESOLVED_Field_1 use
-     (Intenclr_Resolved_Field_Reset => 0,
+     (INTENCLR_RESOLVED_Field_Reset => 0,
       Clear => 1);
 
    --  Disable interrupt on NOTRESOLVED event.
@@ -190,24 +190,24 @@ package NRF_SVD.AAR is
    --  Disable interrupt on NOTRESOLVED event.
    type INTENCLR_NOTRESOLVED_Field_1 is
      (--  Reset value for the field
-      Intenclr_Notresolved_Field_Reset,
+      INTENCLR_NOTRESOLVED_Field_Reset,
       --  Disable interrupt on write.
       Clear)
      with Size => 1;
    for INTENCLR_NOTRESOLVED_Field_1 use
-     (Intenclr_Notresolved_Field_Reset => 0,
+     (INTENCLR_NOTRESOLVED_Field_Reset => 0,
       Clear => 1);
 
    --  Interrupt enable clear register.
    type INTENCLR_Register is record
       --  Disable interrupt on ENDKSGEN event.
-      END_k         : INTENCLR_END_Field_1 := Intenclr_End_Field_Reset;
+      END_k         : INTENCLR_END_Field_1 := INTENCLR_END_Field_Reset;
       --  Disable interrupt on RESOLVED event.
       RESOLVED      : INTENCLR_RESOLVED_Field_1 :=
-                       Intenclr_Resolved_Field_Reset;
+                       INTENCLR_RESOLVED_Field_Reset;
       --  Disable interrupt on NOTRESOLVED event.
       NOTRESOLVED   : INTENCLR_NOTRESOLVED_Field_1 :=
-                       Intenclr_Notresolved_Field_Reset;
+                       INTENCLR_NOTRESOLVED_Field_Reset;
       --  unspecified
       Reserved_3_31 : HAL.UInt29 := 16#0#;
    end record

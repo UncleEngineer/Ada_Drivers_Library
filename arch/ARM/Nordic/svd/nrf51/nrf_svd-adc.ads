@@ -57,18 +57,18 @@ package NRF_SVD.ADC is
    --  Enable interrupt on END event.
    type INTENSET_END_Field_1 is
      (--  Reset value for the field
-      Intenset_End_Field_Reset,
+      INTENSET_END_Field_Reset,
       --  Enable interrupt on write.
       Set)
      with Size => 1;
    for INTENSET_END_Field_1 use
-     (Intenset_End_Field_Reset => 0,
+     (INTENSET_END_Field_Reset => 0,
       Set => 1);
 
    --  Interrupt enable set register.
    type INTENSET_Register is record
       --  Enable interrupt on END event.
-      END_k         : INTENSET_END_Field_1 := Intenset_End_Field_Reset;
+      END_k         : INTENSET_END_Field_1 := INTENSET_END_Field_Reset;
       --  unspecified
       Reserved_1_31 : HAL.UInt31 := 16#0#;
    end record
@@ -94,18 +94,18 @@ package NRF_SVD.ADC is
    --  Disable interrupt on END event.
    type INTENCLR_END_Field_1 is
      (--  Reset value for the field
-      Intenclr_End_Field_Reset,
+      INTENCLR_END_Field_Reset,
       --  Disable interrupt on write.
       Clear)
      with Size => 1;
    for INTENCLR_END_Field_1 use
-     (Intenclr_End_Field_Reset => 0,
+     (INTENCLR_END_Field_Reset => 0,
       Clear => 1);
 
    --  Interrupt enable clear register.
    type INTENCLR_Register is record
       --  Disable interrupt on END event.
-      END_k         : INTENCLR_END_Field_1 := Intenclr_End_Field_Reset;
+      END_k         : INTENCLR_END_Field_1 := INTENCLR_END_Field_Reset;
       --  unspecified
       Reserved_1_31 : HAL.UInt31 := 16#0#;
    end record
@@ -173,114 +173,114 @@ package NRF_SVD.ADC is
    --  ADC resolution.
    type CONFIG_RES_Field is
      (--  8bit ADC resolution.
-      Val_8BIT,
+      Val_8bit,
       --  9bit ADC resolution.
-      Val_9BIT,
+      Val_9bit,
       --  10bit ADC resolution.
-      Val_10BIT)
+      Val_10bit)
      with Size => 2;
    for CONFIG_RES_Field use
-     (Val_8BIT => 0,
-      Val_9BIT => 1,
-      Val_10BIT => 2);
+     (Val_8bit => 0,
+      Val_9bit => 1,
+      Val_10bit => 2);
 
    --  ADC input selection.
    type CONFIG_INPSEL_Field is
      (--  Analog input specified by PSEL with no prescaling used as input for the
 --  conversion.
-      Analoginputnoprescaling,
+      AnalogInputNoPrescaling,
       --  Analog input specified by PSEL with 2/3 prescaling used as input for the
 --  conversion.
-      Analoginputtwothirdsprescaling,
+      AnalogInputTwoThirdsPrescaling,
       --  Analog input specified by PSEL with 1/3 prescaling used as input for the
 --  conversion.
-      Analoginputonethirdprescaling,
+      AnalogInputOneThirdPrescaling,
       --  Supply voltage with 2/3 prescaling used as input for the conversion.
-      Supplytwothirdsprescaling,
+      SupplyTwoThirdsPrescaling,
       --  Supply voltage with 1/3 prescaling used as input for the conversion.
-      Supplyonethirdprescaling)
+      SupplyOneThirdPrescaling)
      with Size => 3;
    for CONFIG_INPSEL_Field use
-     (Analoginputnoprescaling => 0,
-      Analoginputtwothirdsprescaling => 1,
-      Analoginputonethirdprescaling => 2,
-      Supplytwothirdsprescaling => 5,
-      Supplyonethirdprescaling => 6);
+     (AnalogInputNoPrescaling => 0,
+      AnalogInputTwoThirdsPrescaling => 1,
+      AnalogInputOneThirdPrescaling => 2,
+      SupplyTwoThirdsPrescaling => 5,
+      SupplyOneThirdPrescaling => 6);
 
    --  ADC reference selection.
    type CONFIG_REFSEL_Field is
      (--  Use internal 1.2V bandgap voltage as reference for conversion.
-      Vbg,
+      VBG,
       --  Use external source configured by EXTREFSEL as reference for conversion.
       External,
       --  Use supply voltage with 1/2 prescaling as reference for conversion. Only
 --  usable when supply voltage is between 1.7V and 2.6V.
-      Supplyonehalfprescaling,
+      SupplyOneHalfPrescaling,
       --  Use supply voltage with 1/3 prescaling as reference for conversion. Only
 --  usable when supply voltage is between 2.5V and 3.6V.
-      Supplyonethirdprescaling)
+      SupplyOneThirdPrescaling)
      with Size => 2;
    for CONFIG_REFSEL_Field use
-     (Vbg => 0,
+     (VBG => 0,
       External => 1,
-      Supplyonehalfprescaling => 2,
-      Supplyonethirdprescaling => 3);
+      SupplyOneHalfPrescaling => 2,
+      SupplyOneThirdPrescaling => 3);
 
    --  ADC analog pin selection.
    type CONFIG_PSEL_Field is
      (--  Analog input pins disabled.
       Disabled,
       --  Use analog input 0 as analog input.
-      Analoginput0,
+      AnalogInput0,
       --  Use analog input 1 as analog input.
-      Analoginput1,
+      AnalogInput1,
       --  Use analog input 2 as analog input.
-      Analoginput2,
+      AnalogInput2,
       --  Use analog input 3 as analog input.
-      Analoginput3,
+      AnalogInput3,
       --  Use analog input 4 as analog input.
-      Analoginput4,
+      AnalogInput4,
       --  Use analog input 5 as analog input.
-      Analoginput5,
+      AnalogInput5,
       --  Use analog input 6 as analog input.
-      Analoginput6,
+      AnalogInput6,
       --  Use analog input 7 as analog input.
-      Analoginput7)
+      AnalogInput7)
      with Size => 8;
    for CONFIG_PSEL_Field use
      (Disabled => 0,
-      Analoginput0 => 1,
-      Analoginput1 => 2,
-      Analoginput2 => 4,
-      Analoginput3 => 8,
-      Analoginput4 => 16,
-      Analoginput5 => 32,
-      Analoginput6 => 64,
-      Analoginput7 => 128);
+      AnalogInput0 => 1,
+      AnalogInput1 => 2,
+      AnalogInput2 => 4,
+      AnalogInput3 => 8,
+      AnalogInput4 => 16,
+      AnalogInput5 => 32,
+      AnalogInput6 => 64,
+      AnalogInput7 => 128);
 
    --  ADC external reference pin selection.
    type CONFIG_EXTREFSEL_Field is
      (--  Analog external reference inputs disabled.
       None,
       --  Use analog reference 0 as reference.
-      Analogreference0,
+      AnalogReference0,
       --  Use analog reference 1 as reference.
-      Analogreference1)
+      AnalogReference1)
      with Size => 2;
    for CONFIG_EXTREFSEL_Field use
      (None => 0,
-      Analogreference0 => 1,
-      Analogreference1 => 2);
+      AnalogReference0 => 1,
+      AnalogReference1 => 2);
 
    --  ADC configuration register.
    type CONFIG_Register is record
       --  ADC resolution.
-      RES            : CONFIG_RES_Field := NRF_SVD.ADC.Val_8BIT;
+      RES            : CONFIG_RES_Field := NRF_SVD.ADC.Val_8bit;
       --  ADC input selection.
       INPSEL         : CONFIG_INPSEL_Field :=
-                        NRF_SVD.ADC.Supplyonethirdprescaling;
+                        NRF_SVD.ADC.SupplyOneThirdPrescaling;
       --  ADC reference selection.
-      REFSEL         : CONFIG_REFSEL_Field := NRF_SVD.ADC.Vbg;
+      REFSEL         : CONFIG_REFSEL_Field := NRF_SVD.ADC.VBG;
       --  unspecified
       Reserved_7_7   : HAL.Bit := 16#0#;
       --  ADC analog pin selection.

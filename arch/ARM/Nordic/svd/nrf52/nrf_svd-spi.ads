@@ -66,12 +66,12 @@ package NRF_SVD.SPI is
    --  Write '1' to Enable interrupt for READY event
    type INTENSET_READY_Field_1 is
      (--  Reset value for the field
-      Intenset_Ready_Field_Reset,
+      INTENSET_READY_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_READY_Field_1 use
-     (Intenset_Ready_Field_Reset => 0,
+     (INTENSET_READY_Field_Reset => 0,
       Set => 1);
 
    --  Enable interrupt
@@ -79,7 +79,7 @@ package NRF_SVD.SPI is
       --  unspecified
       Reserved_0_1  : HAL.UInt2 := 16#0#;
       --  Write '1' to Enable interrupt for READY event
-      READY         : INTENSET_READY_Field_1 := Intenset_Ready_Field_Reset;
+      READY         : INTENSET_READY_Field_1 := INTENSET_READY_Field_Reset;
       --  unspecified
       Reserved_3_31 : HAL.UInt29 := 16#0#;
    end record
@@ -106,12 +106,12 @@ package NRF_SVD.SPI is
    --  Write '1' to Disable interrupt for READY event
    type INTENCLR_READY_Field_1 is
      (--  Reset value for the field
-      Intenclr_Ready_Field_Reset,
+      INTENCLR_READY_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_READY_Field_1 use
-     (Intenclr_Ready_Field_Reset => 0,
+     (INTENCLR_READY_Field_Reset => 0,
       Clear => 1);
 
    --  Disable interrupt
@@ -119,7 +119,7 @@ package NRF_SVD.SPI is
       --  unspecified
       Reserved_0_1  : HAL.UInt2 := 16#0#;
       --  Write '1' to Disable interrupt for READY event
-      READY         : INTENCLR_READY_Field_1 := Intenclr_Ready_Field_Reset;
+      READY         : INTENCLR_READY_Field_1 := INTENCLR_READY_Field_Reset;
       --  unspecified
       Reserved_3_31 : HAL.UInt29 := 16#0#;
    end record
@@ -196,13 +196,13 @@ package NRF_SVD.SPI is
    --  Bit order
    type CONFIG_ORDER_Field is
      (--  Most significant bit shifted out first
-      Msbfirst,
+      MsbFirst,
       --  Least significant bit shifted out first
-      Lsbfirst)
+      LsbFirst)
      with Size => 1;
    for CONFIG_ORDER_Field use
-     (Msbfirst => 0,
-      Lsbfirst => 1);
+     (MsbFirst => 0,
+      LsbFirst => 1);
 
    --  Serial clock (SCK) phase
    type CONFIG_CPHA_Field is
@@ -218,22 +218,22 @@ package NRF_SVD.SPI is
    --  Serial clock (SCK) polarity
    type CONFIG_CPOL_Field is
      (--  Active high
-      Activehigh,
+      ActiveHigh,
       --  Active low
-      Activelow)
+      ActiveLow)
      with Size => 1;
    for CONFIG_CPOL_Field use
-     (Activehigh => 0,
-      Activelow => 1);
+     (ActiveHigh => 0,
+      ActiveLow => 1);
 
    --  Configuration register
    type CONFIG_Register is record
       --  Bit order
-      ORDER         : CONFIG_ORDER_Field := NRF_SVD.SPI.Msbfirst;
+      ORDER         : CONFIG_ORDER_Field := NRF_SVD.SPI.MsbFirst;
       --  Serial clock (SCK) phase
       CPHA          : CONFIG_CPHA_Field := NRF_SVD.SPI.Leading;
       --  Serial clock (SCK) polarity
-      CPOL          : CONFIG_CPOL_Field := NRF_SVD.SPI.Activehigh;
+      CPOL          : CONFIG_CPOL_Field := NRF_SVD.SPI.ActiveHigh;
       --  unspecified
       Reserved_3_31 : HAL.UInt29 := 16#0#;
    end record

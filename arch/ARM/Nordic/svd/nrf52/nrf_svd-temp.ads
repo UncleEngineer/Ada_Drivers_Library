@@ -66,19 +66,19 @@ package NRF_SVD.TEMP is
    --  Write '1' to Enable interrupt for DATARDY event
    type INTENSET_DATARDY_Field_1 is
      (--  Reset value for the field
-      Intenset_Datardy_Field_Reset,
+      INTENSET_DATARDY_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_DATARDY_Field_1 use
-     (Intenset_Datardy_Field_Reset => 0,
+     (INTENSET_DATARDY_Field_Reset => 0,
       Set => 1);
 
    --  Enable interrupt
    type INTENSET_Register is record
       --  Write '1' to Enable interrupt for DATARDY event
       DATARDY       : INTENSET_DATARDY_Field_1 :=
-                       Intenset_Datardy_Field_Reset;
+                       INTENSET_DATARDY_Field_Reset;
       --  unspecified
       Reserved_1_31 : HAL.UInt31 := 16#0#;
    end record
@@ -104,19 +104,19 @@ package NRF_SVD.TEMP is
    --  Write '1' to Disable interrupt for DATARDY event
    type INTENCLR_DATARDY_Field_1 is
      (--  Reset value for the field
-      Intenclr_Datardy_Field_Reset,
+      INTENCLR_DATARDY_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_DATARDY_Field_1 use
-     (Intenclr_Datardy_Field_Reset => 0,
+     (INTENCLR_DATARDY_Field_Reset => 0,
       Clear => 1);
 
    --  Disable interrupt
    type INTENCLR_Register is record
       --  Write '1' to Disable interrupt for DATARDY event
       DATARDY       : INTENCLR_DATARDY_Field_1 :=
-                       Intenclr_Datardy_Field_Reset;
+                       INTENCLR_DATARDY_Field_Reset;
       --  unspecified
       Reserved_1_31 : HAL.UInt31 := 16#0#;
    end record

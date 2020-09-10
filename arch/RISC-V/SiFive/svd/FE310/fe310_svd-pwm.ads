@@ -111,7 +111,7 @@ package FE310_SVD.PWM is
       CMP_IP         : CONFIG_CMP_IP_Field :=
                         (As_Array => False, Val => 16#0#);
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CONFIG_Register use record
@@ -138,7 +138,7 @@ package FE310_SVD.PWM is
       --  unspecified
       Reserved_31_31 : HAL.Bit := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for COUNT_Register use record
@@ -154,7 +154,7 @@ package FE310_SVD.PWM is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for SCALE_COUNT_Register use record
@@ -170,7 +170,7 @@ package FE310_SVD.PWM is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for COMPARE_Register use record
@@ -213,14 +213,14 @@ package FE310_SVD.PWM is
 
    --  Pulse-Width Modulation.
    PWM0_Periph : aliased PWM_Peripheral
-     with Import, Address => System'To_Address (16#10015000#);
+     with Import, Address => PWM0_Base;
 
    --  Pulse-Width Modulation.
    PWM1_Periph : aliased PWM_Peripheral
-     with Import, Address => System'To_Address (16#10025000#);
+     with Import, Address => PWM1_Base;
 
    --  Pulse-Width Modulation.
    PWM2_Periph : aliased PWM_Peripheral
-     with Import, Address => System'To_Address (16#10035000#);
+     with Import, Address => PWM2_Base;
 
 end FE310_SVD.PWM;

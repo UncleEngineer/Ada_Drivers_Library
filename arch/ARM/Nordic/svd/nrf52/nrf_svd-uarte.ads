@@ -290,12 +290,12 @@ package NRF_SVD.UARTE is
    --  Write '1' to Enable interrupt for CTS event
    type INTENSET_CTS_Field_1 is
      (--  Reset value for the field
-      Intenset_Cts_Field_Reset,
+      INTENSET_CTS_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_CTS_Field_1 use
-     (Intenset_Cts_Field_Reset => 0,
+     (INTENSET_CTS_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for NCTS event
@@ -312,12 +312,12 @@ package NRF_SVD.UARTE is
    --  Write '1' to Enable interrupt for NCTS event
    type INTENSET_NCTS_Field_1 is
      (--  Reset value for the field
-      Intenset_Ncts_Field_Reset,
+      INTENSET_NCTS_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_NCTS_Field_1 use
-     (Intenset_Ncts_Field_Reset => 0,
+     (INTENSET_NCTS_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for RXDRDY event
@@ -334,12 +334,12 @@ package NRF_SVD.UARTE is
    --  Write '1' to Enable interrupt for RXDRDY event
    type INTENSET_RXDRDY_Field_1 is
      (--  Reset value for the field
-      Intenset_Rxdrdy_Field_Reset,
+      INTENSET_RXDRDY_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_RXDRDY_Field_1 use
-     (Intenset_Rxdrdy_Field_Reset => 0,
+     (INTENSET_RXDRDY_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for ENDRX event
@@ -356,12 +356,12 @@ package NRF_SVD.UARTE is
    --  Write '1' to Enable interrupt for ENDRX event
    type INTENSET_ENDRX_Field_1 is
      (--  Reset value for the field
-      Intenset_Endrx_Field_Reset,
+      INTENSET_ENDRX_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_ENDRX_Field_1 use
-     (Intenset_Endrx_Field_Reset => 0,
+     (INTENSET_ENDRX_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for TXDRDY event
@@ -378,12 +378,12 @@ package NRF_SVD.UARTE is
    --  Write '1' to Enable interrupt for TXDRDY event
    type INTENSET_TXDRDY_Field_1 is
      (--  Reset value for the field
-      Intenset_Txdrdy_Field_Reset,
+      INTENSET_TXDRDY_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_TXDRDY_Field_1 use
-     (Intenset_Txdrdy_Field_Reset => 0,
+     (INTENSET_TXDRDY_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for ENDTX event
@@ -400,12 +400,12 @@ package NRF_SVD.UARTE is
    --  Write '1' to Enable interrupt for ENDTX event
    type INTENSET_ENDTX_Field_1 is
      (--  Reset value for the field
-      Intenset_Endtx_Field_Reset,
+      INTENSET_ENDTX_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_ENDTX_Field_1 use
-     (Intenset_Endtx_Field_Reset => 0,
+     (INTENSET_ENDTX_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for ERROR event
@@ -422,12 +422,12 @@ package NRF_SVD.UARTE is
    --  Write '1' to Enable interrupt for ERROR event
    type INTENSET_ERROR_Field_1 is
      (--  Reset value for the field
-      Intenset_Error_Field_Reset,
+      INTENSET_ERROR_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_ERROR_Field_1 use
-     (Intenset_Error_Field_Reset => 0,
+     (INTENSET_ERROR_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for RXTO event
@@ -444,12 +444,12 @@ package NRF_SVD.UARTE is
    --  Write '1' to Enable interrupt for RXTO event
    type INTENSET_RXTO_Field_1 is
      (--  Reset value for the field
-      Intenset_Rxto_Field_Reset,
+      INTENSET_RXTO_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_RXTO_Field_1 use
-     (Intenset_Rxto_Field_Reset => 0,
+     (INTENSET_RXTO_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for RXSTARTED event
@@ -466,12 +466,12 @@ package NRF_SVD.UARTE is
    --  Write '1' to Enable interrupt for RXSTARTED event
    type INTENSET_RXSTARTED_Field_1 is
      (--  Reset value for the field
-      Intenset_Rxstarted_Field_Reset,
+      INTENSET_RXSTARTED_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_RXSTARTED_Field_1 use
-     (Intenset_Rxstarted_Field_Reset => 0,
+     (INTENSET_RXSTARTED_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for TXSTARTED event
@@ -488,12 +488,12 @@ package NRF_SVD.UARTE is
    --  Write '1' to Enable interrupt for TXSTARTED event
    type INTENSET_TXSTARTED_Field_1 is
      (--  Reset value for the field
-      Intenset_Txstarted_Field_Reset,
+      INTENSET_TXSTARTED_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_TXSTARTED_Field_1 use
-     (Intenset_Txstarted_Field_Reset => 0,
+     (INTENSET_TXSTARTED_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for TXSTOPPED event
@@ -510,51 +510,51 @@ package NRF_SVD.UARTE is
    --  Write '1' to Enable interrupt for TXSTOPPED event
    type INTENSET_TXSTOPPED_Field_1 is
      (--  Reset value for the field
-      Intenset_Txstopped_Field_Reset,
+      INTENSET_TXSTOPPED_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_TXSTOPPED_Field_1 use
-     (Intenset_Txstopped_Field_Reset => 0,
+     (INTENSET_TXSTOPPED_Field_Reset => 0,
       Set => 1);
 
    --  Enable interrupt
    type INTENSET_Register is record
       --  Write '1' to Enable interrupt for CTS event
-      CTS            : INTENSET_CTS_Field_1 := Intenset_Cts_Field_Reset;
+      CTS            : INTENSET_CTS_Field_1 := INTENSET_CTS_Field_Reset;
       --  Write '1' to Enable interrupt for NCTS event
-      NCTS           : INTENSET_NCTS_Field_1 := Intenset_Ncts_Field_Reset;
+      NCTS           : INTENSET_NCTS_Field_1 := INTENSET_NCTS_Field_Reset;
       --  Write '1' to Enable interrupt for RXDRDY event
-      RXDRDY         : INTENSET_RXDRDY_Field_1 := Intenset_Rxdrdy_Field_Reset;
+      RXDRDY         : INTENSET_RXDRDY_Field_1 := INTENSET_RXDRDY_Field_Reset;
       --  unspecified
       Reserved_3_3   : HAL.Bit := 16#0#;
       --  Write '1' to Enable interrupt for ENDRX event
-      ENDRX          : INTENSET_ENDRX_Field_1 := Intenset_Endrx_Field_Reset;
+      ENDRX          : INTENSET_ENDRX_Field_1 := INTENSET_ENDRX_Field_Reset;
       --  unspecified
       Reserved_5_6   : HAL.UInt2 := 16#0#;
       --  Write '1' to Enable interrupt for TXDRDY event
-      TXDRDY         : INTENSET_TXDRDY_Field_1 := Intenset_Txdrdy_Field_Reset;
+      TXDRDY         : INTENSET_TXDRDY_Field_1 := INTENSET_TXDRDY_Field_Reset;
       --  Write '1' to Enable interrupt for ENDTX event
-      ENDTX          : INTENSET_ENDTX_Field_1 := Intenset_Endtx_Field_Reset;
+      ENDTX          : INTENSET_ENDTX_Field_1 := INTENSET_ENDTX_Field_Reset;
       --  Write '1' to Enable interrupt for ERROR event
-      ERROR          : INTENSET_ERROR_Field_1 := Intenset_Error_Field_Reset;
+      ERROR          : INTENSET_ERROR_Field_1 := INTENSET_ERROR_Field_Reset;
       --  unspecified
       Reserved_10_16 : HAL.UInt7 := 16#0#;
       --  Write '1' to Enable interrupt for RXTO event
-      RXTO           : INTENSET_RXTO_Field_1 := Intenset_Rxto_Field_Reset;
+      RXTO           : INTENSET_RXTO_Field_1 := INTENSET_RXTO_Field_Reset;
       --  unspecified
       Reserved_18_18 : HAL.Bit := 16#0#;
       --  Write '1' to Enable interrupt for RXSTARTED event
       RXSTARTED      : INTENSET_RXSTARTED_Field_1 :=
-                        Intenset_Rxstarted_Field_Reset;
+                        INTENSET_RXSTARTED_Field_Reset;
       --  Write '1' to Enable interrupt for TXSTARTED event
       TXSTARTED      : INTENSET_TXSTARTED_Field_1 :=
-                        Intenset_Txstarted_Field_Reset;
+                        INTENSET_TXSTARTED_Field_Reset;
       --  unspecified
       Reserved_21_21 : HAL.Bit := 16#0#;
       --  Write '1' to Enable interrupt for TXSTOPPED event
       TXSTOPPED      : INTENSET_TXSTOPPED_Field_1 :=
-                        Intenset_Txstopped_Field_Reset;
+                        INTENSET_TXSTOPPED_Field_Reset;
       --  unspecified
       Reserved_23_31 : HAL.UInt9 := 16#0#;
    end record
@@ -595,12 +595,12 @@ package NRF_SVD.UARTE is
    --  Write '1' to Disable interrupt for CTS event
    type INTENCLR_CTS_Field_1 is
      (--  Reset value for the field
-      Intenclr_Cts_Field_Reset,
+      INTENCLR_CTS_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_CTS_Field_1 use
-     (Intenclr_Cts_Field_Reset => 0,
+     (INTENCLR_CTS_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for NCTS event
@@ -617,12 +617,12 @@ package NRF_SVD.UARTE is
    --  Write '1' to Disable interrupt for NCTS event
    type INTENCLR_NCTS_Field_1 is
      (--  Reset value for the field
-      Intenclr_Ncts_Field_Reset,
+      INTENCLR_NCTS_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_NCTS_Field_1 use
-     (Intenclr_Ncts_Field_Reset => 0,
+     (INTENCLR_NCTS_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for RXDRDY event
@@ -639,12 +639,12 @@ package NRF_SVD.UARTE is
    --  Write '1' to Disable interrupt for RXDRDY event
    type INTENCLR_RXDRDY_Field_1 is
      (--  Reset value for the field
-      Intenclr_Rxdrdy_Field_Reset,
+      INTENCLR_RXDRDY_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_RXDRDY_Field_1 use
-     (Intenclr_Rxdrdy_Field_Reset => 0,
+     (INTENCLR_RXDRDY_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for ENDRX event
@@ -661,12 +661,12 @@ package NRF_SVD.UARTE is
    --  Write '1' to Disable interrupt for ENDRX event
    type INTENCLR_ENDRX_Field_1 is
      (--  Reset value for the field
-      Intenclr_Endrx_Field_Reset,
+      INTENCLR_ENDRX_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_ENDRX_Field_1 use
-     (Intenclr_Endrx_Field_Reset => 0,
+     (INTENCLR_ENDRX_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for TXDRDY event
@@ -683,12 +683,12 @@ package NRF_SVD.UARTE is
    --  Write '1' to Disable interrupt for TXDRDY event
    type INTENCLR_TXDRDY_Field_1 is
      (--  Reset value for the field
-      Intenclr_Txdrdy_Field_Reset,
+      INTENCLR_TXDRDY_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_TXDRDY_Field_1 use
-     (Intenclr_Txdrdy_Field_Reset => 0,
+     (INTENCLR_TXDRDY_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for ENDTX event
@@ -705,12 +705,12 @@ package NRF_SVD.UARTE is
    --  Write '1' to Disable interrupt for ENDTX event
    type INTENCLR_ENDTX_Field_1 is
      (--  Reset value for the field
-      Intenclr_Endtx_Field_Reset,
+      INTENCLR_ENDTX_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_ENDTX_Field_1 use
-     (Intenclr_Endtx_Field_Reset => 0,
+     (INTENCLR_ENDTX_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for ERROR event
@@ -727,12 +727,12 @@ package NRF_SVD.UARTE is
    --  Write '1' to Disable interrupt for ERROR event
    type INTENCLR_ERROR_Field_1 is
      (--  Reset value for the field
-      Intenclr_Error_Field_Reset,
+      INTENCLR_ERROR_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_ERROR_Field_1 use
-     (Intenclr_Error_Field_Reset => 0,
+     (INTENCLR_ERROR_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for RXTO event
@@ -749,12 +749,12 @@ package NRF_SVD.UARTE is
    --  Write '1' to Disable interrupt for RXTO event
    type INTENCLR_RXTO_Field_1 is
      (--  Reset value for the field
-      Intenclr_Rxto_Field_Reset,
+      INTENCLR_RXTO_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_RXTO_Field_1 use
-     (Intenclr_Rxto_Field_Reset => 0,
+     (INTENCLR_RXTO_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for RXSTARTED event
@@ -771,12 +771,12 @@ package NRF_SVD.UARTE is
    --  Write '1' to Disable interrupt for RXSTARTED event
    type INTENCLR_RXSTARTED_Field_1 is
      (--  Reset value for the field
-      Intenclr_Rxstarted_Field_Reset,
+      INTENCLR_RXSTARTED_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_RXSTARTED_Field_1 use
-     (Intenclr_Rxstarted_Field_Reset => 0,
+     (INTENCLR_RXSTARTED_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for TXSTARTED event
@@ -793,12 +793,12 @@ package NRF_SVD.UARTE is
    --  Write '1' to Disable interrupt for TXSTARTED event
    type INTENCLR_TXSTARTED_Field_1 is
      (--  Reset value for the field
-      Intenclr_Txstarted_Field_Reset,
+      INTENCLR_TXSTARTED_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_TXSTARTED_Field_1 use
-     (Intenclr_Txstarted_Field_Reset => 0,
+     (INTENCLR_TXSTARTED_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for TXSTOPPED event
@@ -815,51 +815,51 @@ package NRF_SVD.UARTE is
    --  Write '1' to Disable interrupt for TXSTOPPED event
    type INTENCLR_TXSTOPPED_Field_1 is
      (--  Reset value for the field
-      Intenclr_Txstopped_Field_Reset,
+      INTENCLR_TXSTOPPED_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_TXSTOPPED_Field_1 use
-     (Intenclr_Txstopped_Field_Reset => 0,
+     (INTENCLR_TXSTOPPED_Field_Reset => 0,
       Clear => 1);
 
    --  Disable interrupt
    type INTENCLR_Register is record
       --  Write '1' to Disable interrupt for CTS event
-      CTS            : INTENCLR_CTS_Field_1 := Intenclr_Cts_Field_Reset;
+      CTS            : INTENCLR_CTS_Field_1 := INTENCLR_CTS_Field_Reset;
       --  Write '1' to Disable interrupt for NCTS event
-      NCTS           : INTENCLR_NCTS_Field_1 := Intenclr_Ncts_Field_Reset;
+      NCTS           : INTENCLR_NCTS_Field_1 := INTENCLR_NCTS_Field_Reset;
       --  Write '1' to Disable interrupt for RXDRDY event
-      RXDRDY         : INTENCLR_RXDRDY_Field_1 := Intenclr_Rxdrdy_Field_Reset;
+      RXDRDY         : INTENCLR_RXDRDY_Field_1 := INTENCLR_RXDRDY_Field_Reset;
       --  unspecified
       Reserved_3_3   : HAL.Bit := 16#0#;
       --  Write '1' to Disable interrupt for ENDRX event
-      ENDRX          : INTENCLR_ENDRX_Field_1 := Intenclr_Endrx_Field_Reset;
+      ENDRX          : INTENCLR_ENDRX_Field_1 := INTENCLR_ENDRX_Field_Reset;
       --  unspecified
       Reserved_5_6   : HAL.UInt2 := 16#0#;
       --  Write '1' to Disable interrupt for TXDRDY event
-      TXDRDY         : INTENCLR_TXDRDY_Field_1 := Intenclr_Txdrdy_Field_Reset;
+      TXDRDY         : INTENCLR_TXDRDY_Field_1 := INTENCLR_TXDRDY_Field_Reset;
       --  Write '1' to Disable interrupt for ENDTX event
-      ENDTX          : INTENCLR_ENDTX_Field_1 := Intenclr_Endtx_Field_Reset;
+      ENDTX          : INTENCLR_ENDTX_Field_1 := INTENCLR_ENDTX_Field_Reset;
       --  Write '1' to Disable interrupt for ERROR event
-      ERROR          : INTENCLR_ERROR_Field_1 := Intenclr_Error_Field_Reset;
+      ERROR          : INTENCLR_ERROR_Field_1 := INTENCLR_ERROR_Field_Reset;
       --  unspecified
       Reserved_10_16 : HAL.UInt7 := 16#0#;
       --  Write '1' to Disable interrupt for RXTO event
-      RXTO           : INTENCLR_RXTO_Field_1 := Intenclr_Rxto_Field_Reset;
+      RXTO           : INTENCLR_RXTO_Field_1 := INTENCLR_RXTO_Field_Reset;
       --  unspecified
       Reserved_18_18 : HAL.Bit := 16#0#;
       --  Write '1' to Disable interrupt for RXSTARTED event
       RXSTARTED      : INTENCLR_RXSTARTED_Field_1 :=
-                        Intenclr_Rxstarted_Field_Reset;
+                        INTENCLR_RXSTARTED_Field_Reset;
       --  Write '1' to Disable interrupt for TXSTARTED event
       TXSTARTED      : INTENCLR_TXSTARTED_Field_1 :=
-                        Intenclr_Txstarted_Field_Reset;
+                        INTENCLR_TXSTARTED_Field_Reset;
       --  unspecified
       Reserved_21_21 : HAL.Bit := 16#0#;
       --  Write '1' to Disable interrupt for TXSTOPPED event
       TXSTOPPED      : INTENCLR_TXSTOPPED_Field_1 :=
-                        Intenclr_Txstopped_Field_Reset;
+                        INTENCLR_TXSTOPPED_Field_Reset;
       --  unspecified
       Reserved_23_31 : HAL.UInt9 := 16#0#;
    end record
@@ -889,57 +889,57 @@ package NRF_SVD.UARTE is
    --  Overrun error
    type ERRORSRC_OVERRUN_Field is
      (--  Read: error not present
-      Notpresent,
+      NotPresent,
       --  Read: error present
       Present)
      with Size => 1;
    for ERRORSRC_OVERRUN_Field use
-     (Notpresent => 0,
+     (NotPresent => 0,
       Present => 1);
 
    --  Parity error
    type ERRORSRC_PARITY_Field is
      (--  Read: error not present
-      Notpresent,
+      NotPresent,
       --  Read: error present
       Present)
      with Size => 1;
    for ERRORSRC_PARITY_Field use
-     (Notpresent => 0,
+     (NotPresent => 0,
       Present => 1);
 
    --  Framing error occurred
    type ERRORSRC_FRAMING_Field is
      (--  Read: error not present
-      Notpresent,
+      NotPresent,
       --  Read: error present
       Present)
      with Size => 1;
    for ERRORSRC_FRAMING_Field use
-     (Notpresent => 0,
+     (NotPresent => 0,
       Present => 1);
 
    --  Break condition
    type ERRORSRC_BREAK_Field is
      (--  Read: error not present
-      Notpresent,
+      NotPresent,
       --  Read: error present
       Present)
      with Size => 1;
    for ERRORSRC_BREAK_Field use
-     (Notpresent => 0,
+     (NotPresent => 0,
       Present => 1);
 
    --  Error source
    type ERRORSRC_Register is record
       --  Overrun error
-      OVERRUN       : ERRORSRC_OVERRUN_Field := NRF_SVD.UARTE.Notpresent;
+      OVERRUN       : ERRORSRC_OVERRUN_Field := NRF_SVD.UARTE.NotPresent;
       --  Parity error
-      PARITY        : ERRORSRC_PARITY_Field := NRF_SVD.UARTE.Notpresent;
+      PARITY        : ERRORSRC_PARITY_Field := NRF_SVD.UARTE.NotPresent;
       --  Framing error occurred
-      FRAMING       : ERRORSRC_FRAMING_Field := NRF_SVD.UARTE.Notpresent;
+      FRAMING       : ERRORSRC_FRAMING_Field := NRF_SVD.UARTE.NotPresent;
       --  Break condition
-      BREAK         : ERRORSRC_BREAK_Field := NRF_SVD.UARTE.Notpresent;
+      BREAK         : ERRORSRC_BREAK_Field := NRF_SVD.UARTE.NotPresent;
       --  unspecified
       Reserved_4_31 : HAL.UInt28 := 16#0#;
    end record

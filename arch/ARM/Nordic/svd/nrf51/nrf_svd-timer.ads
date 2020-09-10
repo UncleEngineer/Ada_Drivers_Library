@@ -194,12 +194,12 @@ package NRF_SVD.TIMER is
    --  Enable interrupt on COMPARE[0]
    type INTENSET_COMPARE0_Field_1 is
      (--  Reset value for the field
-      Intenset_Compare0_Field_Reset,
+      INTENSET_COMPARE0_Field_Reset,
       --  Enable interrupt on write.
       Set)
      with Size => 1;
    for INTENSET_COMPARE0_Field_1 use
-     (Intenset_Compare0_Field_Reset => 0,
+     (INTENSET_COMPARE0_Field_Reset => 0,
       Set => 1);
 
    --  INTENSET_COMPARE array
@@ -260,12 +260,12 @@ package NRF_SVD.TIMER is
    --  Disable interrupt on COMPARE[0]
    type INTENCLR_COMPARE0_Field_1 is
      (--  Reset value for the field
-      Intenclr_Compare0_Field_Reset,
+      INTENCLR_COMPARE0_Field_Reset,
       --  Disable interrupt on write.
       Clear)
      with Size => 1;
    for INTENCLR_COMPARE0_Field_1 use
-     (Intenclr_Compare0_Field_Reset => 0,
+     (INTENCLR_COMPARE0_Field_Reset => 0,
       Clear => 1);
 
    --  INTENCLR_COMPARE array

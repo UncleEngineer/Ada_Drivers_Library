@@ -88,18 +88,18 @@ package NRF_SVD.UICR is
    --  Reset value for CLOCK XTALFREQ register.
    type XTALFREQ_XTALFREQ_Field is
      (--  32MHz Xtal is used.
-      Val_32Mhz,
+      Val_32MHz,
       --  16MHz Xtal is used.
-      Val_16Mhz)
+      Val_16MHz)
      with Size => 8;
    for XTALFREQ_XTALFREQ_Field use
-     (Val_32Mhz => 0,
-      Val_16Mhz => 255);
+     (Val_32MHz => 0,
+      Val_16MHz => 255);
 
    --  Reset value for CLOCK XTALFREQ register.
    type XTALFREQ_Register is record
       --  Reset value for CLOCK XTALFREQ register.
-      XTALFREQ      : XTALFREQ_XTALFREQ_Field := NRF_SVD.UICR.Val_16Mhz;
+      XTALFREQ      : XTALFREQ_XTALFREQ_Field := NRF_SVD.UICR.Val_16MHz;
       --  unspecified
       Reserved_8_31 : HAL.UInt24 := 16#FFFFFF#;
    end record

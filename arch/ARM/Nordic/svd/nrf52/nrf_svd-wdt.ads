@@ -66,19 +66,19 @@ package NRF_SVD.WDT is
    --  Write '1' to Enable interrupt for TIMEOUT event
    type INTENSET_TIMEOUT_Field_1 is
      (--  Reset value for the field
-      Intenset_Timeout_Field_Reset,
+      INTENSET_TIMEOUT_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_TIMEOUT_Field_1 use
-     (Intenset_Timeout_Field_Reset => 0,
+     (INTENSET_TIMEOUT_Field_Reset => 0,
       Set => 1);
 
    --  Enable interrupt
    type INTENSET_Register is record
       --  Write '1' to Enable interrupt for TIMEOUT event
       TIMEOUT       : INTENSET_TIMEOUT_Field_1 :=
-                       Intenset_Timeout_Field_Reset;
+                       INTENSET_TIMEOUT_Field_Reset;
       --  unspecified
       Reserved_1_31 : HAL.UInt31 := 16#0#;
    end record
@@ -104,19 +104,19 @@ package NRF_SVD.WDT is
    --  Write '1' to Disable interrupt for TIMEOUT event
    type INTENCLR_TIMEOUT_Field_1 is
      (--  Reset value for the field
-      Intenclr_Timeout_Field_Reset,
+      INTENCLR_TIMEOUT_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_TIMEOUT_Field_1 use
-     (Intenclr_Timeout_Field_Reset => 0,
+     (INTENCLR_TIMEOUT_Field_Reset => 0,
       Clear => 1);
 
    --  Disable interrupt
    type INTENCLR_Register is record
       --  Write '1' to Disable interrupt for TIMEOUT event
       TIMEOUT       : INTENCLR_TIMEOUT_Field_1 :=
-                       Intenclr_Timeout_Field_Reset;
+                       INTENCLR_TIMEOUT_Field_Reset;
       --  unspecified
       Reserved_1_31 : HAL.UInt31 := 16#0#;
    end record
@@ -131,12 +131,12 @@ package NRF_SVD.WDT is
    --  Indicates whether or not the watchdog is running
    type RUNSTATUS_RUNSTATUS_Field is
      (--  Watchdog not running
-      Notrunning,
+      NotRunning,
       --  Watchdog is running
       Running)
      with Size => 1;
    for RUNSTATUS_RUNSTATUS_Field use
-     (Notrunning => 0,
+     (NotRunning => 0,
       Running => 1);
 
    --  Run status
@@ -157,90 +157,90 @@ package NRF_SVD.WDT is
    --  Request status for RR[0] register
    type REQSTATUS_RR0_Field is
      (--  RR[0] register is not enabled, or are already requesting reload
-      Disabledorrequested,
+      DisabledOrRequested,
       --  RR[0] register is enabled, and are not yet requesting reload
-      Enabledandunrequested)
+      EnabledAndUnrequested)
      with Size => 1;
    for REQSTATUS_RR0_Field use
-     (Disabledorrequested => 0,
-      Enabledandunrequested => 1);
+     (DisabledOrRequested => 0,
+      EnabledAndUnrequested => 1);
 
    --  Request status for RR[1] register
    type REQSTATUS_RR1_Field is
      (--  RR[1] register is not enabled, or are already requesting reload
-      Disabledorrequested,
+      DisabledOrRequested,
       --  RR[1] register is enabled, and are not yet requesting reload
-      Enabledandunrequested)
+      EnabledAndUnrequested)
      with Size => 1;
    for REQSTATUS_RR1_Field use
-     (Disabledorrequested => 0,
-      Enabledandunrequested => 1);
+     (DisabledOrRequested => 0,
+      EnabledAndUnrequested => 1);
 
    --  Request status for RR[2] register
    type REQSTATUS_RR2_Field is
      (--  RR[2] register is not enabled, or are already requesting reload
-      Disabledorrequested,
+      DisabledOrRequested,
       --  RR[2] register is enabled, and are not yet requesting reload
-      Enabledandunrequested)
+      EnabledAndUnrequested)
      with Size => 1;
    for REQSTATUS_RR2_Field use
-     (Disabledorrequested => 0,
-      Enabledandunrequested => 1);
+     (DisabledOrRequested => 0,
+      EnabledAndUnrequested => 1);
 
    --  Request status for RR[3] register
    type REQSTATUS_RR3_Field is
      (--  RR[3] register is not enabled, or are already requesting reload
-      Disabledorrequested,
+      DisabledOrRequested,
       --  RR[3] register is enabled, and are not yet requesting reload
-      Enabledandunrequested)
+      EnabledAndUnrequested)
      with Size => 1;
    for REQSTATUS_RR3_Field use
-     (Disabledorrequested => 0,
-      Enabledandunrequested => 1);
+     (DisabledOrRequested => 0,
+      EnabledAndUnrequested => 1);
 
    --  Request status for RR[4] register
    type REQSTATUS_RR4_Field is
      (--  RR[4] register is not enabled, or are already requesting reload
-      Disabledorrequested,
+      DisabledOrRequested,
       --  RR[4] register is enabled, and are not yet requesting reload
-      Enabledandunrequested)
+      EnabledAndUnrequested)
      with Size => 1;
    for REQSTATUS_RR4_Field use
-     (Disabledorrequested => 0,
-      Enabledandunrequested => 1);
+     (DisabledOrRequested => 0,
+      EnabledAndUnrequested => 1);
 
    --  Request status for RR[5] register
    type REQSTATUS_RR5_Field is
      (--  RR[5] register is not enabled, or are already requesting reload
-      Disabledorrequested,
+      DisabledOrRequested,
       --  RR[5] register is enabled, and are not yet requesting reload
-      Enabledandunrequested)
+      EnabledAndUnrequested)
      with Size => 1;
    for REQSTATUS_RR5_Field use
-     (Disabledorrequested => 0,
-      Enabledandunrequested => 1);
+     (DisabledOrRequested => 0,
+      EnabledAndUnrequested => 1);
 
    --  Request status for RR[6] register
    type REQSTATUS_RR6_Field is
      (--  RR[6] register is not enabled, or are already requesting reload
-      Disabledorrequested,
+      DisabledOrRequested,
       --  RR[6] register is enabled, and are not yet requesting reload
-      Enabledandunrequested)
+      EnabledAndUnrequested)
      with Size => 1;
    for REQSTATUS_RR6_Field use
-     (Disabledorrequested => 0,
-      Enabledandunrequested => 1);
+     (DisabledOrRequested => 0,
+      EnabledAndUnrequested => 1);
 
    --  Request status for RR[7] register
    type REQSTATUS_RR7_Field is
      (--  RR[7] register is not enabled, or are already requesting reload
-      Disabledorrequested,
+      DisabledOrRequested,
       --  RR[7] register is enabled, and are not yet requesting reload
-      Enabledandunrequested)
+      EnabledAndUnrequested)
      with Size => 1;
    for REQSTATUS_RR7_Field use
-     (Disabledorrequested => 0,
-      Enabledandunrequested => 1);
+     (DisabledOrRequested => 0,
+      EnabledAndUnrequested => 1);
 
    --  Request status
    type REQSTATUS_Register is record

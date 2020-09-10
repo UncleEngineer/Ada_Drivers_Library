@@ -57,12 +57,12 @@ package NRF_SVD.POWER is
    --  Enable interrupt on POFWARN event.
    type INTENSET_POFWARN_Field_1 is
      (--  Reset value for the field
-      Intenset_Pofwarn_Field_Reset,
+      INTENSET_POFWARN_Field_Reset,
       --  Enable interrupt on write.
       Set)
      with Size => 1;
    for INTENSET_POFWARN_Field_1 use
-     (Intenset_Pofwarn_Field_Reset => 0,
+     (INTENSET_POFWARN_Field_Reset => 0,
       Set => 1);
 
    --  Interrupt enable set register.
@@ -71,7 +71,7 @@ package NRF_SVD.POWER is
       Reserved_0_1  : HAL.UInt2 := 16#0#;
       --  Enable interrupt on POFWARN event.
       POFWARN       : INTENSET_POFWARN_Field_1 :=
-                       Intenset_Pofwarn_Field_Reset;
+                       INTENSET_POFWARN_Field_Reset;
       --  unspecified
       Reserved_3_31 : HAL.UInt29 := 16#0#;
    end record
@@ -98,12 +98,12 @@ package NRF_SVD.POWER is
    --  Disable interrupt on POFWARN event.
    type INTENCLR_POFWARN_Field_1 is
      (--  Reset value for the field
-      Intenclr_Pofwarn_Field_Reset,
+      INTENCLR_POFWARN_Field_Reset,
       --  Disable interrupt on write.
       Clear)
      with Size => 1;
    for INTENCLR_POFWARN_Field_1 use
-     (Intenclr_Pofwarn_Field_Reset => 0,
+     (INTENCLR_POFWARN_Field_Reset => 0,
       Clear => 1);
 
    --  Interrupt enable clear register.
@@ -112,7 +112,7 @@ package NRF_SVD.POWER is
       Reserved_0_1  : HAL.UInt2 := 16#0#;
       --  Disable interrupt on POFWARN event.
       POFWARN       : INTENCLR_POFWARN_Field_1 :=
-                       Intenclr_Pofwarn_Field_Reset;
+                       INTENCLR_POFWARN_Field_Reset;
       --  unspecified
       Reserved_3_31 : HAL.UInt29 := 16#0#;
    end record
@@ -128,104 +128,104 @@ package NRF_SVD.POWER is
    --  Reset from pin-reset detected.
    type RESETREAS_RESETPIN_Field is
      (--  Reset not detected.
-      Notdetected,
+      NotDetected,
       --  Reset detected.
       Detected)
      with Size => 1;
    for RESETREAS_RESETPIN_Field use
-     (Notdetected => 0,
+     (NotDetected => 0,
       Detected => 1);
 
    --  Reset from watchdog detected.
    type RESETREAS_DOG_Field is
      (--  Reset not detected.
-      Notdetected,
+      NotDetected,
       --  Reset detected.
       Detected)
      with Size => 1;
    for RESETREAS_DOG_Field use
-     (Notdetected => 0,
+     (NotDetected => 0,
       Detected => 1);
 
    --  Reset from AIRCR.SYSRESETREQ detected.
    type RESETREAS_SREQ_Field is
      (--  Reset not detected.
-      Notdetected,
+      NotDetected,
       --  Reset detected.
       Detected)
      with Size => 1;
    for RESETREAS_SREQ_Field use
-     (Notdetected => 0,
+     (NotDetected => 0,
       Detected => 1);
 
    --  Reset from CPU lock-up detected.
    type RESETREAS_LOCKUP_Field is
      (--  Reset not detected.
-      Notdetected,
+      NotDetected,
       --  Reset detected.
       Detected)
      with Size => 1;
    for RESETREAS_LOCKUP_Field use
-     (Notdetected => 0,
+     (NotDetected => 0,
       Detected => 1);
 
    --  Reset from wake-up from OFF mode detected by the use of DETECT signal
    --  from GPIO.
    type RESETREAS_OFF_Field is
      (--  Reset not detected.
-      Notdetected,
+      NotDetected,
       --  Reset detected.
       Detected)
      with Size => 1;
    for RESETREAS_OFF_Field use
-     (Notdetected => 0,
+     (NotDetected => 0,
       Detected => 1);
 
    --  Reset from wake-up from OFF mode detected by the use of ANADETECT signal
    --  from LPCOMP.
    type RESETREAS_LPCOMP_Field is
      (--  Reset not detected.
-      Notdetected,
+      NotDetected,
       --  Reset detected.
       Detected)
      with Size => 1;
    for RESETREAS_LPCOMP_Field use
-     (Notdetected => 0,
+     (NotDetected => 0,
       Detected => 1);
 
    --  Reset from wake-up from OFF mode detected by entering into debug
    --  interface mode.
    type RESETREAS_DIF_Field is
      (--  Reset not detected.
-      Notdetected,
+      NotDetected,
       --  Reset detected.
       Detected)
      with Size => 1;
    for RESETREAS_DIF_Field use
-     (Notdetected => 0,
+     (NotDetected => 0,
       Detected => 1);
 
    --  Reset reason.
    type RESETREAS_Register is record
       --  Reset from pin-reset detected.
-      RESETPIN       : RESETREAS_RESETPIN_Field := NRF_SVD.POWER.Notdetected;
+      RESETPIN       : RESETREAS_RESETPIN_Field := NRF_SVD.POWER.NotDetected;
       --  Reset from watchdog detected.
-      DOG            : RESETREAS_DOG_Field := NRF_SVD.POWER.Notdetected;
+      DOG            : RESETREAS_DOG_Field := NRF_SVD.POWER.NotDetected;
       --  Reset from AIRCR.SYSRESETREQ detected.
-      SREQ           : RESETREAS_SREQ_Field := NRF_SVD.POWER.Notdetected;
+      SREQ           : RESETREAS_SREQ_Field := NRF_SVD.POWER.NotDetected;
       --  Reset from CPU lock-up detected.
-      LOCKUP         : RESETREAS_LOCKUP_Field := NRF_SVD.POWER.Notdetected;
+      LOCKUP         : RESETREAS_LOCKUP_Field := NRF_SVD.POWER.NotDetected;
       --  unspecified
       Reserved_4_15  : HAL.UInt12 := 16#0#;
       --  Reset from wake-up from OFF mode detected by the use of DETECT signal
       --  from GPIO.
-      OFF            : RESETREAS_OFF_Field := NRF_SVD.POWER.Notdetected;
+      OFF            : RESETREAS_OFF_Field := NRF_SVD.POWER.NotDetected;
       --  Reset from wake-up from OFF mode detected by the use of ANADETECT
       --  signal from LPCOMP.
-      LPCOMP         : RESETREAS_LPCOMP_Field := NRF_SVD.POWER.Notdetected;
+      LPCOMP         : RESETREAS_LPCOMP_Field := NRF_SVD.POWER.NotDetected;
       --  Reset from wake-up from OFF mode detected by entering into debug
       --  interface mode.
-      DIF            : RESETREAS_DIF_Field := NRF_SVD.POWER.Notdetected;
+      DIF            : RESETREAS_DIF_Field := NRF_SVD.POWER.NotDetected;
       --  unspecified
       Reserved_19_31 : HAL.UInt13 := 16#0#;
    end record
@@ -315,19 +315,19 @@ package NRF_SVD.POWER is
    --  Enter system off mode.
    type SYSTEMOFF_SYSTEMOFF_Field is
      (--  Reset value for the field
-      Systemoff_Systemoff_Field_Reset,
+      SYSTEMOFF_SYSTEMOFF_Field_Reset,
       --  Enter system off mode.
       Enter)
      with Size => 1;
    for SYSTEMOFF_SYSTEMOFF_Field use
-     (Systemoff_Systemoff_Field_Reset => 0,
+     (SYSTEMOFF_SYSTEMOFF_Field_Reset => 0,
       Enter => 1);
 
    --  System off register.
    type SYSTEMOFF_Register is record
       --  Write-only. Enter system off mode.
       SYSTEMOFF     : SYSTEMOFF_SYSTEMOFF_Field :=
-                       Systemoff_Systemoff_Field_Reset;
+                       SYSTEMOFF_SYSTEMOFF_Field_Reset;
       --  unspecified
       Reserved_1_31 : HAL.UInt31 := 16#0#;
    end record
@@ -406,59 +406,59 @@ package NRF_SVD.POWER is
    --  RAM block 0 behaviour in ON mode.
    type RAMON_ONRAM0_Field is
      (--  RAM block 0 OFF in ON mode.
-      Ram0Off,
+      RAM0Off,
       --  RAM block 0 ON in ON mode.
-      Ram0On)
+      RAM0On)
      with Size => 1;
    for RAMON_ONRAM0_Field use
-     (Ram0Off => 0,
-      Ram0On => 1);
+     (RAM0Off => 0,
+      RAM0On => 1);
 
    --  RAM block 1 behaviour in ON mode.
    type RAMON_ONRAM1_Field is
      (--  RAM block 1 OFF in ON mode.
-      Ram1Off,
+      RAM1Off,
       --  RAM block 1 ON in ON mode.
-      Ram1On)
+      RAM1On)
      with Size => 1;
    for RAMON_ONRAM1_Field use
-     (Ram1Off => 0,
-      Ram1On => 1);
+     (RAM1Off => 0,
+      RAM1On => 1);
 
    --  RAM block 0 behaviour in OFF mode.
    type RAMON_OFFRAM0_Field is
      (--  RAM block 0 OFF in OFF mode.
-      Ram0Off,
+      RAM0Off,
       --  RAM block 0 ON in OFF mode.
-      Ram0On)
+      RAM0On)
      with Size => 1;
    for RAMON_OFFRAM0_Field use
-     (Ram0Off => 0,
-      Ram0On => 1);
+     (RAM0Off => 0,
+      RAM0On => 1);
 
    --  RAM block 1 behaviour in OFF mode.
    type RAMON_OFFRAM1_Field is
      (--  RAM block 1 OFF in OFF mode.
-      Ram1Off,
+      RAM1Off,
       --  RAM block 1 ON in OFF mode.
-      Ram1On)
+      RAM1On)
      with Size => 1;
    for RAMON_OFFRAM1_Field use
-     (Ram1Off => 0,
-      Ram1On => 1);
+     (RAM1Off => 0,
+      RAM1On => 1);
 
    --  Ram on/off.
    type RAMON_Register is record
       --  RAM block 0 behaviour in ON mode.
-      ONRAM0         : RAMON_ONRAM0_Field := NRF_SVD.POWER.Ram0On;
+      ONRAM0         : RAMON_ONRAM0_Field := NRF_SVD.POWER.RAM0On;
       --  RAM block 1 behaviour in ON mode.
-      ONRAM1         : RAMON_ONRAM1_Field := NRF_SVD.POWER.Ram1On;
+      ONRAM1         : RAMON_ONRAM1_Field := NRF_SVD.POWER.RAM1On;
       --  unspecified
       Reserved_2_15  : HAL.UInt14 := 16#0#;
       --  RAM block 0 behaviour in OFF mode.
-      OFFRAM0        : RAMON_OFFRAM0_Field := NRF_SVD.POWER.Ram0Off;
+      OFFRAM0        : RAMON_OFFRAM0_Field := NRF_SVD.POWER.RAM0Off;
       --  RAM block 1 behaviour in OFF mode.
-      OFFRAM1        : RAMON_OFFRAM1_Field := NRF_SVD.POWER.Ram1Off;
+      OFFRAM1        : RAMON_OFFRAM1_Field := NRF_SVD.POWER.RAM1Off;
       --  unspecified
       Reserved_18_31 : HAL.UInt14 := 16#0#;
    end record
@@ -504,59 +504,59 @@ package NRF_SVD.POWER is
    --  RAM block 2 behaviour in ON mode.
    type RAMONB_ONRAM2_Field is
      (--  RAM block 2 OFF in ON mode.
-      Ram2Off,
+      RAM2Off,
       --  RAM block 2 ON in ON mode.
-      Ram2On)
+      RAM2On)
      with Size => 1;
    for RAMONB_ONRAM2_Field use
-     (Ram2Off => 0,
-      Ram2On => 1);
+     (RAM2Off => 0,
+      RAM2On => 1);
 
    --  RAM block 3 behaviour in ON mode.
    type RAMONB_ONRAM3_Field is
      (--  RAM block 33 OFF in ON mode.
-      Ram3Off,
+      RAM3Off,
       --  RAM block 3 ON in ON mode.
-      Ram3On)
+      RAM3On)
      with Size => 1;
    for RAMONB_ONRAM3_Field use
-     (Ram3Off => 0,
-      Ram3On => 1);
+     (RAM3Off => 0,
+      RAM3On => 1);
 
    --  RAM block 2 behaviour in OFF mode.
    type RAMONB_OFFRAM2_Field is
      (--  RAM block 2 OFF in OFF mode.
-      Ram2Off,
+      RAM2Off,
       --  RAM block 2 ON in OFF mode.
-      Ram2On)
+      RAM2On)
      with Size => 1;
    for RAMONB_OFFRAM2_Field use
-     (Ram2Off => 0,
-      Ram2On => 1);
+     (RAM2Off => 0,
+      RAM2On => 1);
 
    --  RAM block 3 behaviour in OFF mode.
    type RAMONB_OFFRAM3_Field is
      (--  RAM block 3 OFF in OFF mode.
-      Ram3Off,
+      RAM3Off,
       --  RAM block 3 ON in OFF mode.
-      Ram3On)
+      RAM3On)
      with Size => 1;
    for RAMONB_OFFRAM3_Field use
-     (Ram3Off => 0,
-      Ram3On => 1);
+     (RAM3Off => 0,
+      RAM3On => 1);
 
    --  Ram on/off.
    type RAMONB_Register is record
       --  RAM block 2 behaviour in ON mode.
-      ONRAM2         : RAMONB_ONRAM2_Field := NRF_SVD.POWER.Ram2On;
+      ONRAM2         : RAMONB_ONRAM2_Field := NRF_SVD.POWER.RAM2On;
       --  RAM block 3 behaviour in ON mode.
-      ONRAM3         : RAMONB_ONRAM3_Field := NRF_SVD.POWER.Ram3On;
+      ONRAM3         : RAMONB_ONRAM3_Field := NRF_SVD.POWER.RAM3On;
       --  unspecified
       Reserved_2_15  : HAL.UInt14 := 16#0#;
       --  RAM block 2 behaviour in OFF mode.
-      OFFRAM2        : RAMONB_OFFRAM2_Field := NRF_SVD.POWER.Ram2Off;
+      OFFRAM2        : RAMONB_OFFRAM2_Field := NRF_SVD.POWER.RAM2Off;
       --  RAM block 3 behaviour in OFF mode.
-      OFFRAM3        : RAMONB_OFFRAM3_Field := NRF_SVD.POWER.Ram3Off;
+      OFFRAM3        : RAMONB_OFFRAM3_Field := NRF_SVD.POWER.RAM3Off;
       --  unspecified
       Reserved_18_31 : HAL.UInt14 := 16#0#;
    end record
@@ -601,31 +601,31 @@ package NRF_SVD.POWER is
    --  DCDC power-up force off.
    type DCDCFORCE_FORCEOFF_Field is
      (--  No force.
-      Noforce,
+      NoForce,
       --  Force.
       Force)
      with Size => 1;
    for DCDCFORCE_FORCEOFF_Field use
-     (Noforce => 0,
+     (NoForce => 0,
       Force => 1);
 
    --  DCDC power-up force on.
    type DCDCFORCE_FORCEON_Field is
      (--  No force.
-      Noforce,
+      NoForce,
       --  Force.
       Force)
      with Size => 1;
    for DCDCFORCE_FORCEON_Field use
-     (Noforce => 0,
+     (NoForce => 0,
       Force => 1);
 
    --  DCDC power-up force register.
    type DCDCFORCE_Register is record
       --  DCDC power-up force off.
-      FORCEOFF      : DCDCFORCE_FORCEOFF_Field := NRF_SVD.POWER.Noforce;
+      FORCEOFF      : DCDCFORCE_FORCEOFF_Field := NRF_SVD.POWER.NoForce;
       --  DCDC power-up force on.
-      FORCEON       : DCDCFORCE_FORCEON_Field := NRF_SVD.POWER.Noforce;
+      FORCEON       : DCDCFORCE_FORCEON_Field := NRF_SVD.POWER.NoForce;
       --  unspecified
       Reserved_2_31 : HAL.UInt30 := 16#0#;
    end record

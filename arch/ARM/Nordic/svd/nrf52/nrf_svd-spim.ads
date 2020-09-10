@@ -95,12 +95,12 @@ package NRF_SVD.SPIM is
    --  Write '1' to Enable interrupt for STOPPED event
    type INTENSET_STOPPED_Field_1 is
      (--  Reset value for the field
-      Intenset_Stopped_Field_Reset,
+      INTENSET_STOPPED_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_STOPPED_Field_1 use
-     (Intenset_Stopped_Field_Reset => 0,
+     (INTENSET_STOPPED_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for ENDRX event
@@ -117,12 +117,12 @@ package NRF_SVD.SPIM is
    --  Write '1' to Enable interrupt for ENDRX event
    type INTENSET_ENDRX_Field_1 is
      (--  Reset value for the field
-      Intenset_Endrx_Field_Reset,
+      INTENSET_ENDRX_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_ENDRX_Field_1 use
-     (Intenset_Endrx_Field_Reset => 0,
+     (INTENSET_ENDRX_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for END event
@@ -139,12 +139,12 @@ package NRF_SVD.SPIM is
    --  Write '1' to Enable interrupt for END event
    type INTENSET_END_Field_1 is
      (--  Reset value for the field
-      Intenset_End_Field_Reset,
+      INTENSET_END_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_END_Field_1 use
-     (Intenset_End_Field_Reset => 0,
+     (INTENSET_END_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for ENDTX event
@@ -161,12 +161,12 @@ package NRF_SVD.SPIM is
    --  Write '1' to Enable interrupt for ENDTX event
    type INTENSET_ENDTX_Field_1 is
      (--  Reset value for the field
-      Intenset_Endtx_Field_Reset,
+      INTENSET_ENDTX_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_ENDTX_Field_1 use
-     (Intenset_Endtx_Field_Reset => 0,
+     (INTENSET_ENDTX_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for STARTED event
@@ -183,12 +183,12 @@ package NRF_SVD.SPIM is
    --  Write '1' to Enable interrupt for STARTED event
    type INTENSET_STARTED_Field_1 is
      (--  Reset value for the field
-      Intenset_Started_Field_Reset,
+      INTENSET_STARTED_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_STARTED_Field_1 use
-     (Intenset_Started_Field_Reset => 0,
+     (INTENSET_STARTED_Field_Reset => 0,
       Set => 1);
 
    --  Enable interrupt
@@ -197,24 +197,24 @@ package NRF_SVD.SPIM is
       Reserved_0_0   : HAL.Bit := 16#0#;
       --  Write '1' to Enable interrupt for STOPPED event
       STOPPED        : INTENSET_STOPPED_Field_1 :=
-                        Intenset_Stopped_Field_Reset;
+                        INTENSET_STOPPED_Field_Reset;
       --  unspecified
       Reserved_2_3   : HAL.UInt2 := 16#0#;
       --  Write '1' to Enable interrupt for ENDRX event
-      ENDRX          : INTENSET_ENDRX_Field_1 := Intenset_Endrx_Field_Reset;
+      ENDRX          : INTENSET_ENDRX_Field_1 := INTENSET_ENDRX_Field_Reset;
       --  unspecified
       Reserved_5_5   : HAL.Bit := 16#0#;
       --  Write '1' to Enable interrupt for END event
-      END_k          : INTENSET_END_Field_1 := Intenset_End_Field_Reset;
+      END_k          : INTENSET_END_Field_1 := INTENSET_END_Field_Reset;
       --  unspecified
       Reserved_7_7   : HAL.Bit := 16#0#;
       --  Write '1' to Enable interrupt for ENDTX event
-      ENDTX          : INTENSET_ENDTX_Field_1 := Intenset_Endtx_Field_Reset;
+      ENDTX          : INTENSET_ENDTX_Field_1 := INTENSET_ENDTX_Field_Reset;
       --  unspecified
       Reserved_9_18  : HAL.UInt10 := 16#0#;
       --  Write '1' to Enable interrupt for STARTED event
       STARTED        : INTENSET_STARTED_Field_1 :=
-                        Intenset_Started_Field_Reset;
+                        INTENSET_STARTED_Field_Reset;
       --  unspecified
       Reserved_20_31 : HAL.UInt12 := 16#0#;
    end record
@@ -249,12 +249,12 @@ package NRF_SVD.SPIM is
    --  Write '1' to Disable interrupt for STOPPED event
    type INTENCLR_STOPPED_Field_1 is
      (--  Reset value for the field
-      Intenclr_Stopped_Field_Reset,
+      INTENCLR_STOPPED_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_STOPPED_Field_1 use
-     (Intenclr_Stopped_Field_Reset => 0,
+     (INTENCLR_STOPPED_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for ENDRX event
@@ -271,12 +271,12 @@ package NRF_SVD.SPIM is
    --  Write '1' to Disable interrupt for ENDRX event
    type INTENCLR_ENDRX_Field_1 is
      (--  Reset value for the field
-      Intenclr_Endrx_Field_Reset,
+      INTENCLR_ENDRX_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_ENDRX_Field_1 use
-     (Intenclr_Endrx_Field_Reset => 0,
+     (INTENCLR_ENDRX_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for END event
@@ -293,12 +293,12 @@ package NRF_SVD.SPIM is
    --  Write '1' to Disable interrupt for END event
    type INTENCLR_END_Field_1 is
      (--  Reset value for the field
-      Intenclr_End_Field_Reset,
+      INTENCLR_END_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_END_Field_1 use
-     (Intenclr_End_Field_Reset => 0,
+     (INTENCLR_END_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for ENDTX event
@@ -315,12 +315,12 @@ package NRF_SVD.SPIM is
    --  Write '1' to Disable interrupt for ENDTX event
    type INTENCLR_ENDTX_Field_1 is
      (--  Reset value for the field
-      Intenclr_Endtx_Field_Reset,
+      INTENCLR_ENDTX_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_ENDTX_Field_1 use
-     (Intenclr_Endtx_Field_Reset => 0,
+     (INTENCLR_ENDTX_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for STARTED event
@@ -337,12 +337,12 @@ package NRF_SVD.SPIM is
    --  Write '1' to Disable interrupt for STARTED event
    type INTENCLR_STARTED_Field_1 is
      (--  Reset value for the field
-      Intenclr_Started_Field_Reset,
+      INTENCLR_STARTED_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_STARTED_Field_1 use
-     (Intenclr_Started_Field_Reset => 0,
+     (INTENCLR_STARTED_Field_Reset => 0,
       Clear => 1);
 
    --  Disable interrupt
@@ -351,24 +351,24 @@ package NRF_SVD.SPIM is
       Reserved_0_0   : HAL.Bit := 16#0#;
       --  Write '1' to Disable interrupt for STOPPED event
       STOPPED        : INTENCLR_STOPPED_Field_1 :=
-                        Intenclr_Stopped_Field_Reset;
+                        INTENCLR_STOPPED_Field_Reset;
       --  unspecified
       Reserved_2_3   : HAL.UInt2 := 16#0#;
       --  Write '1' to Disable interrupt for ENDRX event
-      ENDRX          : INTENCLR_ENDRX_Field_1 := Intenclr_Endrx_Field_Reset;
+      ENDRX          : INTENCLR_ENDRX_Field_1 := INTENCLR_ENDRX_Field_Reset;
       --  unspecified
       Reserved_5_5   : HAL.Bit := 16#0#;
       --  Write '1' to Disable interrupt for END event
-      END_k          : INTENCLR_END_Field_1 := Intenclr_End_Field_Reset;
+      END_k          : INTENCLR_END_Field_1 := INTENCLR_END_Field_Reset;
       --  unspecified
       Reserved_7_7   : HAL.Bit := 16#0#;
       --  Write '1' to Disable interrupt for ENDTX event
-      ENDTX          : INTENCLR_ENDTX_Field_1 := Intenclr_Endtx_Field_Reset;
+      ENDTX          : INTENCLR_ENDTX_Field_1 := INTENCLR_ENDTX_Field_Reset;
       --  unspecified
       Reserved_9_18  : HAL.UInt10 := 16#0#;
       --  Write '1' to Disable interrupt for STARTED event
       STARTED        : INTENCLR_STARTED_Field_1 :=
-                        Intenclr_Started_Field_Reset;
+                        INTENCLR_STARTED_Field_Reset;
       --  unspecified
       Reserved_20_31 : HAL.UInt12 := 16#0#;
    end record
@@ -572,11 +572,11 @@ package NRF_SVD.SPIM is
      (--  Disable EasyDMA list
       Disabled,
       --  Use array list
-      Arraylist)
+      ArrayList)
      with Size => 3;
    for LIST_LIST_Field use
      (Disabled => 0,
-      Arraylist => 1);
+      ArrayList => 1);
 
    --  EasyDMA list type
    type LIST_RXD_Register is record
@@ -689,13 +689,13 @@ package NRF_SVD.SPIM is
    --  Bit order
    type CONFIG_ORDER_Field is
      (--  Most significant bit shifted out first
-      Msbfirst,
+      MsbFirst,
       --  Least significant bit shifted out first
-      Lsbfirst)
+      LsbFirst)
      with Size => 1;
    for CONFIG_ORDER_Field use
-     (Msbfirst => 0,
-      Lsbfirst => 1);
+     (MsbFirst => 0,
+      LsbFirst => 1);
 
    --  Serial clock (SCK) phase
    type CONFIG_CPHA_Field is
@@ -711,22 +711,22 @@ package NRF_SVD.SPIM is
    --  Serial clock (SCK) polarity
    type CONFIG_CPOL_Field is
      (--  Active high
-      Activehigh,
+      ActiveHigh,
       --  Active low
-      Activelow)
+      ActiveLow)
      with Size => 1;
    for CONFIG_CPOL_Field use
-     (Activehigh => 0,
-      Activelow => 1);
+     (ActiveHigh => 0,
+      ActiveLow => 1);
 
    --  Configuration register
    type CONFIG_Register is record
       --  Bit order
-      ORDER         : CONFIG_ORDER_Field := NRF_SVD.SPIM.Msbfirst;
+      ORDER         : CONFIG_ORDER_Field := NRF_SVD.SPIM.MsbFirst;
       --  Serial clock (SCK) phase
       CPHA          : CONFIG_CPHA_Field := NRF_SVD.SPIM.Leading;
       --  Serial clock (SCK) polarity
-      CPOL          : CONFIG_CPOL_Field := NRF_SVD.SPIM.Activehigh;
+      CPOL          : CONFIG_CPOL_Field := NRF_SVD.SPIM.ActiveHigh;
       --  unspecified
       Reserved_3_31 : HAL.UInt29 := 16#0#;
    end record

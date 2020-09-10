@@ -323,7 +323,7 @@ package body STM32.PWM is
    procedure Configure_PWM_GPIO
      (Output : GPIO_Point;
       PWM_AF : GPIO_Alternate_Function;
-      AF_Speed  : Pin_Output_Speeds)
+      AF_Speed : Pin_Output_Speeds)
    is
    begin
       Output.Configure_IO

@@ -5,6 +5,7 @@ pragma Ada_2012;
 pragma Style_Checks (Off);
 
 with HAL;
+with System;
 
 package Cortex_M_SVD.NVIC is
    pragma Preelaborate;
@@ -16,8 +17,7 @@ package Cortex_M_SVD.NVIC is
    --  Interrupt Priority Register
 
    --  Interrupt Priority Register
-   type NVIC_IPR_Registers is array (0 .. 7) of HAL.UInt32
-     with Volatile;
+   type NVIC_IPR_Registers is array (0 .. 7) of HAL.UInt32;
 
    -----------------
    -- Peripherals --

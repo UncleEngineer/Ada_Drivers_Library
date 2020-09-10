@@ -32,7 +32,7 @@ package STM32_SVD.SYSCFG is
       --  unspecified
       Reserved_12_31 : HAL.UInt20 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for MEMRM_Register use record
@@ -61,7 +61,7 @@ package STM32_SVD.SYSCFG is
       --  unspecified
       Reserved_24_31 : HAL.UInt8 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for PMC_Register use record
@@ -109,7 +109,7 @@ package STM32_SVD.SYSCFG is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for EXTICR1_Register use record
@@ -152,7 +152,7 @@ package STM32_SVD.SYSCFG is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for EXTICR2_Register use record
@@ -195,7 +195,7 @@ package STM32_SVD.SYSCFG is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for EXTICR3_Register use record
@@ -238,7 +238,7 @@ package STM32_SVD.SYSCFG is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for EXTICR4_Register use record
@@ -257,7 +257,7 @@ package STM32_SVD.SYSCFG is
       --  unspecified
       Reserved_9_31 : HAL.UInt23;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CMPCR_Register use record
@@ -302,6 +302,6 @@ package STM32_SVD.SYSCFG is
 
    --  System configuration controller
    SYSCFG_Periph : aliased SYSCFG_Peripheral
-     with Import, Address => System'To_Address (16#40013800#);
+     with Import, Address => SYSCFG_Base;
 
 end STM32_SVD.SYSCFG;

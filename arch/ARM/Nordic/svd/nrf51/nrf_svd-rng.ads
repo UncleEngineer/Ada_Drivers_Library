@@ -83,18 +83,18 @@ package NRF_SVD.RNG is
    --  Enable interrupt on VALRDY event.
    type INTENSET_VALRDY_Field_1 is
      (--  Reset value for the field
-      Intenset_Valrdy_Field_Reset,
+      INTENSET_VALRDY_Field_Reset,
       --  Enable interrupt on write.
       Set)
      with Size => 1;
    for INTENSET_VALRDY_Field_1 use
-     (Intenset_Valrdy_Field_Reset => 0,
+     (INTENSET_VALRDY_Field_Reset => 0,
       Set => 1);
 
    --  Interrupt enable set register
    type INTENSET_Register is record
       --  Enable interrupt on VALRDY event.
-      VALRDY        : INTENSET_VALRDY_Field_1 := Intenset_Valrdy_Field_Reset;
+      VALRDY        : INTENSET_VALRDY_Field_1 := INTENSET_VALRDY_Field_Reset;
       --  unspecified
       Reserved_1_31 : HAL.UInt31 := 16#0#;
    end record
@@ -120,18 +120,18 @@ package NRF_SVD.RNG is
    --  Disable interrupt on VALRDY event.
    type INTENCLR_VALRDY_Field_1 is
      (--  Reset value for the field
-      Intenclr_Valrdy_Field_Reset,
+      INTENCLR_VALRDY_Field_Reset,
       --  Disable interrupt on write.
       Clear)
      with Size => 1;
    for INTENCLR_VALRDY_Field_1 use
-     (Intenclr_Valrdy_Field_Reset => 0,
+     (INTENCLR_VALRDY_Field_Reset => 0,
       Clear => 1);
 
    --  Interrupt enable clear register
    type INTENCLR_Register is record
       --  Disable interrupt on VALRDY event.
-      VALRDY        : INTENCLR_VALRDY_Field_1 := Intenclr_Valrdy_Field_Reset;
+      VALRDY        : INTENCLR_VALRDY_Field_1 := INTENCLR_VALRDY_Field_Reset;
       --  unspecified
       Reserved_1_31 : HAL.UInt31 := 16#0#;
    end record

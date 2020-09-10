@@ -52,7 +52,7 @@ package STM32_SVD.SPDIF_RX is
       --  unspecified
       Reserved_19_31 : HAL.UInt13 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CR_Register use record
@@ -92,7 +92,7 @@ package STM32_SVD.SPDIF_RX is
       --  unspecified
       Reserved_7_31 : HAL.UInt25 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for IMR_Register use record
@@ -135,7 +135,7 @@ package STM32_SVD.SPDIF_RX is
       --  unspecified
       Reserved_31_31 : HAL.Bit;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for SR_Register use record
@@ -168,7 +168,7 @@ package STM32_SVD.SPDIF_RX is
       --  unspecified
       Reserved_6_31 : HAL.UInt26 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for IFCR_Register use record
@@ -200,7 +200,7 @@ package STM32_SVD.SPDIF_RX is
       --  unspecified
       Reserved_30_31 : HAL.UInt2;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DR_Register use record
@@ -227,7 +227,7 @@ package STM32_SVD.SPDIF_RX is
       --  unspecified
       Reserved_25_31 : HAL.UInt7;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CSR_Register use record
@@ -251,7 +251,7 @@ package STM32_SVD.SPDIF_RX is
       --  unspecified
       Reserved_29_31 : HAL.UInt3;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DIR_Register use record
@@ -296,6 +296,6 @@ package STM32_SVD.SPDIF_RX is
 
    --  Receiver Interface
    SPDIFRX_Periph : aliased SPDIFRX_Peripheral
-     with Import, Address => System'To_Address (16#40004000#);
+     with Import, Address => SPDIFRX_Base;
 
 end STM32_SVD.SPDIF_RX;

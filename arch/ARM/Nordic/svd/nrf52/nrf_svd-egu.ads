@@ -130,12 +130,12 @@ package NRF_SVD.EGU is
    --  Write '1' to Enable interrupt for TRIGGERED[0] event
    type INTENSET_TRIGGERED0_Field_1 is
      (--  Reset value for the field
-      Intenset_Triggered0_Field_Reset,
+      INTENSET_TRIGGERED0_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_TRIGGERED0_Field_1 use
-     (Intenset_Triggered0_Field_Reset => 0,
+     (INTENSET_TRIGGERED0_Field_Reset => 0,
       Set => 1);
 
    --  INTENSET_TRIGGERED array
@@ -193,12 +193,12 @@ package NRF_SVD.EGU is
    --  Write '1' to Disable interrupt for TRIGGERED[0] event
    type INTENCLR_TRIGGERED0_Field_1 is
      (--  Reset value for the field
-      Intenclr_Triggered0_Field_Reset,
+      INTENCLR_TRIGGERED0_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_TRIGGERED0_Field_1 use
-     (Intenclr_Triggered0_Field_Reset => 0,
+     (INTENCLR_TRIGGERED0_Field_Reset => 0,
       Clear => 1);
 
    --  INTENCLR_TRIGGERED array

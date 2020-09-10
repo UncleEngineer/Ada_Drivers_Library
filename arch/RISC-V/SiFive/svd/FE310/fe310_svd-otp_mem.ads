@@ -22,7 +22,7 @@ package FE310_SVD.OTP_Mem is
       --  unspecified
       Reserved_5_31 : HAL.UInt27 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for LFROSC_TRIM_Register use record
@@ -38,7 +38,7 @@ package FE310_SVD.OTP_Mem is
       --  unspecified
       Reserved_5_31 : HAL.UInt27 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for HFROSC_TRIM_Register use record
@@ -49,8 +49,7 @@ package FE310_SVD.OTP_Mem is
    --  Code to jump to SPI-FLASH.
 
    --  Code to jump to SPI-FLASH.
-   type LAST_FENCE_Registers is array (0 .. 2) of HAL.UInt32
-     with Volatile;
+   type LAST_FENCE_Registers is array (0 .. 2) of HAL.UInt32;
 
    -----------------
    -- Peripherals --
@@ -84,6 +83,6 @@ package FE310_SVD.OTP_Mem is
 
    --  One-Time Programmable Memory.
    OTP_Mem_Periph : aliased OTP_Mem_Peripheral
-     with Import, Address => System'To_Address (16#20000#);
+     with Import, Address => OTP_Mem_Base;
 
 end FE310_SVD.OTP_Mem;

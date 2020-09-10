@@ -136,16 +136,16 @@ package NRF_SVD.UICR is
      (--  Operation as GPIO pins. Same protection as normal GPIO pins
       Disabled,
       --  Operation as NFC antenna pins. Configures the protection for NFC operation
-      Nfc)
+      NFC)
      with Size => 1;
    for NFCPINS_PROTECT_Field use
      (Disabled => 0,
-      Nfc => 1);
+      NFC => 1);
 
    --  Setting of pins dedicated to NFC functionality: NFC antenna or GPIO
    type NFCPINS_Register is record
       --  Setting of pins dedicated to NFC functionality
-      PROTECT       : NFCPINS_PROTECT_Field := NRF_SVD.UICR.Nfc;
+      PROTECT       : NFCPINS_PROTECT_Field := NRF_SVD.UICR.NFC;
       --  unspecified
       Reserved_1_31 : HAL.UInt31 := 16#7FFFFFFF#;
    end record

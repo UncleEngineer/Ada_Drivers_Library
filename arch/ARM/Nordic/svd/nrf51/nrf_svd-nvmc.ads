@@ -101,19 +101,19 @@ package NRF_SVD.NVMC is
    --  Starts the erasing of all user NVM (code region 0/1 and UICR registers).
    type ERASEALL_ERASEALL_Field is
      (--  No operation.
-      Nooperation,
+      NoOperation,
       --  Start chip erase.
       Erase)
      with Size => 1;
    for ERASEALL_ERASEALL_Field use
-     (Nooperation => 0,
+     (NoOperation => 0,
       Erase => 1);
 
    --  Register for erasing all non-volatile user memory.
    type ERASEALL_Register is record
       --  Starts the erasing of all user NVM (code region 0/1 and UICR
       --  registers).
-      ERASEALL      : ERASEALL_ERASEALL_Field := NRF_SVD.NVMC.Nooperation;
+      ERASEALL      : ERASEALL_ERASEALL_Field := NRF_SVD.NVMC.NoOperation;
       --  unspecified
       Reserved_1_31 : HAL.UInt31 := 16#0#;
    end record
@@ -128,18 +128,18 @@ package NRF_SVD.NVMC is
    --  It can only be used when all contents of code region 1 are erased.
    type ERASEUICR_ERASEUICR_Field is
      (--  No operation.
-      Nooperation,
+      NoOperation,
       --  Start UICR erase.
       Erase)
      with Size => 1;
    for ERASEUICR_ERASEUICR_Field use
-     (Nooperation => 0,
+     (NoOperation => 0,
       Erase => 1);
 
    --  Register for start erasing User Information Congfiguration Registers.
    type ERASEUICR_Register is record
       --  It can only be used when all contents of code region 1 are erased.
-      ERASEUICR     : ERASEUICR_ERASEUICR_Field := NRF_SVD.NVMC.Nooperation;
+      ERASEUICR     : ERASEUICR_ERASEUICR_Field := NRF_SVD.NVMC.NoOperation;
       --  unspecified
       Reserved_1_31 : HAL.UInt31 := 16#0#;
    end record
@@ -156,12 +156,12 @@ package NRF_SVD.NVMC is
    -----------------
 
    type NVMC_Disc is
-     (Age,
-      Cr1);
+     (AGE,
+      CR1);
 
    --  Non Volatile Memory Controller.
    type NVMC_Peripheral
-     (Discriminent : NVMC_Disc := Age)
+     (Discriminent : NVMC_Disc := AGE)
    is record
       --  Ready flag.
       READY     : aliased READY_Register;
@@ -174,10 +174,10 @@ package NRF_SVD.NVMC is
       --  Register for start erasing User Information Congfiguration Registers.
       ERASEUICR : aliased ERASEUICR_Register;
       case Discriminent is
-         when Age =>
+         when AGE =>
             --  Register for erasing a non-protected non-volatile memory page.
             ERASEPAGE : aliased HAL.UInt32;
-         when Cr1 =>
+         when CR1 =>
             --  Register for erasing a non-protected non-volatile memory page.
             ERASEPCR1 : aliased HAL.UInt32;
       end case;

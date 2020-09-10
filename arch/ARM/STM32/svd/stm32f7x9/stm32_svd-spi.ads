@@ -49,7 +49,7 @@ package STM32_SVD.SPI is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CR1_Register use record
@@ -72,44 +72,42 @@ package STM32_SVD.SPI is
 
    --  Data size
    type CR2_DS_Field is
-     (
-      Size_4Bit,
-      Size_5Bit,
-      Size_6Bit,
-      Size_7Bit,
-      Size_8Bit,
-      Size_9Bit,
-      Size_10Bit,
-      Size_11Bit,
-      Size_12Bit,
-      Size_13Bit,
-      Size_14Bit,
-      Size_15Bit,
-      Size_16Bit)
+     (SIZE_4BIT,
+      SIZE_5BIT,
+      SIZE_6BIT,
+      SIZE_7BIT,
+      SIZE_8BIT,
+      SIZE_9BIT,
+      SIZE_10BIT,
+      SIZE_11BIT,
+      SIZE_12BIT,
+      SIZE_13BIT,
+      SIZE_14BIT,
+      SIZE_15BIT,
+      SIZE_16BIT)
      with Size => 4;
    for CR2_DS_Field use
-     (Size_4Bit => 3,
-      Size_5Bit => 4,
-      Size_6Bit => 5,
-      Size_7Bit => 6,
-      Size_8Bit => 7,
-      Size_9Bit => 8,
-      Size_10Bit => 9,
-      Size_11Bit => 10,
-      Size_12Bit => 11,
-      Size_13Bit => 12,
-      Size_14Bit => 13,
-      Size_15Bit => 14,
-      Size_16Bit => 15);
+     (SIZE_4BIT => 3,
+      SIZE_5BIT => 4,
+      SIZE_6BIT => 5,
+      SIZE_7BIT => 6,
+      SIZE_8BIT => 7,
+      SIZE_9BIT => 8,
+      SIZE_10BIT => 9,
+      SIZE_11BIT => 10,
+      SIZE_12BIT => 11,
+      SIZE_13BIT => 12,
+      SIZE_14BIT => 13,
+      SIZE_15BIT => 14,
+      SIZE_16BIT => 15);
 
    --  FIFO reception threshold
    type CR2_FRXTH_Field is
-     (
-      --  RXNE event is generated if the FIFO level is greater than or equal to
-      --  1/2 (16-bit).
+     (--  RXNE event is generated if the FIFO level is greater than or equal to 1/2
+--  (16-bit).
       Half,
-      --  RXNE event is generated if the FIFO level is greater than or equal to
-      --  1/4 (8-bit).
+      --  RXNE event is generated if the FIFO level is greater than or equal to 1/4
+--  (8-bit).
       Quarter)
      with Size => 1;
    for CR2_FRXTH_Field use
@@ -118,8 +116,7 @@ package STM32_SVD.SPI is
 
    --  Last DMA transfer for reception
    type CR2_LDMA_RX_Field is
-     (
-      --  Number of data to transfer is even.
+     (--  Number of data to transfer is even.
       Even,
       --  Number of data is odd.
       Odd)
@@ -130,8 +127,7 @@ package STM32_SVD.SPI is
 
    --  Last DMA transfer for transmission
    type CR2_LDMA_TX_Field is
-     (
-      --  Number of data to transfer is even.
+     (--  Number of data to transfer is even.
       Even,
       --  Number of data is odd.
       Odd)
@@ -159,7 +155,7 @@ package STM32_SVD.SPI is
       --  Tx buffer empty interrupt enable
       TXEIE          : Boolean := False;
       --  Data size
-      DS             : CR2_DS_Field := STM32_SVD.SPI.Size_8Bit;
+      DS             : CR2_DS_Field := STM32_SVD.SPI.SIZE_8BIT;
       --  FIFO reception threshold
       FRXTH          : CR2_FRXTH_Field := STM32_SVD.SPI.Half;
       --  Last DMA transfer for reception
@@ -169,7 +165,7 @@ package STM32_SVD.SPI is
       --  unspecified
       Reserved_15_31 : HAL.UInt17 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CR2_Register use record
@@ -190,39 +186,37 @@ package STM32_SVD.SPI is
 
    --  FIFO reception level
    type SR_FRLVL_Field is
-     (
-      --  FIFO is empty.
-      Fifo_Empty,
+     (--  FIFO is empty.
+      FIFO_EMPTY,
       --  1/4 FIFO.
-      Fifo_Quarter,
+      FIFO_QUARTER,
       --  1/2 FIFO.
-      Fifo_Half,
+      FIFO_HALF,
       --  FIFO full.
-      Fifo_Full)
+      FIFO_FULL)
      with Size => 2;
    for SR_FRLVL_Field use
-     (Fifo_Empty => 0,
-      Fifo_Quarter => 1,
-      Fifo_Half => 2,
-      Fifo_Full => 3);
+     (FIFO_EMPTY => 0,
+      FIFO_QUARTER => 1,
+      FIFO_HALF => 2,
+      FIFO_FULL => 3);
 
    --  FIFO transmission level
    type SR_FTLVL_Field is
-     (
-      --  FIFO is empty.
-      Fifo_Empty,
+     (--  FIFO is empty.
+      FIFO_EMPTY,
       --  1/4 FIFO.
-      Fifo_Quarter,
+      FIFO_QUARTER,
       --  1/2 FIFO.
-      Fifo_Half,
+      FIFO_HALF,
       --  FIFO full.
-      Fifo_Full)
+      FIFO_FULL)
      with Size => 2;
    for SR_FTLVL_Field use
-     (Fifo_Empty => 0,
-      Fifo_Quarter => 1,
-      Fifo_Half => 2,
-      Fifo_Full => 3);
+     (FIFO_EMPTY => 0,
+      FIFO_QUARTER => 1,
+      FIFO_HALF => 2,
+      FIFO_FULL => 3);
 
    --  status register
    type SR_Register is record
@@ -245,13 +239,13 @@ package STM32_SVD.SPI is
       --  Read-only. TI frame format error
       TIFRFE         : Boolean := False;
       --  Read-only. FIFO reception level
-      FRLVL          : SR_FRLVL_Field := STM32_SVD.SPI.Fifo_Empty;
+      FRLVL          : SR_FRLVL_Field := STM32_SVD.SPI.FIFO_EMPTY;
       --  Read-only. FIFO transmission level
-      FTLVL          : SR_FTLVL_Field := STM32_SVD.SPI.Fifo_Empty;
+      FTLVL          : SR_FTLVL_Field := STM32_SVD.SPI.FIFO_EMPTY;
       --  unspecified
       Reserved_13_31 : HAL.UInt19 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for SR_Register use record
@@ -278,7 +272,7 @@ package STM32_SVD.SPI is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DR_Register use record
@@ -295,7 +289,7 @@ package STM32_SVD.SPI is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CRCPR_Register use record
@@ -312,7 +306,7 @@ package STM32_SVD.SPI is
       --  unspecified
       Reserved_16_31 : HAL.UInt16;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for RXCRCR_Register use record
@@ -329,7 +323,7 @@ package STM32_SVD.SPI is
       --  unspecified
       Reserved_16_31 : HAL.UInt16;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for TXCRCR_Register use record
@@ -366,7 +360,7 @@ package STM32_SVD.SPI is
       --  unspecified
       Reserved_13_31 : HAL.UInt19 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for I2SCFGR_Register use record
@@ -396,7 +390,7 @@ package STM32_SVD.SPI is
       --  unspecified
       Reserved_10_31 : HAL.UInt22 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for I2SPR_Register use record
@@ -447,26 +441,26 @@ package STM32_SVD.SPI is
 
    --  Serial peripheral interface
    SPI1_Periph : aliased SPI_Peripheral
-     with Import, Address => System'To_Address (16#40013000#);
+     with Import, Address => SPI1_Base;
 
    --  Serial peripheral interface
    SPI2_Periph : aliased SPI_Peripheral
-     with Import, Address => System'To_Address (16#40003800#);
+     with Import, Address => SPI2_Base;
 
    --  Serial peripheral interface
    SPI3_Periph : aliased SPI_Peripheral
-     with Import, Address => System'To_Address (16#40003C00#);
+     with Import, Address => SPI3_Base;
 
    --  Serial peripheral interface
    SPI4_Periph : aliased SPI_Peripheral
-     with Import, Address => System'To_Address (16#40013400#);
+     with Import, Address => SPI4_Base;
 
    --  Serial peripheral interface
    SPI5_Periph : aliased SPI_Peripheral
-     with Import, Address => System'To_Address (16#40015000#);
+     with Import, Address => SPI5_Base;
 
    --  Serial peripheral interface
    SPI6_Periph : aliased SPI_Peripheral
-     with Import, Address => System'To_Address (16#40015400#);
+     with Import, Address => SPI6_Base;
 
 end STM32_SVD.SPI;

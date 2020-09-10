@@ -43,6 +43,6 @@ package FE310_SVD.CLINT is
 
    --  Core Local Interruptor.
    CLINT_Periph : aliased CLINT_Peripheral
-     with Import, Address => System'To_Address (16#2000000#);
+     with Import, Address => CLINT_Base;
 
 end FE310_SVD.CLINT;

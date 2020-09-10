@@ -189,12 +189,12 @@ package NRF_SVD.RADIO is
    --  Enable interrupt on READY event.
    type INTENSET_READY_Field_1 is
      (--  Reset value for the field
-      Intenset_Ready_Field_Reset,
+      INTENSET_READY_Field_Reset,
       --  Enable interrupt on write.
       Set)
      with Size => 1;
    for INTENSET_READY_Field_1 use
-     (Intenset_Ready_Field_Reset => 0,
+     (INTENSET_READY_Field_Reset => 0,
       Set => 1);
 
    --  Enable interrupt on ADDRESS event.
@@ -211,12 +211,12 @@ package NRF_SVD.RADIO is
    --  Enable interrupt on ADDRESS event.
    type INTENSET_ADDRESS_Field_1 is
      (--  Reset value for the field
-      Intenset_Address_Field_Reset,
+      INTENSET_ADDRESS_Field_Reset,
       --  Enable interrupt on write.
       Set)
      with Size => 1;
    for INTENSET_ADDRESS_Field_1 use
-     (Intenset_Address_Field_Reset => 0,
+     (INTENSET_ADDRESS_Field_Reset => 0,
       Set => 1);
 
    --  Enable interrupt on PAYLOAD event.
@@ -233,12 +233,12 @@ package NRF_SVD.RADIO is
    --  Enable interrupt on PAYLOAD event.
    type INTENSET_PAYLOAD_Field_1 is
      (--  Reset value for the field
-      Intenset_Payload_Field_Reset,
+      INTENSET_PAYLOAD_Field_Reset,
       --  Enable interrupt on write.
       Set)
      with Size => 1;
    for INTENSET_PAYLOAD_Field_1 use
-     (Intenset_Payload_Field_Reset => 0,
+     (INTENSET_PAYLOAD_Field_Reset => 0,
       Set => 1);
 
    --  Enable interrupt on END event.
@@ -255,12 +255,12 @@ package NRF_SVD.RADIO is
    --  Enable interrupt on END event.
    type INTENSET_END_Field_1 is
      (--  Reset value for the field
-      Intenset_End_Field_Reset,
+      INTENSET_END_Field_Reset,
       --  Enable interrupt on write.
       Set)
      with Size => 1;
    for INTENSET_END_Field_1 use
-     (Intenset_End_Field_Reset => 0,
+     (INTENSET_END_Field_Reset => 0,
       Set => 1);
 
    --  Enable interrupt on DISABLED event.
@@ -277,12 +277,12 @@ package NRF_SVD.RADIO is
    --  Enable interrupt on DISABLED event.
    type INTENSET_DISABLED_Field_1 is
      (--  Reset value for the field
-      Intenset_Disabled_Field_Reset,
+      INTENSET_DISABLED_Field_Reset,
       --  Enable interrupt on write.
       Set)
      with Size => 1;
    for INTENSET_DISABLED_Field_1 use
-     (Intenset_Disabled_Field_Reset => 0,
+     (INTENSET_DISABLED_Field_Reset => 0,
       Set => 1);
 
    --  Enable interrupt on DEVMATCH event.
@@ -299,12 +299,12 @@ package NRF_SVD.RADIO is
    --  Enable interrupt on DEVMATCH event.
    type INTENSET_DEVMATCH_Field_1 is
      (--  Reset value for the field
-      Intenset_Devmatch_Field_Reset,
+      INTENSET_DEVMATCH_Field_Reset,
       --  Enable interrupt on write.
       Set)
      with Size => 1;
    for INTENSET_DEVMATCH_Field_1 use
-     (Intenset_Devmatch_Field_Reset => 0,
+     (INTENSET_DEVMATCH_Field_Reset => 0,
       Set => 1);
 
    --  Enable interrupt on DEVMISS event.
@@ -321,12 +321,12 @@ package NRF_SVD.RADIO is
    --  Enable interrupt on DEVMISS event.
    type INTENSET_DEVMISS_Field_1 is
      (--  Reset value for the field
-      Intenset_Devmiss_Field_Reset,
+      INTENSET_DEVMISS_Field_Reset,
       --  Enable interrupt on write.
       Set)
      with Size => 1;
    for INTENSET_DEVMISS_Field_1 use
-     (Intenset_Devmiss_Field_Reset => 0,
+     (INTENSET_DEVMISS_Field_Reset => 0,
       Set => 1);
 
    --  Enable interrupt on RSSIEND event.
@@ -343,12 +343,12 @@ package NRF_SVD.RADIO is
    --  Enable interrupt on RSSIEND event.
    type INTENSET_RSSIEND_Field_1 is
      (--  Reset value for the field
-      Intenset_Rssiend_Field_Reset,
+      INTENSET_RSSIEND_Field_Reset,
       --  Enable interrupt on write.
       Set)
      with Size => 1;
    for INTENSET_RSSIEND_Field_1 use
-     (Intenset_Rssiend_Field_Reset => 0,
+     (INTENSET_RSSIEND_Field_Reset => 0,
       Set => 1);
 
    --  Enable interrupt on BCMATCH event.
@@ -365,43 +365,43 @@ package NRF_SVD.RADIO is
    --  Enable interrupt on BCMATCH event.
    type INTENSET_BCMATCH_Field_1 is
      (--  Reset value for the field
-      Intenset_Bcmatch_Field_Reset,
+      INTENSET_BCMATCH_Field_Reset,
       --  Enable interrupt on write.
       Set)
      with Size => 1;
    for INTENSET_BCMATCH_Field_1 use
-     (Intenset_Bcmatch_Field_Reset => 0,
+     (INTENSET_BCMATCH_Field_Reset => 0,
       Set => 1);
 
    --  Interrupt enable set register.
    type INTENSET_Register is record
       --  Enable interrupt on READY event.
-      READY          : INTENSET_READY_Field_1 := Intenset_Ready_Field_Reset;
+      READY          : INTENSET_READY_Field_1 := INTENSET_READY_Field_Reset;
       --  Enable interrupt on ADDRESS event.
       ADDRESS        : INTENSET_ADDRESS_Field_1 :=
-                        Intenset_Address_Field_Reset;
+                        INTENSET_ADDRESS_Field_Reset;
       --  Enable interrupt on PAYLOAD event.
       PAYLOAD        : INTENSET_PAYLOAD_Field_1 :=
-                        Intenset_Payload_Field_Reset;
+                        INTENSET_PAYLOAD_Field_Reset;
       --  Enable interrupt on END event.
-      END_k          : INTENSET_END_Field_1 := Intenset_End_Field_Reset;
+      END_k          : INTENSET_END_Field_1 := INTENSET_END_Field_Reset;
       --  Enable interrupt on DISABLED event.
       DISABLED       : INTENSET_DISABLED_Field_1 :=
-                        Intenset_Disabled_Field_Reset;
+                        INTENSET_DISABLED_Field_Reset;
       --  Enable interrupt on DEVMATCH event.
       DEVMATCH       : INTENSET_DEVMATCH_Field_1 :=
-                        Intenset_Devmatch_Field_Reset;
+                        INTENSET_DEVMATCH_Field_Reset;
       --  Enable interrupt on DEVMISS event.
       DEVMISS        : INTENSET_DEVMISS_Field_1 :=
-                        Intenset_Devmiss_Field_Reset;
+                        INTENSET_DEVMISS_Field_Reset;
       --  Enable interrupt on RSSIEND event.
       RSSIEND        : INTENSET_RSSIEND_Field_1 :=
-                        Intenset_Rssiend_Field_Reset;
+                        INTENSET_RSSIEND_Field_Reset;
       --  unspecified
       Reserved_8_9   : HAL.UInt2 := 16#0#;
       --  Enable interrupt on BCMATCH event.
       BCMATCH        : INTENSET_BCMATCH_Field_1 :=
-                        Intenset_Bcmatch_Field_Reset;
+                        INTENSET_BCMATCH_Field_Reset;
       --  unspecified
       Reserved_11_31 : HAL.UInt21 := 16#0#;
    end record
@@ -436,12 +436,12 @@ package NRF_SVD.RADIO is
    --  Disable interrupt on READY event.
    type INTENCLR_READY_Field_1 is
      (--  Reset value for the field
-      Intenclr_Ready_Field_Reset,
+      INTENCLR_READY_Field_Reset,
       --  Disable interrupt on write.
       Clear)
      with Size => 1;
    for INTENCLR_READY_Field_1 use
-     (Intenclr_Ready_Field_Reset => 0,
+     (INTENCLR_READY_Field_Reset => 0,
       Clear => 1);
 
    --  Disable interrupt on ADDRESS event.
@@ -458,12 +458,12 @@ package NRF_SVD.RADIO is
    --  Disable interrupt on ADDRESS event.
    type INTENCLR_ADDRESS_Field_1 is
      (--  Reset value for the field
-      Intenclr_Address_Field_Reset,
+      INTENCLR_ADDRESS_Field_Reset,
       --  Disable interrupt on write.
       Clear)
      with Size => 1;
    for INTENCLR_ADDRESS_Field_1 use
-     (Intenclr_Address_Field_Reset => 0,
+     (INTENCLR_ADDRESS_Field_Reset => 0,
       Clear => 1);
 
    --  Disable interrupt on PAYLOAD event.
@@ -480,12 +480,12 @@ package NRF_SVD.RADIO is
    --  Disable interrupt on PAYLOAD event.
    type INTENCLR_PAYLOAD_Field_1 is
      (--  Reset value for the field
-      Intenclr_Payload_Field_Reset,
+      INTENCLR_PAYLOAD_Field_Reset,
       --  Disable interrupt on write.
       Clear)
      with Size => 1;
    for INTENCLR_PAYLOAD_Field_1 use
-     (Intenclr_Payload_Field_Reset => 0,
+     (INTENCLR_PAYLOAD_Field_Reset => 0,
       Clear => 1);
 
    --  Disable interrupt on END event.
@@ -502,12 +502,12 @@ package NRF_SVD.RADIO is
    --  Disable interrupt on END event.
    type INTENCLR_END_Field_1 is
      (--  Reset value for the field
-      Intenclr_End_Field_Reset,
+      INTENCLR_END_Field_Reset,
       --  Disable interrupt on write.
       Clear)
      with Size => 1;
    for INTENCLR_END_Field_1 use
-     (Intenclr_End_Field_Reset => 0,
+     (INTENCLR_END_Field_Reset => 0,
       Clear => 1);
 
    --  Disable interrupt on DISABLED event.
@@ -524,12 +524,12 @@ package NRF_SVD.RADIO is
    --  Disable interrupt on DISABLED event.
    type INTENCLR_DISABLED_Field_1 is
      (--  Reset value for the field
-      Intenclr_Disabled_Field_Reset,
+      INTENCLR_DISABLED_Field_Reset,
       --  Disable interrupt on write.
       Clear)
      with Size => 1;
    for INTENCLR_DISABLED_Field_1 use
-     (Intenclr_Disabled_Field_Reset => 0,
+     (INTENCLR_DISABLED_Field_Reset => 0,
       Clear => 1);
 
    --  Disable interrupt on DEVMATCH event.
@@ -546,12 +546,12 @@ package NRF_SVD.RADIO is
    --  Disable interrupt on DEVMATCH event.
    type INTENCLR_DEVMATCH_Field_1 is
      (--  Reset value for the field
-      Intenclr_Devmatch_Field_Reset,
+      INTENCLR_DEVMATCH_Field_Reset,
       --  Disable interrupt on write.
       Clear)
      with Size => 1;
    for INTENCLR_DEVMATCH_Field_1 use
-     (Intenclr_Devmatch_Field_Reset => 0,
+     (INTENCLR_DEVMATCH_Field_Reset => 0,
       Clear => 1);
 
    --  Disable interrupt on DEVMISS event.
@@ -568,12 +568,12 @@ package NRF_SVD.RADIO is
    --  Disable interrupt on DEVMISS event.
    type INTENCLR_DEVMISS_Field_1 is
      (--  Reset value for the field
-      Intenclr_Devmiss_Field_Reset,
+      INTENCLR_DEVMISS_Field_Reset,
       --  Disable interrupt on write.
       Clear)
      with Size => 1;
    for INTENCLR_DEVMISS_Field_1 use
-     (Intenclr_Devmiss_Field_Reset => 0,
+     (INTENCLR_DEVMISS_Field_Reset => 0,
       Clear => 1);
 
    --  Disable interrupt on RSSIEND event.
@@ -590,12 +590,12 @@ package NRF_SVD.RADIO is
    --  Disable interrupt on RSSIEND event.
    type INTENCLR_RSSIEND_Field_1 is
      (--  Reset value for the field
-      Intenclr_Rssiend_Field_Reset,
+      INTENCLR_RSSIEND_Field_Reset,
       --  Disable interrupt on write.
       Clear)
      with Size => 1;
    for INTENCLR_RSSIEND_Field_1 use
-     (Intenclr_Rssiend_Field_Reset => 0,
+     (INTENCLR_RSSIEND_Field_Reset => 0,
       Clear => 1);
 
    --  Disable interrupt on BCMATCH event.
@@ -612,43 +612,43 @@ package NRF_SVD.RADIO is
    --  Disable interrupt on BCMATCH event.
    type INTENCLR_BCMATCH_Field_1 is
      (--  Reset value for the field
-      Intenclr_Bcmatch_Field_Reset,
+      INTENCLR_BCMATCH_Field_Reset,
       --  Disable interrupt on write.
       Clear)
      with Size => 1;
    for INTENCLR_BCMATCH_Field_1 use
-     (Intenclr_Bcmatch_Field_Reset => 0,
+     (INTENCLR_BCMATCH_Field_Reset => 0,
       Clear => 1);
 
    --  Interrupt enable clear register.
    type INTENCLR_Register is record
       --  Disable interrupt on READY event.
-      READY          : INTENCLR_READY_Field_1 := Intenclr_Ready_Field_Reset;
+      READY          : INTENCLR_READY_Field_1 := INTENCLR_READY_Field_Reset;
       --  Disable interrupt on ADDRESS event.
       ADDRESS        : INTENCLR_ADDRESS_Field_1 :=
-                        Intenclr_Address_Field_Reset;
+                        INTENCLR_ADDRESS_Field_Reset;
       --  Disable interrupt on PAYLOAD event.
       PAYLOAD        : INTENCLR_PAYLOAD_Field_1 :=
-                        Intenclr_Payload_Field_Reset;
+                        INTENCLR_PAYLOAD_Field_Reset;
       --  Disable interrupt on END event.
-      END_k          : INTENCLR_END_Field_1 := Intenclr_End_Field_Reset;
+      END_k          : INTENCLR_END_Field_1 := INTENCLR_END_Field_Reset;
       --  Disable interrupt on DISABLED event.
       DISABLED       : INTENCLR_DISABLED_Field_1 :=
-                        Intenclr_Disabled_Field_Reset;
+                        INTENCLR_DISABLED_Field_Reset;
       --  Disable interrupt on DEVMATCH event.
       DEVMATCH       : INTENCLR_DEVMATCH_Field_1 :=
-                        Intenclr_Devmatch_Field_Reset;
+                        INTENCLR_DEVMATCH_Field_Reset;
       --  Disable interrupt on DEVMISS event.
       DEVMISS        : INTENCLR_DEVMISS_Field_1 :=
-                        Intenclr_Devmiss_Field_Reset;
+                        INTENCLR_DEVMISS_Field_Reset;
       --  Disable interrupt on RSSIEND event.
       RSSIEND        : INTENCLR_RSSIEND_Field_1 :=
-                        Intenclr_Rssiend_Field_Reset;
+                        INTENCLR_RSSIEND_Field_Reset;
       --  unspecified
       Reserved_8_9   : HAL.UInt2 := 16#0#;
       --  Disable interrupt on BCMATCH event.
       BCMATCH        : INTENCLR_BCMATCH_Field_1 :=
-                        Intenclr_Bcmatch_Field_Reset;
+                        INTENCLR_BCMATCH_Field_Reset;
       --  unspecified
       Reserved_11_31 : HAL.UInt21 := 16#0#;
    end record
@@ -672,13 +672,13 @@ package NRF_SVD.RADIO is
    --  CRC status of received packet.
    type CRCSTATUS_CRCSTATUS_Field is
      (--  Packet received with CRC error.
-      Crcerror,
+      CRCError,
       --  Packet received with CRC ok.
-      Crcok)
+      CRCOk)
      with Size => 1;
    for CRCSTATUS_CRCSTATUS_Field use
-     (Crcerror => 0,
-      Crcok => 1);
+     (CRCError => 0,
+      CRCOk => 1);
 
    --  CRC status of received packet.
    type CRCSTATUS_Register is record
@@ -768,36 +768,36 @@ package NRF_SVD.RADIO is
    --  Radio output power. Decision point: TXEN task.
    type TXPOWER_TXPOWER_Field is
      (--  0dBm.
-      Val_0DBm,
+      Val_0dBm,
       --  +4dBm.
-      Pos4DBm,
+      Pos4dBm,
       --  -30dBm.
-      Neg30DBm,
+      Neg30dBm,
       --  -20dBm.
-      Neg20DBm,
+      Neg20dBm,
       --  -16dBm.
-      Neg16DBm,
+      Neg16dBm,
       --  -12dBm.
-      Neg12DBm,
+      Neg12dBm,
       --  -8dBm.
-      Neg8DBm,
+      Neg8dBm,
       --  -4dBm.
-      Neg4DBm)
+      Neg4dBm)
      with Size => 8;
    for TXPOWER_TXPOWER_Field use
-     (Val_0DBm => 0,
-      Pos4DBm => 4,
-      Neg30DBm => 216,
-      Neg20DBm => 236,
-      Neg16DBm => 240,
-      Neg12DBm => 244,
-      Neg8DBm => 248,
-      Neg4DBm => 252);
+     (Val_0dBm => 0,
+      Pos4dBm => 4,
+      Neg30dBm => 216,
+      Neg20dBm => 236,
+      Neg16dBm => 240,
+      Neg12dBm => 244,
+      Neg8dBm => 248,
+      Neg4dBm => 252);
 
    --  Output power.
    type TXPOWER_Register is record
       --  Radio output power. Decision point: TXEN task.
-      TXPOWER       : TXPOWER_TXPOWER_Field := NRF_SVD.RADIO.Val_0DBm;
+      TXPOWER       : TXPOWER_TXPOWER_Field := NRF_SVD.RADIO.Val_0dBm;
       --  unspecified
       Reserved_8_31 : HAL.UInt24 := 16#0#;
    end record
@@ -1221,32 +1221,32 @@ package NRF_SVD.RADIO is
      (--  Radio is in the Disabled state.
       Disabled,
       --  Radio is in the Rx Ramp Up state.
-      Rxru,
+      RxRu,
       --  Radio is in the Rx Idle state.
-      Rxidle,
+      RxIdle,
       --  Radio is in the Rx state.
       Rx,
       --  Radio is in the Rx Disable state.
-      Rxdisable,
+      RxDisable,
       --  Radio is in the Tx Ramp Up state.
-      Txru,
+      TxRu,
       --  Radio is in the Tx Idle state.
-      Txidle,
+      TxIdle,
       --  Radio is in the Tx state.
       Tx,
       --  Radio is in the Tx Disable state.
-      Txdisable)
+      TxDisable)
      with Size => 4;
    for STATE_STATE_Field use
      (Disabled => 0,
-      Rxru => 1,
-      Rxidle => 2,
+      RxRu => 1,
+      RxIdle => 2,
       Rx => 3,
-      Rxdisable => 4,
-      Txru => 9,
-      Txidle => 10,
+      RxDisable => 4,
+      TxRu => 9,
+      TxIdle => 10,
       Tx => 11,
-      Txdisable => 12);
+      TxDisable => 12);
 
    --  Current radio state.
    type STATE_Register is record

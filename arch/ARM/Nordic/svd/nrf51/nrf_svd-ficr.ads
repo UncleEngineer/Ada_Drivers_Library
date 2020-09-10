@@ -48,11 +48,11 @@ package NRF_SVD.FICR is
      (--  Present.
       Present,
       --  Not present.
-      Notpresent)
+      NotPresent)
      with Size => 8;
    for PPFC_PPFC_Field use
      (Present => 0,
-      Notpresent => 255);
+      NotPresent => 255);
 
    --  Pre-programmed factory code present.
    type PPFC_Register is record
@@ -144,22 +144,22 @@ package NRF_SVD.FICR is
      (--  Override the default values for NRF_1Mbit mode.
       Override,
       --  Do not override the default values for NRF_1Mbit mode.
-      Notoverride)
+      NotOverride)
      with Size => 1;
    for OVERRIDEEN_NRF_1MBIT_Field use
      (Override => 0,
-      Notoverride => 1);
+      NotOverride => 1);
 
    --  Override default values for BLE_1Mbit mode.
    type OVERRIDEEN_BLE_1MBIT_Field is
      (--  Override the default values for BLE_1Mbit mode.
       Override,
       --  Do not override the default values for BLE_1Mbit mode.
-      Notoverride)
+      NotOverride)
      with Size => 1;
    for OVERRIDEEN_BLE_1MBIT_Field use
      (Override => 0,
-      Notoverride => 1);
+      NotOverride => 1);
 
    --  Radio calibration override enable.
    type OVERRIDEEN_Register is record

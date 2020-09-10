@@ -315,12 +315,12 @@ package NRF_SVD.PWM is
    --  Write '1' to Enable interrupt for STOPPED event
    type INTENSET_STOPPED_Field_1 is
      (--  Reset value for the field
-      Intenset_Stopped_Field_Reset,
+      INTENSET_STOPPED_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_STOPPED_Field_1 use
-     (Intenset_Stopped_Field_Reset => 0,
+     (INTENSET_STOPPED_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for SEQSTARTED[0] event
@@ -337,12 +337,12 @@ package NRF_SVD.PWM is
    --  Write '1' to Enable interrupt for SEQSTARTED[0] event
    type INTENSET_SEQSTARTED0_Field_1 is
      (--  Reset value for the field
-      Intenset_Seqstarted0_Field_Reset,
+      INTENSET_SEQSTARTED0_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_SEQSTARTED0_Field_1 use
-     (Intenset_Seqstarted0_Field_Reset => 0,
+     (INTENSET_SEQSTARTED0_Field_Reset => 0,
       Set => 1);
 
    --  INTENSET_SEQSTARTED array
@@ -384,12 +384,12 @@ package NRF_SVD.PWM is
    --  Write '1' to Enable interrupt for SEQEND[0] event
    type INTENSET_SEQEND0_Field_1 is
      (--  Reset value for the field
-      Intenset_Seqend0_Field_Reset,
+      INTENSET_SEQEND0_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_SEQEND0_Field_1 use
-     (Intenset_Seqend0_Field_Reset => 0,
+     (INTENSET_SEQEND0_Field_Reset => 0,
       Set => 1);
 
    --  INTENSET_SEQEND array
@@ -431,12 +431,12 @@ package NRF_SVD.PWM is
    --  Write '1' to Enable interrupt for PWMPERIODEND event
    type INTENSET_PWMPERIODEND_Field_1 is
      (--  Reset value for the field
-      Intenset_Pwmperiodend_Field_Reset,
+      INTENSET_PWMPERIODEND_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_PWMPERIODEND_Field_1 use
-     (Intenset_Pwmperiodend_Field_Reset => 0,
+     (INTENSET_PWMPERIODEND_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for LOOPSDONE event
@@ -453,12 +453,12 @@ package NRF_SVD.PWM is
    --  Write '1' to Enable interrupt for LOOPSDONE event
    type INTENSET_LOOPSDONE_Field_1 is
      (--  Reset value for the field
-      Intenset_Loopsdone_Field_Reset,
+      INTENSET_LOOPSDONE_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_LOOPSDONE_Field_1 use
-     (Intenset_Loopsdone_Field_Reset => 0,
+     (INTENSET_LOOPSDONE_Field_Reset => 0,
       Set => 1);
 
    --  Enable interrupt
@@ -467,7 +467,7 @@ package NRF_SVD.PWM is
       Reserved_0_0  : HAL.Bit := 16#0#;
       --  Write '1' to Enable interrupt for STOPPED event
       STOPPED       : INTENSET_STOPPED_Field_1 :=
-                       Intenset_Stopped_Field_Reset;
+                       INTENSET_STOPPED_Field_Reset;
       --  Write '1' to Enable interrupt for SEQSTARTED[0] event
       SEQSTARTED    : INTENSET_SEQSTARTED_Field :=
                        (As_Array => False, Val => 16#0#);
@@ -476,10 +476,10 @@ package NRF_SVD.PWM is
                        (As_Array => False, Val => 16#0#);
       --  Write '1' to Enable interrupt for PWMPERIODEND event
       PWMPERIODEND  : INTENSET_PWMPERIODEND_Field_1 :=
-                       Intenset_Pwmperiodend_Field_Reset;
+                       INTENSET_PWMPERIODEND_Field_Reset;
       --  Write '1' to Enable interrupt for LOOPSDONE event
       LOOPSDONE     : INTENSET_LOOPSDONE_Field_1 :=
-                       Intenset_Loopsdone_Field_Reset;
+                       INTENSET_LOOPSDONE_Field_Reset;
       --  unspecified
       Reserved_8_31 : HAL.UInt24 := 16#0#;
    end record
@@ -510,12 +510,12 @@ package NRF_SVD.PWM is
    --  Write '1' to Disable interrupt for STOPPED event
    type INTENCLR_STOPPED_Field_1 is
      (--  Reset value for the field
-      Intenclr_Stopped_Field_Reset,
+      INTENCLR_STOPPED_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_STOPPED_Field_1 use
-     (Intenclr_Stopped_Field_Reset => 0,
+     (INTENCLR_STOPPED_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for SEQSTARTED[0] event
@@ -532,12 +532,12 @@ package NRF_SVD.PWM is
    --  Write '1' to Disable interrupt for SEQSTARTED[0] event
    type INTENCLR_SEQSTARTED0_Field_1 is
      (--  Reset value for the field
-      Intenclr_Seqstarted0_Field_Reset,
+      INTENCLR_SEQSTARTED0_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_SEQSTARTED0_Field_1 use
-     (Intenclr_Seqstarted0_Field_Reset => 0,
+     (INTENCLR_SEQSTARTED0_Field_Reset => 0,
       Clear => 1);
 
    --  INTENCLR_SEQSTARTED array
@@ -579,12 +579,12 @@ package NRF_SVD.PWM is
    --  Write '1' to Disable interrupt for SEQEND[0] event
    type INTENCLR_SEQEND0_Field_1 is
      (--  Reset value for the field
-      Intenclr_Seqend0_Field_Reset,
+      INTENCLR_SEQEND0_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_SEQEND0_Field_1 use
-     (Intenclr_Seqend0_Field_Reset => 0,
+     (INTENCLR_SEQEND0_Field_Reset => 0,
       Clear => 1);
 
    --  INTENCLR_SEQEND array
@@ -626,12 +626,12 @@ package NRF_SVD.PWM is
    --  Write '1' to Disable interrupt for PWMPERIODEND event
    type INTENCLR_PWMPERIODEND_Field_1 is
      (--  Reset value for the field
-      Intenclr_Pwmperiodend_Field_Reset,
+      INTENCLR_PWMPERIODEND_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_PWMPERIODEND_Field_1 use
-     (Intenclr_Pwmperiodend_Field_Reset => 0,
+     (INTENCLR_PWMPERIODEND_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for LOOPSDONE event
@@ -648,12 +648,12 @@ package NRF_SVD.PWM is
    --  Write '1' to Disable interrupt for LOOPSDONE event
    type INTENCLR_LOOPSDONE_Field_1 is
      (--  Reset value for the field
-      Intenclr_Loopsdone_Field_Reset,
+      INTENCLR_LOOPSDONE_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_LOOPSDONE_Field_1 use
-     (Intenclr_Loopsdone_Field_Reset => 0,
+     (INTENCLR_LOOPSDONE_Field_Reset => 0,
       Clear => 1);
 
    --  Disable interrupt
@@ -662,7 +662,7 @@ package NRF_SVD.PWM is
       Reserved_0_0  : HAL.Bit := 16#0#;
       --  Write '1' to Disable interrupt for STOPPED event
       STOPPED       : INTENCLR_STOPPED_Field_1 :=
-                       Intenclr_Stopped_Field_Reset;
+                       INTENCLR_STOPPED_Field_Reset;
       --  Write '1' to Disable interrupt for SEQSTARTED[0] event
       SEQSTARTED    : INTENCLR_SEQSTARTED_Field :=
                        (As_Array => False, Val => 16#0#);
@@ -671,10 +671,10 @@ package NRF_SVD.PWM is
                        (As_Array => False, Val => 16#0#);
       --  Write '1' to Disable interrupt for PWMPERIODEND event
       PWMPERIODEND  : INTENCLR_PWMPERIODEND_Field_1 :=
-                       Intenclr_Pwmperiodend_Field_Reset;
+                       INTENCLR_PWMPERIODEND_Field_Reset;
       --  Write '1' to Disable interrupt for LOOPSDONE event
       LOOPSDONE     : INTENCLR_LOOPSDONE_Field_1 :=
-                       Intenclr_Loopsdone_Field_Reset;
+                       INTENCLR_LOOPSDONE_Field_Reset;
       --  unspecified
       Reserved_8_31 : HAL.UInt24 := 16#0#;
    end record
@@ -722,11 +722,11 @@ package NRF_SVD.PWM is
      (--  Up counter - edge aligned PWM duty-cycle
       Up,
       --  Up and down counter - center aligned PWM duty cycle
-      Upanddown)
+      UpAndDown)
      with Size => 1;
    for MODE_UPDOWN_Field use
      (Up => 0,
-      Upanddown => 1);
+      UpAndDown => 1);
 
    --  Selects operating mode of the wave counter
    type MODE_Register is record
@@ -765,36 +765,36 @@ package NRF_SVD.PWM is
    --  Pre-scaler of PWM_CLK
    type PRESCALER_PRESCALER_Field is
      (--  Divide by 1 (16MHz)
-      Div_1,
+      DIV_1,
       --  Divide by 2 ( 8MHz)
-      Div_2,
+      DIV_2,
       --  Divide by 4 ( 4MHz)
-      Div_4,
+      DIV_4,
       --  Divide by 8 ( 2MHz)
-      Div_8,
+      DIV_8,
       --  Divide by 16 ( 1MHz)
-      Div_16,
+      DIV_16,
       --  Divide by 32 ( 500kHz)
-      Div_32,
+      DIV_32,
       --  Divide by 64 ( 250kHz)
-      Div_64,
+      DIV_64,
       --  Divide by 128 ( 125kHz)
-      Div_128)
+      DIV_128)
      with Size => 3;
    for PRESCALER_PRESCALER_Field use
-     (Div_1 => 0,
-      Div_2 => 1,
-      Div_4 => 2,
-      Div_8 => 3,
-      Div_16 => 4,
-      Div_32 => 5,
-      Div_64 => 6,
-      Div_128 => 7);
+     (DIV_1 => 0,
+      DIV_2 => 1,
+      DIV_4 => 2,
+      DIV_8 => 3,
+      DIV_16 => 4,
+      DIV_32 => 5,
+      DIV_64 => 6,
+      DIV_128 => 7);
 
    --  Configuration for PWM_CLK
    type PRESCALER_Register is record
       --  Pre-scaler of PWM_CLK
-      PRESCALER     : PRESCALER_PRESCALER_Field := NRF_SVD.PWM.Div_1;
+      PRESCALER     : PRESCALER_PRESCALER_Field := NRF_SVD.PWM.DIV_1;
       --  unspecified
       Reserved_3_31 : HAL.UInt29 := 16#0#;
    end record
@@ -815,24 +815,24 @@ package NRF_SVD.PWM is
       --  1st half word (16-bit) in ch.0; 2nd in ch.1; ...; 4th in ch.3
       Individual,
       --  1st half word (16-bit) in ch.0; 2nd in ch.1; ...; 4th in COUNTERTOP
-      Waveform)
+      WaveForm)
      with Size => 2;
    for DECODER_LOAD_Field use
      (Common => 0,
       Grouped => 1,
       Individual => 2,
-      Waveform => 3);
+      WaveForm => 3);
 
    --  Selects source for advancing the active sequence
    type DECODER_MODE_Field is
      (--  SEQ[n].REFRESH is used to determine loading internal compare registers
-      Refreshcount,
+      RefreshCount,
       --  NEXTSTEP task causes a new value to be loaded to internal compare registers
-      Nextstep)
+      NextStep)
      with Size => 1;
    for DECODER_MODE_Field use
-     (Refreshcount => 0,
-      Nextstep => 1);
+     (RefreshCount => 0,
+      NextStep => 1);
 
    --  Configuration of the decoder
    type DECODER_Register is record
@@ -841,7 +841,7 @@ package NRF_SVD.PWM is
       --  unspecified
       Reserved_2_7  : HAL.UInt6 := 16#0#;
       --  Selects source for advancing the active sequence
-      MODE          : DECODER_MODE_Field := NRF_SVD.PWM.Refreshcount;
+      MODE          : DECODER_MODE_Field := NRF_SVD.PWM.RefreshCount;
       --  unspecified
       Reserved_9_31 : HAL.UInt23 := 16#0#;
    end record
@@ -911,18 +911,18 @@ package NRF_SVD.PWM is
      (--  Update every PWM period
       Continuous,
       --  Reset value for the field
-      Refresh_Cnt_Field_Reset)
+      REFRESH_CNT_Field_Reset)
      with Size => 24;
    for REFRESH_CNT_Field use
      (Continuous => 0,
-      Refresh_Cnt_Field_Reset => 1);
+      REFRESH_CNT_Field_Reset => 1);
 
    --  Description cluster[0]: Amount of additional PWM periods between samples
    --  loaded into compare register
    type REFRESH_SEQ_Register is record
       --  Amount of additional PWM periods between samples loaded into compare
       --  register (load every REFRESH.CNT+1 PWM periods)
-      CNT            : REFRESH_CNT_Field := Refresh_Cnt_Field_Reset;
+      CNT            : REFRESH_CNT_Field := REFRESH_CNT_Field_Reset;
       --  unspecified
       Reserved_24_31 : HAL.UInt8 := 16#0#;
    end record
@@ -965,7 +965,7 @@ package NRF_SVD.PWM is
       --  Description cluster[0]: Time added after the sequence
       ENDDELAY : aliased ENDDELAY_SEQ_Register;
    end record
-     with Size => 128;
+     with Size => 256;
 
    for PWM_SEQ_Cluster use record
       PTR      at 16#0# range 0 .. 31;
@@ -1119,7 +1119,7 @@ package NRF_SVD.PWM is
       PRESCALER           at 16#50C# range 0 .. 31;
       DECODER             at 16#510# range 0 .. 31;
       LOOP_k              at 16#514# range 0 .. 31;
-      SEQ                 at 16#520# range 0 .. 255;
+      SEQ                 at 16#520# range 0 .. 511;
       PSEL                at 16#560# range 0 .. 127;
    end record;
 

@@ -291,12 +291,12 @@ package NRF_SVD.MWU is
    --  Write '1' to Enable interrupt for REGION[0].WA event
    type INTENSET_REGION0WA_Field_1 is
      (--  Reset value for the field
-      Intenset_Region0Wa_Field_Reset,
+      INTENSET_REGION0WA_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_REGION0WA_Field_1 use
-     (Intenset_Region0Wa_Field_Reset => 0,
+     (INTENSET_REGION0WA_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for REGION[0].RA event
@@ -313,12 +313,12 @@ package NRF_SVD.MWU is
    --  Write '1' to Enable interrupt for REGION[0].RA event
    type INTENSET_REGION0RA_Field_1 is
      (--  Reset value for the field
-      Intenset_Region0Ra_Field_Reset,
+      INTENSET_REGION0RA_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_REGION0RA_Field_1 use
-     (Intenset_Region0Ra_Field_Reset => 0,
+     (INTENSET_REGION0RA_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for REGION[1].WA event
@@ -335,12 +335,12 @@ package NRF_SVD.MWU is
    --  Write '1' to Enable interrupt for REGION[1].WA event
    type INTENSET_REGION1WA_Field_1 is
      (--  Reset value for the field
-      Intenset_Region1Wa_Field_Reset,
+      INTENSET_REGION1WA_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_REGION1WA_Field_1 use
-     (Intenset_Region1Wa_Field_Reset => 0,
+     (INTENSET_REGION1WA_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for REGION[1].RA event
@@ -357,12 +357,12 @@ package NRF_SVD.MWU is
    --  Write '1' to Enable interrupt for REGION[1].RA event
    type INTENSET_REGION1RA_Field_1 is
      (--  Reset value for the field
-      Intenset_Region1Ra_Field_Reset,
+      INTENSET_REGION1RA_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_REGION1RA_Field_1 use
-     (Intenset_Region1Ra_Field_Reset => 0,
+     (INTENSET_REGION1RA_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for REGION[2].WA event
@@ -379,12 +379,12 @@ package NRF_SVD.MWU is
    --  Write '1' to Enable interrupt for REGION[2].WA event
    type INTENSET_REGION2WA_Field_1 is
      (--  Reset value for the field
-      Intenset_Region2Wa_Field_Reset,
+      INTENSET_REGION2WA_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_REGION2WA_Field_1 use
-     (Intenset_Region2Wa_Field_Reset => 0,
+     (INTENSET_REGION2WA_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for REGION[2].RA event
@@ -401,12 +401,12 @@ package NRF_SVD.MWU is
    --  Write '1' to Enable interrupt for REGION[2].RA event
    type INTENSET_REGION2RA_Field_1 is
      (--  Reset value for the field
-      Intenset_Region2Ra_Field_Reset,
+      INTENSET_REGION2RA_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_REGION2RA_Field_1 use
-     (Intenset_Region2Ra_Field_Reset => 0,
+     (INTENSET_REGION2RA_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for REGION[3].WA event
@@ -423,12 +423,12 @@ package NRF_SVD.MWU is
    --  Write '1' to Enable interrupt for REGION[3].WA event
    type INTENSET_REGION3WA_Field_1 is
      (--  Reset value for the field
-      Intenset_Region3Wa_Field_Reset,
+      INTENSET_REGION3WA_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_REGION3WA_Field_1 use
-     (Intenset_Region3Wa_Field_Reset => 0,
+     (INTENSET_REGION3WA_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for REGION[3].RA event
@@ -445,12 +445,12 @@ package NRF_SVD.MWU is
    --  Write '1' to Enable interrupt for REGION[3].RA event
    type INTENSET_REGION3RA_Field_1 is
      (--  Reset value for the field
-      Intenset_Region3Ra_Field_Reset,
+      INTENSET_REGION3RA_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_REGION3RA_Field_1 use
-     (Intenset_Region3Ra_Field_Reset => 0,
+     (INTENSET_REGION3RA_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for PREGION[0].WA event
@@ -467,12 +467,12 @@ package NRF_SVD.MWU is
    --  Write '1' to Enable interrupt for PREGION[0].WA event
    type INTENSET_PREGION0WA_Field_1 is
      (--  Reset value for the field
-      Intenset_Pregion0Wa_Field_Reset,
+      INTENSET_PREGION0WA_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_PREGION0WA_Field_1 use
-     (Intenset_Pregion0Wa_Field_Reset => 0,
+     (INTENSET_PREGION0WA_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for PREGION[0].RA event
@@ -489,12 +489,12 @@ package NRF_SVD.MWU is
    --  Write '1' to Enable interrupt for PREGION[0].RA event
    type INTENSET_PREGION0RA_Field_1 is
      (--  Reset value for the field
-      Intenset_Pregion0Ra_Field_Reset,
+      INTENSET_PREGION0RA_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_PREGION0RA_Field_1 use
-     (Intenset_Pregion0Ra_Field_Reset => 0,
+     (INTENSET_PREGION0RA_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for PREGION[1].WA event
@@ -511,12 +511,12 @@ package NRF_SVD.MWU is
    --  Write '1' to Enable interrupt for PREGION[1].WA event
    type INTENSET_PREGION1WA_Field_1 is
      (--  Reset value for the field
-      Intenset_Pregion1Wa_Field_Reset,
+      INTENSET_PREGION1WA_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_PREGION1WA_Field_1 use
-     (Intenset_Pregion1Wa_Field_Reset => 0,
+     (INTENSET_PREGION1WA_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable interrupt for PREGION[1].RA event
@@ -533,54 +533,54 @@ package NRF_SVD.MWU is
    --  Write '1' to Enable interrupt for PREGION[1].RA event
    type INTENSET_PREGION1RA_Field_1 is
      (--  Reset value for the field
-      Intenset_Pregion1Ra_Field_Reset,
+      INTENSET_PREGION1RA_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_PREGION1RA_Field_1 use
-     (Intenset_Pregion1Ra_Field_Reset => 0,
+     (INTENSET_PREGION1RA_Field_Reset => 0,
       Set => 1);
 
    --  Enable interrupt
    type INTENSET_Register is record
       --  Write '1' to Enable interrupt for REGION[0].WA event
       REGION0WA      : INTENSET_REGION0WA_Field_1 :=
-                        Intenset_Region0Wa_Field_Reset;
+                        INTENSET_REGION0WA_Field_Reset;
       --  Write '1' to Enable interrupt for REGION[0].RA event
       REGION0RA      : INTENSET_REGION0RA_Field_1 :=
-                        Intenset_Region0Ra_Field_Reset;
+                        INTENSET_REGION0RA_Field_Reset;
       --  Write '1' to Enable interrupt for REGION[1].WA event
       REGION1WA      : INTENSET_REGION1WA_Field_1 :=
-                        Intenset_Region1Wa_Field_Reset;
+                        INTENSET_REGION1WA_Field_Reset;
       --  Write '1' to Enable interrupt for REGION[1].RA event
       REGION1RA      : INTENSET_REGION1RA_Field_1 :=
-                        Intenset_Region1Ra_Field_Reset;
+                        INTENSET_REGION1RA_Field_Reset;
       --  Write '1' to Enable interrupt for REGION[2].WA event
       REGION2WA      : INTENSET_REGION2WA_Field_1 :=
-                        Intenset_Region2Wa_Field_Reset;
+                        INTENSET_REGION2WA_Field_Reset;
       --  Write '1' to Enable interrupt for REGION[2].RA event
       REGION2RA      : INTENSET_REGION2RA_Field_1 :=
-                        Intenset_Region2Ra_Field_Reset;
+                        INTENSET_REGION2RA_Field_Reset;
       --  Write '1' to Enable interrupt for REGION[3].WA event
       REGION3WA      : INTENSET_REGION3WA_Field_1 :=
-                        Intenset_Region3Wa_Field_Reset;
+                        INTENSET_REGION3WA_Field_Reset;
       --  Write '1' to Enable interrupt for REGION[3].RA event
       REGION3RA      : INTENSET_REGION3RA_Field_1 :=
-                        Intenset_Region3Ra_Field_Reset;
+                        INTENSET_REGION3RA_Field_Reset;
       --  unspecified
       Reserved_8_23  : HAL.UInt16 := 16#0#;
       --  Write '1' to Enable interrupt for PREGION[0].WA event
       PREGION0WA     : INTENSET_PREGION0WA_Field_1 :=
-                        Intenset_Pregion0Wa_Field_Reset;
+                        INTENSET_PREGION0WA_Field_Reset;
       --  Write '1' to Enable interrupt for PREGION[0].RA event
       PREGION0RA     : INTENSET_PREGION0RA_Field_1 :=
-                        Intenset_Pregion0Ra_Field_Reset;
+                        INTENSET_PREGION0RA_Field_Reset;
       --  Write '1' to Enable interrupt for PREGION[1].WA event
       PREGION1WA     : INTENSET_PREGION1WA_Field_1 :=
-                        Intenset_Pregion1Wa_Field_Reset;
+                        INTENSET_PREGION1WA_Field_Reset;
       --  Write '1' to Enable interrupt for PREGION[1].RA event
       PREGION1RA     : INTENSET_PREGION1RA_Field_1 :=
-                        Intenset_Pregion1Ra_Field_Reset;
+                        INTENSET_PREGION1RA_Field_Reset;
       --  unspecified
       Reserved_28_31 : HAL.UInt4 := 16#0#;
    end record
@@ -618,12 +618,12 @@ package NRF_SVD.MWU is
    --  Write '1' to Disable interrupt for REGION[0].WA event
    type INTENCLR_REGION0WA_Field_1 is
      (--  Reset value for the field
-      Intenclr_Region0Wa_Field_Reset,
+      INTENCLR_REGION0WA_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_REGION0WA_Field_1 use
-     (Intenclr_Region0Wa_Field_Reset => 0,
+     (INTENCLR_REGION0WA_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for REGION[0].RA event
@@ -640,12 +640,12 @@ package NRF_SVD.MWU is
    --  Write '1' to Disable interrupt for REGION[0].RA event
    type INTENCLR_REGION0RA_Field_1 is
      (--  Reset value for the field
-      Intenclr_Region0Ra_Field_Reset,
+      INTENCLR_REGION0RA_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_REGION0RA_Field_1 use
-     (Intenclr_Region0Ra_Field_Reset => 0,
+     (INTENCLR_REGION0RA_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for REGION[1].WA event
@@ -662,12 +662,12 @@ package NRF_SVD.MWU is
    --  Write '1' to Disable interrupt for REGION[1].WA event
    type INTENCLR_REGION1WA_Field_1 is
      (--  Reset value for the field
-      Intenclr_Region1Wa_Field_Reset,
+      INTENCLR_REGION1WA_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_REGION1WA_Field_1 use
-     (Intenclr_Region1Wa_Field_Reset => 0,
+     (INTENCLR_REGION1WA_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for REGION[1].RA event
@@ -684,12 +684,12 @@ package NRF_SVD.MWU is
    --  Write '1' to Disable interrupt for REGION[1].RA event
    type INTENCLR_REGION1RA_Field_1 is
      (--  Reset value for the field
-      Intenclr_Region1Ra_Field_Reset,
+      INTENCLR_REGION1RA_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_REGION1RA_Field_1 use
-     (Intenclr_Region1Ra_Field_Reset => 0,
+     (INTENCLR_REGION1RA_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for REGION[2].WA event
@@ -706,12 +706,12 @@ package NRF_SVD.MWU is
    --  Write '1' to Disable interrupt for REGION[2].WA event
    type INTENCLR_REGION2WA_Field_1 is
      (--  Reset value for the field
-      Intenclr_Region2Wa_Field_Reset,
+      INTENCLR_REGION2WA_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_REGION2WA_Field_1 use
-     (Intenclr_Region2Wa_Field_Reset => 0,
+     (INTENCLR_REGION2WA_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for REGION[2].RA event
@@ -728,12 +728,12 @@ package NRF_SVD.MWU is
    --  Write '1' to Disable interrupt for REGION[2].RA event
    type INTENCLR_REGION2RA_Field_1 is
      (--  Reset value for the field
-      Intenclr_Region2Ra_Field_Reset,
+      INTENCLR_REGION2RA_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_REGION2RA_Field_1 use
-     (Intenclr_Region2Ra_Field_Reset => 0,
+     (INTENCLR_REGION2RA_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for REGION[3].WA event
@@ -750,12 +750,12 @@ package NRF_SVD.MWU is
    --  Write '1' to Disable interrupt for REGION[3].WA event
    type INTENCLR_REGION3WA_Field_1 is
      (--  Reset value for the field
-      Intenclr_Region3Wa_Field_Reset,
+      INTENCLR_REGION3WA_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_REGION3WA_Field_1 use
-     (Intenclr_Region3Wa_Field_Reset => 0,
+     (INTENCLR_REGION3WA_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for REGION[3].RA event
@@ -772,12 +772,12 @@ package NRF_SVD.MWU is
    --  Write '1' to Disable interrupt for REGION[3].RA event
    type INTENCLR_REGION3RA_Field_1 is
      (--  Reset value for the field
-      Intenclr_Region3Ra_Field_Reset,
+      INTENCLR_REGION3RA_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_REGION3RA_Field_1 use
-     (Intenclr_Region3Ra_Field_Reset => 0,
+     (INTENCLR_REGION3RA_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for PREGION[0].WA event
@@ -794,12 +794,12 @@ package NRF_SVD.MWU is
    --  Write '1' to Disable interrupt for PREGION[0].WA event
    type INTENCLR_PREGION0WA_Field_1 is
      (--  Reset value for the field
-      Intenclr_Pregion0Wa_Field_Reset,
+      INTENCLR_PREGION0WA_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_PREGION0WA_Field_1 use
-     (Intenclr_Pregion0Wa_Field_Reset => 0,
+     (INTENCLR_PREGION0WA_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for PREGION[0].RA event
@@ -816,12 +816,12 @@ package NRF_SVD.MWU is
    --  Write '1' to Disable interrupt for PREGION[0].RA event
    type INTENCLR_PREGION0RA_Field_1 is
      (--  Reset value for the field
-      Intenclr_Pregion0Ra_Field_Reset,
+      INTENCLR_PREGION0RA_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_PREGION0RA_Field_1 use
-     (Intenclr_Pregion0Ra_Field_Reset => 0,
+     (INTENCLR_PREGION0RA_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for PREGION[1].WA event
@@ -838,12 +838,12 @@ package NRF_SVD.MWU is
    --  Write '1' to Disable interrupt for PREGION[1].WA event
    type INTENCLR_PREGION1WA_Field_1 is
      (--  Reset value for the field
-      Intenclr_Pregion1Wa_Field_Reset,
+      INTENCLR_PREGION1WA_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_PREGION1WA_Field_1 use
-     (Intenclr_Pregion1Wa_Field_Reset => 0,
+     (INTENCLR_PREGION1WA_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable interrupt for PREGION[1].RA event
@@ -860,54 +860,54 @@ package NRF_SVD.MWU is
    --  Write '1' to Disable interrupt for PREGION[1].RA event
    type INTENCLR_PREGION1RA_Field_1 is
      (--  Reset value for the field
-      Intenclr_Pregion1Ra_Field_Reset,
+      INTENCLR_PREGION1RA_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_PREGION1RA_Field_1 use
-     (Intenclr_Pregion1Ra_Field_Reset => 0,
+     (INTENCLR_PREGION1RA_Field_Reset => 0,
       Clear => 1);
 
    --  Disable interrupt
    type INTENCLR_Register is record
       --  Write '1' to Disable interrupt for REGION[0].WA event
       REGION0WA      : INTENCLR_REGION0WA_Field_1 :=
-                        Intenclr_Region0Wa_Field_Reset;
+                        INTENCLR_REGION0WA_Field_Reset;
       --  Write '1' to Disable interrupt for REGION[0].RA event
       REGION0RA      : INTENCLR_REGION0RA_Field_1 :=
-                        Intenclr_Region0Ra_Field_Reset;
+                        INTENCLR_REGION0RA_Field_Reset;
       --  Write '1' to Disable interrupt for REGION[1].WA event
       REGION1WA      : INTENCLR_REGION1WA_Field_1 :=
-                        Intenclr_Region1Wa_Field_Reset;
+                        INTENCLR_REGION1WA_Field_Reset;
       --  Write '1' to Disable interrupt for REGION[1].RA event
       REGION1RA      : INTENCLR_REGION1RA_Field_1 :=
-                        Intenclr_Region1Ra_Field_Reset;
+                        INTENCLR_REGION1RA_Field_Reset;
       --  Write '1' to Disable interrupt for REGION[2].WA event
       REGION2WA      : INTENCLR_REGION2WA_Field_1 :=
-                        Intenclr_Region2Wa_Field_Reset;
+                        INTENCLR_REGION2WA_Field_Reset;
       --  Write '1' to Disable interrupt for REGION[2].RA event
       REGION2RA      : INTENCLR_REGION2RA_Field_1 :=
-                        Intenclr_Region2Ra_Field_Reset;
+                        INTENCLR_REGION2RA_Field_Reset;
       --  Write '1' to Disable interrupt for REGION[3].WA event
       REGION3WA      : INTENCLR_REGION3WA_Field_1 :=
-                        Intenclr_Region3Wa_Field_Reset;
+                        INTENCLR_REGION3WA_Field_Reset;
       --  Write '1' to Disable interrupt for REGION[3].RA event
       REGION3RA      : INTENCLR_REGION3RA_Field_1 :=
-                        Intenclr_Region3Ra_Field_Reset;
+                        INTENCLR_REGION3RA_Field_Reset;
       --  unspecified
       Reserved_8_23  : HAL.UInt16 := 16#0#;
       --  Write '1' to Disable interrupt for PREGION[0].WA event
       PREGION0WA     : INTENCLR_PREGION0WA_Field_1 :=
-                        Intenclr_Pregion0Wa_Field_Reset;
+                        INTENCLR_PREGION0WA_Field_Reset;
       --  Write '1' to Disable interrupt for PREGION[0].RA event
       PREGION0RA     : INTENCLR_PREGION0RA_Field_1 :=
-                        Intenclr_Pregion0Ra_Field_Reset;
+                        INTENCLR_PREGION0RA_Field_Reset;
       --  Write '1' to Disable interrupt for PREGION[1].WA event
       PREGION1WA     : INTENCLR_PREGION1WA_Field_1 :=
-                        Intenclr_Pregion1Wa_Field_Reset;
+                        INTENCLR_PREGION1WA_Field_Reset;
       --  Write '1' to Disable interrupt for PREGION[1].RA event
       PREGION1RA     : INTENCLR_PREGION1RA_Field_1 :=
-                        Intenclr_Pregion1Ra_Field_Reset;
+                        INTENCLR_PREGION1RA_Field_Reset;
       --  unspecified
       Reserved_28_31 : HAL.UInt4 := 16#0#;
    end record
@@ -1128,12 +1128,12 @@ package NRF_SVD.MWU is
    --  Write '1' to Enable non-maskable interrupt for REGION[0].WA event
    type NMIENSET_REGION0WA_Field_1 is
      (--  Reset value for the field
-      Nmienset_Region0Wa_Field_Reset,
+      NMIENSET_REGION0WA_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for NMIENSET_REGION0WA_Field_1 use
-     (Nmienset_Region0Wa_Field_Reset => 0,
+     (NMIENSET_REGION0WA_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable non-maskable interrupt for REGION[0].RA event
@@ -1150,12 +1150,12 @@ package NRF_SVD.MWU is
    --  Write '1' to Enable non-maskable interrupt for REGION[0].RA event
    type NMIENSET_REGION0RA_Field_1 is
      (--  Reset value for the field
-      Nmienset_Region0Ra_Field_Reset,
+      NMIENSET_REGION0RA_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for NMIENSET_REGION0RA_Field_1 use
-     (Nmienset_Region0Ra_Field_Reset => 0,
+     (NMIENSET_REGION0RA_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable non-maskable interrupt for REGION[1].WA event
@@ -1172,12 +1172,12 @@ package NRF_SVD.MWU is
    --  Write '1' to Enable non-maskable interrupt for REGION[1].WA event
    type NMIENSET_REGION1WA_Field_1 is
      (--  Reset value for the field
-      Nmienset_Region1Wa_Field_Reset,
+      NMIENSET_REGION1WA_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for NMIENSET_REGION1WA_Field_1 use
-     (Nmienset_Region1Wa_Field_Reset => 0,
+     (NMIENSET_REGION1WA_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable non-maskable interrupt for REGION[1].RA event
@@ -1194,12 +1194,12 @@ package NRF_SVD.MWU is
    --  Write '1' to Enable non-maskable interrupt for REGION[1].RA event
    type NMIENSET_REGION1RA_Field_1 is
      (--  Reset value for the field
-      Nmienset_Region1Ra_Field_Reset,
+      NMIENSET_REGION1RA_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for NMIENSET_REGION1RA_Field_1 use
-     (Nmienset_Region1Ra_Field_Reset => 0,
+     (NMIENSET_REGION1RA_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable non-maskable interrupt for REGION[2].WA event
@@ -1216,12 +1216,12 @@ package NRF_SVD.MWU is
    --  Write '1' to Enable non-maskable interrupt for REGION[2].WA event
    type NMIENSET_REGION2WA_Field_1 is
      (--  Reset value for the field
-      Nmienset_Region2Wa_Field_Reset,
+      NMIENSET_REGION2WA_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for NMIENSET_REGION2WA_Field_1 use
-     (Nmienset_Region2Wa_Field_Reset => 0,
+     (NMIENSET_REGION2WA_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable non-maskable interrupt for REGION[2].RA event
@@ -1238,12 +1238,12 @@ package NRF_SVD.MWU is
    --  Write '1' to Enable non-maskable interrupt for REGION[2].RA event
    type NMIENSET_REGION2RA_Field_1 is
      (--  Reset value for the field
-      Nmienset_Region2Ra_Field_Reset,
+      NMIENSET_REGION2RA_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for NMIENSET_REGION2RA_Field_1 use
-     (Nmienset_Region2Ra_Field_Reset => 0,
+     (NMIENSET_REGION2RA_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable non-maskable interrupt for REGION[3].WA event
@@ -1260,12 +1260,12 @@ package NRF_SVD.MWU is
    --  Write '1' to Enable non-maskable interrupt for REGION[3].WA event
    type NMIENSET_REGION3WA_Field_1 is
      (--  Reset value for the field
-      Nmienset_Region3Wa_Field_Reset,
+      NMIENSET_REGION3WA_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for NMIENSET_REGION3WA_Field_1 use
-     (Nmienset_Region3Wa_Field_Reset => 0,
+     (NMIENSET_REGION3WA_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable non-maskable interrupt for REGION[3].RA event
@@ -1282,12 +1282,12 @@ package NRF_SVD.MWU is
    --  Write '1' to Enable non-maskable interrupt for REGION[3].RA event
    type NMIENSET_REGION3RA_Field_1 is
      (--  Reset value for the field
-      Nmienset_Region3Ra_Field_Reset,
+      NMIENSET_REGION3RA_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for NMIENSET_REGION3RA_Field_1 use
-     (Nmienset_Region3Ra_Field_Reset => 0,
+     (NMIENSET_REGION3RA_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable non-maskable interrupt for PREGION[0].WA event
@@ -1304,12 +1304,12 @@ package NRF_SVD.MWU is
    --  Write '1' to Enable non-maskable interrupt for PREGION[0].WA event
    type NMIENSET_PREGION0WA_Field_1 is
      (--  Reset value for the field
-      Nmienset_Pregion0Wa_Field_Reset,
+      NMIENSET_PREGION0WA_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for NMIENSET_PREGION0WA_Field_1 use
-     (Nmienset_Pregion0Wa_Field_Reset => 0,
+     (NMIENSET_PREGION0WA_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable non-maskable interrupt for PREGION[0].RA event
@@ -1326,12 +1326,12 @@ package NRF_SVD.MWU is
    --  Write '1' to Enable non-maskable interrupt for PREGION[0].RA event
    type NMIENSET_PREGION0RA_Field_1 is
      (--  Reset value for the field
-      Nmienset_Pregion0Ra_Field_Reset,
+      NMIENSET_PREGION0RA_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for NMIENSET_PREGION0RA_Field_1 use
-     (Nmienset_Pregion0Ra_Field_Reset => 0,
+     (NMIENSET_PREGION0RA_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable non-maskable interrupt for PREGION[1].WA event
@@ -1348,12 +1348,12 @@ package NRF_SVD.MWU is
    --  Write '1' to Enable non-maskable interrupt for PREGION[1].WA event
    type NMIENSET_PREGION1WA_Field_1 is
      (--  Reset value for the field
-      Nmienset_Pregion1Wa_Field_Reset,
+      NMIENSET_PREGION1WA_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for NMIENSET_PREGION1WA_Field_1 use
-     (Nmienset_Pregion1Wa_Field_Reset => 0,
+     (NMIENSET_PREGION1WA_Field_Reset => 0,
       Set => 1);
 
    --  Write '1' to Enable non-maskable interrupt for PREGION[1].RA event
@@ -1370,54 +1370,54 @@ package NRF_SVD.MWU is
    --  Write '1' to Enable non-maskable interrupt for PREGION[1].RA event
    type NMIENSET_PREGION1RA_Field_1 is
      (--  Reset value for the field
-      Nmienset_Pregion1Ra_Field_Reset,
+      NMIENSET_PREGION1RA_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for NMIENSET_PREGION1RA_Field_1 use
-     (Nmienset_Pregion1Ra_Field_Reset => 0,
+     (NMIENSET_PREGION1RA_Field_Reset => 0,
       Set => 1);
 
    --  Enable non-maskable interrupt
    type NMIENSET_Register is record
       --  Write '1' to Enable non-maskable interrupt for REGION[0].WA event
       REGION0WA      : NMIENSET_REGION0WA_Field_1 :=
-                        Nmienset_Region0Wa_Field_Reset;
+                        NMIENSET_REGION0WA_Field_Reset;
       --  Write '1' to Enable non-maskable interrupt for REGION[0].RA event
       REGION0RA      : NMIENSET_REGION0RA_Field_1 :=
-                        Nmienset_Region0Ra_Field_Reset;
+                        NMIENSET_REGION0RA_Field_Reset;
       --  Write '1' to Enable non-maskable interrupt for REGION[1].WA event
       REGION1WA      : NMIENSET_REGION1WA_Field_1 :=
-                        Nmienset_Region1Wa_Field_Reset;
+                        NMIENSET_REGION1WA_Field_Reset;
       --  Write '1' to Enable non-maskable interrupt for REGION[1].RA event
       REGION1RA      : NMIENSET_REGION1RA_Field_1 :=
-                        Nmienset_Region1Ra_Field_Reset;
+                        NMIENSET_REGION1RA_Field_Reset;
       --  Write '1' to Enable non-maskable interrupt for REGION[2].WA event
       REGION2WA      : NMIENSET_REGION2WA_Field_1 :=
-                        Nmienset_Region2Wa_Field_Reset;
+                        NMIENSET_REGION2WA_Field_Reset;
       --  Write '1' to Enable non-maskable interrupt for REGION[2].RA event
       REGION2RA      : NMIENSET_REGION2RA_Field_1 :=
-                        Nmienset_Region2Ra_Field_Reset;
+                        NMIENSET_REGION2RA_Field_Reset;
       --  Write '1' to Enable non-maskable interrupt for REGION[3].WA event
       REGION3WA      : NMIENSET_REGION3WA_Field_1 :=
-                        Nmienset_Region3Wa_Field_Reset;
+                        NMIENSET_REGION3WA_Field_Reset;
       --  Write '1' to Enable non-maskable interrupt for REGION[3].RA event
       REGION3RA      : NMIENSET_REGION3RA_Field_1 :=
-                        Nmienset_Region3Ra_Field_Reset;
+                        NMIENSET_REGION3RA_Field_Reset;
       --  unspecified
       Reserved_8_23  : HAL.UInt16 := 16#0#;
       --  Write '1' to Enable non-maskable interrupt for PREGION[0].WA event
       PREGION0WA     : NMIENSET_PREGION0WA_Field_1 :=
-                        Nmienset_Pregion0Wa_Field_Reset;
+                        NMIENSET_PREGION0WA_Field_Reset;
       --  Write '1' to Enable non-maskable interrupt for PREGION[0].RA event
       PREGION0RA     : NMIENSET_PREGION0RA_Field_1 :=
-                        Nmienset_Pregion0Ra_Field_Reset;
+                        NMIENSET_PREGION0RA_Field_Reset;
       --  Write '1' to Enable non-maskable interrupt for PREGION[1].WA event
       PREGION1WA     : NMIENSET_PREGION1WA_Field_1 :=
-                        Nmienset_Pregion1Wa_Field_Reset;
+                        NMIENSET_PREGION1WA_Field_Reset;
       --  Write '1' to Enable non-maskable interrupt for PREGION[1].RA event
       PREGION1RA     : NMIENSET_PREGION1RA_Field_1 :=
-                        Nmienset_Pregion1Ra_Field_Reset;
+                        NMIENSET_PREGION1RA_Field_Reset;
       --  unspecified
       Reserved_28_31 : HAL.UInt4 := 16#0#;
    end record
@@ -1455,12 +1455,12 @@ package NRF_SVD.MWU is
    --  Write '1' to Disable non-maskable interrupt for REGION[0].WA event
    type NMIENCLR_REGION0WA_Field_1 is
      (--  Reset value for the field
-      Nmienclr_Region0Wa_Field_Reset,
+      NMIENCLR_REGION0WA_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for NMIENCLR_REGION0WA_Field_1 use
-     (Nmienclr_Region0Wa_Field_Reset => 0,
+     (NMIENCLR_REGION0WA_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable non-maskable interrupt for REGION[0].RA event
@@ -1477,12 +1477,12 @@ package NRF_SVD.MWU is
    --  Write '1' to Disable non-maskable interrupt for REGION[0].RA event
    type NMIENCLR_REGION0RA_Field_1 is
      (--  Reset value for the field
-      Nmienclr_Region0Ra_Field_Reset,
+      NMIENCLR_REGION0RA_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for NMIENCLR_REGION0RA_Field_1 use
-     (Nmienclr_Region0Ra_Field_Reset => 0,
+     (NMIENCLR_REGION0RA_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable non-maskable interrupt for REGION[1].WA event
@@ -1499,12 +1499,12 @@ package NRF_SVD.MWU is
    --  Write '1' to Disable non-maskable interrupt for REGION[1].WA event
    type NMIENCLR_REGION1WA_Field_1 is
      (--  Reset value for the field
-      Nmienclr_Region1Wa_Field_Reset,
+      NMIENCLR_REGION1WA_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for NMIENCLR_REGION1WA_Field_1 use
-     (Nmienclr_Region1Wa_Field_Reset => 0,
+     (NMIENCLR_REGION1WA_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable non-maskable interrupt for REGION[1].RA event
@@ -1521,12 +1521,12 @@ package NRF_SVD.MWU is
    --  Write '1' to Disable non-maskable interrupt for REGION[1].RA event
    type NMIENCLR_REGION1RA_Field_1 is
      (--  Reset value for the field
-      Nmienclr_Region1Ra_Field_Reset,
+      NMIENCLR_REGION1RA_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for NMIENCLR_REGION1RA_Field_1 use
-     (Nmienclr_Region1Ra_Field_Reset => 0,
+     (NMIENCLR_REGION1RA_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable non-maskable interrupt for REGION[2].WA event
@@ -1543,12 +1543,12 @@ package NRF_SVD.MWU is
    --  Write '1' to Disable non-maskable interrupt for REGION[2].WA event
    type NMIENCLR_REGION2WA_Field_1 is
      (--  Reset value for the field
-      Nmienclr_Region2Wa_Field_Reset,
+      NMIENCLR_REGION2WA_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for NMIENCLR_REGION2WA_Field_1 use
-     (Nmienclr_Region2Wa_Field_Reset => 0,
+     (NMIENCLR_REGION2WA_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable non-maskable interrupt for REGION[2].RA event
@@ -1565,12 +1565,12 @@ package NRF_SVD.MWU is
    --  Write '1' to Disable non-maskable interrupt for REGION[2].RA event
    type NMIENCLR_REGION2RA_Field_1 is
      (--  Reset value for the field
-      Nmienclr_Region2Ra_Field_Reset,
+      NMIENCLR_REGION2RA_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for NMIENCLR_REGION2RA_Field_1 use
-     (Nmienclr_Region2Ra_Field_Reset => 0,
+     (NMIENCLR_REGION2RA_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable non-maskable interrupt for REGION[3].WA event
@@ -1587,12 +1587,12 @@ package NRF_SVD.MWU is
    --  Write '1' to Disable non-maskable interrupt for REGION[3].WA event
    type NMIENCLR_REGION3WA_Field_1 is
      (--  Reset value for the field
-      Nmienclr_Region3Wa_Field_Reset,
+      NMIENCLR_REGION3WA_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for NMIENCLR_REGION3WA_Field_1 use
-     (Nmienclr_Region3Wa_Field_Reset => 0,
+     (NMIENCLR_REGION3WA_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable non-maskable interrupt for REGION[3].RA event
@@ -1609,12 +1609,12 @@ package NRF_SVD.MWU is
    --  Write '1' to Disable non-maskable interrupt for REGION[3].RA event
    type NMIENCLR_REGION3RA_Field_1 is
      (--  Reset value for the field
-      Nmienclr_Region3Ra_Field_Reset,
+      NMIENCLR_REGION3RA_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for NMIENCLR_REGION3RA_Field_1 use
-     (Nmienclr_Region3Ra_Field_Reset => 0,
+     (NMIENCLR_REGION3RA_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable non-maskable interrupt for PREGION[0].WA event
@@ -1631,12 +1631,12 @@ package NRF_SVD.MWU is
    --  Write '1' to Disable non-maskable interrupt for PREGION[0].WA event
    type NMIENCLR_PREGION0WA_Field_1 is
      (--  Reset value for the field
-      Nmienclr_Pregion0Wa_Field_Reset,
+      NMIENCLR_PREGION0WA_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for NMIENCLR_PREGION0WA_Field_1 use
-     (Nmienclr_Pregion0Wa_Field_Reset => 0,
+     (NMIENCLR_PREGION0WA_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable non-maskable interrupt for PREGION[0].RA event
@@ -1653,12 +1653,12 @@ package NRF_SVD.MWU is
    --  Write '1' to Disable non-maskable interrupt for PREGION[0].RA event
    type NMIENCLR_PREGION0RA_Field_1 is
      (--  Reset value for the field
-      Nmienclr_Pregion0Ra_Field_Reset,
+      NMIENCLR_PREGION0RA_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for NMIENCLR_PREGION0RA_Field_1 use
-     (Nmienclr_Pregion0Ra_Field_Reset => 0,
+     (NMIENCLR_PREGION0RA_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable non-maskable interrupt for PREGION[1].WA event
@@ -1675,12 +1675,12 @@ package NRF_SVD.MWU is
    --  Write '1' to Disable non-maskable interrupt for PREGION[1].WA event
    type NMIENCLR_PREGION1WA_Field_1 is
      (--  Reset value for the field
-      Nmienclr_Pregion1Wa_Field_Reset,
+      NMIENCLR_PREGION1WA_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for NMIENCLR_PREGION1WA_Field_1 use
-     (Nmienclr_Pregion1Wa_Field_Reset => 0,
+     (NMIENCLR_PREGION1WA_Field_Reset => 0,
       Clear => 1);
 
    --  Write '1' to Disable non-maskable interrupt for PREGION[1].RA event
@@ -1697,54 +1697,54 @@ package NRF_SVD.MWU is
    --  Write '1' to Disable non-maskable interrupt for PREGION[1].RA event
    type NMIENCLR_PREGION1RA_Field_1 is
      (--  Reset value for the field
-      Nmienclr_Pregion1Ra_Field_Reset,
+      NMIENCLR_PREGION1RA_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for NMIENCLR_PREGION1RA_Field_1 use
-     (Nmienclr_Pregion1Ra_Field_Reset => 0,
+     (NMIENCLR_PREGION1RA_Field_Reset => 0,
       Clear => 1);
 
    --  Disable non-maskable interrupt
    type NMIENCLR_Register is record
       --  Write '1' to Disable non-maskable interrupt for REGION[0].WA event
       REGION0WA      : NMIENCLR_REGION0WA_Field_1 :=
-                        Nmienclr_Region0Wa_Field_Reset;
+                        NMIENCLR_REGION0WA_Field_Reset;
       --  Write '1' to Disable non-maskable interrupt for REGION[0].RA event
       REGION0RA      : NMIENCLR_REGION0RA_Field_1 :=
-                        Nmienclr_Region0Ra_Field_Reset;
+                        NMIENCLR_REGION0RA_Field_Reset;
       --  Write '1' to Disable non-maskable interrupt for REGION[1].WA event
       REGION1WA      : NMIENCLR_REGION1WA_Field_1 :=
-                        Nmienclr_Region1Wa_Field_Reset;
+                        NMIENCLR_REGION1WA_Field_Reset;
       --  Write '1' to Disable non-maskable interrupt for REGION[1].RA event
       REGION1RA      : NMIENCLR_REGION1RA_Field_1 :=
-                        Nmienclr_Region1Ra_Field_Reset;
+                        NMIENCLR_REGION1RA_Field_Reset;
       --  Write '1' to Disable non-maskable interrupt for REGION[2].WA event
       REGION2WA      : NMIENCLR_REGION2WA_Field_1 :=
-                        Nmienclr_Region2Wa_Field_Reset;
+                        NMIENCLR_REGION2WA_Field_Reset;
       --  Write '1' to Disable non-maskable interrupt for REGION[2].RA event
       REGION2RA      : NMIENCLR_REGION2RA_Field_1 :=
-                        Nmienclr_Region2Ra_Field_Reset;
+                        NMIENCLR_REGION2RA_Field_Reset;
       --  Write '1' to Disable non-maskable interrupt for REGION[3].WA event
       REGION3WA      : NMIENCLR_REGION3WA_Field_1 :=
-                        Nmienclr_Region3Wa_Field_Reset;
+                        NMIENCLR_REGION3WA_Field_Reset;
       --  Write '1' to Disable non-maskable interrupt for REGION[3].RA event
       REGION3RA      : NMIENCLR_REGION3RA_Field_1 :=
-                        Nmienclr_Region3Ra_Field_Reset;
+                        NMIENCLR_REGION3RA_Field_Reset;
       --  unspecified
       Reserved_8_23  : HAL.UInt16 := 16#0#;
       --  Write '1' to Disable non-maskable interrupt for PREGION[0].WA event
       PREGION0WA     : NMIENCLR_PREGION0WA_Field_1 :=
-                        Nmienclr_Pregion0Wa_Field_Reset;
+                        NMIENCLR_PREGION0WA_Field_Reset;
       --  Write '1' to Disable non-maskable interrupt for PREGION[0].RA event
       PREGION0RA     : NMIENCLR_PREGION0RA_Field_1 :=
-                        Nmienclr_Pregion0Ra_Field_Reset;
+                        NMIENCLR_PREGION0RA_Field_Reset;
       --  Write '1' to Disable non-maskable interrupt for PREGION[1].WA event
       PREGION1WA     : NMIENCLR_PREGION1WA_Field_1 :=
-                        Nmienclr_Pregion1Wa_Field_Reset;
+                        NMIENCLR_PREGION1WA_Field_Reset;
       --  Write '1' to Disable non-maskable interrupt for PREGION[1].RA event
       PREGION1RA     : NMIENCLR_PREGION1RA_Field_1 :=
-                        Nmienclr_Pregion1Ra_Field_Reset;
+                        NMIENCLR_PREGION1RA_Field_Reset;
       --  unspecified
       Reserved_28_31 : HAL.UInt4 := 16#0#;
    end record
@@ -1775,12 +1775,12 @@ package NRF_SVD.MWU is
    --  Subregion 0 in region 0 (write '1' to clear)
    type SUBSTATWA_SR0_Field is
      (--  No write access occurred in this subregion
-      Noaccess,
+      NoAccess,
       --  Write access(es) occurred in this subregion
       Access_k)
      with Size => 1;
    for SUBSTATWA_SR0_Field use
-     (Noaccess => 0,
+     (NoAccess => 0,
       Access_k => 1);
 
    --  SUBSTATWA_PERREGION_SR array
@@ -1813,12 +1813,12 @@ package NRF_SVD.MWU is
    --  Subregion 0 in region 0 (write '1' to clear)
    type SUBSTATRA_SR0_Field is
      (--  No read access occurred in this subregion
-      Noaccess,
+      NoAccess,
       --  Read access(es) occurred in this subregion
       Access_k)
      with Size => 1;
    for SUBSTATRA_SR0_Field use
-     (Noaccess => 0,
+     (NoAccess => 0,
       Access_k => 1);
 
    --  SUBSTATRA_PERREGION_SR array
@@ -2066,12 +2066,12 @@ package NRF_SVD.MWU is
    --  Enable write access watch in region[0]
    type REGIONENSET_RGN0WA_Field_1 is
      (--  Reset value for the field
-      Regionenset_Rgn0Wa_Field_Reset,
+      REGIONENSET_RGN0WA_Field_Reset,
       --  Enable write access watch in this region
       Set)
      with Size => 1;
    for REGIONENSET_RGN0WA_Field_1 use
-     (Regionenset_Rgn0Wa_Field_Reset => 0,
+     (REGIONENSET_RGN0WA_Field_Reset => 0,
       Set => 1);
 
    --  Enable read access watch in region[0]
@@ -2088,12 +2088,12 @@ package NRF_SVD.MWU is
    --  Enable read access watch in region[0]
    type REGIONENSET_RGN0RA_Field_1 is
      (--  Reset value for the field
-      Regionenset_Rgn0Ra_Field_Reset,
+      REGIONENSET_RGN0RA_Field_Reset,
       --  Enable read access watch in this region
       Set)
      with Size => 1;
    for REGIONENSET_RGN0RA_Field_1 use
-     (Regionenset_Rgn0Ra_Field_Reset => 0,
+     (REGIONENSET_RGN0RA_Field_Reset => 0,
       Set => 1);
 
    --  Enable write access watch in region[1]
@@ -2110,12 +2110,12 @@ package NRF_SVD.MWU is
    --  Enable write access watch in region[1]
    type REGIONENSET_RGN1WA_Field_1 is
      (--  Reset value for the field
-      Regionenset_Rgn1Wa_Field_Reset,
+      REGIONENSET_RGN1WA_Field_Reset,
       --  Enable write access watch in this region
       Set)
      with Size => 1;
    for REGIONENSET_RGN1WA_Field_1 use
-     (Regionenset_Rgn1Wa_Field_Reset => 0,
+     (REGIONENSET_RGN1WA_Field_Reset => 0,
       Set => 1);
 
    --  Enable read access watch in region[1]
@@ -2132,12 +2132,12 @@ package NRF_SVD.MWU is
    --  Enable read access watch in region[1]
    type REGIONENSET_RGN1RA_Field_1 is
      (--  Reset value for the field
-      Regionenset_Rgn1Ra_Field_Reset,
+      REGIONENSET_RGN1RA_Field_Reset,
       --  Enable read access watch in this region
       Set)
      with Size => 1;
    for REGIONENSET_RGN1RA_Field_1 use
-     (Regionenset_Rgn1Ra_Field_Reset => 0,
+     (REGIONENSET_RGN1RA_Field_Reset => 0,
       Set => 1);
 
    --  Enable write access watch in region[2]
@@ -2154,12 +2154,12 @@ package NRF_SVD.MWU is
    --  Enable write access watch in region[2]
    type REGIONENSET_RGN2WA_Field_1 is
      (--  Reset value for the field
-      Regionenset_Rgn2Wa_Field_Reset,
+      REGIONENSET_RGN2WA_Field_Reset,
       --  Enable write access watch in this region
       Set)
      with Size => 1;
    for REGIONENSET_RGN2WA_Field_1 use
-     (Regionenset_Rgn2Wa_Field_Reset => 0,
+     (REGIONENSET_RGN2WA_Field_Reset => 0,
       Set => 1);
 
    --  Enable read access watch in region[2]
@@ -2176,12 +2176,12 @@ package NRF_SVD.MWU is
    --  Enable read access watch in region[2]
    type REGIONENSET_RGN2RA_Field_1 is
      (--  Reset value for the field
-      Regionenset_Rgn2Ra_Field_Reset,
+      REGIONENSET_RGN2RA_Field_Reset,
       --  Enable read access watch in this region
       Set)
      with Size => 1;
    for REGIONENSET_RGN2RA_Field_1 use
-     (Regionenset_Rgn2Ra_Field_Reset => 0,
+     (REGIONENSET_RGN2RA_Field_Reset => 0,
       Set => 1);
 
    --  Enable write access watch in region[3]
@@ -2198,12 +2198,12 @@ package NRF_SVD.MWU is
    --  Enable write access watch in region[3]
    type REGIONENSET_RGN3WA_Field_1 is
      (--  Reset value for the field
-      Regionenset_Rgn3Wa_Field_Reset,
+      REGIONENSET_RGN3WA_Field_Reset,
       --  Enable write access watch in this region
       Set)
      with Size => 1;
    for REGIONENSET_RGN3WA_Field_1 use
-     (Regionenset_Rgn3Wa_Field_Reset => 0,
+     (REGIONENSET_RGN3WA_Field_Reset => 0,
       Set => 1);
 
    --  Enable read access watch in region[3]
@@ -2220,12 +2220,12 @@ package NRF_SVD.MWU is
    --  Enable read access watch in region[3]
    type REGIONENSET_RGN3RA_Field_1 is
      (--  Reset value for the field
-      Regionenset_Rgn3Ra_Field_Reset,
+      REGIONENSET_RGN3RA_Field_Reset,
       --  Enable read access watch in this region
       Set)
      with Size => 1;
    for REGIONENSET_RGN3RA_Field_1 use
-     (Regionenset_Rgn3Ra_Field_Reset => 0,
+     (REGIONENSET_RGN3RA_Field_Reset => 0,
       Set => 1);
 
    --  Enable write access watch in PREGION[0]
@@ -2242,12 +2242,12 @@ package NRF_SVD.MWU is
    --  Enable write access watch in PREGION[0]
    type REGIONENSET_PRGN0WA_Field_1 is
      (--  Reset value for the field
-      Regionenset_Prgn0Wa_Field_Reset,
+      REGIONENSET_PRGN0WA_Field_Reset,
       --  Enable write access watch in this PREGION
       Set)
      with Size => 1;
    for REGIONENSET_PRGN0WA_Field_1 use
-     (Regionenset_Prgn0Wa_Field_Reset => 0,
+     (REGIONENSET_PRGN0WA_Field_Reset => 0,
       Set => 1);
 
    --  Enable read access watch in PREGION[0]
@@ -2264,12 +2264,12 @@ package NRF_SVD.MWU is
    --  Enable read access watch in PREGION[0]
    type REGIONENSET_PRGN0RA_Field_1 is
      (--  Reset value for the field
-      Regionenset_Prgn0Ra_Field_Reset,
+      REGIONENSET_PRGN0RA_Field_Reset,
       --  Enable read access watch in this PREGION
       Set)
      with Size => 1;
    for REGIONENSET_PRGN0RA_Field_1 use
-     (Regionenset_Prgn0Ra_Field_Reset => 0,
+     (REGIONENSET_PRGN0RA_Field_Reset => 0,
       Set => 1);
 
    --  Enable write access watch in PREGION[1]
@@ -2286,12 +2286,12 @@ package NRF_SVD.MWU is
    --  Enable write access watch in PREGION[1]
    type REGIONENSET_PRGN1WA_Field_1 is
      (--  Reset value for the field
-      Regionenset_Prgn1Wa_Field_Reset,
+      REGIONENSET_PRGN1WA_Field_Reset,
       --  Enable write access watch in this PREGION
       Set)
      with Size => 1;
    for REGIONENSET_PRGN1WA_Field_1 use
-     (Regionenset_Prgn1Wa_Field_Reset => 0,
+     (REGIONENSET_PRGN1WA_Field_Reset => 0,
       Set => 1);
 
    --  Enable read access watch in PREGION[1]
@@ -2308,54 +2308,54 @@ package NRF_SVD.MWU is
    --  Enable read access watch in PREGION[1]
    type REGIONENSET_PRGN1RA_Field_1 is
      (--  Reset value for the field
-      Regionenset_Prgn1Ra_Field_Reset,
+      REGIONENSET_PRGN1RA_Field_Reset,
       --  Enable read access watch in this PREGION
       Set)
      with Size => 1;
    for REGIONENSET_PRGN1RA_Field_1 use
-     (Regionenset_Prgn1Ra_Field_Reset => 0,
+     (REGIONENSET_PRGN1RA_Field_Reset => 0,
       Set => 1);
 
    --  Enable regions watch
    type REGIONENSET_Register is record
       --  Enable write access watch in region[0]
       RGN0WA         : REGIONENSET_RGN0WA_Field_1 :=
-                        Regionenset_Rgn0Wa_Field_Reset;
+                        REGIONENSET_RGN0WA_Field_Reset;
       --  Enable read access watch in region[0]
       RGN0RA         : REGIONENSET_RGN0RA_Field_1 :=
-                        Regionenset_Rgn0Ra_Field_Reset;
+                        REGIONENSET_RGN0RA_Field_Reset;
       --  Enable write access watch in region[1]
       RGN1WA         : REGIONENSET_RGN1WA_Field_1 :=
-                        Regionenset_Rgn1Wa_Field_Reset;
+                        REGIONENSET_RGN1WA_Field_Reset;
       --  Enable read access watch in region[1]
       RGN1RA         : REGIONENSET_RGN1RA_Field_1 :=
-                        Regionenset_Rgn1Ra_Field_Reset;
+                        REGIONENSET_RGN1RA_Field_Reset;
       --  Enable write access watch in region[2]
       RGN2WA         : REGIONENSET_RGN2WA_Field_1 :=
-                        Regionenset_Rgn2Wa_Field_Reset;
+                        REGIONENSET_RGN2WA_Field_Reset;
       --  Enable read access watch in region[2]
       RGN2RA         : REGIONENSET_RGN2RA_Field_1 :=
-                        Regionenset_Rgn2Ra_Field_Reset;
+                        REGIONENSET_RGN2RA_Field_Reset;
       --  Enable write access watch in region[3]
       RGN3WA         : REGIONENSET_RGN3WA_Field_1 :=
-                        Regionenset_Rgn3Wa_Field_Reset;
+                        REGIONENSET_RGN3WA_Field_Reset;
       --  Enable read access watch in region[3]
       RGN3RA         : REGIONENSET_RGN3RA_Field_1 :=
-                        Regionenset_Rgn3Ra_Field_Reset;
+                        REGIONENSET_RGN3RA_Field_Reset;
       --  unspecified
       Reserved_8_23  : HAL.UInt16 := 16#0#;
       --  Enable write access watch in PREGION[0]
       PRGN0WA        : REGIONENSET_PRGN0WA_Field_1 :=
-                        Regionenset_Prgn0Wa_Field_Reset;
+                        REGIONENSET_PRGN0WA_Field_Reset;
       --  Enable read access watch in PREGION[0]
       PRGN0RA        : REGIONENSET_PRGN0RA_Field_1 :=
-                        Regionenset_Prgn0Ra_Field_Reset;
+                        REGIONENSET_PRGN0RA_Field_Reset;
       --  Enable write access watch in PREGION[1]
       PRGN1WA        : REGIONENSET_PRGN1WA_Field_1 :=
-                        Regionenset_Prgn1Wa_Field_Reset;
+                        REGIONENSET_PRGN1WA_Field_Reset;
       --  Enable read access watch in PREGION[1]
       PRGN1RA        : REGIONENSET_PRGN1RA_Field_1 :=
-                        Regionenset_Prgn1Ra_Field_Reset;
+                        REGIONENSET_PRGN1RA_Field_Reset;
       --  unspecified
       Reserved_28_31 : HAL.UInt4 := 16#0#;
    end record
@@ -2393,12 +2393,12 @@ package NRF_SVD.MWU is
    --  Disable write access watch in region[0]
    type REGIONENCLR_RGN0WA_Field_1 is
      (--  Reset value for the field
-      Regionenclr_Rgn0Wa_Field_Reset,
+      REGIONENCLR_RGN0WA_Field_Reset,
       --  Disable write access watch in this region
       Clear)
      with Size => 1;
    for REGIONENCLR_RGN0WA_Field_1 use
-     (Regionenclr_Rgn0Wa_Field_Reset => 0,
+     (REGIONENCLR_RGN0WA_Field_Reset => 0,
       Clear => 1);
 
    --  Disable read access watch in region[0]
@@ -2415,12 +2415,12 @@ package NRF_SVD.MWU is
    --  Disable read access watch in region[0]
    type REGIONENCLR_RGN0RA_Field_1 is
      (--  Reset value for the field
-      Regionenclr_Rgn0Ra_Field_Reset,
+      REGIONENCLR_RGN0RA_Field_Reset,
       --  Disable read access watch in this region
       Clear)
      with Size => 1;
    for REGIONENCLR_RGN0RA_Field_1 use
-     (Regionenclr_Rgn0Ra_Field_Reset => 0,
+     (REGIONENCLR_RGN0RA_Field_Reset => 0,
       Clear => 1);
 
    --  Disable write access watch in region[1]
@@ -2437,12 +2437,12 @@ package NRF_SVD.MWU is
    --  Disable write access watch in region[1]
    type REGIONENCLR_RGN1WA_Field_1 is
      (--  Reset value for the field
-      Regionenclr_Rgn1Wa_Field_Reset,
+      REGIONENCLR_RGN1WA_Field_Reset,
       --  Disable write access watch in this region
       Clear)
      with Size => 1;
    for REGIONENCLR_RGN1WA_Field_1 use
-     (Regionenclr_Rgn1Wa_Field_Reset => 0,
+     (REGIONENCLR_RGN1WA_Field_Reset => 0,
       Clear => 1);
 
    --  Disable read access watch in region[1]
@@ -2459,12 +2459,12 @@ package NRF_SVD.MWU is
    --  Disable read access watch in region[1]
    type REGIONENCLR_RGN1RA_Field_1 is
      (--  Reset value for the field
-      Regionenclr_Rgn1Ra_Field_Reset,
+      REGIONENCLR_RGN1RA_Field_Reset,
       --  Disable read access watch in this region
       Clear)
      with Size => 1;
    for REGIONENCLR_RGN1RA_Field_1 use
-     (Regionenclr_Rgn1Ra_Field_Reset => 0,
+     (REGIONENCLR_RGN1RA_Field_Reset => 0,
       Clear => 1);
 
    --  Disable write access watch in region[2]
@@ -2481,12 +2481,12 @@ package NRF_SVD.MWU is
    --  Disable write access watch in region[2]
    type REGIONENCLR_RGN2WA_Field_1 is
      (--  Reset value for the field
-      Regionenclr_Rgn2Wa_Field_Reset,
+      REGIONENCLR_RGN2WA_Field_Reset,
       --  Disable write access watch in this region
       Clear)
      with Size => 1;
    for REGIONENCLR_RGN2WA_Field_1 use
-     (Regionenclr_Rgn2Wa_Field_Reset => 0,
+     (REGIONENCLR_RGN2WA_Field_Reset => 0,
       Clear => 1);
 
    --  Disable read access watch in region[2]
@@ -2503,12 +2503,12 @@ package NRF_SVD.MWU is
    --  Disable read access watch in region[2]
    type REGIONENCLR_RGN2RA_Field_1 is
      (--  Reset value for the field
-      Regionenclr_Rgn2Ra_Field_Reset,
+      REGIONENCLR_RGN2RA_Field_Reset,
       --  Disable read access watch in this region
       Clear)
      with Size => 1;
    for REGIONENCLR_RGN2RA_Field_1 use
-     (Regionenclr_Rgn2Ra_Field_Reset => 0,
+     (REGIONENCLR_RGN2RA_Field_Reset => 0,
       Clear => 1);
 
    --  Disable write access watch in region[3]
@@ -2525,12 +2525,12 @@ package NRF_SVD.MWU is
    --  Disable write access watch in region[3]
    type REGIONENCLR_RGN3WA_Field_1 is
      (--  Reset value for the field
-      Regionenclr_Rgn3Wa_Field_Reset,
+      REGIONENCLR_RGN3WA_Field_Reset,
       --  Disable write access watch in this region
       Clear)
      with Size => 1;
    for REGIONENCLR_RGN3WA_Field_1 use
-     (Regionenclr_Rgn3Wa_Field_Reset => 0,
+     (REGIONENCLR_RGN3WA_Field_Reset => 0,
       Clear => 1);
 
    --  Disable read access watch in region[3]
@@ -2547,12 +2547,12 @@ package NRF_SVD.MWU is
    --  Disable read access watch in region[3]
    type REGIONENCLR_RGN3RA_Field_1 is
      (--  Reset value for the field
-      Regionenclr_Rgn3Ra_Field_Reset,
+      REGIONENCLR_RGN3RA_Field_Reset,
       --  Disable read access watch in this region
       Clear)
      with Size => 1;
    for REGIONENCLR_RGN3RA_Field_1 use
-     (Regionenclr_Rgn3Ra_Field_Reset => 0,
+     (REGIONENCLR_RGN3RA_Field_Reset => 0,
       Clear => 1);
 
    --  Disable write access watch in PREGION[0]
@@ -2569,12 +2569,12 @@ package NRF_SVD.MWU is
    --  Disable write access watch in PREGION[0]
    type REGIONENCLR_PRGN0WA_Field_1 is
      (--  Reset value for the field
-      Regionenclr_Prgn0Wa_Field_Reset,
+      REGIONENCLR_PRGN0WA_Field_Reset,
       --  Disable write access watch in this PREGION
       Clear)
      with Size => 1;
    for REGIONENCLR_PRGN0WA_Field_1 use
-     (Regionenclr_Prgn0Wa_Field_Reset => 0,
+     (REGIONENCLR_PRGN0WA_Field_Reset => 0,
       Clear => 1);
 
    --  Disable read access watch in PREGION[0]
@@ -2591,12 +2591,12 @@ package NRF_SVD.MWU is
    --  Disable read access watch in PREGION[0]
    type REGIONENCLR_PRGN0RA_Field_1 is
      (--  Reset value for the field
-      Regionenclr_Prgn0Ra_Field_Reset,
+      REGIONENCLR_PRGN0RA_Field_Reset,
       --  Disable read access watch in this PREGION
       Clear)
      with Size => 1;
    for REGIONENCLR_PRGN0RA_Field_1 use
-     (Regionenclr_Prgn0Ra_Field_Reset => 0,
+     (REGIONENCLR_PRGN0RA_Field_Reset => 0,
       Clear => 1);
 
    --  Disable write access watch in PREGION[1]
@@ -2613,12 +2613,12 @@ package NRF_SVD.MWU is
    --  Disable write access watch in PREGION[1]
    type REGIONENCLR_PRGN1WA_Field_1 is
      (--  Reset value for the field
-      Regionenclr_Prgn1Wa_Field_Reset,
+      REGIONENCLR_PRGN1WA_Field_Reset,
       --  Disable write access watch in this PREGION
       Clear)
      with Size => 1;
    for REGIONENCLR_PRGN1WA_Field_1 use
-     (Regionenclr_Prgn1Wa_Field_Reset => 0,
+     (REGIONENCLR_PRGN1WA_Field_Reset => 0,
       Clear => 1);
 
    --  Disable read access watch in PREGION[1]
@@ -2635,54 +2635,54 @@ package NRF_SVD.MWU is
    --  Disable read access watch in PREGION[1]
    type REGIONENCLR_PRGN1RA_Field_1 is
      (--  Reset value for the field
-      Regionenclr_Prgn1Ra_Field_Reset,
+      REGIONENCLR_PRGN1RA_Field_Reset,
       --  Disable read access watch in this PREGION
       Clear)
      with Size => 1;
    for REGIONENCLR_PRGN1RA_Field_1 use
-     (Regionenclr_Prgn1Ra_Field_Reset => 0,
+     (REGIONENCLR_PRGN1RA_Field_Reset => 0,
       Clear => 1);
 
    --  Disable regions watch
    type REGIONENCLR_Register is record
       --  Disable write access watch in region[0]
       RGN0WA         : REGIONENCLR_RGN0WA_Field_1 :=
-                        Regionenclr_Rgn0Wa_Field_Reset;
+                        REGIONENCLR_RGN0WA_Field_Reset;
       --  Disable read access watch in region[0]
       RGN0RA         : REGIONENCLR_RGN0RA_Field_1 :=
-                        Regionenclr_Rgn0Ra_Field_Reset;
+                        REGIONENCLR_RGN0RA_Field_Reset;
       --  Disable write access watch in region[1]
       RGN1WA         : REGIONENCLR_RGN1WA_Field_1 :=
-                        Regionenclr_Rgn1Wa_Field_Reset;
+                        REGIONENCLR_RGN1WA_Field_Reset;
       --  Disable read access watch in region[1]
       RGN1RA         : REGIONENCLR_RGN1RA_Field_1 :=
-                        Regionenclr_Rgn1Ra_Field_Reset;
+                        REGIONENCLR_RGN1RA_Field_Reset;
       --  Disable write access watch in region[2]
       RGN2WA         : REGIONENCLR_RGN2WA_Field_1 :=
-                        Regionenclr_Rgn2Wa_Field_Reset;
+                        REGIONENCLR_RGN2WA_Field_Reset;
       --  Disable read access watch in region[2]
       RGN2RA         : REGIONENCLR_RGN2RA_Field_1 :=
-                        Regionenclr_Rgn2Ra_Field_Reset;
+                        REGIONENCLR_RGN2RA_Field_Reset;
       --  Disable write access watch in region[3]
       RGN3WA         : REGIONENCLR_RGN3WA_Field_1 :=
-                        Regionenclr_Rgn3Wa_Field_Reset;
+                        REGIONENCLR_RGN3WA_Field_Reset;
       --  Disable read access watch in region[3]
       RGN3RA         : REGIONENCLR_RGN3RA_Field_1 :=
-                        Regionenclr_Rgn3Ra_Field_Reset;
+                        REGIONENCLR_RGN3RA_Field_Reset;
       --  unspecified
       Reserved_8_23  : HAL.UInt16 := 16#0#;
       --  Disable write access watch in PREGION[0]
       PRGN0WA        : REGIONENCLR_PRGN0WA_Field_1 :=
-                        Regionenclr_Prgn0Wa_Field_Reset;
+                        REGIONENCLR_PRGN0WA_Field_Reset;
       --  Disable read access watch in PREGION[0]
       PRGN0RA        : REGIONENCLR_PRGN0RA_Field_1 :=
-                        Regionenclr_Prgn0Ra_Field_Reset;
+                        REGIONENCLR_PRGN0RA_Field_Reset;
       --  Disable write access watch in PREGION[1]
       PRGN1WA        : REGIONENCLR_PRGN1WA_Field_1 :=
-                        Regionenclr_Prgn1Wa_Field_Reset;
+                        REGIONENCLR_PRGN1WA_Field_Reset;
       --  Disable read access watch in PREGION[1]
       PRGN1RA        : REGIONENCLR_PRGN1RA_Field_1 :=
-                        Regionenclr_Prgn1Ra_Field_Reset;
+                        REGIONENCLR_PRGN1RA_Field_Reset;
       --  unspecified
       Reserved_28_31 : HAL.UInt4 := 16#0#;
    end record
@@ -2717,7 +2717,7 @@ package NRF_SVD.MWU is
       --  Description cluster[0]: End address of region 0
       END_k : aliased HAL.UInt32;
    end record
-     with Size => 64;
+     with Size => 128;
 
    for REGION_Cluster use record
       START at 16#0# range 0 .. 31;
@@ -2776,7 +2776,7 @@ package NRF_SVD.MWU is
       --  Description cluster[0]: Subregions of region 0
       SUBS  : aliased SUBS_PREGION_Register;
    end record
-     with Size => 96;
+     with Size => 128;
 
    for PREGION_Cluster use record
       START at 16#0# range 0 .. 31;
@@ -2837,8 +2837,8 @@ package NRF_SVD.MWU is
       REGIONEN       at 16#510# range 0 .. 31;
       REGIONENSET    at 16#514# range 0 .. 31;
       REGIONENCLR    at 16#518# range 0 .. 31;
-      REGION         at 16#600# range 0 .. 255;
-      PREGION        at 16#6C0# range 0 .. 191;
+      REGION         at 16#600# range 0 .. 511;
+      PREGION        at 16#6C0# range 0 .. 255;
    end record;
 
    --  Memory Watch Unit

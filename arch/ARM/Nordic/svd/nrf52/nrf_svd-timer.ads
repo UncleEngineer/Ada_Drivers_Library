@@ -259,12 +259,12 @@ package NRF_SVD.TIMER is
    --  Write '1' to Enable interrupt for COMPARE[0] event
    type INTENSET_COMPARE0_Field_1 is
      (--  Reset value for the field
-      Intenset_Compare0_Field_Reset,
+      INTENSET_COMPARE0_Field_Reset,
       --  Enable
       Set)
      with Size => 1;
    for INTENSET_COMPARE0_Field_1 use
-     (Intenset_Compare0_Field_Reset => 0,
+     (INTENSET_COMPARE0_Field_Reset => 0,
       Set => 1);
 
    --  INTENSET_COMPARE array
@@ -325,12 +325,12 @@ package NRF_SVD.TIMER is
    --  Write '1' to Disable interrupt for COMPARE[0] event
    type INTENCLR_COMPARE0_Field_1 is
      (--  Reset value for the field
-      Intenclr_Compare0_Field_Reset,
+      INTENCLR_COMPARE0_Field_Reset,
       --  Disable
       Clear)
      with Size => 1;
    for INTENCLR_COMPARE0_Field_1 use
-     (Intenclr_Compare0_Field_Reset => 0,
+     (INTENCLR_COMPARE0_Field_Reset => 0,
       Clear => 1);
 
    --  INTENCLR_COMPARE array
@@ -384,12 +384,12 @@ package NRF_SVD.TIMER is
       --  Deprecated enumerator - Select Counter mode
       Counter,
       --  Select Low Power Counter mode
-      Lowpowercounter)
+      LowPowerCounter)
      with Size => 2;
    for MODE_MODE_Field use
      (Timer => 0,
       Counter => 1,
-      Lowpowercounter => 2);
+      LowPowerCounter => 2);
 
    --  Timer mode selection
    type MODE_Register is record

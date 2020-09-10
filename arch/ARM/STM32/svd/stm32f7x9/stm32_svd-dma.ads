@@ -69,7 +69,7 @@ package STM32_SVD.DMA is
       --  unspecified
       Reserved_28_31 : HAL.UInt4;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for LISR_Register use record
@@ -156,7 +156,7 @@ package STM32_SVD.DMA is
       --  unspecified
       Reserved_28_31 : HAL.UInt4;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for HISR_Register use record
@@ -243,7 +243,7 @@ package STM32_SVD.DMA is
       --  unspecified
       Reserved_28_31 : HAL.UInt4 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for LIFCR_Register use record
@@ -330,7 +330,7 @@ package STM32_SVD.DMA is
       --  unspecified
       Reserved_28_31 : HAL.UInt4 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for HIFCR_Register use record
@@ -419,7 +419,7 @@ package STM32_SVD.DMA is
       --  unspecified
       Reserved_29_31 : HAL.UInt3 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for SxCR_Stream_Register use record
@@ -455,7 +455,7 @@ package STM32_SVD.DMA is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for SxNDTR_Stream_Register use record
@@ -481,7 +481,7 @@ package STM32_SVD.DMA is
       --  unspecified
       Reserved_8_31 : HAL.UInt24 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for SxFCR_Stream_Register use record
@@ -508,7 +508,7 @@ package STM32_SVD.DMA is
       --  stream x FIFO control register
       SxFCR  : aliased SxFCR_Stream_Register;
    end record
-     with Volatile, Size => 192;
+     with Size => 192;
 
    for Stream_Cluster use record
       SxCR   at 16#0# range 0 .. 31;
@@ -555,10 +555,10 @@ package STM32_SVD.DMA is
 
    --  DMA controller
    DMA1_Periph : aliased DMA_Peripheral
-     with Import, Address => System'To_Address (16#40026000#);
+     with Import, Address => DMA1_Base;
 
    --  DMA controller
    DMA2_Periph : aliased DMA_Peripheral
-     with Import, Address => System'To_Address (16#40026400#);
+     with Import, Address => DMA2_Base;
 
 end STM32_SVD.DMA;

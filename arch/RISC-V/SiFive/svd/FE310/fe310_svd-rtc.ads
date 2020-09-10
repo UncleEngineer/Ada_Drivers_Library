@@ -28,7 +28,7 @@ package FE310_SVD.RTC is
       --  unspecified
       Reserved_29_31 : HAL.UInt3 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CONFIG_Register use record
@@ -48,7 +48,7 @@ package FE310_SVD.RTC is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for HI_Register use record
@@ -85,6 +85,6 @@ package FE310_SVD.RTC is
 
    --  Real-Time Clock.
    RTC_Periph : aliased RTC_Peripheral
-     with Import, Address => System'To_Address (16#10000040#);
+     with Import, Address => RTC_Base;
 
 end FE310_SVD.RTC;

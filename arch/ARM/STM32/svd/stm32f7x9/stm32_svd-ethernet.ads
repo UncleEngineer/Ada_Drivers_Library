@@ -48,7 +48,7 @@ package STM32_SVD.Ethernet is
       --  unspecified
       Reserved_27_31 : HAL.UInt5 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DMABMR_Register use record
@@ -122,7 +122,7 @@ package STM32_SVD.Ethernet is
       --  unspecified
       Reserved_30_31 : HAL.UInt2 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DMASR_Register use record
@@ -194,7 +194,7 @@ package STM32_SVD.Ethernet is
       --  unspecified
       Reserved_27_31 : HAL.UInt5 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DMAOMR_Register use record
@@ -255,7 +255,7 @@ package STM32_SVD.Ethernet is
       --  unspecified
       Reserved_17_31 : HAL.UInt15 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DMAIER_Register use record
@@ -294,7 +294,7 @@ package STM32_SVD.Ethernet is
       --  unspecified
       Reserved_29_31 : HAL.UInt3 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DMAMFBOCR_Register use record
@@ -314,7 +314,7 @@ package STM32_SVD.Ethernet is
       --  unspecified
       Reserved_8_31 : HAL.UInt24 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for DMARSWTR_Register use record
@@ -372,7 +372,7 @@ package STM32_SVD.Ethernet is
       --  unspecified
       Reserved_26_31 : HAL.UInt6 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for MACCR_Register use record
@@ -427,7 +427,7 @@ package STM32_SVD.Ethernet is
       --  no description available
       RA             : Boolean := False;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for MACFFR_Register use record
@@ -466,7 +466,7 @@ package STM32_SVD.Ethernet is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for MACMIIAR_Register use record
@@ -488,7 +488,7 @@ package STM32_SVD.Ethernet is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for MACMIIDR_Register use record
@@ -520,7 +520,7 @@ package STM32_SVD.Ethernet is
       --  no description available
       PT            : MACFCR_PT_Field := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for MACFCR_Register use record
@@ -546,7 +546,7 @@ package STM32_SVD.Ethernet is
       --  unspecified
       Reserved_17_31 : HAL.UInt15 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for MACVLANTR_Register use record
@@ -578,7 +578,7 @@ package STM32_SVD.Ethernet is
       --  no description available
       WFFRPR         : Boolean := False;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for MACPMTCSR_Register use record
@@ -611,7 +611,7 @@ package STM32_SVD.Ethernet is
       --  unspecified
       Reserved_6_31 : HAL.UInt26;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for MACDBGR_Register use record
@@ -643,7 +643,7 @@ package STM32_SVD.Ethernet is
       --  unspecified
       Reserved_10_31 : HAL.UInt22 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for MACSR_Register use record
@@ -670,7 +670,7 @@ package STM32_SVD.Ethernet is
       --  unspecified
       Reserved_10_31 : HAL.UInt22 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for MACIMR_Register use record
@@ -692,7 +692,7 @@ package STM32_SVD.Ethernet is
       --  Read-only. Always 1
       MO             : Boolean := False;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for MACA0HR_Register use record
@@ -717,7 +717,7 @@ package STM32_SVD.Ethernet is
       --  no description available
       AE             : Boolean := False;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for MACA1HR_Register use record
@@ -744,7 +744,7 @@ package STM32_SVD.Ethernet is
       --  no description available
       AE             : Boolean := False;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for MACA2HR_Register use record
@@ -764,7 +764,7 @@ package STM32_SVD.Ethernet is
       --  unspecified
       Reserved_31_31 : HAL.Bit := 16#1#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for MACA2LR_Register use record
@@ -788,7 +788,7 @@ package STM32_SVD.Ethernet is
       --  no description available
       AE             : Boolean := False;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for MACA3HR_Register use record
@@ -816,7 +816,7 @@ package STM32_SVD.Ethernet is
       --  unspecified
       Reserved_6_31 : HAL.UInt26 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for MMCCR_Register use record
@@ -844,7 +844,7 @@ package STM32_SVD.Ethernet is
       --  unspecified
       Reserved_18_31 : HAL.UInt14 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for MMCRIR_Register use record
@@ -871,7 +871,7 @@ package STM32_SVD.Ethernet is
       --  unspecified
       Reserved_22_31 : HAL.UInt10;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for MMCTIR_Register use record
@@ -898,7 +898,7 @@ package STM32_SVD.Ethernet is
       --  unspecified
       Reserved_18_31 : HAL.UInt14 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for MMCRIMR_Register use record
@@ -923,7 +923,7 @@ package STM32_SVD.Ethernet is
       --  unspecified
       Reserved_17_31 : HAL.UInt15 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for MMCTIMR_Register use record
@@ -975,7 +975,7 @@ package STM32_SVD.Ethernet is
       --  unspecified
       Reserved_19_31 : HAL.UInt13 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for PTPTSCR_Register use record
@@ -1008,7 +1008,7 @@ package STM32_SVD.Ethernet is
       --  unspecified
       Reserved_8_31 : HAL.UInt24 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for PTPSSIR_Register use record
@@ -1025,7 +1025,7 @@ package STM32_SVD.Ethernet is
       --  Read-only. no description available
       STPNS : Boolean;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for PTPTSLR_Register use record
@@ -1042,7 +1042,7 @@ package STM32_SVD.Ethernet is
       --  no description available
       TSUPNS : Boolean := False;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for PTPTSLUR_Register use record
@@ -1059,7 +1059,7 @@ package STM32_SVD.Ethernet is
       --  unspecified
       Reserved_2_31 : HAL.UInt30;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for PTPTSSR_Register use record
@@ -1077,7 +1077,7 @@ package STM32_SVD.Ethernet is
       --  unspecified
       Reserved_2_31 : HAL.UInt30;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for PTPPPSCR_Register use record
@@ -1142,7 +1142,7 @@ package STM32_SVD.Ethernet is
 
    --  Ethernet: DMA controller operation
    Ethernet_DMA_Periph : aliased Ethernet_DMA_Peripheral
-     with Import, Address => System'To_Address (16#40029000#);
+     with Import, Address => Ethernet_DMA_Base;
 
    --  Ethernet: media access control (MAC)
    type Ethernet_MAC_Peripheral is record
@@ -1217,7 +1217,7 @@ package STM32_SVD.Ethernet is
 
    --  Ethernet: media access control (MAC)
    Ethernet_MAC_Periph : aliased Ethernet_MAC_Peripheral
-     with Import, Address => System'To_Address (16#40028000#);
+     with Import, Address => Ethernet_MAC_Base;
 
    --  Ethernet: MAC management counters
    type Ethernet_MMC_Peripheral is record
@@ -1263,7 +1263,7 @@ package STM32_SVD.Ethernet is
 
    --  Ethernet: MAC management counters
    Ethernet_MMC_Periph : aliased Ethernet_MMC_Peripheral
-     with Import, Address => System'To_Address (16#40028100#);
+     with Import, Address => Ethernet_MMC_Base;
 
    --  Ethernet: Precision time protocol
    type Ethernet_PTP_Peripheral is record
@@ -1308,6 +1308,6 @@ package STM32_SVD.Ethernet is
 
    --  Ethernet: Precision time protocol
    Ethernet_PTP_Periph : aliased Ethernet_PTP_Peripheral
-     with Import, Address => System'To_Address (16#40028700#);
+     with Import, Address => Ethernet_PTP_Base;
 
 end STM32_SVD.Ethernet;

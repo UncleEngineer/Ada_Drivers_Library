@@ -45,7 +45,7 @@ package STM32_SVD.EXTI is
       --  unspecified
       Reserved_23_31 : HAL.UInt9 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for IMR_Register use record
@@ -84,7 +84,7 @@ package STM32_SVD.EXTI is
       --  unspecified
       Reserved_23_31 : HAL.UInt9 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for EMR_Register use record
@@ -123,7 +123,7 @@ package STM32_SVD.EXTI is
       --  unspecified
       Reserved_23_31 : HAL.UInt9 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for RTSR_Register use record
@@ -162,7 +162,7 @@ package STM32_SVD.EXTI is
       --  unspecified
       Reserved_23_31 : HAL.UInt9 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for FTSR_Register use record
@@ -201,7 +201,7 @@ package STM32_SVD.EXTI is
       --  unspecified
       Reserved_23_31 : HAL.UInt9 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for SWIER_Register use record
@@ -240,7 +240,7 @@ package STM32_SVD.EXTI is
       --  unspecified
       Reserved_23_31 : HAL.UInt9 := 16#0#;
    end record
-     with Volatile_Full_Access, Size => 32,
+     with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for PR_Register use record
@@ -280,6 +280,6 @@ package STM32_SVD.EXTI is
 
    --  External interrupt/event controller
    EXTI_Periph : aliased EXTI_Peripheral
-     with Import, Address => System'To_Address (16#40013C00#);
+     with Import, Address => EXTI_Base;
 
 end STM32_SVD.EXTI;
