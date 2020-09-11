@@ -185,7 +185,6 @@ package body STM32.ADC is
       --  We ignore this warning to conform to the common spec in STM32
       --  family
    begin
-      -- C_ADC_Periph.CCR.MULT    := Multi_ADC_Mode_Selections'Enum_Rep (Mode);
       ADC_Common_Periph.CCR.DELAY_k :=
         Sampling_Delay_Selections'Enum_Rep (Sampling_Delay);
       ADC_Common_Periph.CCR.DMA     := Multi_ADC_DMA_Modes'Enum_Rep (DMA_Mode);
