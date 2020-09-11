@@ -48,7 +48,7 @@ package body nRF.Clock is
    procedure Set_High_Freq_Source (Src : High_Freq_Source_Kind) is
    begin
       CLOCK_Periph.HFCLKSTAT.SRC := (case Src is
-                                        when HFCLK_RC => Rc,
+                                        when HFCLK_RC => RC,
                                         when HFCLK_XTAL => Xtal);
    end Set_High_Freq_Source;
 
@@ -59,7 +59,7 @@ package body nRF.Clock is
    function High_Freq_Source return High_Freq_Source_Kind is
    begin
       case CLOCK_Periph.HFCLKSTAT.SRC is
-         when Rc => return HFCLK_RC;
+         when RC => return HFCLK_RC;
          when Xtal => return HFCLK_XTAL;
       end case;
    end High_Freq_Source;
@@ -98,7 +98,7 @@ package body nRF.Clock is
    procedure Set_Low_Freq_Source (Src : Low_Freq_Source_Kind) is
    begin
       CLOCK_Periph.LFCLKSRC.SRC := (case Src is
-                                       when LFCLK_RC => Rc,
+                                       when LFCLK_RC => RC,
                                        when LFCLK_XTAL => Xtal,
                                        when LFCLK_SYNTH => Synth);
    end Set_Low_Freq_Source;
@@ -110,7 +110,7 @@ package body nRF.Clock is
    function Low_Freq_Source return Low_Freq_Source_Kind is
    begin
       case CLOCK_Periph.LFCLKSTAT.SRC is
-         when Rc => return LFCLK_RC;
+         when RC => return LFCLK_RC;
          when Xtal => return LFCLK_XTAL;
          when Synth => return LFCLK_SYNTH;
       end case;

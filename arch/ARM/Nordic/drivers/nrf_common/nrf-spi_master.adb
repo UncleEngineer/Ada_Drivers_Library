@@ -116,16 +116,16 @@ package body nRF.SPI_Master is
                                    when SPI_8Mbps   => 16#8000_0000#);
 
       This.Periph.CONFIG.ORDER := (case Bit_Order is
-                                      when Most_Significant_First => Msbfirst,
-                                      when Least_Significant_First => Lsbfirst);
+                                      when Most_Significant_First => MsbFirst,
+                                      when Least_Significant_First => LsbFirst);
 
       This.Periph.CONFIG.CPHA := (case Phase is
                                      when Sample_Leading_Edge => Leading,
                                      when Sample_Trailing_Edge => Trailing);
 
       This.Periph.CONFIG.CPOL := (case Polarity is
-                                     when Active_High => Activehigh,
-                                     when Active_Low => Activelow);
+                                     when Active_High => ActiveHigh,
+                                     when Active_Low => ActiveLow);
    end Configure;
 
    ----------------
@@ -189,7 +189,7 @@ package body nRF.SPI_Master is
       --  Clear any previous event
       This.Periph.EVENTS_READY := 0;
 
-      if This.Periph.CONFIG.ORDER = Msbfirst then
+      if This.Periph.CONFIG.ORDER = MsbFirst then
          for Elt of Data loop
             Transfer (This,
                       Data_Out => UInt8 (Shift_Left (Elt, 8)),
@@ -252,7 +252,7 @@ package body nRF.SPI_Master is
       --  Clear any previous event
       This.Periph.EVENTS_READY := 0;
 
-      if This.Periph.CONFIG.ORDER = Msbfirst then
+      if This.Periph.CONFIG.ORDER = MsbFirst then
          for Elt of Data loop
             Transfer (This, Data_Out => 0, Data_In => Byte);
             Elt := Shift_Left (UInt16 (Byte), 8);
