@@ -67,7 +67,7 @@ def git_clone(repo_url, branch, dst, recursive=False):
 #  - Destination directory
 #  - Recursive clone?
 #  - install command (if any)
-git_repos = [("https://github.com/AdaCore/bb-runtimes",
+git_repos = [("https://github.com/FredPraca/bb-runtimes",
               False,
               "bb-runtimes",
               False,
