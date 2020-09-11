@@ -67,14 +67,14 @@ package body nRF.Radio is
       --  return Radio_State'Enum_Val (RADIO_Periph.STATE.STATE'Enum_Rep);
       case RADIO_Periph.STATE.STATE is
          when Disabled => return Disabled;
-         when Rxru => return Rx_Ramp_Up;
-         when Rxidle => return Rx_Idle;
+         when RxRu => return Rx_Ramp_Up;
+         when RxIdle => return Rx_Idle;
          when Rx => return Rx_State;
-         when Rxdisable => return Rx_Disabled;
-         when Txru => return Tx_Ramp_Up;
-         when Txidle => return Tx_Idle;
+         when RxDisable => return Rx_Disabled;
+         when TxRu => return Tx_Ramp_Up;
+         when TxIdle => return Tx_Idle;
          when Tx => return Tx_State;
-         when Txdisable => return Tx_Disabled;
+         when TxDisable => return Tx_Disabled;
       end case;
    end State;
 
@@ -277,7 +277,7 @@ package body nRF.Radio is
 
    function CRC_Error return Boolean is
    begin
-      return RADIO_Periph.CRCSTATUS.CRCSTATUS = Crcerror;
+      return RADIO_Periph.CRCSTATUS.CRCSTATUS = CRCError;
    end CRC_Error;
 
    -------------------------

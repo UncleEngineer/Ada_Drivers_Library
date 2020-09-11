@@ -45,9 +45,9 @@ package body nRF.ADC is
    begin
       ADC_Periph.CONFIG.RES  :=
         (case Res is
-            when 8  => Val_8BIT,
-            when 9  => Val_9BIT,
-            when 10 => Val_10BIT);
+            when 8  => Val_8bit,
+            when 9  => Val_9bit,
+            when 10 => Val_10bit);
    end Set_Resolution;
 
    -------------------
@@ -60,17 +60,17 @@ package body nRF.ADC is
 
       case Ref is
          when Internal_1V2 =>
-            ADC_Periph.CONFIG.REFSEL := Vbg;
+            ADC_Periph.CONFIG.REFSEL := VBG;
          when External_AREF0 =>
             ADC_Periph.CONFIG.REFSEL := External;
-            ADC_Periph.CONFIG.EXTREFSEL := Analogreference0;
+            ADC_Periph.CONFIG.EXTREFSEL := AnalogReference0;
          when External_AREF1 =>
             ADC_Periph.CONFIG.REFSEL := External;
-            ADC_Periph.CONFIG.EXTREFSEL := Analogreference1;
+            ADC_Periph.CONFIG.EXTREFSEL := AnalogReference1;
          when VDD_Half  =>
-            ADC_Periph.CONFIG.REFSEL := Supplyonehalfprescaling;
+            ADC_Periph.CONFIG.REFSEL := SupplyOneHalfPrescaling;
          when VDD_One_Third  =>
-            ADC_Periph.CONFIG.REFSEL := Supplyonethirdprescaling;
+            ADC_Periph.CONFIG.REFSEL := SupplyOneThirdPrescaling;
       end case;
    end Set_Reference;
 
@@ -90,30 +90,30 @@ package body nRF.ADC is
 
       case Input is
          when Pin_Full =>
-            ADC_Periph.CONFIG.INPSEL := Analoginputnoprescaling;
+            ADC_Periph.CONFIG.INPSEL := AnalogInputNoPrescaling;
          when Pin_Two_Third =>
-            ADC_Periph.CONFIG.INPSEL := Analoginputtwothirdsprescaling;
+            ADC_Periph.CONFIG.INPSEL := AnalogInputTwoThirdsPrescaling;
          when Pin_One_Third =>
-            ADC_Periph.CONFIG.INPSEL := Analoginputonethirdprescaling;
+            ADC_Periph.CONFIG.INPSEL := AnalogInputOneThirdPrescaling;
       end case;
 
       case Pin is
          when 0 =>
-            ADC_Periph.CONFIG.PSEL := Analoginput0;
+            ADC_Periph.CONFIG.PSEL := AnalogInput0;
          when 1 =>
-            ADC_Periph.CONFIG.PSEL := Analoginput1;
+            ADC_Periph.CONFIG.PSEL := AnalogInput1;
          when 2 =>
-            ADC_Periph.CONFIG.PSEL := Analoginput2;
+            ADC_Periph.CONFIG.PSEL := AnalogInput2;
          when 3 =>
-            ADC_Periph.CONFIG.PSEL := Analoginput3;
+            ADC_Periph.CONFIG.PSEL := AnalogInput3;
          when 4 =>
-            ADC_Periph.CONFIG.PSEL := Analoginput4;
+            ADC_Periph.CONFIG.PSEL := AnalogInput4;
          when 5 =>
-            ADC_Periph.CONFIG.PSEL := Analoginput5;
+            ADC_Periph.CONFIG.PSEL := AnalogInput5;
          when 6 =>
-            ADC_Periph.CONFIG.PSEL := Analoginput6;
+            ADC_Periph.CONFIG.PSEL := AnalogInput6;
          when 7 =>
-            ADC_Periph.CONFIG.PSEL := Analoginput7;
+            ADC_Periph.CONFIG.PSEL := AnalogInput7;
       end case;
 
       ADC_Periph.ENABLE.ENABLE := Enabled;
@@ -137,9 +137,9 @@ package body nRF.ADC is
 
       case Input is
          when VDD_Two_Third =>
-            ADC_Periph.CONFIG.INPSEL := Supplytwothirdsprescaling;
+            ADC_Periph.CONFIG.INPSEL := SupplyTwoThirdsPrescaling;
          when VDD_One_Third =>
-            ADC_Periph.CONFIG.INPSEL := Supplyonethirdprescaling;
+            ADC_Periph.CONFIG.INPSEL := SupplyOneThirdPrescaling;
       end case;
 
       ADC_Periph.ENABLE.ENABLE := Enabled;

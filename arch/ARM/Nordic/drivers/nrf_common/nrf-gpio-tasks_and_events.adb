@@ -56,8 +56,8 @@ package body nRF.GPIO.Tasks_And_Events is
    begin
       CONFIG.PSEL := UInt5 (GPIO_Pin);
       CONFIG.POLARITY := (case Polarity is
-                          when Rising_Edge  => Lotohi,
-                          when Falling_Edge => Hitolo,
+                          when Rising_Edge  => LoToHi,
+                          when Falling_Edge => HiToLo,
                           when Any_Change   => Toggle);
       CONFIG.MODE := Event;
    end Enable_Event;
@@ -76,8 +76,8 @@ package body nRF.GPIO.Tasks_And_Events is
    begin
       CONFIG.PSEL := UInt5 (GPIO_Pin);
       CONFIG.POLARITY := (case Action is
-                          when Set_Pin    => Lotohi,
-                          when Clear_Pin  => Hitolo,
+                          when Set_Pin    => LoToHi,
+                          when Clear_Pin  => HiToLo,
                              when Toggle_Pin => Toggle);
       CONFIG.OUTINIT := (case Initial_Value is
                             when Init_Set => High,

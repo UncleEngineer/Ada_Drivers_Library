@@ -131,7 +131,7 @@ package body nRF.Timers is
       if Enable then
          This.Periph.INTENSET.COMPARE.Arr (Integer (Chan)) := Set;
       else
-         This.Periph.INTENSET.COMPARE.Arr (Integer (Chan)) := Intenset_Compare0_Field_Reset;
+         This.Periph.INTENSET.COMPARE.Arr (Integer (Chan)) := INTENSET_COMPARE0_Field_Reset;
       end if;
    end Compare_Interrupt;
 
