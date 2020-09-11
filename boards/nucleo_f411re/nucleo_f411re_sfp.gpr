@@ -100,14 +100,14 @@ library project NUCLEO_F411RE_SFP is
     Src_Dirs_Root & "/arch/ARM/cortex_m/src/nocache", -- From arch definition
     Src_Dirs_Root & "/arch/ARM/cortex_m/src/nvic_cm4_cm7", -- From arch definition
     Src_Dirs_Root & "/arch/ARM/STM32/devices/stm32f411/", -- From MCU definition
-    Src_Dirs_Root & "/arch/ARM/STM32/svd/stm32f40x", -- From MCU definition
+    Src_Dirs_Root & "/arch/ARM/STM32/svd/stm32f411", -- From MCU definition
     Src_Dirs_Root & "/arch/ARM/STM32/drivers/", -- From MCU definition
     Src_Dirs_Root & "/arch/ARM/STM32/drivers/dma/", -- From MCU definition
     Src_Dirs_Root & "/arch/ARM/STM32/drivers/dma_interrupts/", -- From MCU definition
     Src_Dirs_Root & "/arch/ARM/STM32/drivers/crc_stm32f4/", -- From MCU definition
     Src_Dirs_Root & "/arch/ARM/STM32/drivers/i2c_stm32f4", -- From MCU definition
     Src_Dirs_Root & "/arch/ARM/STM32/drivers/power_control_stm32f4", -- From MCU definition
-    Src_Dirs_Root & "/arch/ARM/STM32/drivers/uart_stm32f4/", -- From MCU definition
+    Src_Dirs_Root & "/arch/ARM/STM32/drivers/uart_stm32f411/", -- From MCU definition
     Src_Dirs_Root & "/arch/ARM/STM32/drivers/sd/", -- From MCU definition
     Src_Dirs_Root & "/arch/ARM/STM32/drivers/sd/sdio/", -- From MCU definition
     Src_Dirs_Root & "/middleware/src/filesystem", -- From middleware config
@@ -121,5 +121,19 @@ library project NUCLEO_F411RE_SFP is
     Src_Dirs_Root & "/middleware/src/neopixel", -- From middleware config
     Src_Dirs_Root & "/middleware/src/ravenscar-common", -- From middleware config
     Src_Dirs_Root & "/components/src/**", -- From components config
-     "src/sfp/");
+     		    "src/sfp/");
+     
+   for Excluded_Source_Files use (
+                                  "stm32-rng.ads",
+                                  "stm32-rng.adb",
+                                  "stm32-rng-interrupts.adb",
+                                  "stm32-rng-interrupts.ads",
+                                  "stm32-dac.ads",
+                                  "stm32-dac.adb",
+                                  "stm32-dcmi.ads",
+                                  "stm32-dcmi.adb",
+                                  "stm32-rng-polling.adb",
+                                  "stm32-rng-polling.ads"
+                                  );
+
 end NUCLEO_F411RE_SFP;
