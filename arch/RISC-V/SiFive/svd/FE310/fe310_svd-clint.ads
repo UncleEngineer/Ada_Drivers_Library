@@ -5,7 +5,6 @@ pragma Ada_2012;
 pragma Style_Checks (Off);
 
 with HAL;
-with System;
 
 package FE310_SVD.CLINT is
    pragma Preelaborate;

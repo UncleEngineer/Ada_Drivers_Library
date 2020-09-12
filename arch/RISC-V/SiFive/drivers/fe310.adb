@@ -112,7 +112,7 @@ package body FE310 is
       --  Switch to crystal oscillator
       PRIC_Periph.PLLCFG.REFSEL := Crystal;
       PRIC_Periph.PLLCFG.BYPASS := True;
-      PRIC_Periph.PLLCFG.SEL := Pll;
+      PRIC_Periph.PLLCFG.SEL := PLL;
 
       --  Disable internal oscillator
       PRIC_Periph.HFROSCCFG.ENABLE := False;
@@ -188,7 +188,7 @@ package body FE310 is
       end loop;
 
       --  Switch to PLL
-      PRIC_Periph.PLLCFG.SEL := Pll;
+      PRIC_Periph.PLLCFG.SEL := PLL;
 
       --  Disable internal oscillator if the crystal reference is used
       if Reference = Crystal then

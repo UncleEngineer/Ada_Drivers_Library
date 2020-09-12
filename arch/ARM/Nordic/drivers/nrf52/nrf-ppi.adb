@@ -54,7 +54,7 @@ package body nRF.PPI is
    --------------------
 
    procedure Enable_Channel (Chan : Channel_ID) is
-      Arr : CHENSET_CH_Field_Array := (others => Chenset_Ch0_Field_Reset);
+      Arr : CHENSET_CH_Field_Array := (others => CHENSET_CH0_Field_Reset);
    begin
       Arr (Chan) := Set;
       PPI_Periph.CHENSET.Arr := Arr;
@@ -65,7 +65,7 @@ package body nRF.PPI is
    ---------------------
 
    procedure Disable_Channel (Chan : Channel_ID) is
-      Arr : CHENCLR_CH_Field_Array := (others => Chenclr_Ch0_Field_Reset);
+      Arr : CHENCLR_CH_Field_Array := (others => CHENCLR_CH0_Field_Reset);
    begin
       Arr (Chan) := Clear;
       PPI_Periph.CHENCLR.Arr := Arr;
