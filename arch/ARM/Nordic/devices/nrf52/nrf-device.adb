@@ -293,7 +293,7 @@ begin
       --  Workaround for Errata 136 "System: Bits in RESETREAS are set when they
       --  should not be"
       if POWER_Periph.RESETREAS.RESETPIN = Detected then
-         POWER_Periph.RESETREAS.RESETPIN := Notdetected;
+         POWER_Periph.RESETREAS.RESETPIN := NotDetected;
       end if;
    end if;
 
