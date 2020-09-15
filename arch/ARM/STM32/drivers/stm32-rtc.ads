@@ -37,7 +37,7 @@ package STM32.RTC is
 
    type Wakeup_Clock_Selection is
      (RTC_16, RTC_8, RTC_4, RTC_2, CK_SPRE_Low, CK_SPRE_High);
-   For Wakeup_Clock_Selection use (RTC_16 => 2#000#,
+   for Wakeup_Clock_Selection use (RTC_16 => 2#000#,
                                    RTC_8 => 2#001#,
                                    RTC_4 => 2#010#,
                                    RTC_2 => 2#011#,
