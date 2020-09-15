@@ -36,6 +36,8 @@ with STM32.Power_Control;
 
 with HAL.Real_Time_Clock; use HAL.Real_Time_Clock;
 
+with Ada.Unchecked_Conversion;
+
 package body STM32.RTC is
 
    procedure Disable_Write_Protection;
@@ -67,10 +69,9 @@ package body STM32.RTC is
    -- Set --
    ---------
 
-   overriding
-   procedure Set (This : in out RTC_Device;
-                  Time : HAL.Real_Time_Clock.RTC_Time;
-                  Date : HAL.Real_Time_Clock.RTC_Date)
+   overriding procedure Set
+     (This : in out RTC_Device; Time : HAL.Real_Time_Clock.RTC_Time;
+      Date :        HAL.Real_Time_Clock.RTC_Date)
    is
       pragma Unreferenced (This);
 
@@ -134,10 +135,9 @@ package body STM32.RTC is
    -- Get --
    ---------
 
-   overriding
-   procedure Get (This : in out RTC_Device;
-                  Time : out HAL.Real_Time_Clock.RTC_Time;
-                  Date : out HAL.Real_Time_Clock.RTC_Date)
+   overriding procedure Get
+     (This : in out RTC_Device; Time : out HAL.Real_Time_Clock.RTC_Time;
+      Date :    out HAL.Real_Time_Clock.RTC_Date)
    is
    begin
       loop
@@ -154,8 +154,8 @@ package body STM32.RTC is
    -- Get_Time --
    --------------
 
-   overriding
-   function Get_Time (This : RTC_Device) return HAL.Real_Time_Clock.RTC_Time
+   overriding function Get_Time
+     (This : RTC_Device) return HAL.Real_Time_Clock.RTC_Time
    is
       pragma Unreferenced (This);
       Ret : RTC_Time;
@@ -174,16 +174,16 @@ package body STM32.RTC is
    -- Get_Date --
    --------------
 
-   overriding
-   function Get_Date (This : RTC_Device) return HAL.Real_Time_Clock.RTC_Date
+   overriding function Get_Date
+     (This : RTC_Device) return HAL.Real_Time_Clock.RTC_Date
    is
       pragma Unreferenced (This);
       Ret : RTC_Date;
       DR  : constant DR_Register := RTC_Periph.DR;
    begin
       Ret.Day_Of_Week := RTC_Day_Of_Week'Enum_Val (DR.WDU);
-      Ret.Day := RTC_Day (Integer (DR.DT) * 10 + Integer (DR.DU));
-      Ret.Year := RTC_Year (DR.YT) * 10 + RTC_Year (DR.YU);
+      Ret.Day         := RTC_Day (Integer (DR.DT) * 10 + Integer (DR.DU));
+      Ret.Year        := RTC_Year (DR.YT) * 10 + RTC_Year (DR.YU);
       Ret.Month := RTC_Month'Enum_Val ((if DR.MT then 10 else 0) + DR.MU);
       return Ret;
    end Get_Date;
@@ -233,5 +233,166 @@ package body STM32.RTC is
       RCC_Periph.BDCR.RTCEN := False;
       Power_Control.Enable_Backup_Domain_Protection;
    end Disable;
+
+   -------------------
+   -- Enable_Wakeup --
+   -------------------
+   procedure Enable_Wakeup (This : in out RTC_Device; With_Interrupt : Boolean)
+   is
+      pragma Unreferenced (This);
+   begin
+      RTC_Periph.ISR.WUTF := False;
+      RTC_Periph.CR.WUTIE := With_Interrupt;
+      RTC_Periph.CR.WUTE  := True;
+   end Enable_Wakeup;
+
+   --------------------
+   -- Disable_Wakeup --
+   --------------------
+   procedure Disable_Wakeup (This : in out RTC_Device) is
+      pragma Unreferenced (This);
+   begin
+      RTC_Periph.CR.WUTE := False;
+
+      loop
+         exit when RTC_Periph.ISR.WUTWF = True;
+      end loop;
+
+      Power_Control.Clear_Wakeup_Flag;
+   end Disable_Wakeup;
+
+   ----------------------
+   -- Set_Wakeup_Clock --
+   ----------------------
+   procedure Set_Wakeup_Clock
+     (This : in out RTC_Device; Clock_Selection : in Wakeup_Clock_Selection)
+   is
+      function Rep is new Ada.Unchecked_Conversion
+        (Wakeup_Clock_Selection, UInt3);
+   begin
+      Disable_Wakeup (This);
+      RTC_Periph.CR.WCKSEL := Rep (Clock_Selection);
+   end Set_Wakeup_Clock;
+
+   procedure Set_Wakeup_Timer (This : in out RTC_Device; Value : in UInt16) is
+   begin
+      Disable_Wakeup (This);
+      RTC_Periph.WUTR.WUT := Value;
+   end Set_Wakeup_Timer;
+
+   -------------------
+   -- Clear_Alarm_A --
+   -------------------
+   procedure Clear_Alarm_A (This : in out RTC_Device) is
+      pragma Unreferenced (This);
+   begin
+      Disable_Write_Protection;
+
+      RTC_Periph.CR.ALRAE := False;
+
+      Enable_Write_Protection;
+   end Clear_Alarm_A;
+
+   -----------------
+   -- Set_Alarm_A --
+   -----------------
+   procedure Set_Alarm_A
+     (This : in out RTC_Device; Time : in HAL.Real_Time_Clock.RTC_Time;
+      Date :        HAL.Real_Time_Clock.RTC_Date)
+   is
+      pragma Unreferenced (This);
+      ALR : ALRMAR_Register;
+   begin
+      Disable_Write_Protection;
+      ALR.HT := UInt2 (Time.Hour / 10);
+      ALR.HU := UInt4 (Time.Hour mod 10);
+
+      ALR.MNT := UInt3 (Time.Min / 10);
+      ALR.MNU := UInt4 (Time.Min mod 10);
+
+      ALR.ST := UInt3 (Time.Sec / 10);
+      ALR.SU := UInt4 (Time.Sec mod 10);
+
+      ALR.DT := UInt2 (Date.Day / 10);
+      ALR.DU := UInt4 (Date.Day mod 10);
+
+      RTC_Periph.CR.ALRAE := False;
+
+      RTC_Periph.ALRMAR := ALR;
+
+      Enable_Write_Protection;
+   end Set_Alarm_A;
+
+   --------------------
+   -- Enable_Alarm_A --
+   --------------------
+   procedure Enable_Alarm_A
+     (This : in out RTC_Device; With_Interrupt : Boolean)
+   is
+      pragma Unreferenced (This);
+   begin
+      Disable_Write_Protection;
+      RTC_Periph.CR.ALRAIE := True;
+      RTC_Periph.CR.ALRAE  := With_Interrupt;
+      Enable_Write_Protection;
+   end Enable_Alarm_A;
+
+   -------------------
+   -- Clear_Alarm_B --
+   -------------------
+   procedure Clear_Alarm_B (This : in out RTC_Device) is
+      pragma Unreferenced (This);
+   begin
+      Disable_Write_Protection;
+
+      RTC_Periph.CR.ALRBE := False;
+
+      Enable_Write_Protection;
+   end Clear_Alarm_B;
+
+   -----------------
+   -- Set_Alarm_B --
+   -----------------
+   procedure Set_Alarm_B
+     (This : in out RTC_Device; Time : in HAL.Real_Time_Clock.RTC_Time;
+      Date :        HAL.Real_Time_Clock.RTC_Date)
+   is
+      pragma Unreferenced (This);
+      ALR : ALRMBR_Register;
+   begin
+      Disable_Write_Protection;
+
+      ALR.HT := UInt2 (Time.Hour / 10);
+      ALR.HU := UInt4 (Time.Hour mod 10);
+
+      ALR.MNT := UInt3 (Time.Min / 10);
+      ALR.MNU := UInt4 (Time.Min mod 10);
+
+      ALR.ST := UInt3 (Time.Sec / 10);
+      ALR.SU := UInt4 (Time.Sec mod 10);
+
+      ALR.DT := UInt2 (Date.Day / 10);
+      ALR.DU := UInt4 (Date.Day mod 10);
+
+      RTC_Periph.CR.ALRBE := False;
+
+      RTC_Periph.ALRMBR := ALR;
+
+      Enable_Write_Protection;
+   end Set_Alarm_B;
+
+   --------------------
+   -- Enable_Alarm_B --
+   --------------------
+   procedure Enable_Alarm_B
+     (This : in out RTC_Device; With_Interrupt : Boolean)
+   is
+      pragma Unreferenced (This);
+   begin
+      Disable_Write_Protection;
+      RTC_Periph.CR.ALRBIE := True;
+      RTC_Periph.CR.ALRBE  := With_Interrupt;
+      Enable_Write_Protection;
+   end Enable_Alarm_B;
 
 end STM32.RTC;

@@ -35,28 +35,63 @@ package STM32.RTC is
 
    type RTC_Device is new HAL.Real_Time_Clock.RTC_Device with private;
 
-   overriding
-   procedure Set (This : in out RTC_Device;
-                  Time : HAL.Real_Time_Clock.RTC_Time;
-                  Date : HAL.Real_Time_Clock.RTC_Date);
+   type Wakeup_Clock_Selection is
+     (RTC_16, RTC_8, RTC_4, RTC_2, CK_SPRE_Low, CK_SPRE_High);
+   For Wakeup_Clock_Selection use (RTC_16 => 2#000#,
+                                   RTC_8 => 2#001#,
+                                   RTC_4 => 2#010#,
+                                   RTC_2 => 2#011#,
+                                   CK_SPRE_Low => 2#100#,
+                                   CK_SPRE_High => 2#111#);
 
-   overriding
-   procedure Get (This : in out RTC_Device;
-                  Time : out HAL.Real_Time_Clock.RTC_Time;
-                  Date : out HAL.Real_Time_Clock.RTC_Date);
 
-   overriding
-   function Get_Time (This : RTC_Device) return HAL.Real_Time_Clock.RTC_Time;
+   overriding procedure Set
+     (This : in out RTC_Device; Time : HAL.Real_Time_Clock.RTC_Time;
+      Date :        HAL.Real_Time_Clock.RTC_Date);
 
-   overriding
-   function Get_Date (This : RTC_Device) return HAL.Real_Time_Clock.RTC_Date;
+   overriding procedure Get
+     (This : in out RTC_Device; Time : out HAL.Real_Time_Clock.RTC_Time;
+      Date :    out HAL.Real_Time_Clock.RTC_Date);
+
+   overriding function Get_Time
+     (This : RTC_Device) return HAL.Real_Time_Clock.RTC_Time;
+
+   overriding function Get_Date
+     (This : RTC_Device) return HAL.Real_Time_Clock.RTC_Date;
 
    procedure Enable (This : in out RTC_Device);
    procedure Disable (This : in out RTC_Device);
 
+   procedure Enable_Wakeup
+     (This : in out RTC_Device; With_Interrupt : Boolean);
+
+   procedure Disable_Wakeup (This : in out RTC_Device);
+
+   procedure Set_Wakeup_Clock
+     (This : in out RTC_Device; Clock_Selection : in Wakeup_Clock_Selection);
+
+   procedure Set_Wakeup_Timer (This : in out RTC_Device; Value : in UInt16);
+
+   procedure Clear_Alarm_A (This : in out RTC_Device);
+
+   procedure Set_Alarm_A
+     (This : in out RTC_Device; Time : in HAL.Real_Time_Clock.RTC_Time;
+      Date :        HAL.Real_Time_Clock.RTC_Date);
+
+   procedure Enable_Alarm_A
+     (This : in out RTC_Device; With_Interrupt : Boolean);
+
+   procedure Clear_Alarm_B (This : in out RTC_Device);
+
+   procedure Set_Alarm_B
+     (This : in out RTC_Device; Time : in HAL.Real_Time_Clock.RTC_Time;
+      Date :        HAL.Real_Time_Clock.RTC_Date);
+
+   procedure Enable_Alarm_B
+     (This : in out RTC_Device; With_Interrupt : Boolean);
+
 private
 
-   type RTC_Device is new HAL.Real_Time_Clock.RTC_Device with
-     null record;
+   type RTC_Device is new HAL.Real_Time_Clock.RTC_Device with null record;
 
 end STM32.RTC;
