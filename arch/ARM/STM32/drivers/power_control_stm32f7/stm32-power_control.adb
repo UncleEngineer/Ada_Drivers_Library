@@ -79,6 +79,13 @@ package body STM32.Power_Control is
       PWR_Periph.CR2.CWUPF.Arr (Integer (Pin)) := True;
    end Clear_Wakeup_Flag;
 
+   procedure Clear_Wakeup_Flag is
+   begin
+      for Pin in Wakeup_Pin loop
+         Clear_Wakeup_Flag (Pin);
+      end loop;
+   end Clear_Wakeup_Flag;
+
    ------------------
    -- Standby_Flag --
    ------------------
@@ -140,9 +147,7 @@ package body STM32.Power_Control is
 
    procedure Enter_Standby_Mode is
    begin
-      for Pin in Wakeup_Pin loop
-         Clear_Wakeup_Flag (Pin);
-      end loop;
+      Clear_Wakeup_Flag;
 
       Clear_Standby_Flag;
 
