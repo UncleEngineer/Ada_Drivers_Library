@@ -66,6 +66,8 @@ package STM32.Power_Control is
    --  This flag is set by hardware and cleared either by a system reset or by
    --  calling the Clear_Wakeup_Flag procedure.
 
+   procedure Clear_Wakeup_Flag;
+
    procedure Clear_Wakeup_Flag (Pin : Wakeup_Pin);
 
    procedure Enable_Wakeup_Pin (Pin     : Wakeup_Pin;
