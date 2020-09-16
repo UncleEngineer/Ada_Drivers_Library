@@ -1,0 +1,20 @@
+with "../../boards/stm32f746_discovery/stm32f746_discovery_full.gpr";
+
+project Power_STM32F746 extends "../shared/common/common.gpr" is
+
+   for Languages use ("Ada");
+
+   for Main use ("power_demo.adb");
+
+   for Source_Dirs use ("../shared/power_demo");
+
+   for Object_Dir use "../shared/power_demo/obj/stm32f746disco";
+
+   for Runtime ("Ada") use STM32F746_Discovery_Full'Runtime("Ada");
+   
+   for Create_Missing_Dirs use "True";
+
+   package Compiler renames STM32F746_Discovery_Full.Compiler;
+
+end Power_STM32F746;
+
