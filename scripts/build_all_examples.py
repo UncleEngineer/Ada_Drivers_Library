@@ -111,6 +111,11 @@ projects = [
             "/boards/nucleo_f411re/nucleo_f411re_sfp.gpr",
             "/examples/nucleo_f411re/blinky_f411re.gpr",
 
+            # NUCLEO-F401RE
+            "/boards/nucleo_f401re/nucleo_f401re_full.gpr",
+            "/boards/nucleo_f401re/nucleo_f401re_sfp.gpr",
+            "/examples/nucleo_f401re/blinky_f401re.gpr",
+
             # NUCLEO-F446ZE
             "/boards/nucleo_f446ze/nucleo_f446ze_full.gpr",
             "/boards/nucleo_f446ze/nucleo_f446ze_sfp.gpr",
