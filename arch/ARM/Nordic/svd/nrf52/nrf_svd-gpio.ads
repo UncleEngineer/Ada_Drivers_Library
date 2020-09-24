@@ -571,7 +571,7 @@ package NRF_SVD.GPIO is
    end record;
 
    --  GPIO Port 1
-   P0_Periph : aliased GPIO_Peripheral
+   GPIO_Periph : aliased GPIO_Peripheral
      with Import, Address => P0_Base;
 
 end NRF_SVD.GPIO;

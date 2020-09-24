@@ -50,9 +50,9 @@ package body nRF.ADC is
    begin
       SAADC_Periph.RESOLUTION.VAL :=
         (case Res is
-            when Res_8bit  => Val_8BIT,
-            when Res_10bit => Val_10BIT,
-            when Res_12bit => Val_12BIT);
+            when Res_8bit  => Val_8bit,
+            when Res_10bit => Val_10bit,
+            when Res_12bit => Val_12bit);
    end Set_Resolution;
 
    -------------------
@@ -65,7 +65,7 @@ package body nRF.ADC is
          when Internal_0V6 =>
             SAADC_Periph.CH (0).CONFIG.REFSEL := Internal;
          when VDD_One_Forth  =>
-            SAADC_Periph.CH (0).CONFIG.REFSEL := Vdd1_4;
+            SAADC_Periph.CH (0).CONFIG.REFSEL := VDD1_4;
       end case;
    end Set_Reference;
 
@@ -108,21 +108,21 @@ package body nRF.ADC is
 
       case Pin is
          when 0 =>
-            SAADC_Periph.CH (0).PSELP.PSELP := Analoginput0;
+            SAADC_Periph.CH (0).PSELP.PSELP := AnalogInput0;
          when 1 =>
-            SAADC_Periph.CH (0).PSELP.PSELP := Analoginput1;
+            SAADC_Periph.CH (0).PSELP.PSELP := AnalogInput1;
          when 2 =>
-            SAADC_Periph.CH (0).PSELP.PSELP := Analoginput2;
+            SAADC_Periph.CH (0).PSELP.PSELP := AnalogInput2;
          when 3 =>
-            SAADC_Periph.CH (0).PSELP.PSELP := Analoginput3;
+            SAADC_Periph.CH (0).PSELP.PSELP := AnalogInput3;
          when 4 =>
-            SAADC_Periph.CH (0).PSELP.PSELP := Analoginput4;
+            SAADC_Periph.CH (0).PSELP.PSELP := AnalogInput4;
          when 5 =>
-            SAADC_Periph.CH (0).PSELP.PSELP := Analoginput5;
+            SAADC_Periph.CH (0).PSELP.PSELP := AnalogInput5;
          when 6 =>
-            SAADC_Periph.CH (0).PSELP.PSELP := Analoginput6;
+            SAADC_Periph.CH (0).PSELP.PSELP := AnalogInput6;
          when 7 =>
-            SAADC_Periph.CH (0).PSELP.PSELP := Analoginput7;
+            SAADC_Periph.CH (0).PSELP.PSELP := AnalogInput7;
       end case;
 
       SAADC_Periph.ENABLE.ENABLE := Enabled;
@@ -145,7 +145,7 @@ package body nRF.ADC is
       Set_Resolution (Res);
       Set_Reference (Ref);
 
-      SAADC_Periph.CH (0).PSELP.PSELP := Vdd;
+      SAADC_Periph.CH (0).PSELP.PSELP := VDD;
       SAADC_Periph.RESULT.PTR := UInt32 (System.Storage_Elements.To_Integer (Result'Address));
       SAADC_Periph.RESULT.MAXCNT.MAXCNT := 1;
 
