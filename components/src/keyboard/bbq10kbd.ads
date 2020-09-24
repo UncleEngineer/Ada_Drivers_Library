@@ -1,6 +1,6 @@
 ------------------------------------------------------------------------------
 --                                                                          --
---                    Copyright (C) 2016-2020, AdaCore                      --
+--                        Copyright (C) 2020, AdaCore                       --
 --                                                                          --
 --  Redistribution and use in source and binary forms, with or without      --
 --  modification, are permitted provided that the following conditions are  --
@@ -29,60 +29,63 @@
 --                                                                          --
 ------------------------------------------------------------------------------
 
-package nRF.GPIO.Tasks_And_Events is
+--  Driver for the Blackberry Q10 Keyboard I2C interface from solder.party
+--  https://github.com/arturo182/bbq10kbd_i2c_sw
 
-   type GPIOTE_Channel is range 0 .. 3;
+with HAL;
+with HAL.I2C;
 
-   procedure Disable (Chan : GPIOTE_Channel);
+package BBQ10KBD is
 
-   type Event_Polarity is (Rising_Edge, Falling_Edge, Any_Change);
+   type BBQ10KBD_Device (Port : not null HAL.I2C.Any_I2C_Port)
+   is tagged private;
 
-   procedure Enable_Event (Chan     : GPIOTE_Channel;
-                           GPIO_Pin : GPIO_Pin_Index;
-                           Polarity : Event_Polarity);
-   --  When GPIO_Pin value changes (as specified by Polarity) the
-   --  event associated with Chan is raised.
+   type Key_State_Kind is (Pressed, Held_Pressed, Released, Error);
 
-   procedure Enable_Channel_Interrupt (Chan : GPIOTE_Channel);
-   --  If enabled, Channel interrupts are triggered when the Event is
-   --  raised.
+   type Key_State is record
+      Kind : Key_State_Kind;
+      Code : HAL.UInt8;
+   end record;
 
-   function Channel_Event_Set (Chan : GPIOTE_Channel) return Boolean
-   with Inline;
+   function Key_FIFO_Pop (This : in out BBQ10KBD_Device) return Key_State;
+   --  When the FIFO is empty a Key_State with Kind = Error is returned
 
-   procedure Acknowledge_Channel_Interrupt (Chan : GPIOTE_Channel)
-   with Pre => Channel_Event_Set (Chan);
-   --  All channel (and port) events share the same interrupt, so
-   --  acknowledging another event's interrupt would lose the event.
+   type KBD_Status is record
+      Numlock   : Boolean;
+      Capslock  : Boolean;
+      Key_Count : HAL.UInt5;
+   end record;
 
-   procedure Disable_Channel_Interrupt (Chan : GPIOTE_Channel);
+   function Status (This : in out BBQ10KBD_Device) return KBD_Status;
 
-   procedure Enable_Port_Interrupt;
-   --  The Port event occurs when any GPIO pin's state matches the
-   --  Pin_Sense_Mode with which that pin was configured. No other
-   --  configuration is required.
+   procedure Set_Backlight (This : in out BBQ10KBD_Device;
+                            Lvl  :        HAL.UInt8);
 
-   function Port_Event_Set return Boolean
-   with Inline;
+   function Version (This : in out BBQ10KBD_Device) return HAL.UInt8;
 
-   procedure Acknowledge_Port_Interrupt;
+private
 
-   procedure Disable_Port_Interrupt;
+   type BBQ10KBD_Device (Port : not null HAL.I2C.Any_I2C_Port)
+   is tagged null record;
 
-   type Task_Action is (Set_Pin, Clear_Pin, Toggle_Pin);
-   type Init_Value is (Init_Set, Init_Clear);
+   procedure Read (This : in out BBQ10KBD_Device;
+                   Reg  :        HAL.UInt8;
+                   Data :    out HAL.I2C.I2C_Data);
 
-   procedure Enable_Task (Chan          : GPIOTE_Channel;
-                          GPIO_Pin      : GPIO_Pin_Index;
-                          Action        : Task_Action;
-                          Initial_Value : Init_Value);
-   --  When the tasks associated with Chan is triggered, Action (Set, Clear,
-   --  Toggle) is applied to GPIO_Pin.
+   procedure Write (This : in out BBQ10KBD_Device;
+                    Reg  :        HAL.UInt8;
+                    Data :        HAL.I2C.I2C_Data);
 
-   function Out_Task (Chan : GPIOTE_Channel) return Task_Type;
-   --  Return the nRF task associated with Chan
+   Device_Addr : constant HAL.I2C.I2C_Address := 16#1F#;
 
-   function In_Event (Chan : GPIOTE_Channel) return Event_Type;
-   --  Return the nRF event associated with Chan
+   REG_VER : constant := 16#01#;
+   REG_CFG : constant := 16#02#;
+   REG_INT : constant := 16#03#;
+   REG_KEY : constant := 16#04#;
+   REG_BKL : constant := 16#05#;
+   REG_DEB : constant := 16#06#;
+   REG_FRQ : constant := 16#07#;
+   REG_RST : constant := 16#08#;
+   REG_FIF : constant := 16#09#;
 
-end nRF.GPIO.Tasks_And_Events;
+end BBQ10KBD;

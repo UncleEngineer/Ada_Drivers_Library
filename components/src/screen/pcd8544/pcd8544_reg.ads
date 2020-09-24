@@ -1,6 +1,6 @@
 ------------------------------------------------------------------------------
 --                                                                          --
---                    Copyright (C) 2016-2020, AdaCore                      --
+--                       Copyright (C) 2020, AdaCore                        --
 --                                                                          --
 --  Redistribution and use in source and binary forms, with or without      --
 --  modification, are permitted provided that the following conditions are  --
@@ -29,60 +29,57 @@
 --                                                                          --
 ------------------------------------------------------------------------------
 
-package nRF.GPIO.Tasks_And_Events is
+with Ada.Unchecked_Conversion;
+with HAL;
 
-   type GPIOTE_Channel is range 0 .. 3;
+package PCD8544_Reg is
 
-   procedure Disable (Chan : GPIOTE_Channel);
+   --  Basic mode
+   PCD8544_CMD_FUNCTION : constant := 2#0010_0000#;
+   PCD8544_CMD_DISPLAY  : constant := 2#0000_1000#;
+   PCD8544_CMD_SET_X    : constant := 2#1000_0000#;
+   PCD8544_CMD_SET_Y    : constant := 2#0100_0000#;
 
-   type Event_Polarity is (Rising_Edge, Falling_Edge, Any_Change);
+   --  Extended mode
+   PCD8544_CMD_SET_TC   : constant := 2#0000_0100#;
+   PCD8544_CMD_SET_BIAS : constant := 2#0001_0000#;
+   PCD8544_CMD_SET_VOP  : constant := 2#1000_0000#;
 
-   procedure Enable_Event (Chan     : GPIOTE_Channel;
-                           GPIO_Pin : GPIO_Pin_Index;
-                           Polarity : Event_Polarity);
-   --  When GPIO_Pin value changes (as specified by Polarity) the
-   --  event associated with Chan is raised.
+   type PCD8544_Address_Mode is (Horizontal, Vertical);
 
-   procedure Enable_Channel_Interrupt (Chan : GPIOTE_Channel);
-   --  If enabled, Channel interrupts are triggered when the Event is
-   --  raised.
+   type PCD8544_Function_Register is record
+      Power_Down    : Boolean              := True;
+      Address_Mode  : PCD8544_Address_Mode := Horizontal;
+      Extended_Mode : Boolean              := False;
+      Reserved      : Boolean              := False;
+   end record;
 
-   function Channel_Event_Set (Chan : GPIOTE_Channel) return Boolean
-   with Inline;
+   for PCD8544_Function_Register use record
+      Reserved      at 0 range 3 .. 7;
+      Power_Down    at 0 range 2 .. 2;
+      Address_Mode  at 0 range 1 .. 1;
+      Extended_Mode at 0 range 0 .. 0;
+   end record;
+   for PCD8544_Function_Register'Size use 8;
 
-   procedure Acknowledge_Channel_Interrupt (Chan : GPIOTE_Channel)
-   with Pre => Channel_Event_Set (Chan);
-   --  All channel (and port) events share the same interrupt, so
-   --  acknowledging another event's interrupt would lose the event.
+   type PCD8544_Display_Register is record
+      Enable    : Boolean := False;
+      Invert    : Boolean := False;
+      Reserved1 : Boolean := False;
+      Reserved2 : Boolean := False;
+   end record;
 
-   procedure Disable_Channel_Interrupt (Chan : GPIOTE_Channel);
+   for PCD8544_Display_Register use record
+      Reserved2 at 0 range 3 .. 7;
+      Reserved1 at 0 range 1 .. 1;
+      Enable    at 0 range 2 .. 2;
+      Invert    at 0 range 0 .. 0;
+   end record;
+   for PCD8544_Display_Register'Size use 8;
 
-   procedure Enable_Port_Interrupt;
-   --  The Port event occurs when any GPIO pin's state matches the
-   --  Pin_Sense_Mode with which that pin was configured. No other
-   --  configuration is required.
+   function Convert is new Ada.Unchecked_Conversion
+     (PCD8544_Function_Register, HAL.UInt8);
+   function Convert is new Ada.Unchecked_Conversion
+     (PCD8544_Display_Register, HAL.UInt8);
 
-   function Port_Event_Set return Boolean
-   with Inline;
-
-   procedure Acknowledge_Port_Interrupt;
-
-   procedure Disable_Port_Interrupt;
-
-   type Task_Action is (Set_Pin, Clear_Pin, Toggle_Pin);
-   type Init_Value is (Init_Set, Init_Clear);
-
-   procedure Enable_Task (Chan          : GPIOTE_Channel;
-                          GPIO_Pin      : GPIO_Pin_Index;
-                          Action        : Task_Action;
-                          Initial_Value : Init_Value);
-   --  When the tasks associated with Chan is triggered, Action (Set, Clear,
-   --  Toggle) is applied to GPIO_Pin.
-
-   function Out_Task (Chan : GPIOTE_Channel) return Task_Type;
-   --  Return the nRF task associated with Chan
-
-   function In_Event (Chan : GPIOTE_Channel) return Event_Type;
-   --  Return the nRF event associated with Chan
-
-end nRF.GPIO.Tasks_And_Events;
+end PCD8544_Reg;
